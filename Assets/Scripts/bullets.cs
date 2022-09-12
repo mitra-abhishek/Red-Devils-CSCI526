@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class bullets : MonoBehaviour
+public class Bullets : MonoBehaviour
 {   
     public float speed=15.0f;
     private Rigidbody2D rb;
@@ -28,8 +28,6 @@ public class bullets : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other){
         Debug.Log(other.tag);
         if(other.tag=="rock"){
-            // GameObject explosion=Instantiate(explosion) as GameObject;
-            // e.transform.position=transform.position;
             Debug.Log(other.gameObject);
             Destroy(other.gameObject);
 
@@ -37,7 +35,6 @@ public class bullets : MonoBehaviour
     }
 }
 
-// public class bullets : MonoBehaviour
 // {
 //     public float speed=50.0f;
 //     private Rigidbody2D rb;

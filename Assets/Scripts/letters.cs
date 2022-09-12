@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class letters : MonoBehaviour
+public class Letters : MonoBehaviour
 {
     public float speed=4.0f;
     private Rigidbody2D rb;

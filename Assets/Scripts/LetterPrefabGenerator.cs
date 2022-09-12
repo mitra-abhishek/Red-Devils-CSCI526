@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class letterImplementation : MonoBehaviour
+public class LetterPrefabGenerator : MonoBehaviour
 {
     public GameObject letterPrefab;
     public float letterReAppearTime=4.0f;

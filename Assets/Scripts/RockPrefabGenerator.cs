@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class rockImplementation : MonoBehaviour
+public class RockPrefabGenerator : MonoBehaviour
 {
     public GameObject rockPrefab;
     public float rockReAppearTime=1.0f;
