@@ -7,6 +7,8 @@ TagManager:
   - bullet
   - rock
   - player
+  - Letter
+  - Garbage Collector
   layers:
   - Default
   - TransparentFX
