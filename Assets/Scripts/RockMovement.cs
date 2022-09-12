@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class rock : MonoBehaviour
+public class RockMovement : MonoBehaviour
 {
 
     public float speed=8.0f;

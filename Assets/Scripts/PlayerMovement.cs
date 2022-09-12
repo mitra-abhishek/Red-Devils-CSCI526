@@ -8,18 +8,20 @@ public class PlayerMovement : MonoBehaviour
     public float xMin;
     public float xMax;
     public float y;
+    private Vector2 screenBounds;
 
     public GameObject bulletPrefab;
 
 
     void FixedUpdate() {
+        screenBounds=Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
         float moveHorizontal = Input.GetAxis("Horizontal");
 
         Vector2 movement = new Vector2(moveHorizontal, 0.0f);
         GetComponent<Rigidbody>().velocity = movement*speed;
 
         GetComponent<Rigidbody>().position = new Vector2(
-            Mathf.Clamp(GetComponent<Rigidbody>().position.x, xMin, xMax), 
+            Mathf.Clamp(GetComponent<Rigidbody>().position.x, -screenBounds.x, screenBounds.x), 
             y
         );
         
