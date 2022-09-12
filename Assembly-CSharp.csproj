@@ -53,6 +53,7 @@
      <Compile Include="Assets\Scripts\Proto1 Scripts\ArrowTag.cs" />
      <Compile Include="Assets\Scripts\Proto1 Scripts\bulletdemo1.cs" />
      <Compile Include="Assets\Scripts\Proto1 Scripts\bulletdemo2.cs" />
+     <Compile Include="Assets\GarbageCollector.cs" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.9f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>
