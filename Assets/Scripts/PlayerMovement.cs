@@ -18,10 +18,10 @@ public class PlayerMovement : MonoBehaviour
         float moveHorizontal = Input.GetAxis("Horizontal");
 
         Vector2 movement = new Vector2(moveHorizontal, 0.0f);
-        GetComponent<Rigidbody>().velocity = movement*speed;
+        GetComponent<Rigidbody2D>().velocity = movement*speed;
 
-        GetComponent<Rigidbody>().position = new Vector2(
-            Mathf.Clamp(GetComponent<Rigidbody>().position.x, -screenBounds.x, screenBounds.x), 
+        GetComponent<Rigidbody2D>().position = new Vector2(
+            Mathf.Clamp(GetComponent<Rigidbody2D>().position.x, -screenBounds.x, screenBounds.x), 
             y
         );
         
@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void shoot(){
         GameObject bullet=Instantiate(bulletPrefab) as GameObject;
-        bullet.transform.position=GetComponent<Rigidbody>().position;
+        bullet.transform.position=GetComponent<Rigidbody2D>().position;
         // Debug.Log(GetComponent<Rigidbody>().position);
     }
 

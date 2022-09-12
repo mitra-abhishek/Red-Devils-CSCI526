@@ -6,6 +6,7 @@ TagManager:
   tags:
   - bullet
   - rock
+  - player
   layers:
   - Default
   - TransparentFX
