@@ -52,6 +52,7 @@
      <Compile Include="Assets/Scripts/Proto1 Scripts/bulletdemo1.cs" />
      <Compile Include="Assets/Scripts/LetterPrefabGenerator.cs" />
      <Compile Include="Assets/Scripts/SendToGoogle.cs" />
+     <Compile Include="Assets\Scripts\LevelManager\LevelManagerLevel1.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark02.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/EnvMapAnimator.cs" />
      <Compile Include="Assets/Scripts/InitialDisplaySpawn.cs" />
