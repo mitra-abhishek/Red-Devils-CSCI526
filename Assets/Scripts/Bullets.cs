@@ -27,9 +27,9 @@ public class Bullets : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other){
         Debug.Log(other.tag);
-        if(other.tag == "Letter") {
-            EventManager.TriggerEvent ("test", new Dictionary<string, object> { { "amount", other } });
-        }
+        // if(other.tag == "Letter") {
+        //     EventManager.TriggerEvent ("test", new Dictionary<string, object> { { "amount", other } });
+        // }
         if(other.tag=="rock"){
             Debug.Log(other.gameObject);
             Destroy(other.gameObject);

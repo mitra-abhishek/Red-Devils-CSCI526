@@ -14,6 +14,7 @@ public class LevelManagerLevel1 : MonoBehaviour
     public List<TMP_Text> blankList = new List<TMP_Text>();
     public GameObject blankPrefab;
     public Transform blankHolder;
+    public Dictionary<int,Char> letterMap = new Dictionary<int,Char>();
     //private static Dictionary<int, List<string>> all_level_words = new Dictionary<int, List<string>>();
     
     private static System.Random random = new System.Random();
@@ -61,6 +62,16 @@ public class LevelManagerLevel1 : MonoBehaviour
         var val = (Collider2D)message["amount"];
         Debug.Log ($"{val.name[0]} received test!");
         Debug.Log ("Some Function was called!: ");
+        Boolean letterMatched = false;
+       for(int itr = 0;itr<levelWord.Length;itr++)
+       {
+           if(levelWord[itr]==val.name[0])
+           {
+               letterMap[itr] = val.name[0];
+               break;
+           }
+       }
+
     }
 
     // Start is called before the first frame update
@@ -72,14 +83,25 @@ public class LevelManagerLevel1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        for(int i = 0;i<blankList.Count;i++)
+        {
+            if(letterMap[i]!='/')
+            {
+                TMP_Text blankUpdate = blankList[i].GetComponent<TMP_Text>();
+                blankUpdate.text = letterMap[i].ToString();
+            }
+            
+        }
     }
 
     void Initialise(){
-        for(int i = 0;i<3;i++)
+        
+        for(int i = 0;i<levelWord.Length;i++)
         {
+            letterMap.Add(i,'/');
             GameObject blankHelper = Instantiate(blankPrefab,blankHolder,false);
             blankList.Add(blankHelper.GetComponent<TMP_Text>());
         }
+        Debug.Log(letterMap);
     }
 }

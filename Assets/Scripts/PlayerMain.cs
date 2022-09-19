@@ -35,5 +35,8 @@ public class PlayerMain : MonoBehaviour
         if(other.tag=="rock"){
             TakeDamage(20);
         }
+         if(other.tag == "Letter") {
+            EventManager.TriggerEvent ("test", new Dictionary<string, object> { { "amount", other } });
+        }
     }
 }
