@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Letters : MonoBehaviour
@@ -39,19 +40,43 @@ public class Letters : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-    
-    
+
+    private void letterCollidedwithPlayerorBullet()
+    {
+        char letter_collided = gameObject.name[0];
+        if (LevelManagerLevel1.instance.levelWord.ToUpper().Contains(letter_collided.ToString()))
+        {
+            // True Condition then reveal the letter
+        }
+        else
+        {
+            // Decrease Health
+        }
+    }
     private void OnCollisionEnter2D(Collision2D col)
     {
         Debug.Log("Collision for Letter");
         Debug.Log(col.gameObject.tag);
-        if (col.gameObject.tag == "Bullet")
+        Boolean correct_collision = false;
+        if (col.gameObject.tag == "bullet" )
         {
             Destroy(col.gameObject);
             Destroy(gameObject);
+            letterCollidedwithPlayerorBullet();
         }
     }
-    
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        Debug.Log("Trigger for Letter");
+        Debug.Log(col.gameObject.tag);
+        if (col.gameObject.tag == "player")
+        {
+            Destroy(gameObject);
+            letterCollidedwithPlayerorBullet();
+        }
+    }
+
     private IEnumerator RunLoop() {
         for (float t=0f; ; t += Time.deltaTime) { 
             
