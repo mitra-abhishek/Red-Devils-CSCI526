@@ -49,7 +49,7 @@ public class LetterPrefabGenerator : MonoBehaviour
         // Debug.Log("Word : " + word + ", Letter : " + let);
 
         int random_num = random.Next(1, 6);
-        if (random_num <= 3)
+        if (random_num <= 2)
         {
             return random_let.ToString().ToUpper();
         }
@@ -85,7 +85,7 @@ public class LetterPrefabGenerator : MonoBehaviour
 
     private IEnumerator createLettersDelayedCoRoutine()
     {
-        yield return new WaitForSeconds(0.1f*random.Next(1,10));
+        yield return new WaitForSeconds(0.2f*random.Next(1,10));
         GameObject letter = Instantiate(Resources.Load("Letters/"+getLetter(LevelManagerLevel1.instance.levelWord)) as GameObject);
         //Debug.Log("Tag : " +letter.tag);
         //Debug.Log("createLettersDelayedCoRoutine Name : " + letter.name);

@@ -7,7 +7,7 @@ using UnityEngine;
 public class Letters : MonoBehaviour
 {
     public float speed=2.0f;
-    public Boolean moving = true;
+    public Boolean moving = false;
     public float pingPongSpeed = 0.25f;
     public Boolean displacementX = true;
     public float displacementParam1 = 0.3f;
@@ -57,7 +57,6 @@ public class Letters : MonoBehaviour
     {
         Debug.Log("Collision for Letter");
         Debug.Log(col.gameObject.tag);
-        Boolean correct_collision = false;
         if (col.gameObject.tag == "bullet" )
         {
             Destroy(col.gameObject);
