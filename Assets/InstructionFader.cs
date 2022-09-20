@@ -25,7 +25,7 @@ public class InstructionFader : MonoBehaviour
     IEnumerator FadeImage()
     {
         mouse_kb = this.GetComponent<SpriteRenderer>();
-        for (float i = 1; i >= 0; i -= Time.deltaTime/2)
+        for (float i = 1; i >= 0; i -= Time.deltaTime/5)
             {
                 // set color with i as alpha
                 mouse_kb.material.color = new Color(1, 1, 1, i);
