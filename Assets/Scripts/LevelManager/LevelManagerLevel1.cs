@@ -89,7 +89,7 @@ public class LevelManagerLevel1 : MonoBehaviour
             {
                 TMP_Text blankUpdate = blankList[i].GetComponent<TMP_Text>();
                 blankUpdate.text = letterMap[i].ToString();
-                blankUpdate.fontSize = 50f;
+                blankUpdate.fontSize = 110f;
             }
             
         }
