@@ -103,12 +103,16 @@ public class LevelManagerLevel1 : MonoBehaviour
                 count = count + 1;
             }
         }
-        if (count == levelWord.Length) {
-            Destroy(this.gameObject);
-            UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
+        if (count == levelWord.Length) {    
+            StartCoroutine(SetWinText ());
         }
     }
 
+    IEnumerator SetWinText () {
+        yield return new WaitForSeconds(3f);
+        Destroy(this.gameObject);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
+    }
     void Initialise(){
         
         for(int i = 0;i<levelWord.Length;i++)
