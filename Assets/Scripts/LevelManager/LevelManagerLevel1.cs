@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class LevelManagerLevel1 : MonoBehaviour
 {
@@ -92,6 +93,19 @@ public class LevelManagerLevel1 : MonoBehaviour
                 blankUpdate.fontSize = 110f;
             }
             
+        }
+
+        int count = 0;
+        for(int i = 0;i<blankList.Count;i++)
+        {    
+            if(letterMap[i]!='/')
+            {
+                count = count + 1;
+            }
+        }
+        if (count == levelWord.Length) {
+            Destroy(this.gameObject);
+            UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
         }
     }
 
