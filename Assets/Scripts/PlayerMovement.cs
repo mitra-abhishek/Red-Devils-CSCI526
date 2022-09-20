@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
     public void shoot(){
         GameObject bullet=Instantiate(bulletPrefab) as GameObject;
         bullet.transform.position=GetComponent<Rigidbody2D>().position;
-        // Debug.Log(GetComponent<Rigidbody>().position);
+        // Debug.Log(GetComponent<Rigidbody2D>().position);
     }
 
     void Update(){

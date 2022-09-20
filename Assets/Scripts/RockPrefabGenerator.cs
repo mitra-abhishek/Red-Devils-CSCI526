@@ -5,7 +5,7 @@ using UnityEngine;
 public class RockPrefabGenerator : MonoBehaviour
 {
     public GameObject rockPrefab;
-    public float rockReAppearTime=1.0f;
+    public float rockReAppearTime=2.0f;
     private Vector2 screenBounds;
 
     // Start is called before the first frame update

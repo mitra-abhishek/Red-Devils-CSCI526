@@ -7,11 +7,11 @@ public class Bullets : MonoBehaviour
     public float speed=15.0f;
     private Rigidbody2D rb;
     private Vector2 screenBounds;
-    public GameObject explosion;
     
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("hello");
         rb=this.GetComponent<Rigidbody2D>();
         rb.velocity=new Vector2(0, speed);
         screenBounds=Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));   
@@ -26,12 +26,12 @@ public class Bullets : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other){
-        Debug.Log(other.tag);
+        // Debug.Log(other.tag);
         // if(other.tag == "Letter") {
         //     EventManager.TriggerEvent ("test", new Dictionary<string, object> { { "amount", other } });
         // }
         if(other.tag=="rock"){
-            Debug.Log(other.gameObject);
+            // Debug.Log(other.gameObject);
             Destroy(other.gameObject);
 
         }

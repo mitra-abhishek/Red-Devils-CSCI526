@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class Letters : MonoBehaviour
 {
-    public float speed=4.0f;
+    public float speed=2.0f;
     public Boolean moving = true;
     public float pingPongSpeed = 0.25f;
     public Boolean displacementX = true;

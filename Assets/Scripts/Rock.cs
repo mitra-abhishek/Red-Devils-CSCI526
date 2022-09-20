@@ -5,7 +5,7 @@ using UnityEngine;
 public class Rock : MonoBehaviour
 {
 
-    public float speed=8.0f;
+    public float speed=5.0f;
     private Rigidbody2D rb;
     private Vector2 screenBounds;
 
