@@ -9,8 +9,19 @@ public class PlayerMovement : MonoBehaviour
     public float xMax;
     public float y;
     private Vector2 screenBounds;
+    private Vector2 posMouse;
+    private Vector2 mouseMove;
 
     public GameObject bulletPrefab;
+    public Camera sceneCam;
+    public Rigidbody2D rb;
+
+    void mouseMovement(){
+        float xAxis=Input.GetAxisRaw("Horizontal");
+        float yAxis=Input.GetAxisRaw("Vertical");
+        mouseMove=new Vector2(xAxis, yAxis).normalized; 
+        posMouse=sceneCam.ScreenToWorldPoint(Input.mousePosition);
+    }
 
 
     void FixedUpdate() {
@@ -24,19 +35,24 @@ public class PlayerMovement : MonoBehaviour
             Mathf.Clamp(GetComponent<Rigidbody2D>().position.x, -screenBounds.x, screenBounds.x), 
             y
         );
+
+        rb.velocity=new Vector2(mouseMove.x*5, mouseMove.y*5);
+        Vector2 aimDirection=posMouse-rb.position;
+        float aimAngle=Mathf.Atan2(aimDirection.y, aimDirection.x)*Mathf.Rad2Deg-90f;
+        rb.rotation=aimAngle;
         
     }
 
     public void shoot(){
         GameObject bullet=Instantiate(bulletPrefab) as GameObject;
         bullet.transform.position=GetComponent<Rigidbody2D>().position;
-        // Debug.Log(GetComponent<Rigidbody2D>().position);
     }
 
     void Update(){
-        if(Input.GetKeyDown("space")){
+        if(Input.GetKeyDown("space") || Input.GetMouseButtonDown(0)){
             shoot();
         }
+        mouseMovement();
     }
 
 }
