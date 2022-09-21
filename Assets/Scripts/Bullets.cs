@@ -22,6 +22,8 @@ public class Bullets : MonoBehaviour
         rigidBullet.velocity = new Vector2(bulletShootDirection.x, bulletShootDirection.y).normalized * speed;
         float bulletTransformAngle = Mathf.Atan2 (rotation.y, rotation.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler (0, 0, bulletTransformAngle+90);
+
+        // rigidBullet.velocity = new Vector2(0, speed);
         screenBounds=Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));   
     }
 
@@ -37,6 +39,10 @@ public class Bullets : MonoBehaviour
         if(other.tag=="rock"){
             Destroy(other.gameObject);
 
+        }
+        if(other.tag == "Letter") {
+            EventManager.TriggerEvent ("test", new Dictionary<string, object> { { "amount", other } });
+            Destroy(other.gameObject);
         }
     }
 }

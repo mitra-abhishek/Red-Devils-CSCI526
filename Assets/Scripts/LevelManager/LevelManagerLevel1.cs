@@ -109,7 +109,7 @@ public class LevelManagerLevel1 : MonoBehaviour
     }
 
     IEnumerator SetWinText () {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
         Destroy(this.gameObject);
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
     }

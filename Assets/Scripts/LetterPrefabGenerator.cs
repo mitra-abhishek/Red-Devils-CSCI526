@@ -5,7 +5,7 @@ using UnityEngine;
 public class LetterPrefabGenerator : MonoBehaviour
 {
     public GameObject letterPrefab;
-    public float letterReAppearTime=4.0f;
+    private float letterReAppearTime=4.0f;
     private Vector2 screenBounds;
     private static System.Random random = new System.Random();
     private static Dictionary<int, List<string>> all_level_words = new Dictionary<int, List<string>>();
