@@ -5,9 +5,9 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-public class LevelManagerLevel1 : MonoBehaviour
+public class LevelManagerLevel3 : MonoBehaviour
 {
-    public static LevelManagerLevel1 instance;
+    public static LevelManagerLevel3 instance;
     
     // Other Game parameters can be added here! like health, time, etc;
 
@@ -16,10 +16,11 @@ public class LevelManagerLevel1 : MonoBehaviour
     public GameObject blankPrefab;
     public Transform blankHolder;
     public Dictionary<int,Char> letterMap = new Dictionary<int,Char>();
-    
     public float letterSpeed = 2.0f;
     public float rockSpeed = 2.5f;
 
+    
+    //private static Dictionary<int, List<string>> all_level_words = new Dictionary<int, List<string>>();
     
     private static System.Random random = new System.Random();
 
@@ -42,9 +43,9 @@ public class LevelManagerLevel1 : MonoBehaviour
 
         List<string> level_words = new List<string>
         {
-            "CAT", "DOG", "PIN"
+            "ACUTE", "BROAD", "CRAZY", "EXTRA", "FIFTH", "GROSS", "HARSH","YOUNG", "VAGUE", "TIGHT", "RURAL", "SMART","PRIME", "NAVAL"
         };
-        
+       
         int index = random.Next(level_words.Count);
         levelWord =  level_words[index];
         
@@ -88,7 +89,6 @@ public class LevelManagerLevel1 : MonoBehaviour
     void Start()
     {
         Initialise();
-        // Start Monitoring for Analytics Here!
     }
 
     // Update is called once per frame
@@ -132,11 +132,5 @@ public class LevelManagerLevel1 : MonoBehaviour
             blankList.Add(blankHelper.GetComponent<TMP_Text>());
         }
         Debug.Log(letterMap);
-    }
-
-    private void OnDestroy()
-    {   
-        // End Analytics Call here
-        //throw new NotImplementedException();
     }
 }

@@ -22,7 +22,7 @@ public class Letters : MonoBehaviour
     void Start()
     {
         rb=this.GetComponent<Rigidbody2D>();
-        rb.velocity=new Vector2(0,-speed);
+        rb.velocity=new Vector2(0,-GameManager.instance.LetterSpeed);
         screenBounds=Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
         if (displacementX)
             initialPosition = transform.position.x;

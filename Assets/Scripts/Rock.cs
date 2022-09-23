@@ -5,7 +5,6 @@ using UnityEngine;
 public class Rock : MonoBehaviour
 {
 
-    public float speed=5.0f;
     private Rigidbody2D rb;
     private Vector2 screenBounds;
 
@@ -13,7 +12,7 @@ public class Rock : MonoBehaviour
     void Start()
     {
         rb=this.GetComponent<Rigidbody2D>();
-        rb.velocity=new Vector2(0,-speed);
+        rb.velocity=new Vector2(0,-GameManager.instance.RockSpeed);
         screenBounds=Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
     }
 

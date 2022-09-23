@@ -5,7 +5,8 @@ using UnityEngine;
 public class LetterPrefabGenerator : MonoBehaviour
 {
     public GameObject letterPrefab;
-    private float letterReAppearTime=4.0f;
+    public float letterReAppearTime=4.0f;
+
     private Vector2 screenBounds;
     private static System.Random random = new System.Random();
     private static Dictionary<int, List<string>> all_level_words = new Dictionary<int, List<string>>();
@@ -86,10 +87,22 @@ public class LetterPrefabGenerator : MonoBehaviour
     private IEnumerator createLettersDelayedCoRoutine()
     {
         yield return new WaitForSeconds(0.2f*random.Next(1,10));
-        GameObject letter = Instantiate(Resources.Load("Letters/"+getLetter(LevelManagerLevel1.instance.levelWord)) as GameObject);
+
+        GameObject letter;
+        // if (GameManager.instance.Level == 3) 
+        //     letter = Instantiate(Resources.Load("Letters/"+getLetter(LevelManagerLevel3.instance.levelWord)) as GameObject);
+        // else if(GameManager.instance.Level ==2)
+        //     letter = Instantiate(Resources.Load("Letters/"+getLetter(LevelManagerLevel3.instance.levelWord)) as GameObject);
+        // else
+        //     letter = Instantiate(Resources.Load("Letters/"+getLetter(LevelManagerLevel1.instance.levelWord)) as GameObject);
+        
+        letter = Instantiate(Resources.Load("Letters/"+getLetter(GameManager.instance.LevelWord)) as GameObject);
+        
+
         //Debug.Log("Tag : " +letter.tag);
         //Debug.Log("createLettersDelayedCoRoutine Name : " + letter.name);
         letter.transform.position=new Vector2(Random.Range(-screenBounds.x+0.5f, screenBounds.x-0.5f), screenBounds.y);;
+        
     }
     
 
