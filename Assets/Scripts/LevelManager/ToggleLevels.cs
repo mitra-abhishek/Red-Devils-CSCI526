@@ -35,6 +35,7 @@ public class ToggleLevels : MonoBehaviour
     {
         GameManager.instance.Level = 2;
         
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Level 2");
     }
     void loadLevel3()
     {

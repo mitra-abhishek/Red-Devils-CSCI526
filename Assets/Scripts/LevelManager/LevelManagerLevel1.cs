@@ -17,7 +17,7 @@ public class LevelManagerLevel1 : MonoBehaviour
     public Transform blankHolder;
     public Dictionary<int,Char> letterMap = new Dictionary<int,Char>();
     
-    public float letterSpeed = 2.0f;
+    public float letterSpeed = 1.5f;
     public float rockSpeed = 2.5f;
 
     

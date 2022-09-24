@@ -5,9 +5,9 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-public class LevelManagerLevel3 : MonoBehaviour
+public class LevelManagerLevel2 : MonoBehaviour
 {
-    public static LevelManagerLevel3 instance;
+    public static LevelManagerLevel2 instance;
     
     // Other Game parameters can be added here! like health, time, etc;
 
@@ -17,7 +17,7 @@ public class LevelManagerLevel3 : MonoBehaviour
     public Transform blankHolder;
     public Dictionary<int,Char> letterMap = new Dictionary<int,Char>();
     public float letterSpeed = 1.5f;
-    public float rockSpeed = 3.5f;
+    public float rockSpeed = 3.0f;
 
     
     //private static Dictionary<int, List<string>> all_level_words = new Dictionary<int, List<string>>();
