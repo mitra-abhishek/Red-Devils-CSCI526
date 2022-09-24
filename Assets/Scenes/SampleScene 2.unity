@@ -632,9 +632,8 @@ MonoBehaviour:
   blankList: []
   blankPrefab: {fileID: 5187836768122991378, guid: 7cce4b751137f4e84a2f103914e1a902, type: 3}
   blankHolder: {fileID: 252724979}
-  letterSpeed: 20
-  letterReappearTime: 2
-  rockSpeed: 2.5
+  letterSpeed: 3
+  rockSpeed: 3.5
 --- !u!114 &345747629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -663,8 +662,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rockPrefab: {fileID: 5356430114322639579, guid: 70a51788f29000747ae30818dca94965, type: 3}
   rockReAppearTime: 2
-  maxRockAtTime: 1
-  rockVelocity: 20
+  maxRockAtTime: 3
 --- !u!1 &356175784
 GameObject:
   m_ObjectHideFlags: 0
