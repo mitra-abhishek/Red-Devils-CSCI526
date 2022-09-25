@@ -16,9 +16,19 @@ public class LevelManagerLevel1 : MonoBehaviour
     public GameObject blankPrefab;
     public Transform blankHolder;
     public Dictionary<int,Char> letterMap = new Dictionary<int,Char>();
+    public float timeStart;
+    public float timeFinished;
+    public double timeToComplete;
+
+    [SerializeField] SendToGoogle sendToGoogle;
     
     public float letterSpeed = 1.5f;
     public float rockSpeed = 2.5f;
+    public Dictionary<String, int> pairs = new Dictionary<String, int>()
+        {
+            { "SampleScene 2", 1 }, { "Level 2", 2 },{"Level 3",3}
+        };
+    private int currentLevel=1;
 
     
     private static System.Random random = new System.Random();
@@ -89,6 +99,8 @@ public class LevelManagerLevel1 : MonoBehaviour
     {
         Initialise();
         // Start Monitoring for Analytics Here!
+        timeStart=Time.time;
+
     }
 
     // Update is called once per frame
@@ -121,8 +133,14 @@ public class LevelManagerLevel1 : MonoBehaviour
     IEnumerator SetWinText () {
         yield return new WaitForSeconds(2f);
         Destroy(this.gameObject);
-        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
+        if (pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name]+1 <=3){
+        UnityEngine.SceneManagement.SceneManager.LoadScene(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name]+1);
     }
+    else{
+         UnityEngine.SceneManagement.SceneManager.LoadScene(1);   
+        }
+    }
+        
     void Initialise(){
         
         for(int i = 0;i<levelWord.Length;i++)
@@ -137,6 +155,15 @@ public class LevelManagerLevel1 : MonoBehaviour
     private void OnDestroy()
     {   
         // End Analytics Call here
-        //throw new NotImplementedException();
+        if (this != null)
+        {
+        timeFinished=Time.time;
+        timeToComplete=Math.Round(timeFinished-timeStart,2);
+        if (timeToComplete>0){
+             currentLevel=pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name];            
+             sendToGoogle.UpdateLevelAnalytics(currentLevel,timeToComplete);
+        }
+        }
+        
     }
 }

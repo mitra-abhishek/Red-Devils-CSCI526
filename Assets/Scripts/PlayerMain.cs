@@ -8,6 +8,11 @@ public class PlayerMain : MonoBehaviour
 {
     public int maxHealth=100;
     public int currentHealth;
+    public Dictionary<string, int> pairs = new Dictionary<string, int>()
+    {
+        { "SampleScene 2", 1 }, { "Level 2", 2 },{"Level 3",3}
+    };
+    [SerializeField] SendToGoogle sendToGoogle;
 
     public HealthBar healthBar;
     void Start()
@@ -25,9 +30,11 @@ public class PlayerMain : MonoBehaviour
     public void TakeDamage(int damage){
         currentHealth-=damage;
         healthBar.setHealth(currentHealth);
+        Debug.Log("The scence health is"+currentHealth);
         if (currentHealth<=0){
+            sendToGoogle.UpdateUnsuccessfulTriesAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name]);
             Destroy(this.gameObject);
-            UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
+            UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene 2");
         }
     }
 

@@ -123,6 +123,53 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &82895569
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 82895571}
+  - component: {fileID: 82895570}
+  m_Layer: 0
+  m_Name: AnalyticsManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &82895570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82895569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb47f9b239a5b4cbe8cc4a324ca52067, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelCompletionURL: https://docs.google.com/forms/u/0/d/e/1FAIpQLSc_zXZmw5qk7WBukBgV7lYpYfFlunDd7xQa4qTKyOqGiV8u3Q/formResponse
+  levelAttemptsURL: https://docs.google.com/forms/u/0/d/e/1FAIpQLSdB6lDNYq6_zdR0RPEAElwkRkFsfxMq0tW14fCfGiY2mVETgQ/formResponse
+  playerMain: {fileID: 0}
+--- !u!4 &82895571
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82895569}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.245138, y: -4.083924, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &182012157
 GameObject:
   m_ObjectHideFlags: 0
@@ -311,7 +358,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingTime: 120
+  currentLevel: 000000000100000002000000
   countdownText: {fileID: 238759229}
+  sendToGoogle: {fileID: 82895570}
 --- !u!114 &238759229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -632,6 +681,10 @@ MonoBehaviour:
   blankList: []
   blankPrefab: {fileID: 5187836768122991378, guid: 7cce4b751137f4e84a2f103914e1a902, type: 3}
   blankHolder: {fileID: 252724979}
+  timeStart: 0
+  timeFinished: 0
+  timeToComplete: 0
+  sendToGoogle: {fileID: 82895570}
   letterSpeed: 1.5
   rockSpeed: 10
 --- !u!114 &345747629
@@ -1000,6 +1053,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 0
+  currentLevel: 000000000100000002000000
+  sendToGoogle: {fileID: 82895570}
   healthBar: {fileID: 1209196295}
 --- !u!1 &883307403
 GameObject:

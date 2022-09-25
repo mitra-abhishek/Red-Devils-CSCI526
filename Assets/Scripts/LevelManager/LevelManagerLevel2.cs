@@ -10,7 +10,7 @@ public class LevelManagerLevel2 : MonoBehaviour
     public static LevelManagerLevel2 instance;
     
     // Other Game parameters can be added here! like health, time, etc;
-
+    [SerializeField] SendToGoogle sendToGoogle;
     public String levelWord = "";
     public List<TMP_Text> blankList = new List<TMP_Text>();
     public GameObject blankPrefab;
@@ -18,6 +18,15 @@ public class LevelManagerLevel2 : MonoBehaviour
     public Dictionary<int,Char> letterMap = new Dictionary<int,Char>();
     public float letterSpeed = 1.5f;
     public float rockSpeed = 3.0f;
+
+    public float timeStart;
+    public float timeFinished;
+    public double timeToComplete;
+     public Dictionary<String, int> pairs = new Dictionary<String, int>()
+    {
+        { "SampleScene 2", 1 }, { "Level 2", 2 },{"Level 3",3}
+    };
+    private int currentLevel=1;
 
     
     //private static Dictionary<int, List<string>> all_level_words = new Dictionary<int, List<string>>();
@@ -121,7 +130,7 @@ public class LevelManagerLevel2 : MonoBehaviour
     IEnumerator SetWinText () {
         yield return new WaitForSeconds(2f);
         Destroy(this.gameObject);
-        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Level 3");
     }
     void Initialise(){
         
@@ -132,5 +141,20 @@ public class LevelManagerLevel2 : MonoBehaviour
             blankList.Add(blankHelper.GetComponent<TMP_Text>());
         }
         Debug.Log(letterMap);
+    }
+
+    private void OnDestroy()
+    {   
+        // End Analytics Call here
+        if (this != null)
+        {
+        timeFinished=Time.time;
+        timeToComplete=Math.Round(timeFinished-timeStart,2);
+        if (timeToComplete>0){
+             currentLevel=pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name];            
+             sendToGoogle.UpdateLevelAnalytics(currentLevel,timeToComplete);
+        }
+        }
+        
     }
 }
