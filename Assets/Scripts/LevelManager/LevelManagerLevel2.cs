@@ -28,6 +28,7 @@ public class LevelManagerLevel2 : MonoBehaviour
         { "SampleScene 2", 1 }, { "Level 2", 2 },{"Level 3",3}
     };
     private int currentLevel=1;
+    public PlayerMain playerMain;
 
     
     //private static Dictionary<int, List<string>> all_level_words = new Dictionary<int, List<string>>();
@@ -134,7 +135,7 @@ public class LevelManagerLevel2 : MonoBehaviour
     IEnumerator SetWinText () {
         yield return new WaitForSeconds(2f);
         Destroy(this.gameObject);
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Level 3");
+        UnityEngine.SceneManagement.SceneManager.LoadScene(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name]+1);
     }
     void Initialise(){
         
@@ -157,6 +158,10 @@ public class LevelManagerLevel2 : MonoBehaviour
         if (timeToComplete>0){
              currentLevel=pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name];            
              sendToGoogle.UpdateLevelAnalytics(currentLevel,timeToComplete);
+             Debug.Log("The player Health is"+currentLevel);
+            if(playerMain.currentHealth>0){
+             sendToGoogle.UpdateUnsuccessfulTriesAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],true);
+             }
         }
         }
         
