@@ -15,6 +15,11 @@ public class PlayerMovement : MonoBehaviour
     public GameObject bulletPrefab;
     public Camera sceneCam;
     public Rigidbody2D rb;
+    private int curBullets;
+
+    void Start()
+    {   
+    }
 
     void mouseMovement(){
         float xAxis=Input.GetAxisRaw("Horizontal");
@@ -49,8 +54,13 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void Update(){
-        if(Input.GetKeyDown("space") || Input.GetMouseButtonDown(0)){
+        if(GameManager.instance.bulletController.getBullets()>0 && (Input.GetKeyDown("space") || Input.GetMouseButtonDown(0))){
             shoot();
+            GameManager.instance.bulletController.subtractBullet();
+        }
+        if(GameManager.instance.bulletController.getBullets()==0){
+            Destroy(this.gameObject);
+            UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
         }
         mouseMovement();
     }

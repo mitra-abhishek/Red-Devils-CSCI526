@@ -16,6 +16,7 @@ public class PlayerMain : MonoBehaviour
 
     public HealthBar healthBar;
     public Timer timer;
+    
     void Start()
     {
        currentHealth=maxHealth; 
@@ -43,8 +44,5 @@ public class PlayerMain : MonoBehaviour
         if(other.tag=="rock"){
             TakeDamage(20);
         }
-        //  if(other.tag == "Letter") {
-        //     EventManager.TriggerEvent ("test", new Dictionary<string, object> { { "amount", other } });
-        // }
     }
 }

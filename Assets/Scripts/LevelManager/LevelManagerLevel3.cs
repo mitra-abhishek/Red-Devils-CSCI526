@@ -18,6 +18,7 @@ public class LevelManagerLevel3 : MonoBehaviour
     public Dictionary<int,Char> letterMap = new Dictionary<int,Char>();
     public float letterSpeed = 1.5f;
     public float rockSpeed = 3.5f;
+    public int level3Bullets = 40;
 
     public float timeStart;
     public float timeFinished;
@@ -72,6 +73,7 @@ public class LevelManagerLevel3 : MonoBehaviour
         GameManager.instance.LevelWord = levelWord;
         GameManager.instance.LetterSpeed = letterSpeed;
         GameManager.instance.RockSpeed = rockSpeed;
+        GameManager.instance.bullets = level3Bullets;
 
     }
 
@@ -108,6 +110,8 @@ public class LevelManagerLevel3 : MonoBehaviour
     {
         Initialise();
         timeStart=Time.time;
+        GameManager.instance.bullets = level3Bullets;
+        GameManager.instance.Start();
     }
 
     // Update is called once per frame

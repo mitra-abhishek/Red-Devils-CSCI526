@@ -27,6 +27,7 @@ public class LevelManagerLevel1 : MonoBehaviour
     
     public float letterSpeed = 1.5f;
     public float rockSpeed = 2.5f;
+    private int level1Bullets = 50;
     public Dictionary<String, int> pairs = new Dictionary<String, int>()
         {
             { "SampleScene 2", 1 }, { "Level 2", 2 },{"Level 3",3}
@@ -66,6 +67,7 @@ public class LevelManagerLevel1 : MonoBehaviour
         GameManager.instance.LevelWord = levelWord;
         GameManager.instance.LetterSpeed = letterSpeed;
         GameManager.instance.RockSpeed = rockSpeed;
+        GameManager.instance.bullets = level1Bullets;
 
     }
 
@@ -103,7 +105,8 @@ public class LevelManagerLevel1 : MonoBehaviour
         Initialise();
         // Start Monitoring for Analytics Here!
         timeStart=Time.time;
-
+        GameManager.instance.bullets = level1Bullets;
+        GameManager.instance.Start();
     }
 
     // Update is called once per frame
@@ -162,11 +165,15 @@ public class LevelManagerLevel1 : MonoBehaviour
         {
         timeFinished=Time.time;
         timeToComplete=Math.Round(timeFinished-timeStart,2);
-        if (timeToComplete>0 && timer.currentTime>0 && playerMain.currentHealth>0){
+        if (timeToComplete>0 && timer.currentTime>0 && playerMain.currentHealth>0 && level1Bullets>0){
              currentLevel=pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name];            
              sendToGoogle.UpdateLevelAnalytics(currentLevel,timeToComplete);
              sendToGoogle.UpdateUnsuccessfulTriesAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],true);
         }   
+         else{
+             sendToGoogle.UpdateUnsuccessfulTriesAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],false);
+                
+             }
     }
     }
 }
