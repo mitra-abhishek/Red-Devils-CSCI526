@@ -22,6 +22,7 @@ public class LevelManagerLevel2 : MonoBehaviour
     public float timeStart;
     public float timeFinished;
     public double timeToComplete;
+    public int level2Bullets = 45;
      public Dictionary<String, int> pairs = new Dictionary<String, int>()
     {
         { "SampleScene 2", 1 }, { "Level 2", 2 },{"Level 3",3}
@@ -63,6 +64,7 @@ public class LevelManagerLevel2 : MonoBehaviour
         GameManager.instance.LevelWord = levelWord;
         GameManager.instance.LetterSpeed = letterSpeed;
         GameManager.instance.RockSpeed = rockSpeed;
+        GameManager.instance.bullets = level2Bullets;
 
     }
 
@@ -98,6 +100,8 @@ public class LevelManagerLevel2 : MonoBehaviour
     void Start()
     {
         Initialise();
+        GameManager.instance.bullets = level2Bullets;
+        GameManager.instance.Start();
     }
 
     // Update is called once per frame

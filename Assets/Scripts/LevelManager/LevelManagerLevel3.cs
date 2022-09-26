@@ -18,6 +18,7 @@ public class LevelManagerLevel3 : MonoBehaviour
     public Dictionary<int,Char> letterMap = new Dictionary<int,Char>();
     public float letterSpeed = 1.5f;
     public float rockSpeed = 3.5f;
+    public int level3Bullets = 40;
 
     
     //private static Dictionary<int, List<string>> all_level_words = new Dictionary<int, List<string>>();
@@ -54,6 +55,7 @@ public class LevelManagerLevel3 : MonoBehaviour
         GameManager.instance.LevelWord = levelWord;
         GameManager.instance.LetterSpeed = letterSpeed;
         GameManager.instance.RockSpeed = rockSpeed;
+        GameManager.instance.bullets = level3Bullets;
 
     }
 
@@ -89,6 +91,8 @@ public class LevelManagerLevel3 : MonoBehaviour
     void Start()
     {
         Initialise();
+        GameManager.instance.bullets = level3Bullets;
+        GameManager.instance.Start();
     }
 
     // Update is called once per frame

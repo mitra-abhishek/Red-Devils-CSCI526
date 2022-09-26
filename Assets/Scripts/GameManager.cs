@@ -15,6 +15,10 @@ public class GameManager : MonoBehaviour
     
     public float RockSpeed = 2.0f;
 
+    public int bullets;
+
+    public BulletController bulletController;
+
 
     void Awake()
     {
@@ -25,8 +29,10 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(instance);
     }
 
-    private void Start()
+    public void Start()
     {
+        bulletController=new BulletController();
+        bulletController.setBullets(bullets);
     }
 
     // Update is called once per frame
