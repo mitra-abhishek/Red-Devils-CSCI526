@@ -310,6 +310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7afaf4c3b128041ec848b2bbc4271bf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentTime: 0
   startingTime: 120
   countdownText: {fileID: 238759229}
   sendToGoogle: {fileID: 1289588395}
@@ -638,6 +639,7 @@ MonoBehaviour:
   timeToComplete: 0
   sendToGoogle: {fileID: 1289588395}
   playerMain: {fileID: 635070116}
+  timer: {fileID: 238759228}
   letterSpeed: 3
   rockSpeed: 3.5
 --- !u!114 &345747629
@@ -1008,6 +1010,7 @@ MonoBehaviour:
   currentHealth: 0
   sendToGoogle: {fileID: 1289588395}
   healthBar: {fileID: 1209196295}
+  timer: {fileID: 238759228}
 --- !u!1 &883307403
 GameObject:
   m_ObjectHideFlags: 0

@@ -23,6 +23,7 @@ public class LevelManagerLevel1 : MonoBehaviour
 
     [SerializeField] SendToGoogle sendToGoogle;
     public PlayerMain playerMain;
+    public Timer timer;
     
     public float letterSpeed = 1.5f;
     public float rockSpeed = 2.5f;
@@ -161,15 +162,11 @@ public class LevelManagerLevel1 : MonoBehaviour
         {
         timeFinished=Time.time;
         timeToComplete=Math.Round(timeFinished-timeStart,2);
-        if (timeToComplete>0){
+        if (timeToComplete>0 && timer.currentTime>0 && playerMain.currentHealth>0){
              currentLevel=pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name];            
              sendToGoogle.UpdateLevelAnalytics(currentLevel,timeToComplete);
-             Debug.Log("The player Health is"+currentLevel);
-             if(playerMain.currentHealth>0){
              sendToGoogle.UpdateUnsuccessfulTriesAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],true);
-             }
-        }
-        }
-        
+        }   
+    }
     }
 }

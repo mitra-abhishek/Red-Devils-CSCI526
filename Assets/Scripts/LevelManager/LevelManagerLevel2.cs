@@ -28,6 +28,8 @@ public class LevelManagerLevel2 : MonoBehaviour
     };
     private int currentLevel=1;
     public PlayerMain playerMain;
+    public Timer timer;
+
 
     
     //private static Dictionary<int, List<string>> all_level_words = new Dictionary<int, List<string>>();
@@ -99,6 +101,7 @@ public class LevelManagerLevel2 : MonoBehaviour
     void Start()
     {
         Initialise();
+        timeStart=Time.time;
     }
 
     // Update is called once per frame
@@ -151,14 +154,11 @@ public class LevelManagerLevel2 : MonoBehaviour
         {
         timeFinished=Time.time;
         timeToComplete=Math.Round(timeFinished-timeStart,2);
-        if (timeToComplete>0){
+         if (timeToComplete>0 & timer.currentTime>0 & playerMain.currentHealth>0){
              currentLevel=pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name];            
              sendToGoogle.UpdateLevelAnalytics(currentLevel,timeToComplete);
-             Debug.Log("The player Health is"+currentLevel);
-            if(playerMain.currentHealth>0){
              sendToGoogle.UpdateUnsuccessfulTriesAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],true);
-             }
-        }
+        }   
         }
         
     }

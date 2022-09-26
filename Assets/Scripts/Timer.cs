@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
-    float currentTime = 0f;
+    public float currentTime = 0f;
     public float startingTime = 120f;
     public Dictionary<string, int> pairs = new Dictionary<string, int>()
     {

@@ -125,7 +125,9 @@ public class SendToGoogle : MonoBehaviour
     public void UpdateUnsuccessfulTriesAnalytics(int current_level,bool isLevelCompleted){
         _currentLevel=current_level;
         _isLevelCompleted=isLevelCompleted;
+        if(this!=null){
         SendUnsuccessfulTriesAnalytics();
+        }
 
     }
 

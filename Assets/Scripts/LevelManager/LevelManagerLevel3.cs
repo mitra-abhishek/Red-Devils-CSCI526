@@ -22,12 +22,15 @@ public class LevelManagerLevel3 : MonoBehaviour
     public float timeStart;
     public float timeFinished;
     public double timeToComplete;
+    private float checktime;
      public Dictionary<String, int> pairs = new Dictionary<String, int>()
     {
         { "SampleScene 2", 1 }, { "Level 2", 2 },{"Level 3",3}
     };
     private int currentLevel=1;
     public PlayerMain playerMain;
+    public Timer timer;
+
 
     
     //private static Dictionary<int, List<string>> all_level_words = new Dictionary<int, List<string>>();
@@ -51,9 +54,14 @@ public class LevelManagerLevel3 : MonoBehaviour
         
         //List<string> level_words = all_level_words[1];
 
+        // List<string> level_words = new List<string>
+        // {
+        //     "ACUTE", "BROAD", "CRAZY", "EXTRA", "FIFTH", "GROSS", "HARSH","YOUNG", "VAGUE", "TIGHT", "RURAL", "SMART","PRIME", "NAVAL"
+        // };
+
         List<string> level_words = new List<string>
         {
-            "ACUTE", "BROAD", "CRAZY", "EXTRA", "FIFTH", "GROSS", "HARSH","YOUNG", "VAGUE", "TIGHT", "RURAL", "SMART","PRIME", "NAVAL"
+            "AXE"
         };
        
         int index = random.Next(level_words.Count);
@@ -99,6 +107,7 @@ public class LevelManagerLevel3 : MonoBehaviour
     void Start()
     {
         Initialise();
+        timeStart=Time.time;
     }
 
     // Update is called once per frame
@@ -151,14 +160,12 @@ public class LevelManagerLevel3 : MonoBehaviour
         {
         timeFinished=Time.time;
         timeToComplete=Math.Round(timeFinished-timeStart,2);
-        if (timeToComplete>0){
+        Debug.Log("The completion time is"+timeToComplete);
+          if (timeToComplete>0 & timer.currentTime>0 & playerMain.currentHealth>0){
              currentLevel=pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name];            
              sendToGoogle.UpdateLevelAnalytics(currentLevel,timeToComplete);
-             Debug.Log("The current level is"+currentLevel);
-             if(playerMain.currentHealth>0){
              sendToGoogle.UpdateUnsuccessfulTriesAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],true);
-             }
-        }
+        }   
         }
         
     }

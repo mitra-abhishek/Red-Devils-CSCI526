@@ -15,6 +15,7 @@ public class PlayerMain : MonoBehaviour
     [SerializeField] SendToGoogle sendToGoogle;
 
     public HealthBar healthBar;
+    public Timer timer;
     void Start()
     {
        currentHealth=maxHealth; 
