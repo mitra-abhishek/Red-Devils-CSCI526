@@ -32,7 +32,7 @@ public class PlayerMain : MonoBehaviour
         healthBar.setHealth(currentHealth);
         Debug.Log("The scence health is"+currentHealth);
         if (currentHealth<=0){
-            sendToGoogle.UpdateUnsuccessfulTriesAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name]);
+            sendToGoogle.UpdateUnsuccessfulTriesAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],false);
             Destroy(this.gameObject);
             UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene 2");
         }

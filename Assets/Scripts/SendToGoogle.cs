@@ -19,6 +19,7 @@ public class SendToGoogle : MonoBehaviour
 
     // Unsuccesful Attempts
     private int _currentLevel;
+    private bool _isLevelCompleted;
 
 
     // Finishing Time Analytics:
@@ -85,16 +86,17 @@ public class SendToGoogle : MonoBehaviour
 
         // StartCoroutine(Post(_sessionID.ToString(), _testUserHealth.ToString(),"1"));
         if(this.gameObject!=null){
-        StartCoroutine(PostUnsuccessfulTriesAnalytics(_sessionID.ToString(), _currentLevel.ToString()));
+        StartCoroutine(PostUnsuccessfulTriesAnalytics(_sessionID.ToString(), _currentLevel.ToString(),_isLevelCompleted.ToString()));
         }
     }
     
-    private IEnumerator PostUnsuccessfulTriesAnalytics(string sessionID, string currentLevel)
+    private IEnumerator PostUnsuccessfulTriesAnalytics(string sessionID, string currentLevel,string isLevelCompleted)
     {
         //Create Form and enter responses
         WWWForm form = new WWWForm();
         form.AddField("entry.1366828310", sessionID);
         form.AddField("entry.363749641",currentLevel);
+        form.AddField("entry.1458904313",isLevelCompleted);
         //Send responses and verify result
         using (UnityWebRequest www = UnityWebRequest.Post(levelAttemptsURL, form))
         {
@@ -120,8 +122,9 @@ public class SendToGoogle : MonoBehaviour
         }
     }
 
-    public void UpdateUnsuccessfulTriesAnalytics(int current_level){
+    public void UpdateUnsuccessfulTriesAnalytics(int current_level,bool isLevelCompleted){
         _currentLevel=current_level;
+        _isLevelCompleted=isLevelCompleted;
         SendUnsuccessfulTriesAnalytics();
 
     }

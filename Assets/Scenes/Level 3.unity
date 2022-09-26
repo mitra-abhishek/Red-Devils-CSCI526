@@ -532,12 +532,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3e190c3d9067c643a77a0e51c666710, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sendToGoogle: {fileID: 682405817}
   levelWord: 
   blankList: []
   blankPrefab: {fileID: 5187836768122991378, guid: 7cce4b751137f4e84a2f103914e1a902, type: 3}
   blankHolder: {fileID: 252724979}
   letterSpeed: 2
   rockSpeed: 2.5
+  timeStart: 0
+  timeFinished: 0
+  timeToComplete: 0
+  playerMain: {fileID: 635070116}
 --- !u!114 &345747629
 MonoBehaviour:
   m_ObjectHideFlags: 0

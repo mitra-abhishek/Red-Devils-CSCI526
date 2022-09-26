@@ -358,7 +358,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingTime: 120
-  currentLevel: 000000000100000002000000
   countdownText: {fileID: 238759229}
   sendToGoogle: {fileID: 82895570}
 --- !u!114 &238759229
@@ -685,6 +684,7 @@ MonoBehaviour:
   timeFinished: 0
   timeToComplete: 0
   sendToGoogle: {fileID: 82895570}
+  playerMain: {fileID: 635070116}
   letterSpeed: 1.5
   rockSpeed: 10
 --- !u!114 &345747629
@@ -1053,7 +1053,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 0
-  currentLevel: 000000000100000002000000
   sendToGoogle: {fileID: 82895570}
   healthBar: {fileID: 1209196295}
 --- !u!1 &883307403
