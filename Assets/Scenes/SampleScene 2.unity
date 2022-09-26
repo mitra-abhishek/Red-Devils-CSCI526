@@ -640,7 +640,7 @@ MonoBehaviour:
   playerMain: {fileID: 635070116}
   letterSpeed: 3
   rockSpeed: 3.5
-  level1Bullets: 10
+  level1Bullets: 50
 --- !u!114 &345747629
 MonoBehaviour:
   m_ObjectHideFlags: 0
