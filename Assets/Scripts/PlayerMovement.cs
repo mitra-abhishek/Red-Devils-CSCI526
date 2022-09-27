@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 screenBounds;
     private Vector2 posMouse;
     private Vector2 mouseMove;
+    private float angle = 0;
+    public float bulletSpeed = 7f;
 
     public GameObject bulletPrefab;
     public Camera sceneCam;
@@ -19,13 +21,6 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {   
-    }
-
-    void mouseMovement(){
-        float xAxis=Input.GetAxisRaw("Horizontal");
-        float yAxis=Input.GetAxisRaw("Vertical");
-        mouseMove=new Vector2(xAxis, yAxis).normalized; 
-        posMouse=sceneCam.ScreenToWorldPoint(Input.mousePosition);
     }
 
 
@@ -39,22 +34,35 @@ public class PlayerMovement : MonoBehaviour
         GetComponent<Rigidbody2D>().position = new Vector2(
             Mathf.Clamp(GetComponent<Rigidbody2D>().position.x, -screenBounds.x, screenBounds.x), 
             y
-        );
-
-        rb.velocity=new Vector2(mouseMove.x*5, mouseMove.y*5);
-        Vector2 aimDirection=posMouse-rb.position;
-        float aimAngle=Mathf.Atan2(aimDirection.y, aimDirection.x)*Mathf.Rad2Deg-90f;
-        rb.rotation=aimAngle;
-        
+        );  
     }
 
     public void shoot(){
         GameObject bullet=Instantiate(bulletPrefab) as GameObject;
         bullet.transform.position=GetComponent<Rigidbody2D>().position;
+        Vector2 bulletDirection = new Vector2(Mathf.Sin(Mathf.Deg2Rad * -angle), Mathf.Cos(Mathf.Deg2Rad * -angle));
+        bullet.GetComponent<Rigidbody2D>().velocity = bulletDirection * bulletSpeed;
+        bullet.transform.eulerAngles = new Vector3(0, 0, angle);
     }
 
     void Update(){
-        if(GameManager.instance.bulletController.getBullets()>0 && (Input.GetKeyDown("space") || Input.GetMouseButtonDown(0))){
+        if (Input.GetKeyDown(KeyCode.RightArrow)) {
+            if(angle != -90) {
+                angle += -15;
+                transform.eulerAngles = new Vector3(0, 0, angle);
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftArrow)) {
+            
+            if(angle != 90) {
+                angle += 15;
+                transform.eulerAngles = new Vector3(0, 0, angle);
+            }
+        }
+
+
+        if(GameManager.instance.bulletController.getBullets()>0 && (Input.GetKeyDown("space") || Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.UpArrow))){
             shoot();
             GameManager.instance.bulletController.subtractBullet();
         }
@@ -62,7 +70,6 @@ public class PlayerMovement : MonoBehaviour
             Destroy(this.gameObject);
             UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
         }
-        mouseMovement();
     }
 
 }

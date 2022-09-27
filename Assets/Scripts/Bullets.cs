@@ -14,16 +14,6 @@ public class Bullets : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rigidBullet = this.GetComponent<Rigidbody2D>();
-        posMouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector3 posBody = transform.position;
-        Vector3 rotation = posBody - posMouse;
-        Vector3 bulletShootDirection = posMouse - posBody;
-        rigidBullet.velocity = new Vector2(bulletShootDirection.x, bulletShootDirection.y).normalized * speed;
-        float bulletTransformAngle = Mathf.Atan2 (rotation.y, rotation.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler (0, 0, bulletTransformAngle+90);
-
-        // rigidBullet.velocity = new Vector2(0, speed);
         screenBounds=Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));   
     }
 
