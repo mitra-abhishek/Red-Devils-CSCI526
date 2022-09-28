@@ -62,7 +62,7 @@ public class LevelManagerLevel3 : MonoBehaviour
 
         List<string> level_words = new List<string>
         {
-            "AXE"
+            "GRAPE", "MANGO", "PEACH"
         };
        
         int index = random.Next(level_words.Count);

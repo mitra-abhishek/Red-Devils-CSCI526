@@ -56,7 +56,7 @@ public class LevelManagerLevel1 : MonoBehaviour
 
         List<string> level_words = new List<string>
         {
-            "CAT", "DOG", "PIN"
+            "CAT", "DOG", "FOX", "BAT", "OWL", "ANT"
         };
         
         int index = random.Next(level_words.Count);

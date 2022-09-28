@@ -689,7 +689,7 @@ MonoBehaviour:
   playerMain: {fileID: 635070116}
   timer: {fileID: 238759228}
   letterSpeed: 1.5
-  rockSpeed: 10
+  rockSpeed: 7
 --- !u!114 &345747629
 MonoBehaviour:
   m_ObjectHideFlags: 0

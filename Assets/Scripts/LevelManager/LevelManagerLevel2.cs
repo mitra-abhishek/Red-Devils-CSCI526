@@ -17,7 +17,7 @@ public class LevelManagerLevel2 : MonoBehaviour
     public Transform blankHolder;
     public Dictionary<int,Char> letterMap = new Dictionary<int,Char>();
     public float letterSpeed = 1.5f;
-    public float rockSpeed = 3.0f;
+    public float rockSpeed = 2.0f;
 
     public float timeStart;
     public float timeFinished;
@@ -56,7 +56,7 @@ public class LevelManagerLevel2 : MonoBehaviour
 
         List<string> level_words = new List<string>
         {
-            "ACUTE", "BROAD", "CRAZY", "EXTRA", "FIFTH", "GROSS", "HARSH","YOUNG", "VAGUE", "TIGHT", "RURAL", "SMART","PRIME", "NAVAL"
+            "FORD", "FIAT", "AUDI", "BENZ"
         };
        
         int index = random.Next(level_words.Count);
