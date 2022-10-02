@@ -10,6 +10,9 @@ public class LetterPrefabGenerator : MonoBehaviour
     private Vector2 screenBounds;
     private static System.Random random = new System.Random();
     private static Dictionary<int, List<string>> all_level_words = new Dictionary<int, List<string>>();
+    
+    private List<string> lettersDropped = new List<string>(15);
+    private Dictionary<string, int> lettersDroppedDict = new Dictionary<string, int>();
 
     // Start is called before the first frame update
     void Start()
@@ -40,7 +43,7 @@ public class LetterPrefabGenerator : MonoBehaviour
     }
     
 
-     private string getLetter(string word)
+     private string getLetterRandom(string word)
     {
         int index = random.Next(word.Length);
         char let =  word[index];
@@ -50,7 +53,7 @@ public class LetterPrefabGenerator : MonoBehaviour
         // Debug.Log("Word : " + word + ", Letter : " + let);
 
         int random_num = random.Next(1, 6);
-        if (random_num <= 2)
+        if (random_num <= 3)
         {
             return random_let.ToString().ToUpper();
         }
@@ -58,7 +61,104 @@ public class LetterPrefabGenerator : MonoBehaviour
         return let.ToString().ToUpper();
     }
 
-    private void createLetters(string word){
+     // private string getLetter(string word)
+     // {
+     //     if (lettersDropped.Count < 15)
+     //     {
+     //         string char_chosen = getLetterRandom(word);
+     //         lettersDropped.Add(char_chosen);
+     //         if (lettersDroppedDict.ContainsKey(char_chosen))
+     //         {
+     //             lettersDroppedDict[char_chosen] += 1;
+     //         }
+     //         else
+     //         {
+     //             lettersDroppedDict.Add(char_chosen,1);
+     //         }
+     //
+     //         return char_chosen;
+     //     }
+     //     else
+     //     {
+     //         bool letterDroppedorNot = false;
+     //         foreach (var a in word.ToUpper())
+     //         {
+     //             if (!lettersDroppedDict.ContainsKey(a.ToString()) || lettersDroppedDict[a.ToString()] <= 0)
+     //             {
+     //                 lettersDropped.RemoveAt(0);
+     //                 lettersDropped.Add(a.ToString());
+     //                 if (!lettersDroppedDict.ContainsKey(a.ToString()))
+     //                 {
+     //                     lettersDroppedDict.Add(a.ToString(), 1);
+     //                 }
+     //                 else
+     //                 {
+     //                     lettersDroppedDict[a.ToString()] += 1;
+     //                 }
+     //
+     //                 letterDroppedorNot = true;
+     //                 return a.ToString().ToUpper();
+     //             }
+     //         }
+     //         if (!letterDroppedorNot)
+     //         {
+     //             string char_chosen = getLetterRandom(word);
+     //             lettersDropped.Add(char_chosen);
+     //             if (lettersDroppedDict.ContainsKey(char_chosen))
+     //             {
+     //                 lettersDroppedDict[char_chosen] += 1;
+     //             }
+     //             else
+     //             {
+     //                 lettersDroppedDict.Add(char_chosen,1);
+     //             }
+     //
+     //             return char_chosen;
+     //         }
+     //         
+     //     }
+     //     
+     // }
+     //
+     private string getLetter(string word)
+     {
+         if (lettersDropped.Count == 15)
+         {
+             foreach (var a in word.ToUpper())
+             {
+                 if (!lettersDroppedDict.ContainsKey(a.ToString()) || lettersDroppedDict[a.ToString()] <= 0)
+                 {
+                     lettersDropped.RemoveAt(0);
+                     lettersDropped.Add(a.ToString());
+                     if (!lettersDroppedDict.ContainsKey(a.ToString()))
+                     {
+                         lettersDroppedDict.Add(a.ToString(), 1);
+                     }
+                     else
+                     {
+                         lettersDroppedDict[a.ToString()] += 1;
+                     }
+                     return a.ToString().ToUpper();
+                 }
+             }
+         }
+         
+         string charChosen = getLetterRandom(word);
+         lettersDropped.Add(charChosen);
+         if (lettersDroppedDict.ContainsKey(charChosen))
+         {
+             lettersDroppedDict[charChosen] += 1;
+         }
+         else
+         {
+             lettersDroppedDict.Add(charChosen,1);
+         }
+
+         return charChosen;
+         
+     }
+
+     private void createLetters(string word){
         //GameObject letter=Instantiate(letterPrefab) as GameObject;
         
         

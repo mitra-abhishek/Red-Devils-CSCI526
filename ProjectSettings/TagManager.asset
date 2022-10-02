@@ -11,6 +11,7 @@ TagManager:
   - Garbage Collector
   - Spawn Line
   - Hangman Display Letter
+  - BulletPowerup
   layers:
   - Default
   - TransparentFX
