@@ -12,6 +12,7 @@ public class SendToGoogle : MonoBehaviour
 
     [SerializeField]private string levelCompletionURL;
     [SerializeField]private string levelAttemptsURL;
+    [SerializeField]private string averageHealthbarAnalyticsURL;
 
     private long _sessionID;
     private int _testUserHealth;
@@ -25,6 +26,9 @@ public class SendToGoogle : MonoBehaviour
     // Finishing Time Analytics:
     private double _completionTime;
     private int _completedLevel;
+
+    // Health Analytics:
+    private int _currentHealth;
 
     private void Awake()
     {
@@ -93,12 +97,44 @@ public class SendToGoogle : MonoBehaviour
     private IEnumerator PostUnsuccessfulTriesAnalytics(string sessionID, string currentLevel,string isLevelCompleted)
     {
         //Create Form and enter responses
+        Debug.Log("Unsuccessful Tries Analytics");
         WWWForm form = new WWWForm();
         form.AddField("entry.1366828310", sessionID);
         form.AddField("entry.363749641",currentLevel);
         form.AddField("entry.1458904313",isLevelCompleted);
         //Send responses and verify result
         using (UnityWebRequest www = UnityWebRequest.Post(levelAttemptsURL, form))
+        {
+            yield return www.SendWebRequest();
+
+            if (www.result != UnityWebRequest.Result.Success)
+            {
+                Debug.Log(www.error);
+            }
+            else
+            {
+                Debug.Log("SendToGoogle.Post: Form upload completed.");
+            }
+        }
+
+    }
+
+    public void SendHealthbarAnalytics(){
+        if(this.gameObject!=null){
+        StartCoroutine(PostHealthbarAnalytics(_sessionID.ToString(), _completedLevel.ToString(),_currentHealth.ToString()));
+        }
+    }
+
+    private IEnumerator PostHealthbarAnalytics(string sessionID, string completedLevel,string currentHealth)
+    {
+        Debug.Log("The Healthbar Analytics"+completedLevel);
+        //Create Form and enter responses
+        WWWForm form = new WWWForm();
+        form.AddField("entry.628208234", sessionID);
+        form.AddField("entry.836810572",completedLevel);
+        form.AddField("entry.1135885735",currentHealth);
+        //Send responses and verify result
+        using (UnityWebRequest www = UnityWebRequest.Post(averageHealthbarAnalyticsURL, form))
         {
             yield return www.SendWebRequest();
 
@@ -125,10 +161,18 @@ public class SendToGoogle : MonoBehaviour
     public void UpdateUnsuccessfulTriesAnalytics(int current_level,bool isLevelCompleted){
         _currentLevel=current_level;
         _isLevelCompleted=isLevelCompleted;
+        Debug.Log("Unsuccessful Tries Function");
         if(this!=null){
-        SendUnsuccessfulTriesAnalytics();
+            SendUnsuccessfulTriesAnalytics();
         }
-
     }
 
+    public void UpdateHealthbarAnalytics(int completedLevel, int currentHealth){
+        _completedLevel=completedLevel;
+        _currentHealth=currentHealth;
+        if(this!=null){
+            SendHealthbarAnalytics();
+        }
+    }
+// Compiling
 }
