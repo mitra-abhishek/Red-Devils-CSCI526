@@ -47,18 +47,18 @@ public class PlayerMovement : MonoBehaviour
 
     void Update(){
         if (Input.GetKey(KeyCode.RightArrow)) {
-            if(angle != -90) {
-                angle += -1.2f;
-                transform.eulerAngles = new Vector3(0, 0, angle);
-            }
+            if(angle>= -90)
+            angle -= 0.5f;
+            transform.eulerAngles = new Vector3(0, 0, angle);
+            print(angle);
         }
 
         if (Input.GetKey(KeyCode.LeftArrow)) {
             
-            if(angle != 90) {
-                angle += 1.2f;
-                transform.eulerAngles = new Vector3(0, 0, angle);
-            }
+            if(angle<= 90)
+            angle += 0.5f;
+            transform.eulerAngles = new Vector3(0, 0, angle);
+            print(angle);
         }
 
 
