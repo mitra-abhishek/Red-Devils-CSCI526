@@ -11,6 +11,8 @@ public class LevelManagerLevel2 : MonoBehaviour
     
     // Other Game parameters can be added here! like health, time, etc;
     [SerializeField] SendToGoogle sendToGoogle;
+    [SerializeField] BulletController bulletController;
+
     public String levelWord = "";
     public List<TMP_Text> blankList = new List<TMP_Text>();
     public GameObject blankPrefab;
@@ -23,7 +25,8 @@ public class LevelManagerLevel2 : MonoBehaviour
     public float timeFinished;
     public double timeToComplete;
     public int level2Bullets = 45;
-     public Dictionary<String, int> pairs = new Dictionary<String, int>()
+    public int availableBullets;
+    public Dictionary<String, int> pairs = new Dictionary<String, int>()
     {
         { "SampleScene 2", 1 }, { "Level 2", 2 },{"Level 3",3}
     };
@@ -68,6 +71,7 @@ public class LevelManagerLevel2 : MonoBehaviour
         GameManager.instance.LetterSpeed = letterSpeed;
         GameManager.instance.RockSpeed = rockSpeed;
         GameManager.instance.bullets = level2Bullets;
+        availableBullets=level2Bullets;
 
     }
 
@@ -157,12 +161,20 @@ public class LevelManagerLevel2 : MonoBehaviour
         if (this != null)
         {
         timeFinished=Time.time;
+        availableBullets=bulletController.availableBullets;
         timeToComplete=Math.Round(timeFinished-timeStart,2);
-         if (timeToComplete>0 & timer.currentTime>0 & playerMain.currentHealth>0){
+         if (timeToComplete>0 && timer.currentTime>0 && playerMain.currentHealth>0){
+            if (availableBullets>1){
              currentLevel=pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name];            
              sendToGoogle.UpdateLevelAnalytics(currentLevel,timeToComplete);
              sendToGoogle.UpdateUnsuccessfulTriesAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],true);
+             sendToGoogle.UpdateHealthbarAnalytics(currentLevel,playerMain.currentHealth);
         }   
+        else{
+            sendToGoogle.UpdateUnsuccessfulTriesAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],false);
+            UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene 2");
+        }
+        }
         }
         
     }

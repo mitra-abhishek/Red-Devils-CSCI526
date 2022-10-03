@@ -11,6 +11,8 @@ public class LevelManagerLevel3 : MonoBehaviour
     
     // Other Game parameters can be added here! like health, time, etc;
     [SerializeField] SendToGoogle sendToGoogle;
+    [SerializeField] BulletController bulletController;
+
     public String levelWord = "";
     public List<TMP_Text> blankList = new List<TMP_Text>();
     public GameObject blankPrefab;
@@ -19,6 +21,7 @@ public class LevelManagerLevel3 : MonoBehaviour
     public float letterSpeed = 1.5f;
     public float rockSpeed = 3.5f;
     public int level3Bullets = 40;
+    public int availableBullets;
 
     public float timeStart;
     public float timeFinished;
@@ -74,6 +77,7 @@ public class LevelManagerLevel3 : MonoBehaviour
         GameManager.instance.LetterSpeed = letterSpeed;
         GameManager.instance.RockSpeed = rockSpeed;
         GameManager.instance.bullets = level3Bullets;
+        availableBullets=level3Bullets;
 
     }
 
@@ -164,12 +168,20 @@ public class LevelManagerLevel3 : MonoBehaviour
         {
         timeFinished=Time.time;
         timeToComplete=Math.Round(timeFinished-timeStart,2);
-        Debug.Log("The completion time is"+timeToComplete);
-          if (timeToComplete>0 & timer.currentTime>0 & playerMain.currentHealth>0){
-             currentLevel=pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name];            
-             sendToGoogle.UpdateLevelAnalytics(currentLevel,timeToComplete);
-             sendToGoogle.UpdateUnsuccessfulTriesAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],true);
-        }   
+        availableBullets=bulletController.availableBullets;
+        Debug.Log("The available Bullets are"+availableBullets);
+        if (timeToComplete>0 && timer.currentTime>0 && playerMain.currentHealth>0){
+            if (availableBullets>1){
+            currentLevel=pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name];            
+            sendToGoogle.UpdateLevelAnalytics(currentLevel,timeToComplete);
+            sendToGoogle.UpdateUnsuccessfulTriesAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],true);
+            sendToGoogle.UpdateHealthbarAnalytics(currentLevel,playerMain.currentHealth);
+            }
+            else{
+                sendToGoogle.UpdateUnsuccessfulTriesAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],false);
+                UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene 2");
+                }
+        }
         }
         
     }

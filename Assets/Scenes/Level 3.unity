@@ -542,6 +542,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletsToShoot: 0
   bulletsCountText: {fileID: 290474932}
+  sendToGoogle: {fileID: 682405817}
 --- !u!114 &290474932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -632,6 +633,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sendToGoogle: {fileID: 682405817}
+  bulletController: {fileID: 290474931}
   levelWord: 
   blankList: []
   blankPrefab: {fileID: 5187836768122991378, guid: 7cce4b751137f4e84a2f103914e1a902, type: 3}
@@ -639,6 +641,7 @@ MonoBehaviour:
   letterSpeed: 2
   rockSpeed: 2.5
   level3Bullets: 40
+  availableBullets: 0
   timeStart: 0
   timeFinished: 0
   timeToComplete: 0
@@ -1060,7 +1063,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelCompletionURL: https://docs.google.com/forms/u/0/d/e/1FAIpQLSc_zXZmw5qk7WBukBgV7lYpYfFlunDd7xQa4qTKyOqGiV8u3Q/formResponse
   levelAttemptsURL: https://docs.google.com/forms/u/0/d/e/1FAIpQLSdB6lDNYq6_zdR0RPEAElwkRkFsfxMq0tW14fCfGiY2mVETgQ/formResponse
-  playerMain: {fileID: 0}
+  averageHealthbarAnalyticsURL: https://docs.google.com/forms/u/0/d/e/1FAIpQLScKqAEsntpZlcSdqTH3yzm6gzh92zztp1hiu23VbBUlWJYhxQ/formResponse
+  playerMain: {fileID: 635070116}
 --- !u!4 &682405818
 Transform:
   m_ObjectHideFlags: 0

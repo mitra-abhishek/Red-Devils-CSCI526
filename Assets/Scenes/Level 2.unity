@@ -154,7 +154,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelCompletionURL: https://docs.google.com/forms/u/0/d/e/1FAIpQLSc_zXZmw5qk7WBukBgV7lYpYfFlunDd7xQa4qTKyOqGiV8u3Q/formResponse
   levelAttemptsURL: https://docs.google.com/forms/u/0/d/e/1FAIpQLSdB6lDNYq6_zdR0RPEAElwkRkFsfxMq0tW14fCfGiY2mVETgQ/formResponse
-  playerMain: {fileID: 0}
+  averageHealthbarAnalyticsURL: https://docs.google.com/forms/u/0/d/e/1FAIpQLScKqAEsntpZlcSdqTH3yzm6gzh92zztp1hiu23VbBUlWJYhxQ/formResponse
+  playerMain: {fileID: 635070116}
 --- !u!4 &82895571
 Transform:
   m_ObjectHideFlags: 0
@@ -686,10 +687,13 @@ MonoBehaviour:
   timeFinished: 0
   timeToComplete: 0
   sendToGoogle: {fileID: 82895570}
+  bulletController: {fileID: 377380306}
   playerMain: {fileID: 635070116}
   timer: {fileID: 238759228}
   letterSpeed: 1.5
   rockSpeed: 7
+  level1Bullets: 50
+  availableBullets: 0
 --- !u!114 &345747629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -857,6 +861,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletsToShoot: 60
   bulletsCountText: {fileID: 377380307}
+  sendToGoogle: {fileID: 82895570}
 --- !u!114 &377380307
 MonoBehaviour:
   m_ObjectHideFlags: 0

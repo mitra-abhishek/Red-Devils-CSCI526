@@ -1,11 +1,15 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
+using System.Collections.Generic;
+
 
 
 public class BulletController : MonoBehaviour
 {
-    public int bulletsToShoot;
-    [SerializeField] Text bulletsCountText;
+     public int bulletsToShoot;
+     public int availableBullets;
+     [SerializeField] Text bulletsCountText;
 
    public void setBullets(int bullets){
        bulletsToShoot=bullets;
@@ -21,7 +25,7 @@ public class BulletController : MonoBehaviour
 
    void Update() {
         bulletsCountText.text = GameManager.instance.bulletController.getBullets().ToString();
-        
+        availableBullets=GameManager.instance.bulletController.getBullets();
         if (GameManager.instance.bulletController.getBullets() <= 10 ){
              bulletsCountText.color = Color.red;
         }
