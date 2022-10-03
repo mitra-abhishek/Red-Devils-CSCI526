@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 387216967669953161}
   - component: {fileID: 1894228963035091770}
   - component: {fileID: 2639584406234585721}
+  - component: {fileID: 8055725179153831021}
   m_Layer: 0
   m_Name: Bullet Power Up
   m_TagString: BulletPowerup
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 387216967669953160}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 460.82443, y: 507.0843, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -117,7 +118,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -133,3 +134,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.34, y: 0.33}
   m_EdgeRadius: 0
+--- !u!114 &8055725179153831021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387216967669953160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7937530437dc27f4c9d756fe51a99c16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
