@@ -673,8 +673,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rockPrefab: {fileID: 5356430114322639579, guid: 70a51788f29000747ae30818dca94965, type: 3}
-  rockReAppearTime: 2
-  maxRockAtTime: 3
+  rockReAppearTime: 1
+  maxRockAtTime: 2
 --- !u!1 &356175784
 GameObject:
   m_ObjectHideFlags: 0

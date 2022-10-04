@@ -676,7 +676,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rockPrefab: {fileID: 5356430114322639579, guid: 70a51788f29000747ae30818dca94965, type: 3}
   rockReAppearTime: 0.9
-  maxRockAtTime: 4
+  maxRockAtTime: 3
 --- !u!114 &345747631
 MonoBehaviour:
   m_ObjectHideFlags: 0
