@@ -179,6 +179,7 @@ public class LevelManagerLevel1 : MonoBehaviour
         }  
         else{
         sendToGoogle.UpdateUnsuccessfulTriesAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],false);
+        sendToGoogle.UpdateResonForDeathAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],"Bullet Finished");
         UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene 2");
         } 
     }

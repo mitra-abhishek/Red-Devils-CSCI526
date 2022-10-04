@@ -13,6 +13,7 @@ public class SendToGoogle : MonoBehaviour
     [SerializeField]private string levelCompletionURL;
     [SerializeField]private string levelAttemptsURL;
     [SerializeField]private string averageHealthbarAnalyticsURL;
+    [SerializeField]private string deathReasonAnalyticsURL;
 
     private long _sessionID;
     private int _testUserHealth;
@@ -29,6 +30,9 @@ public class SendToGoogle : MonoBehaviour
 
     // Health Analytics:
     private int _currentHealth;
+
+    //deathReason Analytics
+    private string _deathReason;
 
     private void Awake()
     {
@@ -150,6 +154,37 @@ public class SendToGoogle : MonoBehaviour
 
     }
 
+    public void SendResonForDeathAnalytics(){
+        if(this.gameObject!=null){
+        StartCoroutine(PostResonForDeathAnalytics(_sessionID.ToString(), _currentLevel.ToString(),_deathReason));
+        }
+    }
+
+    private IEnumerator PostResonForDeathAnalytics(string sessionID, string currentLevel,string deathReason)
+    {
+        //Create Form and enter responses
+        Debug.Log("The reason for the death is"+currentLevel+"----"+deathReason);
+        WWWForm form = new WWWForm();
+        form.AddField("entry.1761087184", sessionID);
+        form.AddField("entry.2142992592",currentLevel);
+        form.AddField("entry.2025417393",deathReason);
+        //Send responses and verify result
+        using (UnityWebRequest www = UnityWebRequest.Post(deathReasonAnalyticsURL, form))
+        {
+            yield return www.SendWebRequest();
+
+            if (www.result != UnityWebRequest.Result.Success)
+            {
+                Debug.Log(www.error);
+            }
+            else
+            {
+                Debug.Log("SendToGoogle.Post: Form upload completed.");
+            }
+        }
+
+    }
+
     public void  UpdateLevelAnalytics(int completedLevel,double completionTime){
         _completionTime=completionTime;
         _completedLevel=completedLevel;
@@ -172,6 +207,14 @@ public class SendToGoogle : MonoBehaviour
         _currentHealth=currentHealth;
         if(this!=null){
             SendHealthbarAnalytics();
+        }
+    }
+
+    public void UpdateResonForDeathAnalytics(int current_level,string deathReason){
+        _deathReason=deathReason;
+        _currentLevel=current_level;
+        if(this!=null){
+            SendResonForDeathAnalytics();
         }
     }
 // Compiling

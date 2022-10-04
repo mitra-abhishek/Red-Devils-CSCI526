@@ -35,6 +35,7 @@ public class PlayerMain : MonoBehaviour
         Debug.Log("The scence health is"+currentHealth);
         if (currentHealth<=0){
             sendToGoogle.UpdateUnsuccessfulTriesAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],false);
+            sendToGoogle.UpdateResonForDeathAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],"Health Finished");
             Destroy(this.gameObject);
             UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene 2");
         }
