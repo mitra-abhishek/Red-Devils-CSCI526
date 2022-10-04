@@ -12,6 +12,8 @@ TagManager:
   - Spawn Line
   - Hangman Display Letter
   - BulletPowerup
+  - enemy_bullet
+  - enemy
   layers:
   - Default
   - TransparentFX

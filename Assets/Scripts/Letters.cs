@@ -43,15 +43,15 @@ public class Letters : MonoBehaviour
 
     private void letterCollidedwithPlayerorBullet()
     {
-        char letter_collided = gameObject.name[0];
-        if (LevelManagerLevel1.instance.levelWord.ToUpper().Contains(letter_collided.ToString()))
-        {
-            // True Condition then reveal the letter
-        }
-        else
-        {
-            // Decrease Health
-        }
+        // char letter_collided = gameObject.name[0];
+        // if (LevelManagerLevel1.instance.levelWord.ToUpper().Contains(letter_collided.ToString()))
+        // {
+        //     // True Condition then reveal the letter
+        // }
+        // else
+        // {
+        //     // Decrease Health
+        // }
     }
     private void OnCollisionEnter2D(Collision2D col)
     {
