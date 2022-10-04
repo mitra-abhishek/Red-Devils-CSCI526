@@ -640,7 +640,7 @@ MonoBehaviour:
   blankPrefab: {fileID: 5187836768122991378, guid: 7cce4b751137f4e84a2f103914e1a902, type: 3}
   blankHolder: {fileID: 252724979}
   letterSpeed: 2
-  rockSpeed: 2.5
+  rockSpeed: 4
   level3Bullets: 40
   availableBullets: 0
   timeStart: 0
@@ -675,7 +675,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rockPrefab: {fileID: 5356430114322639579, guid: 70a51788f29000747ae30818dca94965, type: 3}
-  rockReAppearTime: 0.9
+  rockReAppearTime: 3
   maxRockAtTime: 3
 --- !u!114 &345747631
 MonoBehaviour:
