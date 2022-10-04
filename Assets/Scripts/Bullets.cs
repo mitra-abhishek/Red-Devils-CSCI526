@@ -28,11 +28,13 @@ public class Bullets : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other){
         if(other.tag=="rock"){
             Destroy(other.gameObject);
+            // Destroy(this.gameObject);
 
         }
         if(other.tag == "Letter") {
             EventManager.TriggerEvent ("test", new Dictionary<string, object> { { "amount", other } });
             Destroy(other.gameObject);
+            // Destroy(this.gameObject);
         }
     }
 }
