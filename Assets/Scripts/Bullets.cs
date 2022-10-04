@@ -36,5 +36,9 @@ public class Bullets : MonoBehaviour
             Destroy(other.gameObject);
             // Destroy(this.gameObject);
         }
+
+        if(other.tag == "enemy"){
+            Destroy(other.gameObject);
+        }
     }
 }
