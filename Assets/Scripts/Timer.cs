@@ -41,6 +41,7 @@ public class Timer : MonoBehaviour
         if (currentTime <= 0) {
             currentTime = 0;
             sendToGoogle.UpdateUnsuccessfulTriesAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],false);
+            sendToGoogle.UpdateResonForDeathAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],"Time Finished");
             Destroy(this.gameObject);
             UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene 2");
         }

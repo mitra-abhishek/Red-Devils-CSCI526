@@ -312,7 +312,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTime: 0
-  startingTime: 90
+  startingTime: 10
   countdownText: {fileID: 238759229}
   sendToGoogle: {fileID: 682405817}
 --- !u!114 &238759229
@@ -541,8 +541,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletsToShoot: 0
+  availableBullets: 0
   bulletsCountText: {fileID: 290474932}
-  sendToGoogle: {fileID: 682405817}
 --- !u!114 &290474932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1048,6 +1048,7 @@ MonoBehaviour:
   levelCompletionURL: https://docs.google.com/forms/u/0/d/e/1FAIpQLSc_zXZmw5qk7WBukBgV7lYpYfFlunDd7xQa4qTKyOqGiV8u3Q/formResponse
   levelAttemptsURL: https://docs.google.com/forms/u/0/d/e/1FAIpQLSdB6lDNYq6_zdR0RPEAElwkRkFsfxMq0tW14fCfGiY2mVETgQ/formResponse
   averageHealthbarAnalyticsURL: https://docs.google.com/forms/u/0/d/e/1FAIpQLScKqAEsntpZlcSdqTH3yzm6gzh92zztp1hiu23VbBUlWJYhxQ/formResponse
+  deathReasonAnalyticsURL: https://docs.google.com/forms/u/0/d/e/1FAIpQLScaZKeWVOPaL-eEClhwcO6WOj-f8byk2VaYwV_bUToWNNA6dA/formResponse
   playerMain: {fileID: 635070116}
 --- !u!4 &682405818
 Transform:
