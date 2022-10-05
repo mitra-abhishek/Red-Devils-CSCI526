@@ -31,7 +31,9 @@ public class BulletPowerUp : MonoBehaviour
     {
         if (col.gameObject.CompareTag("player"))
         {
+            GameManager.instance.bulletController.addBullets(5);
             Debug.Log("Bullet Powerup added to Player");
+            Destroy(this.gameObject);
         }
     }
 }

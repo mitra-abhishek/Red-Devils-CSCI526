@@ -23,6 +23,10 @@ public class BulletController : MonoBehaviour
         bulletsToShoot--;
    }
 
+   public void addBullets(int count) {
+        bulletsToShoot += count;
+   }
+
    void Update() {
         bulletsCountText.text = GameManager.instance.bulletController.getBullets().ToString();
         availableBullets=GameManager.instance.bulletController.getBullets();
