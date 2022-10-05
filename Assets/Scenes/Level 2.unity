@@ -643,9 +643,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 345747627}
-  - component: {fileID: 345747628}
   - component: {fileID: 345747630}
   - component: {fileID: 345747629}
+  - component: {fileID: 345747631}
   m_Layer: 0
   m_Name: LevelManager2
   m_TagString: Untagged
@@ -668,33 +668,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &345747628
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 345747626}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e899657fc5ef1934198f675bf34c88ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelWord: 
-  blankList: []
-  blankPrefab: {fileID: 5187836768122991378, guid: 7cce4b751137f4e84a2f103914e1a902, type: 3}
-  blankHolder: {fileID: 252724979}
-  timeStart: 0
-  timeFinished: 0
-  timeToComplete: 0
-  sendToGoogle: {fileID: 82895570}
-  bulletController: {fileID: 377380306}
-  playerMain: {fileID: 635070116}
-  timer: {fileID: 238759228}
-  letterSpeed: 1.5
-  rockSpeed: 7
-  level1Bullets: 50
-  availableBullets: 0
 --- !u!114 &345747629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -724,6 +697,33 @@ MonoBehaviour:
   rockPrefab: {fileID: 5356430114322639579, guid: 70a51788f29000747ae30818dca94965, type: 3}
   rockReAppearTime: 2
   maxRockAtTime: 3
+--- !u!114 &345747631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 345747626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1616fe3f037df49a2855d0ef93fa2662, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sendToGoogle: {fileID: 82895570}
+  bulletController: {fileID: 377380306}
+  levelWord: 
+  blankList: []
+  blankPrefab: {fileID: 5187836768122991378, guid: 7cce4b751137f4e84a2f103914e1a902, type: 3}
+  blankHolder: {fileID: 252724979}
+  letterSpeed: 1.5
+  rockSpeed: 2
+  timeStart: 0
+  timeFinished: 0
+  timeToComplete: 0
+  level2Bullets: 45
+  availableBullets: 0
+  playerMain: {fileID: 0}
+  timer: {fileID: 0}
 --- !u!1 &356175784
 GameObject:
   m_ObjectHideFlags: 0
@@ -1703,6 +1703,10 @@ PrefabInstance:
       propertyPath: Level
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2502462975162162575, guid: be481bcb7702e014b98fa2a7c560e7ac, type: 3}
+      propertyPath: bulletController
+      value: 
+      objectReference: {fileID: 377380306}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be481bcb7702e014b98fa2a7c560e7ac, type: 3}
 --- !u!1 &1987629925
