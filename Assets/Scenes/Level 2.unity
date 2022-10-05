@@ -722,8 +722,8 @@ MonoBehaviour:
   timeToComplete: 0
   level2Bullets: 45
   availableBullets: 0
-  playerMain: {fileID: 0}
-  timer: {fileID: 0}
+  playerMain: {fileID: 635070116}
+  timer: {fileID: 238759228}
 --- !u!1 &356175784
 GameObject:
   m_ObjectHideFlags: 0
