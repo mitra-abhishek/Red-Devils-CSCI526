@@ -8,7 +8,7 @@ public class BulletPowerupPrefabGenerator : MonoBehaviour
     private static System.Random random = new System.Random();
 
     public GameObject bulletPowerupPrefab;
-    public float bulletPowerupReAppearTime=2.0f;
+    public float bulletPowerupReAppearTime=4.0f;
     public int maxbulletPowerupAtTime = 1;
 
     // Start is called before the first frame update

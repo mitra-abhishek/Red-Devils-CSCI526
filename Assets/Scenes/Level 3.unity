@@ -690,7 +690,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPowerupPrefab: {fileID: 387216967669953160, guid: 545bc3e745cd6394984a8a5484fed91b, type: 3}
-  bulletPowerupReAppearTime: 2
+  bulletPowerupReAppearTime: 4
   maxbulletPowerupAtTime: 1
 --- !u!114 &345747632
 MonoBehaviour:
