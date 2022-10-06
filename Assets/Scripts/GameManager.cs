@@ -41,6 +41,16 @@ public class GameManager : MonoBehaviour
         bulletController.setBullets(bullets);
     }
 
+    private void OnDisable()
+    {
+        previousScreenPositionSelected = new List<int>(10);
+    }
+
+    private void OnEnable()
+    {
+        previousScreenPositionSelected = new List<int>(10);
+    }
+
     // Update is called once per frame
     void Update()
     {
