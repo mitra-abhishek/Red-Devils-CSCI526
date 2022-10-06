@@ -19,6 +19,12 @@ public class GameManager : MonoBehaviour
 
     public BulletController bulletController;
 
+    public int ScreenDivisionNumber = 10;
+
+    private List<int> previousScreenPositionSelected = new List<int>(10);
+    
+    private static System.Random random = new System.Random();
+
 
     void Awake()
     {
@@ -39,5 +45,31 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public float getRandomRange(float start, float end)
+    {
+        //float start = -screenBounds.x; float end = screenBounds.x;
+        start = start + 0.25f;
+        end = end - 0.25f;
+        float diff_per_screen = (end - start)/ScreenDivisionNumber;
+
+        int random_number = random.Next(ScreenDivisionNumber);
+
+        while (previousScreenPositionSelected.Contains(random_number))
+        {
+            random_number = random.Next(ScreenDivisionNumber);
+        }
+
+        if (previousScreenPositionSelected.Count >= 10)
+        {
+            previousScreenPositionSelected.RemoveAt(0);
+        }
+        
+        previousScreenPositionSelected.Add(random_number);
+
+        float final_position = start + random_number * diff_per_screen;
+
+        return final_position;
     }
 }

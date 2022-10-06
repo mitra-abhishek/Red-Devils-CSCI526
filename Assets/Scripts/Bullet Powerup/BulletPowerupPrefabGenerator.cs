@@ -30,14 +30,14 @@ public class BulletPowerupPrefabGenerator : MonoBehaviour
     void createbulletPowerups()
     {
         GameObject bulletPowerup=Instantiate(bulletPowerupPrefab) as GameObject;
-        bulletPowerup.transform.position=new Vector2(Random.Range(-screenBounds.x+0.5f, screenBounds.x-0.5f), screenBounds.y);
+        bulletPowerup.transform.position=new Vector2(GameManager.instance.getRandomRange(-screenBounds.x, screenBounds.x), screenBounds.y);
     }
 
     private IEnumerator createbulletPowerupssDelayedCoRoutine()
     {
         yield return new WaitForSeconds(0.2f*random.Next(1,10));
         GameObject bulletPowerup=Instantiate(bulletPowerupPrefab) as GameObject;
-        bulletPowerup.transform.position=new Vector2(Random.Range(-screenBounds.x, screenBounds.x), screenBounds.y);
+        bulletPowerup.transform.position=new Vector2(GameManager.instance.getRandomRange(-screenBounds.x, screenBounds.x), screenBounds.y);
     }
 
     IEnumerator bulletPowerupLoop(){
