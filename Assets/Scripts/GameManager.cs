@@ -60,8 +60,8 @@ public class GameManager : MonoBehaviour
     public float getRandomRange(float start, float end)
     {
         //float start = -screenBounds.x; float end = screenBounds.x;
-        start = start + 0.25f;
-        end = end - 0.25f;
+        start = start + 0.5f;
+        end = end - 0.5f;
         float diff_per_screen = (end - start)/ScreenDivisionNumber;
 
         int random_number = random.Next(ScreenDivisionNumber);
