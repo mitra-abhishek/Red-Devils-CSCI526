@@ -168,12 +168,12 @@ public class LetterPrefabGenerator : MonoBehaviour
         GameObject letter = Instantiate(Resources.Load("Letters/"+getLetter(word)) as GameObject);
         //Debug.Log("Tag : " +letter.tag);
         Debug.Log("Name : " + letter.name);
-        letter.transform.position=new Vector2(GameManager.instance.getRandomRange(-screenBounds.x, screenBounds.x), screenBounds.y);
+        letter.transform.position=new Vector2(Random.Range(-screenBounds.x, screenBounds.x), screenBounds.y);
         
         GameObject letter2 = Instantiate(Resources.Load("Letters/"+getLetter(word)) as GameObject);
         //Debug.Log("Tag : " +letter.tag);
         //Debug.Log("Name : " + letter2.name);
-        letter2.transform.position=new Vector2(GameManager.instance.getRandomRange(-screenBounds.x, screenBounds.x), screenBounds.y);
+        letter2.transform.position=new Vector2(Random.Range(-screenBounds.x, screenBounds.x), screenBounds.y);
 
     }
 
@@ -204,7 +204,7 @@ public class LetterPrefabGenerator : MonoBehaviour
 
         //Debug.Log("Tag : " +letter.tag);
         //Debug.Log("createLettersDelayedCoRoutine Name : " + letter.name);
-        letter.transform.position=new Vector2(GameManager.instance.getRandomRange(-screenBounds.x+0.5f, screenBounds.x-0.5f), screenBounds.y);;
+        letter.transform.position=new Vector2(Random.Range(-screenBounds.x+0.5f, screenBounds.x-0.5f), screenBounds.y);;
         
     }
     

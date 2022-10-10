@@ -30,14 +30,14 @@ public class EnemyPrefabGenerator : MonoBehaviour
     void createEnemies()
     {
         GameObject enemy=Instantiate(enemyPrefab) as GameObject;
-        enemy.transform.position=new Vector2(GameManager.instance.getRandomRange(-screenBounds.x, screenBounds.x), screenBounds.y);
+        enemy.transform.position=new Vector2(Random.Range(-screenBounds.x+0.5f, screenBounds.x-0.5f), screenBounds.y);
     }
 
     private IEnumerator createEnemiesDelayedCoRoutine()
     {
         yield return new WaitForSeconds(0.2f*random.Next(1,10));
         GameObject enemy=Instantiate(enemyPrefab) as GameObject;
-        enemy.transform.position=new Vector2(GameManager.instance.getRandomRange(-screenBounds.x, screenBounds.x), screenBounds.y);
+        enemy.transform.position=new Vector2(Random.Range(-screenBounds.x, screenBounds.x), screenBounds.y);
     }
 
     IEnumerator enemyLoop(){
