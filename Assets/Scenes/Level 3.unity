@@ -1084,6 +1084,7 @@ MonoBehaviour:
   averageHealthbarAnalyticsURL: https://docs.google.com/forms/u/0/d/e/1FAIpQLScKqAEsntpZlcSdqTH3yzm6gzh92zztp1hiu23VbBUlWJYhxQ/formResponse
   deathReasonAnalyticsURL: https://docs.google.com/forms/u/0/d/e/1FAIpQLScaZKeWVOPaL-eEClhwcO6WOj-f8byk2VaYwV_bUToWNNA6dA/formResponse
   correctLettersShotAnalytics: https://docs.google.com/forms/u/0/d/e/1FAIpQLSdQTBwVEgC6Fgxhv2bbhbzSzDWp-T1dud_ypijW4nE9M8vs5w/formResponse
+  powerUpsUsageAnalyticsURL: https://docs.google.com/forms/u/0/d/e/1FAIpQLSe0rDIIkaNtvRQZYHnq_5PojZfgu6MoFhRzlLKAzS8sRD-6KQ/formResponse
   playerMain: {fileID: 635070116}
 --- !u!4 &682405818
 Transform:

@@ -191,6 +191,6 @@ public class LevelManagerLevel3 : MonoBehaviour
         }
         }
         sendToGoogle.UpdateCorrectLettersShotAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],totalLettersShot,characterShot);
-        Debug.Log("The powerup Generated at last generated is"+GameManager.instance.bulletPowerUpController.getTotalPowerUpsGenerated());
+        sendToGoogle.UpdatePowerUpsUsageAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],GameManager.instance.bulletPowerUpController.getTotalPowerUpsGenerated(),GameManager.instance.bulletPowerUpController.getTotalPowerUpsCollected());
     }
 }
