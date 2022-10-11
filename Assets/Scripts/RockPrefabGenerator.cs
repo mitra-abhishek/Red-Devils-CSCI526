@@ -30,14 +30,14 @@ public class RockPrefabGenerator : MonoBehaviour
     void createRocks()
     {
         GameObject rock=Instantiate(rockPrefab) as GameObject;
-        rock.transform.position=new Vector2(GameManager.instance.getRandomRange(-screenBounds.x+0.5f, screenBounds.x-0.5f), screenBounds.y);
+        rock.transform.position=new Vector2(Random.Range(-screenBounds.x+0.5f, screenBounds.x-0.5f), screenBounds.y);
     }
 
     private IEnumerator createRockssDelayedCoRoutine()
     {
         yield return new WaitForSeconds(0.2f*random.Next(1,10));
         GameObject rock=Instantiate(rockPrefab) as GameObject;
-        rock.transform.position=new Vector2(GameManager.instance.getRandomRange(-screenBounds.x, screenBounds.x), screenBounds.y);
+        rock.transform.position=new Vector2(Random.Range(-screenBounds.x, screenBounds.x), screenBounds.y);
     }
 
     IEnumerator rockLoop(){
