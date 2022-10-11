@@ -706,7 +706,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 5389615402529709660, guid: 037e261c6813a2a49a3c3c3242eef74e, type: 3}
   enemyReAppearTime: 2
-  maxEnemyAtTime: 1
+  maxEnemyAtTime: 2
 --- !u!1 &356175784
 GameObject:
   m_ObjectHideFlags: 0
