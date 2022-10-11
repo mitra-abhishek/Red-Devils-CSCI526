@@ -24,7 +24,7 @@ public class LevelManagerLevel2 : MonoBehaviour
     public float timeStart;
     public float timeFinished;
     public double timeToComplete;
-    public int level2Bullets = 45;
+    public int level2Bullets = 55;
     public int availableBullets;
     public Dictionary<String, int> pairs = new Dictionary<String, int>()
     {

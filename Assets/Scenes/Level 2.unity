@@ -717,11 +717,11 @@ MonoBehaviour:
   blankPrefab: {fileID: 5187836768122991378, guid: 7cce4b751137f4e84a2f103914e1a902, type: 3}
   blankHolder: {fileID: 252724979}
   letterSpeed: 1.5
-  rockSpeed: 2
+  rockSpeed: 2.5
   timeStart: 0
   timeFinished: 0
   timeToComplete: 0
-  level2Bullets: 45
+  level2Bullets: 55
   availableBullets: 0
   playerMain: {fileID: 635070116}
   timer: {fileID: 238759228}

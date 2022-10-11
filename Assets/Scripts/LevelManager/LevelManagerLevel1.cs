@@ -28,7 +28,7 @@ public class LevelManagerLevel1 : MonoBehaviour
     
     public float letterSpeed = 1.5f;
     public float rockSpeed = 2.5f;
-    public int level1Bullets = 50;
+    public int level1Bullets = 60;
 
     public int availableBullets;
     public Dictionary<String, int> pairs = new Dictionary<String, int>()

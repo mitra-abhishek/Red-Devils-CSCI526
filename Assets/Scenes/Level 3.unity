@@ -640,8 +640,8 @@ MonoBehaviour:
   blankPrefab: {fileID: 5187836768122991378, guid: 7cce4b751137f4e84a2f103914e1a902, type: 3}
   blankHolder: {fileID: 252724979}
   letterSpeed: 2
-  rockSpeed: 4
-  level3Bullets: 40
+  level3Bullets: 50
+  rockSpeed: 3.5
   availableBullets: 0
   timeStart: 0
   timeFinished: 0
