@@ -48,18 +48,31 @@ public class PlayerMovement : MonoBehaviour
     void Update(){
         if (Input.GetKey(KeyCode.RightArrow)) {
             if(angle>= -90)
-            angle -= 3.7f;
+                angle -= 3.7f*0.0285f;
             transform.eulerAngles = new Vector3(0, 0, angle);
             print(angle);
         }
 
-        if (Input.GetKey(KeyCode.LeftArrow)) {
+        else if (Input.GetKey(KeyCode.LeftArrow)) {
             
             if(angle<= 90)
-            angle += 3.7f;
+                angle += 3.7f*0.0285f;
             transform.eulerAngles = new Vector3(0, 0, angle);
             print(angle);
         }
+
+        else
+        {
+            if(angle>= 0)
+                angle -= 3.7f*0.0285f;
+            
+            if(angle<= 0)
+                angle += 3.7f*0.0285f;
+
+            transform.eulerAngles = new Vector3(0, 0, angle);
+        }
+
+        
 
 
         if(GameManager.instance.bulletController.getBullets()>0 && (Input.GetKeyDown("space") || Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.UpArrow))){
