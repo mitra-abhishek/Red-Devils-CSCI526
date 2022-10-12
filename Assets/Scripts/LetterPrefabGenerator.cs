@@ -122,12 +122,14 @@ public class LetterPrefabGenerator : MonoBehaviour
      //
      private string getLetter(string word)
      {
-         if (lettersDropped.Count == 15)
+         if (lettersDropped.Count >= 10)
          {
              foreach (var a in word.ToUpper())
              {
                  if (!lettersDroppedDict.ContainsKey(a.ToString()) || lettersDroppedDict[a.ToString()] <= 0)
                  {
+                     string element_popped = lettersDropped[0];
+                     lettersDroppedDict[element_popped] -= 1;
                      lettersDropped.RemoveAt(0);
                      lettersDropped.Add(a.ToString());
                      if (!lettersDroppedDict.ContainsKey(a.ToString()))
