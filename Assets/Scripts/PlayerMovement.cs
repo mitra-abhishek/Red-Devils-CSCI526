@@ -19,6 +19,9 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     private int curBullets;
 
+    public float ANGULAR_SPEED = 3.7f;
+
+    public float WEBGL_MULTIPLIER = 1;
     void Start()
     {   
     }
@@ -48,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
     void Update(){
         if (Input.GetKey(KeyCode.RightArrow)) {
             if(angle>= -90)
-                angle -= 3.7f*0.0285f;
+                angle -= ANGULAR_SPEED*WEBGL_MULTIPLIER;
             transform.eulerAngles = new Vector3(0, 0, angle);
             print(angle);
         }
@@ -56,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
         else if (Input.GetKey(KeyCode.LeftArrow)) {
             
             if(angle<= 90)
-                angle += 3.7f*0.0285f;
+                angle += ANGULAR_SPEED*WEBGL_MULTIPLIER;
             transform.eulerAngles = new Vector3(0, 0, angle);
             print(angle);
         }
@@ -64,10 +67,10 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             if(angle>= 0)
-                angle -= 3.7f*0.0285f;
+                angle -= ANGULAR_SPEED*WEBGL_MULTIPLIER;
             
             if(angle<= 0)
-                angle += 3.7f*0.0285f;
+                angle += ANGULAR_SPEED*WEBGL_MULTIPLIER;
 
             transform.eulerAngles = new Vector3(0, 0, angle);
         }
