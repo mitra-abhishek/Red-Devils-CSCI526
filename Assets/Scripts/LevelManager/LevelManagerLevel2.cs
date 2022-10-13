@@ -12,6 +12,8 @@ public class LevelManagerLevel2 : MonoBehaviour
     // Other Game parameters can be added here! like health, time, etc;
     [SerializeField] SendToGoogle sendToGoogle;
     [SerializeField] BulletController bulletController;
+    [SerializeField] BulletPowerUpController bulletPowerUpController;
+
 
     public String levelWord = "";
     public List<TMP_Text> blankList = new List<TMP_Text>();
@@ -24,8 +26,10 @@ public class LevelManagerLevel2 : MonoBehaviour
     public float timeStart;
     public float timeFinished;
     public double timeToComplete;
-    public int level2Bullets = 55;
+    public int level2Bullets = 20;
     public int availableBullets;
+    public int totalLettersShot=0;
+    public int characterShot=0;
     public Dictionary<String, int> pairs = new Dictionary<String, int>()
     {
         { "SampleScene 2", 1 }, { "Level 2", 2 },{"Level 3",3}
@@ -91,6 +95,8 @@ public class LevelManagerLevel2 : MonoBehaviour
         var val = (Collider2D)message["amount"];
         Debug.Log ($"{val.name[0]} received test!");
         Debug.Log ("Some Function was called!: ");
+        totalLettersShot+=1;
+        GameManager.instance.totalLettersShot=totalLettersShot;
         Boolean letterMatched = false;
        for(int itr = 0;itr<levelWord.Length;itr++)
        {
@@ -134,6 +140,8 @@ public class LevelManagerLevel2 : MonoBehaviour
                 count = count + 1;
             }
         }
+        characterShot=count;
+        GameManager.instance.characterShotCount=characterShot;
         if (count == levelWord.Length) {    
             StartCoroutine(SetWinText ());
         }
@@ -169,14 +177,17 @@ public class LevelManagerLevel2 : MonoBehaviour
              sendToGoogle.UpdateLevelAnalytics(currentLevel,timeToComplete);
              sendToGoogle.UpdateUnsuccessfulTriesAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],true);
              sendToGoogle.UpdateHealthbarAnalytics(currentLevel,playerMain.currentHealth);
+             sendToGoogle.UpdateCorrectLettersShotAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],totalLettersShot,characterShot,"level2 source");
+             sendToGoogle.UpdatePowerUpsUsageAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],GameManager.instance.bulletPowerUpController.getTotalPowerUpsGenerated(),GameManager.instance.bulletPowerUpController.getTotalPowerUpsCollected());
         }   
         else{
             sendToGoogle.UpdateUnsuccessfulTriesAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],false);
             sendToGoogle.UpdateResonForDeathAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],"Bullet Finished");
+            sendToGoogle.UpdateCorrectLettersShotAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],totalLettersShot,characterShot,"level2 source");
+            sendToGoogle.UpdatePowerUpsUsageAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],bulletPowerUpController.getTotalPowerUpsGenerated(),bulletPowerUpController.getTotalPowerUpsCollected());
             UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene 2");
         }
         }
         }
-        
     }
 }

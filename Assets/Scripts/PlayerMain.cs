@@ -36,6 +36,9 @@ public class PlayerMain : MonoBehaviour
         if (currentHealth<=0){
             sendToGoogle.UpdateUnsuccessfulTriesAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],false);
             sendToGoogle.UpdateResonForDeathAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],"Health Finished");
+             Debug.Log("Check letter count when health is over"+GameManager.instance.totalLettersShot+"---- correct"+GameManager.instance.characterShotCount+"level---"+pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name]);
+            sendToGoogle.UpdateCorrectLettersShotAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],GameManager.instance.totalLettersShot,GameManager.instance.characterShotCount,"healthbar finished");
+            sendToGoogle.UpdatePowerUpsUsageAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],GameManager.instance.bulletPowerUpController.getTotalPowerUpsGenerated(),GameManager.instance.bulletPowerUpController.getTotalPowerUpsCollected());
             Destroy(this.gameObject);
             UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene 2");
         }
@@ -43,10 +46,10 @@ public class PlayerMain : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other){
         if(other.tag=="rock"){
-            TakeDamage(5);
+            TakeDamage(20);
         }
         if(other.tag=="enemy_bullet"){
-            TakeDamage(5);
+            TakeDamage(20);
         }
     }
 }

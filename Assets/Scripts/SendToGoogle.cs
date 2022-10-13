@@ -14,6 +14,8 @@ public class SendToGoogle : MonoBehaviour
     [SerializeField]private string levelAttemptsURL;
     [SerializeField]private string averageHealthbarAnalyticsURL;
     [SerializeField]private string deathReasonAnalyticsURL;
+    [SerializeField]private string correctLettersShotAnalytics;
+    [SerializeField]private string powerUpsUsageAnalyticsURL;
 
     private long _sessionID;
     private int _testUserHealth;
@@ -33,6 +35,15 @@ public class SendToGoogle : MonoBehaviour
 
     //deathReason Analytics
     private string _deathReason;
+
+    //total vs correct character shot analytics:
+    private int _totalShotsCount;
+    private int _correctShotCount;
+    private int _letterShotLevel;
+
+    //total vs collected powerups analytics:
+    private int _totalPowerUpsGenerated;
+    private int _totalPowerUpsCollected;
 
     private void Awake()
     {
@@ -185,6 +196,70 @@ public class SendToGoogle : MonoBehaviour
 
     }
 
+    public void SendCorrectLettersShotAnalytics(){
+        if(this.gameObject!=null){
+        StartCoroutine(PostCorrectLettersShotAnalytics(_sessionID.ToString(), _currentLevel.ToString(),_totalShotsCount.ToString(),_correctShotCount.ToString(),_letterShotLevel.ToString()));
+        }
+    }
+
+    private IEnumerator PostCorrectLettersShotAnalytics(string sessionID, string currentLevel,string totalShotsCount,string correctShotCount,string letterShotLevel)
+    {
+        //Create Form and enter responses
+        WWWForm form = new WWWForm();
+        Debug.Log("The current leve inside form is"+letterShotLevel);
+        form.AddField("entry.298398774", sessionID);
+        form.AddField("entry.692591639",letterShotLevel);
+        form.AddField("entry.561116185",totalShotsCount);
+        form.AddField("entry.352160701",correctShotCount);
+        //Send responses and verify result
+        using (UnityWebRequest www = UnityWebRequest.Post(correctLettersShotAnalytics, form))
+        {
+            yield return www.SendWebRequest();
+
+            if (www.result != UnityWebRequest.Result.Success)
+            {
+                Debug.Log(www.error);
+            }
+            else
+            {
+                Debug.Log("SendToGoogle.Post: Form upload completed.");
+            }
+        }
+
+    }
+
+    public void SendPowerUpsUsageAnalytics(){
+        Debug.Log("Game Manager Power Up Usage");
+        if(this.gameObject!=null){
+        StartCoroutine(PostPowerUpsUsageAnalytics(_sessionID.ToString(), _currentLevel.ToString(),_totalPowerUpsGenerated.ToString(),_totalPowerUpsCollected.ToString()));
+        }
+    }
+
+    private IEnumerator PostPowerUpsUsageAnalytics(string sessionID, string currentLevel,string totalPowerUpsGenerated,string totalPowerUpsCollected)
+    {
+        //Create Form and enter responses
+        WWWForm form = new WWWForm();
+        form.AddField("entry.1593837011", sessionID);
+        form.AddField("entry.351687776",currentLevel);
+        form.AddField("entry.1030437167",totalPowerUpsGenerated);
+        form.AddField("entry.1349777128",totalPowerUpsCollected);
+        //Send responses and verify result
+        using (UnityWebRequest www = UnityWebRequest.Post(powerUpsUsageAnalyticsURL, form))
+        {
+            yield return www.SendWebRequest();
+
+            if (www.result != UnityWebRequest.Result.Success)
+            {
+                Debug.Log(www.error);
+            }
+            else
+            {
+                Debug.Log("SendToGoogle.Post: Form upload completed.");
+            }
+        }
+
+    }
+
     public void  UpdateLevelAnalytics(int completedLevel,double completionTime){
         _completionTime=completionTime;
         _completedLevel=completedLevel;
@@ -216,6 +291,23 @@ public class SendToGoogle : MonoBehaviour
         if(this!=null){
             SendResonForDeathAnalytics();
         }
+    }
+    public void UpdateCorrectLettersShotAnalytics(int currentLevel,int totalShotsCount,int correctShotCount,string source){
+     _totalShotsCount=totalShotsCount;
+     _correctShotCount=correctShotCount;
+     _letterShotLevel=currentLevel;
+     Debug.Log("the current Level is:"+currentLevel+"--The correct Shot is:"+correctShotCount+"--The toal count is:"+totalShotsCount+"--Source is:"+source);
+     if(this!=null){
+        SendCorrectLettersShotAnalytics();
+     } 
+    }
+
+    public void UpdatePowerUpsUsageAnalytics(int currentLevel,int totalPowerUpsGenerated,int totalPowerUpsCollected){
+        _totalPowerUpsGenerated=totalPowerUpsGenerated;
+        _totalPowerUpsCollected=totalPowerUpsCollected;
+        if(this!=null){
+        SendPowerUpsUsageAnalytics();
+     } 
     }
 // Compiling
 }

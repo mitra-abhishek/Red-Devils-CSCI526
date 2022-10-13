@@ -13,6 +13,7 @@ public class BulletPowerUp : MonoBehaviour
     void Start()
     {
         Debug.Log("Bullet Powerup Created");
+        GameManager.instance.bulletPowerUpController.addTotalPowerUpsGenerated();
         rb=this.GetComponent<Rigidbody2D>();
         // Change to add bullet speed if needed
         rb.velocity=new Vector2(0,-bulletPowerUpSpeed);
@@ -32,6 +33,7 @@ public class BulletPowerUp : MonoBehaviour
         if (col.gameObject.CompareTag("player"))
         {
             GameManager.instance.bulletController.addBullets(5);
+            GameManager.instance.bulletPowerUpController.addTotalPowerUpsCollected();
             Debug.Log("Bullet Powerup added to Player");
             Destroy(this.gameObject);
         }

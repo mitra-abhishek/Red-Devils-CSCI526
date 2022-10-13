@@ -312,7 +312,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTime: 0
-  startingTime: 120
+  startingTime: 30
   countdownText: {fileID: 238759229}
   sendToGoogle: {fileID: 682405817}
 --- !u!114 &238759229
@@ -635,14 +635,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sendToGoogle: {fileID: 682405817}
   bulletController: {fileID: 290474931}
+  bulletPowerUpController: {fileID: 1632121986}
   levelWord: 
   blankList: []
   blankPrefab: {fileID: 5187836768122991378, guid: 7cce4b751137f4e84a2f103914e1a902, type: 3}
   blankHolder: {fileID: 252724979}
   letterSpeed: 2
-  level3Bullets: 50
+  level3Bullets: 30
   rockSpeed: 3.5
   availableBullets: 0
+  totalLettersShot: 0
+  characterShot: 0
   timeStart: 0
   timeFinished: 0
   timeToComplete: 0
@@ -983,6 +986,8 @@ MonoBehaviour:
   bulletPrefab: {fileID: 4403854986693279775, guid: 749751dbaf3c45242ba0303af30b832d, type: 3}
   sceneCam: {fileID: 519420031}
   rb: {fileID: 635070115}
+  ANGULAR_SPEED: 3.7
+  WEBGL_MULTIPLIER: 1
 --- !u!61 &635070114
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1080,6 +1085,8 @@ MonoBehaviour:
   levelAttemptsURL: https://docs.google.com/forms/u/0/d/e/1FAIpQLSdB6lDNYq6_zdR0RPEAElwkRkFsfxMq0tW14fCfGiY2mVETgQ/formResponse
   averageHealthbarAnalyticsURL: https://docs.google.com/forms/u/0/d/e/1FAIpQLScKqAEsntpZlcSdqTH3yzm6gzh92zztp1hiu23VbBUlWJYhxQ/formResponse
   deathReasonAnalyticsURL: https://docs.google.com/forms/u/0/d/e/1FAIpQLScaZKeWVOPaL-eEClhwcO6WOj-f8byk2VaYwV_bUToWNNA6dA/formResponse
+  correctLettersShotAnalytics: https://docs.google.com/forms/u/0/d/e/1FAIpQLSdQTBwVEgC6Fgxhv2bbhbzSzDWp-T1dud_ypijW4nE9M8vs5w/formResponse
+  powerUpsUsageAnalyticsURL: https://docs.google.com/forms/u/0/d/e/1FAIpQLSe0rDIIkaNtvRQZYHnq_5PojZfgu6MoFhRzlLKAzS8sRD-6KQ/formResponse
   playerMain: {fileID: 635070116}
 --- !u!4 &682405818
 Transform:
@@ -1600,6 +1607,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db5af22f9153747b0aba0e53cb963a36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1632121985
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1632121987}
+  - component: {fileID: 1632121986}
+  m_Layer: 0
+  m_Name: BulletPowerUp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1632121986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632121985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0855f307689e7ff4ca7627be5808fcbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalPowerUpsGenerated: 0
+  totalPowerUpsCollected: 0
+--- !u!4 &1632121987
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632121985}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1987629925
 GameObject:
   m_ObjectHideFlags: 0
@@ -1807,5 +1860,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2502462975162162575, guid: be481bcb7702e014b98fa2a7c560e7ac, type: 3}
+      propertyPath: bulletController
+      value: 
+      objectReference: {fileID: 290474931}
+    - target: {fileID: 2502462975162162575, guid: be481bcb7702e014b98fa2a7c560e7ac, type: 3}
+      propertyPath: bulletPowerUpController
+      value: 
+      objectReference: {fileID: 1632121986}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be481bcb7702e014b98fa2a7c560e7ac, type: 3}

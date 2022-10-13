@@ -11,7 +11,13 @@ public class GameManager : MonoBehaviour
     
     public float RockSpeed = 2.0f;
     public int bullets;
+
+    public int totalLettersShot;
+    public int characterShotCount;
+
     public BulletController bulletController;
+    public BulletPowerUpController bulletPowerUpController;
+
     public int ScreenDivisionNumber = 10;
     private List<int> previousScreenPositionSelected = new List<int>(10);
     
@@ -26,8 +32,13 @@ public class GameManager : MonoBehaviour
     }
     public void Start()
     {
+        Debug.Log("Game Manager Started");
         bulletController=new BulletController();
         bulletController.setBullets(bullets);
+        bulletPowerUpController=new BulletPowerUpController();
+        bulletPowerUpController.setTotalPowerGenerated();
+        bulletPowerUpController.setTotalPowerUpsCollected();
+
     }
     private void OnDisable()
     {

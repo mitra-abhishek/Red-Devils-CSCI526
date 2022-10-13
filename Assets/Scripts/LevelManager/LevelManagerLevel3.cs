@@ -12,6 +12,7 @@ public class LevelManagerLevel3 : MonoBehaviour
     // Other Game parameters can be added here! like health, time, etc;
     [SerializeField] SendToGoogle sendToGoogle;
     [SerializeField] BulletController bulletController;
+    [SerializeField] BulletPowerUpController bulletPowerUpController;
 
     public String levelWord = "";
     public List<TMP_Text> blankList = new List<TMP_Text>();
@@ -19,9 +20,11 @@ public class LevelManagerLevel3 : MonoBehaviour
     public Transform blankHolder;
     public Dictionary<int,Char> letterMap = new Dictionary<int,Char>();
     public float letterSpeed = 1.5f;
-    public int level3Bullets = 50;
+    public int level3Bullets = 20;
     public float rockSpeed = 3.5f;
     public int availableBullets;
+    public int totalLettersShot=0;
+    public int characterShot=0;
 
     public float timeStart;
     public float timeFinished;
@@ -98,6 +101,8 @@ public class LevelManagerLevel3 : MonoBehaviour
         Debug.Log ($"{val.name[0]} received test!");
         Debug.Log ("Some Function was called!: ");
         Boolean letterMatched = false;
+        totalLettersShot+=1;
+        GameManager.instance.totalLettersShot=totalLettersShot;
        for(int itr = 0;itr<levelWord.Length;itr++)
        {
            if(levelWord[itr]==val.name[0])
@@ -140,6 +145,8 @@ public class LevelManagerLevel3 : MonoBehaviour
                 count = count + 1;
             }
         }
+        characterShot=count;
+        GameManager.instance.characterShotCount=characterShot;
         if (count == levelWord.Length) {    
             StartCoroutine(SetWinText ());
         }
@@ -163,7 +170,7 @@ public class LevelManagerLevel3 : MonoBehaviour
 
     private void OnDestroy()
     {   
-        // End Analytics Call here
+       // End Analytics Call here
         if (this != null)
         {
         timeFinished=Time.time;
@@ -176,13 +183,19 @@ public class LevelManagerLevel3 : MonoBehaviour
             sendToGoogle.UpdateLevelAnalytics(currentLevel,timeToComplete);
             sendToGoogle.UpdateUnsuccessfulTriesAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],true);
             sendToGoogle.UpdateHealthbarAnalytics(currentLevel,playerMain.currentHealth);
+            sendToGoogle.UpdateCorrectLettersShotAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],totalLettersShot,characterShot,"level3 destroy");
+            sendToGoogle.UpdatePowerUpsUsageAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],GameManager.instance.bulletPowerUpController.getTotalPowerUpsGenerated(),GameManager.instance.bulletPowerUpController.getTotalPowerUpsCollected());
+
             }
             else{
                 sendToGoogle.UpdateUnsuccessfulTriesAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],false);
                 sendToGoogle.UpdateResonForDeathAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],"Bullet Finished");
+                sendToGoogle.UpdateCorrectLettersShotAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],totalLettersShot,characterShot,"level3 destroy");
+                Debug.Log("Game manager else"+bulletPowerUpController.getTotalPowerUpsCollected());
+                sendToGoogle.UpdatePowerUpsUsageAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],bulletPowerUpController.getTotalPowerUpsGenerated(),bulletPowerUpController.getTotalPowerUpsCollected());
                 UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene 2");
                 }
-        }
+               }
         }
         
     }

@@ -19,16 +19,19 @@ public class LevelManagerLevel1 : MonoBehaviour
     public float timeStart;
     public float timeFinished;
     public double timeToComplete;
-
+    public int totalLettersShot=0;
+    public int characterShot=0;
 
     [SerializeField] SendToGoogle sendToGoogle;
     [SerializeField] BulletController bulletController;
+    [SerializeField] BulletPowerUpController bulletPowerUpController;
+
     public PlayerMain playerMain;
     public Timer timer;
     
     public float letterSpeed = 1.5f;
     public float rockSpeed = 2.5f;
-    public int level1Bullets = 60;
+    public int level1Bullets = 20;
 
     public int availableBullets;
     public Dictionary<String, int> pairs = new Dictionary<String, int>()
@@ -92,6 +95,8 @@ public class LevelManagerLevel1 : MonoBehaviour
         Debug.Log ($"{val.name[0]} received test!");
         Debug.Log ("Some Function was called!: ");
         Boolean letterMatched = false;
+        totalLettersShot+=1;
+        GameManager.instance.totalLettersShot=totalLettersShot;
        for(int itr = 0;itr<levelWord.Length;itr++)
        {
            if(levelWord[itr]==val.name[0])
@@ -135,6 +140,8 @@ public class LevelManagerLevel1 : MonoBehaviour
                 count = count + 1;
             }
         }
+        characterShot=count;
+        GameManager.instance.characterShotCount=characterShot;
         if (count == levelWord.Length) {    
             StartCoroutine(SetWinText ());
         }
@@ -165,25 +172,33 @@ public class LevelManagerLevel1 : MonoBehaviour
     private void OnDestroy()
     {   
         // End Analytics Call here
+        // count gives the total number of the correct characters shot:
         if (this != null)
         {
         timeFinished=Time.time;
         timeToComplete=Math.Round(timeFinished-timeStart,2);
-        availableBullets=bulletController.availableBullets;
+        availableBullets=bulletController.availableBullets;         // Available bullets==Bullets Shot
+
+        Debug.Log("The characters total shot"+totalLettersShot);
         if (timeToComplete>0 && timer.currentTime>0 && playerMain.currentHealth>0){
             if (availableBullets>1){
             currentLevel=pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name];            
             sendToGoogle.UpdateLevelAnalytics(currentLevel,timeToComplete);
             sendToGoogle.UpdateUnsuccessfulTriesAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],true);
             sendToGoogle.UpdateHealthbarAnalytics(currentLevel,playerMain.currentHealth);
+            sendToGoogle.UpdateCorrectLettersShotAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],totalLettersShot,characterShot,"level1 source");
+            sendToGoogle.UpdatePowerUpsUsageAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],GameManager.instance.bulletPowerUpController.getTotalPowerUpsGenerated(),GameManager.instance.bulletPowerUpController.getTotalPowerUpsCollected());
         }  
         else{
+            // All bulltes over so available bullets=level1bullets;
         sendToGoogle.UpdateUnsuccessfulTriesAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],false);
         sendToGoogle.UpdateResonForDeathAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],"Bullet Finished");
+        Debug.Log("THe total bullets shot is"+totalLettersShot+"Correct character shot"+characterShot);
+        sendToGoogle.UpdateCorrectLettersShotAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],totalLettersShot,characterShot,"level1 source");
+        sendToGoogle.UpdatePowerUpsUsageAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],bulletPowerUpController.getTotalPowerUpsGenerated(),bulletPowerUpController.getTotalPowerUpsCollected());
         UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene 2");
         } 
-    }
-     
-    }
+        }
+        }
     }
 }
