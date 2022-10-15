@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 public class GameManager : MonoBehaviour
 {  
     public static GameManager instance;
@@ -73,4 +75,21 @@ public class GameManager : MonoBehaviour
         float final_position = start + random_number * diff_per_screen;
         return final_position;
     }
+
+    public void winScreen()
+    {
+        SceneManager.LoadScene("Level Complete");
+    }
+
+    public void lossScreen()
+    {
+        SceneManager.LoadScene("Level Failure");
+    }
+
+    public void goToHome()
+    {
+        SceneManager.LoadScene("Main Screen Demo");
+    }
+    
+    
 }

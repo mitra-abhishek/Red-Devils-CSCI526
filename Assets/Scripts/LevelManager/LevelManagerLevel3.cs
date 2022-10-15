@@ -75,7 +75,7 @@ public class LevelManagerLevel3 : MonoBehaviour
         levelWord =  level_words[index];
         
         // Pass Values to GameManager
-        GameManager.instance.Level = 1;
+        GameManager.instance.Level = 3;
         GameManager.instance.LevelWord = levelWord;
         GameManager.instance.LetterSpeed = letterSpeed;
         GameManager.instance.RockSpeed = rockSpeed;
@@ -155,7 +155,8 @@ public class LevelManagerLevel3 : MonoBehaviour
     IEnumerator SetWinText () {
         yield return new WaitForSeconds(2f);
         Destroy(this.gameObject);
-        UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene 2");
+        //UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene 2");
+        GameManager.instance.winScreen();
     }
     void Initialise(){
         
@@ -194,8 +195,10 @@ public class LevelManagerLevel3 : MonoBehaviour
                 Debug.Log("Game manager else"+bulletPowerUpController.getTotalPowerUpsCollected());
                 sendToGoogle.UpdatePowerUpsUsageAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],bulletPowerUpController.getTotalPowerUpsGenerated(),bulletPowerUpController.getTotalPowerUpsCollected());
                 UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene 2");
-                }
-               }
+                GameManager.instance.lossScreen();
+
+            }
+            }
         }
         
     }

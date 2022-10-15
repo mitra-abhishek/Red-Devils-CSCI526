@@ -150,12 +150,14 @@ public class LevelManagerLevel1 : MonoBehaviour
     IEnumerator SetWinText () {
         yield return new WaitForSeconds(2f);
         Destroy(this.gameObject);
-        if (pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name]+1 <=3){
-        UnityEngine.SceneManagement.SceneManager.LoadScene(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name]+1);
-    }
-    else{
-         UnityEngine.SceneManagement.SceneManager.LoadScene(1);   
-        }
+    //     if (pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name]+1 <=3){
+    //     UnityEngine.SceneManagement.SceneManager.LoadScene(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name]+1);
+    // }
+    // else{
+    //      UnityEngine.SceneManagement.SceneManager.LoadScene(1);   
+    //     }
+        GameManager.instance.winScreen();
+
     }
         
     void Initialise(){
@@ -191,12 +193,14 @@ public class LevelManagerLevel1 : MonoBehaviour
         }  
         else{
             // All bulltes over so available bullets=level1bullets;
-        sendToGoogle.UpdateUnsuccessfulTriesAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],false);
-        sendToGoogle.UpdateResonForDeathAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],"Bullet Finished");
-        Debug.Log("THe total bullets shot is"+totalLettersShot+"Correct character shot"+characterShot);
-        sendToGoogle.UpdateCorrectLettersShotAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],totalLettersShot,characterShot,"level1 source");
-        sendToGoogle.UpdatePowerUpsUsageAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],bulletPowerUpController.getTotalPowerUpsGenerated(),bulletPowerUpController.getTotalPowerUpsCollected());
-        UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene 2");
+            sendToGoogle.UpdateUnsuccessfulTriesAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],false);
+            sendToGoogle.UpdateResonForDeathAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],"Bullet Finished");
+            Debug.Log("THe total bullets shot is"+totalLettersShot+"Correct character shot"+characterShot);
+            sendToGoogle.UpdateCorrectLettersShotAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],totalLettersShot,characterShot,"level1 source");
+            sendToGoogle.UpdatePowerUpsUsageAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],bulletPowerUpController.getTotalPowerUpsGenerated(),bulletPowerUpController.getTotalPowerUpsCollected());
+            //UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene 2");
+            GameManager.instance.lossScreen();
+        
         } 
         }
         }

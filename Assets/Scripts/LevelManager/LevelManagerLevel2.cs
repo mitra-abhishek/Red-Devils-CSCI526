@@ -70,7 +70,7 @@ public class LevelManagerLevel2 : MonoBehaviour
         levelWord =  level_words[index];
         
         // Pass Values to GameManager
-        GameManager.instance.Level = 1;
+        GameManager.instance.Level = 2;
         GameManager.instance.LevelWord = levelWord;
         GameManager.instance.LetterSpeed = letterSpeed;
         GameManager.instance.RockSpeed = rockSpeed;
@@ -150,7 +150,10 @@ public class LevelManagerLevel2 : MonoBehaviour
     IEnumerator SetWinText () {
         yield return new WaitForSeconds(2f);
         Destroy(this.gameObject);
-        UnityEngine.SceneManagement.SceneManager.LoadScene(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name]+1);
+        
+        //UnityEngine.SceneManagement.SceneManager.LoadScene(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name]+1);
+        GameManager.instance.winScreen();
+
     }
     void Initialise(){
         
@@ -185,7 +188,9 @@ public class LevelManagerLevel2 : MonoBehaviour
             sendToGoogle.UpdateResonForDeathAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],"Bullet Finished");
             sendToGoogle.UpdateCorrectLettersShotAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],totalLettersShot,characterShot,"level2 source");
             sendToGoogle.UpdatePowerUpsUsageAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],bulletPowerUpController.getTotalPowerUpsGenerated(),bulletPowerUpController.getTotalPowerUpsCollected());
-            UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene 2");
+            //UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene 2");
+            GameManager.instance.lossScreen();
+
         }
         }
         }
