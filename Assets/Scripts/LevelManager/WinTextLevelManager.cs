@@ -18,7 +18,15 @@ public class WinTextLevelManager : MonoBehaviour
     {
         {  1, "SampleScene 2" }, { 2, "Level 2" },{3, "Level 3"}
     };
-    
+
+    private void Awake()
+    {
+        if (GameManager.instance.Level == 3)
+        {
+            nextLevel.gameObject.SetActive(false);
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
