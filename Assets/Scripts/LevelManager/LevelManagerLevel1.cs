@@ -127,7 +127,12 @@ public class LevelManagerLevel1 : MonoBehaviour
             {
                 TMP_Text blankUpdate = blankList[i].GetComponent<TMP_Text>();
                 blankUpdate.text = letterMap[i].ToString();
-                blankUpdate.fontSize = 110f;
+                blankUpdate.fontSize = 100f;
+                RectTransform RectTransform = blankList[i].GetComponent<RectTransform>();
+                RectTransform.offsetMax = new Vector2(RectTransform.offsetMax.x,-60);
+                RectTransform.offsetMin = new Vector2(RectTransform.offsetMin.x,-60);  
+
+
             }
             
         }
@@ -166,9 +171,18 @@ public class LevelManagerLevel1 : MonoBehaviour
         {
             letterMap.Add(i,'/');
             GameObject blankHelper = Instantiate(blankPrefab,blankHolder,false);
+            RectTransform RectTransform = blankHelper.GetComponent<RectTransform>();
+            float divider = (float)1/levelWord.Length;
+            float x_minval = i*divider;
+            float x_maxval = (i+1)*divider;
+            RectTransform.anchorMin = new Vector2(x_minval,0);
+            RectTransform.anchorMax = new Vector2(x_maxval, 1);  
+            RectTransform.offsetMin = new Vector2(-400,RectTransform.offsetMin.y);
+            RectTransform.offsetMax = new Vector2(-407,RectTransform.offsetMax.y);
+            RectTransform.offsetMax = new Vector2(RectTransform.offsetMax.x,-40);
+            RectTransform.offsetMin = new Vector2(RectTransform.offsetMin.x,-40);                                     
             blankList.Add(blankHelper.GetComponent<TMP_Text>());
         }
-        Debug.Log(letterMap);
     }
 
     private void OnDestroy()
