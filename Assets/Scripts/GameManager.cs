@@ -119,8 +119,8 @@ public class GameManager : MonoBehaviour
     public String getColorLevel(String currentChar)
     {
         int dist = wordDistanceDict[currentChar.ToUpper()[0]];
-        Debug.Log("Distance is " + dist);
-
+        Debug.Log("Letter is "+ currentChar + "Distance is " + dist);
+ 
         if (dist < 2)
         {
             return "green/";

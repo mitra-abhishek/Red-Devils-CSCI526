@@ -199,6 +199,7 @@ public class LetterPrefabGenerator : MonoBehaviour
         //     letter = Instantiate(Resources.Load("Letters/"+getLetter(LevelManagerLevel1.instance.levelWord)) as GameObject);
 
         string string_letter = getLetter(GameManager.instance.LevelWord);
+        Debug.Log("Current Letter is " + string_letter);
         if (!GameManager.instance.switchColor)
             letter = Instantiate(Resources.Load("Letters/black/"+ string_letter) as GameObject);
         else

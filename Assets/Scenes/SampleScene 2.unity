@@ -1807,6 +1807,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2502462975162162575, guid: be481bcb7702e014b98fa2a7c560e7ac, type: 3}
+      propertyPath: switchColor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2502462975162162575, guid: be481bcb7702e014b98fa2a7c560e7ac, type: 3}
       propertyPath: bulletController
       value: 
       objectReference: {fileID: 928287816}
