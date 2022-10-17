@@ -97,6 +97,7 @@ public class GameManager : MonoBehaviour
 
     public void genWordDistanceDictionary()
     {
+        wordDistanceDict = new Dictionary<char, int>();
         String tempUpperCase = LevelWord.ToUpper();
         for (char c = 'A'; c <= 'Z'; c++)
         {
@@ -104,21 +105,27 @@ public class GameManager : MonoBehaviour
             int minDist = 30;
             foreach (char wordChar in tempUpperCase)
             {
-                int currentDist = Math.Abs((int)Char.GetNumericValue(wordChar) - (int)Char.GetNumericValue(wordChar));
+                int currentDist = Math.Abs((int)(c-wordChar));
+                Debug.Log(("Curr DIst is " + currentDist + " Numeric Value "+ Char.GetNumericValue(c)));
                 minDist = Math.Min(currentDist, minDist);
             }
+            Debug.Log("Distance for " + c + " is  : " + minDist);
             wordDistanceDict.Add(c, minDist);
         } 
+        Debug.Log(wordDistanceDict);
+
     }
 
     public String getColorLevel(String currentChar)
     {
         int dist = wordDistanceDict[currentChar.ToUpper()[0]];
-        if (dist <= 2)
+        Debug.Log("Distance is " + dist);
+
+        if (dist < 2)
         {
             return "green/";
         }
-        if(dist <= 4)
+        if(dist < 4)
         {
             return "orange/";
         }

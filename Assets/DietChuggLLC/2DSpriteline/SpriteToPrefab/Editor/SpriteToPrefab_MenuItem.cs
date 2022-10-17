@@ -33,6 +33,12 @@ public class SpriteToPrefab_MenuItem
             SpriteRenderer spriteRenderer = gameObject.AddComponent<SpriteRenderer>();
             gameObject.AddComponent<Rigidbody2D>();
             gameObject.AddComponent<BoxCollider2D>();
+
+            gameObject.transform.localScale = new Vector3(2, 2, 0);
+            
+            var boxColliderGameObj =  gameObject.GetComponent<Rigidbody2D>();
+            boxColliderGameObj.gravityScale = 0;
+            
             gameObject.tag = "Letter";
             System.Type MyScriptType = System.Type.GetType ("Letters" + ",Assembly-CSharp");
             //Now that we have the Type we can use it to Add Component
