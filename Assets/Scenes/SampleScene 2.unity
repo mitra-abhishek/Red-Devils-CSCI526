@@ -771,7 +771,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 356175784}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.08, z: 0}
+  m_LocalPosition: {x: 0.17, y: -0.87, z: 0}
   m_LocalScale: {x: 5.52, y: 3.11, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -971,6 +971,7 @@ MonoBehaviour:
   sceneCam: {fileID: 519420031}
   rb: {fileID: 635070115}
   ANGULAR_SPEED: 3.7
+  WEBGL_MULTIPLIER: 1
 --- !u!61 &635070114
 BoxCollider2D:
   m_ObjectHideFlags: 0

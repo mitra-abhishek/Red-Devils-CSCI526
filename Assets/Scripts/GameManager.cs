@@ -23,6 +23,10 @@ public class GameManager : MonoBehaviour
     public int ScreenDivisionNumber = 10;
     private List<int> previousScreenPositionSelected = new List<int>(10);
     
+    public Dictionary<char, int> wordDistanceDict = new Dictionary<char, int>();
+
+    public Boolean switchColor = false;
+
     private static System.Random random = new System.Random();
     void Awake()
     {
@@ -89,6 +93,37 @@ public class GameManager : MonoBehaviour
     public void goToHome()
     {
         SceneManager.LoadScene("Main Screen Demo");
+    }
+
+    public void genWordDistanceDictionary()
+    {
+        String tempUpperCase = LevelWord.ToUpper();
+        for (char c = 'A'; c <= 'Z'; c++)
+        {
+            //do something with letter 
+            int minDist = 30;
+            foreach (char wordChar in tempUpperCase)
+            {
+                int currentDist = Math.Abs((int)Char.GetNumericValue(wordChar) - (int)Char.GetNumericValue(wordChar));
+                minDist = Math.Min(currentDist, minDist);
+            }
+            wordDistanceDict.Add(c, minDist);
+        } 
+    }
+
+    public String getColorLevel(String currentChar)
+    {
+        int dist = wordDistanceDict[currentChar.ToUpper()[0]];
+        if (dist <= 2)
+        {
+            return "green/";
+        }
+        if(dist <= 4)
+        {
+            return "orange/";
+        }
+       
+        return "red/";
     }
     
     

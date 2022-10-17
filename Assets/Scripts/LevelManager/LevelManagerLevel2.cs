@@ -75,6 +75,7 @@ public class LevelManagerLevel2 : MonoBehaviour
         GameManager.instance.LetterSpeed = letterSpeed;
         GameManager.instance.RockSpeed = rockSpeed;
         GameManager.instance.bullets = level2Bullets;
+        GameManager.instance.genWordDistanceDictionary();
         availableBullets=level2Bullets;
 
     }

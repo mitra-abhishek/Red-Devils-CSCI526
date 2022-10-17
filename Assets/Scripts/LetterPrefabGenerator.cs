@@ -197,9 +197,12 @@ public class LetterPrefabGenerator : MonoBehaviour
         //     letter = Instantiate(Resources.Load("Letters/"+getLetter(LevelManagerLevel3.instance.levelWord)) as GameObject);
         // else
         //     letter = Instantiate(Resources.Load("Letters/"+getLetter(LevelManagerLevel1.instance.levelWord)) as GameObject);
-        
-        letter = Instantiate(Resources.Load("Letters/"+getLetter(GameManager.instance.LevelWord)) as GameObject);
-        
+
+        string string_letter = getLetter(GameManager.instance.LevelWord);
+        if (!GameManager.instance.switchColor)
+            letter = Instantiate(Resources.Load("Letters/"+ string_letter) as GameObject);
+        else
+            letter = Instantiate(Resources.Load("Letters/"+GameManager.instance.getColorLevel(string_letter)+string_letter) as GameObject);
 
         //Debug.Log("Tag : " +letter.tag);
         //Debug.Log("createLettersDelayedCoRoutine Name : " + letter.name);

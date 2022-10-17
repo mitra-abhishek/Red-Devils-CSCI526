@@ -80,6 +80,7 @@ public class LevelManagerLevel3 : MonoBehaviour
         GameManager.instance.LetterSpeed = letterSpeed;
         GameManager.instance.RockSpeed = rockSpeed;
         GameManager.instance.bullets = level3Bullets;
+        GameManager.instance.genWordDistanceDictionary();
         availableBullets=level3Bullets;
 
     }
@@ -207,7 +208,7 @@ public class LevelManagerLevel3 : MonoBehaviour
                 sendToGoogle.UpdateCorrectLettersShotAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],totalLettersShot,characterShot,"level3 destroy");
                 Debug.Log("Game manager else"+bulletPowerUpController.getTotalPowerUpsCollected());
                 sendToGoogle.UpdatePowerUpsUsageAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],bulletPowerUpController.getTotalPowerUpsGenerated(),bulletPowerUpController.getTotalPowerUpsCollected());
-                UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene 2");
+                //UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene 2");
                 GameManager.instance.lossScreen();
 
             }

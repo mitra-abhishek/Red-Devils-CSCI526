@@ -40,7 +40,8 @@ public class PlayerMain : MonoBehaviour
             sendToGoogle.UpdateCorrectLettersShotAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],GameManager.instance.totalLettersShot,GameManager.instance.characterShotCount,"healthbar finished");
             sendToGoogle.UpdatePowerUpsUsageAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],GameManager.instance.bulletPowerUpController.getTotalPowerUpsGenerated(),GameManager.instance.bulletPowerUpController.getTotalPowerUpsCollected());
             Destroy(this.gameObject);
-            UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene 2");
+            //UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene 2");
+            GameManager.instance.lossScreen();
         }
     }
 
