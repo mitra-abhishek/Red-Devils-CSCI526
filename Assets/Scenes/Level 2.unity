@@ -803,7 +803,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sendToGoogle: {fileID: 82895570}
-  bulletController: {fileID: 0}
+  bulletController: {fileID: 505017606}
   bulletPowerUpController: {fileID: 1262066304}
   levelWord: 
   blankList: []
@@ -819,7 +819,7 @@ MonoBehaviour:
   totalLettersShot: 0
   characterShot: 0
   playerMain: {fileID: 635070116}
-  timer: {fileID: 0}
+  timer: {fileID: 58053606}
 --- !u!114 &345747632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1209,6 +1209,7 @@ MonoBehaviour:
   sceneCam: {fileID: 519420031}
   rb: {fileID: 635070115}
   ANGULAR_SPEED: 3.7
+  WEBGL_MULTIPLIER: 1
 --- !u!61 &635070114
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1271,8 +1272,8 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   sendToGoogle: {fileID: 82895570}
-  healthBar: {fileID: 0}
-  timer: {fileID: 0}
+  healthBar: {fileID: 1905909201}
+  timer: {fileID: 58053606}
 --- !u!1 &1010635232
 GameObject:
   m_ObjectHideFlags: 0
