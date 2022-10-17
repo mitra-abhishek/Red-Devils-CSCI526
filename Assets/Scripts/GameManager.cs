@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     
     public Dictionary<char, int> wordDistanceDict = new Dictionary<char, int>();
 
-    public Boolean switchColor = false;
+    public Boolean switchColor = true;
 
     private static System.Random random = new System.Random();
     void Awake()

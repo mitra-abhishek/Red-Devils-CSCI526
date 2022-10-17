@@ -139,12 +139,18 @@ public class LevelManagerLevel1 : MonoBehaviour
         }
 
         int count = 0;
+        int hintThreshold = blankList.Count/2;
         for(int i = 0;i<blankList.Count;i++)
         {    
             if(letterMap[i]!='/')
             {
                 count = count + 1;
             }
+            if(count>=hintThreshold && GameManager.instance.switchColor == true)
+            {
+                GameManager.instance.switchColor = false;
+            }
+            
         }
         characterShot=count;
         GameManager.instance.characterShotCount=characterShot;

@@ -120,7 +120,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92b448bbe51b3234ba108e50337edc46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
   moving: 1
   pingPongSpeed: 0.25
   displacementX: 1
