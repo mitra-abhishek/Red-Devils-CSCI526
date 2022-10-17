@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
 
     public float ANGULAR_SPEED = 3.7f;
 
-    public float WEBGL_MULTIPLIER = 1;
+    public float WEBGL_MULTIPLIER = 1.0f;
     void Start()
     {   
     }

@@ -71,6 +71,7 @@ public class LevelManagerLevel2 : MonoBehaviour
         
         // Pass Values to GameManager
         GameManager.instance.Level = 2;
+        GameManager.instance.switchColor = true;
         GameManager.instance.LevelWord = levelWord;
         GameManager.instance.LetterSpeed = letterSpeed;
         GameManager.instance.RockSpeed = rockSpeed;
