@@ -46,7 +46,7 @@ public class SpriteToPrefab_MenuItem
                 // string savePath = makeSeperateFolders
                 //     ? fullFolderPath + "/" + sprites[j].name + "/" + sprites[j].name + ".prefab"
                 //     : fullFolderPath + "/" + sprites[j].name + ".prefab";
-                string savePath = makeSeperateFolders ? fullFolderPath + "/" + (Char)(Convert.ToUInt16('A') + j-1) + "/" + (Char)(Convert.ToUInt16('A') + j-1) + ".prefab" : fullFolderPath + "/" + (Char)(Convert.ToUInt16('A') + j-1) + ".prefab";
+                string savePath = makeSeperateFolders ? fullFolderPath + "/" + (Char)(Convert.ToUInt16('A') + j) + "/" + (Char)(Convert.ToUInt16('A') + j) + ".prefab" : fullFolderPath + "/" + (Char)(Convert.ToUInt16('A') + j) + ".prefab";
 
                 if (makeSeperateFolders)
                 {
