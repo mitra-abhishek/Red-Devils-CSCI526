@@ -18,7 +18,7 @@ public class HealthBar : MonoBehaviour
        slider.value=health;
     //    Instead of slider.value, we used slider.normalized because it normalizes the slider value from 0 to 1
         print("Printing text here");
-a        print(slider.normalizedValue);
+        print(slider.normalizedValue);
        fill.color=gradient.Evaluate(slider.normalizedValue);
    }
 }
