@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level Transistion Screen/Level Failure.unity
     guid: 01c65526285e09b4b88329386d7ccb74
+  - enabled: 1
+    path: Assets/Scenes/Level Transistion Screen/Game Over.unity
+    guid: f5e70596f75874dc68e7823ef6357c32
   m_configObjects: {}

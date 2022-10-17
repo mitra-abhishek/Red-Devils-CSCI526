@@ -214,7 +214,7 @@ public class LevelManagerLevel3 : MonoBehaviour
                 Debug.Log("Game manager else"+bulletPowerUpController.getTotalPowerUpsCollected());
                 sendToGoogle.UpdatePowerUpsUsageAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],bulletPowerUpController.getTotalPowerUpsGenerated(),bulletPowerUpController.getTotalPowerUpsCollected());
                 //UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene 2");
-                GameManager.instance.lossScreen();
+                GameManager.instance.gameOverScreen();
 
             }
             }

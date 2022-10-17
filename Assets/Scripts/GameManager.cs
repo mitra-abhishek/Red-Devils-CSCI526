@@ -95,6 +95,10 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Main Screen Demo");
     }
 
+    public void gameOverScreen(){
+        SceneManager.LoadScene("Game Over");
+    }
+    
     public void genWordDistanceDictionary()
     {
         wordDistanceDict = new Dictionary<char, int>();
