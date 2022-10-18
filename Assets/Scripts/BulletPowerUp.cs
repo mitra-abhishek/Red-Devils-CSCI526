@@ -7,7 +7,7 @@ public class BulletPowerUp : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 screenBounds;
 
-    public float bulletPowerUpSpeed = 2.0f;
+    public float bulletPowerUpSpeed;
 
     // Start is called before the first frame update
     void Start()

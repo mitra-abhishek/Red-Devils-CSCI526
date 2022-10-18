@@ -32,6 +32,7 @@ public class LevelManagerLevel1 : MonoBehaviour
     public float letterSpeed = 1.5f;
     public float rockSpeed = 2.5f;
     public int level1Bullets = 20;
+    // public float bulletPowerUpSpeed = 20.0f;
 
     public int availableBullets;
     public Dictionary<String, int> pairs = new Dictionary<String, int>()
@@ -75,6 +76,7 @@ public class LevelManagerLevel1 : MonoBehaviour
         GameManager.instance.LetterSpeed = letterSpeed;
         GameManager.instance.RockSpeed = rockSpeed;
         GameManager.instance.bullets = level1Bullets;
+        // GameManager.instance.bulletPowerUpSpeed = bulletPowerUpSpeed;
         GameManager.instance.genWordDistanceDictionary();
         availableBullets=level1Bullets;
 

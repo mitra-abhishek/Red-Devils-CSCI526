@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     public float RockSpeed = 2.0f;
     public int bullets;
 
+    // public float bulletPowerUpSpeed = 2.0f;
+
     public int totalLettersShot;
     public int characterShotCount;
 
@@ -127,11 +129,11 @@ public class GameManager : MonoBehaviour
         int dist = wordDistanceDict[currentChar.ToUpper()[0]];
         Debug.Log("Letter is "+ currentChar + "Distance is " + dist);
  
-        if (dist < 2)
+        if (dist == 0)
         {
             return "green/";
         }
-        if(dist < 4)
+        if(dist < 2)
         {
             return "orange/";
         }
