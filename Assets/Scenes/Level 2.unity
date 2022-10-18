@@ -1224,8 +1224,6 @@ MonoBehaviour:
   bulletPrefab: {fileID: 4403854986693279775, guid: 749751dbaf3c45242ba0303af30b832d, type: 3}
   sceneCam: {fileID: 519420031}
   rb: {fileID: 635070115}
-  ANGULAR_SPEED: 3.7
-  WEBGL_MULTIPLIER: 1
 --- !u!61 &635070114
 BoxCollider2D:
   m_ObjectHideFlags: 0
