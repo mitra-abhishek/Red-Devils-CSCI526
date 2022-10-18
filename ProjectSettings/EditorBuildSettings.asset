@@ -29,4 +29,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level Transistion Screen/Level Complete2.unity
     guid: 1272f4733c324463d898ff51c5a23090
+  - enabled: 1
+    path: Assets/Scenes/Tutorial1.unity
+    guid: e418a5a0118214ea7929ca8c33cd98d6
+  - enabled: 1
+    path: Assets/Scenes/Tutorial2.unity
+    guid: 486cb534ca04a4c26a3dcaadbe4c1190
+  - enabled: 1
+    path: Assets/Scenes/Tutorial3.unity
+    guid: eda991d7bdb404c4887c903ae5879d52
   m_configObjects: {}
