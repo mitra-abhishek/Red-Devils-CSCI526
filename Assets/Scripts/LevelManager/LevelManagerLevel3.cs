@@ -166,7 +166,17 @@ public class LevelManagerLevel3 : MonoBehaviour
         yield return new WaitForSeconds(2f);
         Destroy(this.gameObject);
         //UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene 2");
-        GameManager.instance.winScreen();
+        GameManager.instance.winScreen2();
+        // GameObject mainMenu = GameObject.Find("MainMenu");
+        // print("Checking mainMenu here");
+        // print(mainMenu);
+        // RectTransform rectTransform = mainMenu.GetComponent<RectTransform>();
+        // print("Checking transform vals here");
+        // print(rectTransform.offsetMin);
+        // rectTransform.offsetMin = new Vector2(-37,rectTransform.offsetMin.y);
+        // print(rectTransform);
+        // rectTransform.offsetMax = new Vector2(rectTransform.offsetMax.x,-178);
+
     }
     void Initialise(){
         
@@ -215,7 +225,7 @@ public class LevelManagerLevel3 : MonoBehaviour
                 Debug.Log("Game manager else"+bulletPowerUpController.getTotalPowerUpsCollected());
                 sendToGoogle.UpdatePowerUpsUsageAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],bulletPowerUpController.getTotalPowerUpsGenerated(),bulletPowerUpController.getTotalPowerUpsCollected());
                 //UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene 2");
-                GameManager.instance.gameOverScreen();
+                GameManager.instance.lossScreen();
 
             }
             }
