@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     public float RockSpeed = 2.0f;
     public int bullets;
 
+    // public float bulletPowerUpSpeed = 2.0f;
+
     public int totalLettersShot;
     public int characterShotCount;
 

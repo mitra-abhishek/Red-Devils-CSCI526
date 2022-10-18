@@ -739,6 +739,7 @@ GameObject:
   - component: {fileID: 345747629}
   - component: {fileID: 345747631}
   - component: {fileID: 345747632}
+  - component: {fileID: 345747633}
   m_Layer: 0
   m_Name: LevelManager2
   m_TagString: Untagged
@@ -835,6 +836,21 @@ MonoBehaviour:
   enemyPrefab: {fileID: 5389615402529709660, guid: 037e261c6813a2a49a3c3c3242eef74e, type: 3}
   enemyReAppearTime: 4
   maxEnemyAtTime: 1
+--- !u!114 &345747633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 345747626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b849fa12688e914459f9ac66e271de08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPowerupPrefab: {fileID: 387216967669953160, guid: 545bc3e745cd6394984a8a5484fed91b, type: 3}
+  bulletPowerupReAppearTime: 10
+  maxbulletPowerupAtTime: 1
 --- !u!1 &356175784
 GameObject:
   m_ObjectHideFlags: 0
@@ -1208,6 +1224,8 @@ MonoBehaviour:
   bulletPrefab: {fileID: 4403854986693279775, guid: 749751dbaf3c45242ba0303af30b832d, type: 3}
   sceneCam: {fileID: 519420031}
   rb: {fileID: 635070115}
+  ANGULAR_SPEED: 3.7
+  WEBGL_MULTIPLIER: 1
 --- !u!61 &635070114
 BoxCollider2D:
   m_ObjectHideFlags: 0

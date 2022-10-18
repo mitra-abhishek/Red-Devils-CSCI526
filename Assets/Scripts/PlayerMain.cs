@@ -50,6 +50,7 @@ public class PlayerMain : MonoBehaviour
             TakeDamage(20);
         }
         if(other.tag=="enemy_bullet"){
+            Debug.Log("enemy bullet detected");
             TakeDamage(20);
         }
     }
