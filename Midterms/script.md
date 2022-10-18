@@ -9,12 +9,11 @@ The game is split across multiple levels - each having a word theme of its own. 
 ## **Gameplay**
 
 ### **Player movement**
-As you can see, the shooter can rotate using the Arrow and move using the WASD keys. They can shoot using the Space bar.
+As you can see, the shooter can Rotate using the Arrow and Move using the WASD keys. They can shoot using the Space bar.
 
 ### **Hint Letters**
-Let's take a pause. What's that Green letter? So, to give the player some hint and also to test their marksmanship, we initially indicate the likelihood of a letter through color - Red, Yellow and Green being the alphabetical closeness to the correct letters.
-
-
+Let's take a pause. What's that Green letter? So, to introduce strategy in the initial few seconds of the game (rather than just random shooting), we indicate alphabetical closeness of a falling letter to a letter in the word through color gradient - Red through Green.
+\
 *(In the middle of screenshot where FOX is being generated)* The player is able to shoot letters that seems to generate the word FOX.
 \
 *(After FOX is complete)* After completing the word, the score for the level is displayed, let's move to the next level
