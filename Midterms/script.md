@@ -26,8 +26,8 @@ Let's take a pause. What's that Green letter? So, to give the player some hint a
 After completing all the levels, the player is shown the final screen displaying the score and other stats.
 
 ## **Closing Remarks**
-A final closing remark. we'd like to describe some ongoing improvements that we are undertaking. Specifically - the proffessor had raised an interesting important point in our last meeting - during the inital part of a level there is not a lot of strategy involved and the player must randomly shoot letters as they appear for the first few seconds.
+A final closing remark. we'd like to describe some improvements that we have made. Specifically - the proffessor had raised an interesting important point in our last meeting - during the inital part of a level there is not a lot of strategy involved and the player must randomly shoot letters as they appear for the first few seconds.
 
-We have brainstormed a few solutions for this problem and should have a prototype soon.
+We have brainstormed a few solutions - including the colored letters solution that was visible earlier. We are still experimenting on stuff and look forward to the analytics.
 
 Finally, we'd like to thank the Professor for his awesome lectures and useful feedback. We appreciate being given this opportunity to present the game and look forward to your feedback.
