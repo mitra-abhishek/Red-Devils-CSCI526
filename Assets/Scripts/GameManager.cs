@@ -127,11 +127,11 @@ public class GameManager : MonoBehaviour
         int dist = wordDistanceDict[currentChar.ToUpper()[0]];
         Debug.Log("Letter is "+ currentChar + "Distance is " + dist);
  
-        if (dist < 2)
+        if (dist == 0)
         {
             return "green/";
         }
-        if(dist < 4)
+        if(dist < 2)
         {
             return "orange/";
         }
