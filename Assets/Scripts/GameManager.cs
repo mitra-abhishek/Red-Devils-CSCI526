@@ -101,7 +101,7 @@ public class GameManager : MonoBehaviour
 
     public void goToHome()
     {
-        SceneManager.LoadScene("Main Screen Demo");
+        SceneManager.LoadScene("Start Screen");
     }
 
     public void gameOverScreen(){
