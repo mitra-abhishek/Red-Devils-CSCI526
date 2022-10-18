@@ -89,6 +89,11 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Level Complete");
     }
 
+    public void winScreen2()
+    {
+        SceneManager.LoadScene("Level Complete2");
+    }
+
     public void lossScreen()
     {
         SceneManager.LoadScene("Level Failure");
