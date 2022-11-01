@@ -61,14 +61,12 @@ public class PlayerMain : MonoBehaviour
             TakeDamage(20);
         }
         if(other.tag=="enemy_bullet"){
-<<<<<<< HEAD
             gotHitScreen.GetComponent<Image>().color=color;
             Debug.Log("enemy bullet detected");
-=======
             TakeDamage(20);
         }
         if(other.tag=="smart_enemy_bullet"){
->>>>>>> bd0660cf258208a547abb7a19a54117d0658ad71
+            gotHitScreen.GetComponent<Image>().color=color;
             TakeDamage(20);
         }
     }
