@@ -28,6 +28,7 @@ public class Bullets : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other){
         if(other.tag=="rock"){
+            PlayerStats.rockScore += 5;
             Instantiate(explosion,transform.position,transform.rotation);
             Destroy(this.gameObject);
             Destroy(other.gameObject);
@@ -40,11 +41,13 @@ public class Bullets : MonoBehaviour
         }
 
         if(other.tag == "enemy"){
+            PlayerStats.enemyScore += 10;
             Instantiate(explosion,transform.position,transform.rotation);
             Destroy(other.gameObject);
         }
 
         if(other.tag == "smart_enemy"){
+            PlayerStats.enemyScore += 10;
             Instantiate(explosion,transform.position,transform.rotation);
             Destroy(other.gameObject);
         }

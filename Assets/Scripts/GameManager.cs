@@ -6,6 +6,11 @@ using UnityEngine.SceneManagement;
 using TMPro;
 
 
+public static class PlayerStats {
+    public static int rockScore { get; set; }
+    public static int enemyScore { get; set; }
+}
+
 public class GameManager : MonoBehaviour
 {  
     public static GameManager instance;
@@ -40,8 +45,16 @@ public class GameManager : MonoBehaviour
         }
         DontDestroyOnLoad(instance);
     }
+
+    public void ResetScore()
+    {
+        PlayerStats.rockScore = 0;
+        PlayerStats.enemyScore = 0;
+    }
+
     public void Start()
     {
+        ResetScore();
         bulletController=new BulletController();
         bulletController.setBullets(bullets);
         bulletPowerUpController=new BulletPowerUpController();
@@ -118,20 +131,20 @@ public class GameManager : MonoBehaviour
             foreach (char wordChar in tempUpperCase)
             {
                 int currentDist = Math.Abs((int)(c-wordChar));
-                //Debug.Log(("Curr DIst is " + currentDist + " Numeric Value "+ Char.GetNumericValue(c)));
+                // Debug.Log(("Curr DIst is " + currentDist + " Numeric Value "+ Char.GetNumericValue(c)));
                 minDist = Math.Min(currentDist, minDist);
             }
-            //Debug.Log("Distance for " + c + " is  : " + minDist);
+            // Debug.Log("Distance for " + c + " is  : " + minDist);
             wordDistanceDict.Add(c, minDist);
         } 
-        //Debug.Log(wordDistanceDict);
+        // Debug.Log(wordDistanceDict);
 
     }
 
     public String getColorLevel(String currentChar)
     {
         int dist = wordDistanceDict[currentChar.ToUpper()[0]];
-        //Debug.Log("Letter is "+ currentChar + "Distance is " + dist);
+        // Debug.Log("Letter is "+ currentChar + "Distance is " + dist);
  
         if (dist == 0)
         {

@@ -12,7 +12,8 @@ public class LevelCompleteScript : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {  
+    {
+        int totalScore = PlayerStats.rockScore + PlayerStats.enemyScore;
         scoreObj = GameObject.FindWithTag("score");
         TextMeshProUGUI scoreObjGui = scoreObj.GetComponent<TextMeshProUGUI>();
         scoreObjGui.text = getRandomScore(GameManager.instance.Level);
