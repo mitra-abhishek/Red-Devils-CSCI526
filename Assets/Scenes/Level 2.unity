@@ -866,7 +866,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   smartEnemyPrefab: {fileID: 7857365539536989332, guid: d9580dd25d46a47579ae50d7c3cf8fe2, type: 3}
-  enemyReAppearTime: 2
+  enemyReAppearTime: 8
   maxEnemyAtTime: 1
 --- !u!1 &356175784
 GameObject:
