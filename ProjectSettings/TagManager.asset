@@ -57,3 +57,6 @@ TagManager:
   - name: Letter
     uniqueID: 2211898041
     locked: 0
+  - name: coin
+    uniqueID: 1169610647
+    locked: 0

@@ -14,11 +14,11 @@ public class LevelManagerLevel3 : MonoBehaviour
     [SerializeField] BulletController bulletController;
     [SerializeField] BulletPowerUpController bulletPowerUpController;
 
-    public String levelWord = "";
+    public static String levelWord = "";
     public List<TMP_Text> blankList = new List<TMP_Text>();
     public GameObject blankPrefab;
     public Transform blankHolder;
-    public Dictionary<int,Char> letterMap = new Dictionary<int,Char>();
+    public static Dictionary<int,Char> letterMap = new Dictionary<int,Char>();
     public float letterSpeed = 1.5f;
     public int level3Bullets = 20;
     public float rockSpeed = 3.5f;
@@ -84,6 +84,23 @@ public class LevelManagerLevel3 : MonoBehaviour
         GameManager.instance.genWordDistanceDictionary();
         availableBullets=level3Bullets;
 
+    }
+
+    public void setLetterFromHint()
+    {
+        print("Entering this 5");
+        print(levelWord.Length);
+        for(int itr = 0;itr<levelWord.Length;itr++)
+       {
+           print(letterMap[itr]);
+           if(letterMap[itr]=='/')
+           {
+               letterMap[itr] = levelWord[itr];
+               print("LetterMap");
+               print(letterMap[itr]);
+               break;
+           }
+       }
     }
 
     void OnEnable ()
