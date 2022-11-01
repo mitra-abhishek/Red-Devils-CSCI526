@@ -6,6 +6,8 @@ using TMPro;
 public class LevelCompleteScript : MonoBehaviour
 {
 
+    GameObject rockScoreObj;
+    GameObject enemyScoreObj;
     GameObject scoreObj;
 
     private static System.Random random = new System.Random();
@@ -13,31 +15,24 @@ public class LevelCompleteScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        int totalScore = PlayerStats.rockScore + PlayerStats.enemyScore;
+        rockScoreObj = GameObject.FindWithTag("rock_score");
+        enemyScoreObj = GameObject.FindWithTag("enemy_score");
         scoreObj = GameObject.FindWithTag("score");
+        
+        TextMeshProUGUI rockScoreObjGui = rockScoreObj.GetComponent<TextMeshProUGUI>();
+        rockScoreObjGui.text = PlayerStats.rockScore.ToString();
+
+        TextMeshProUGUI enemyScoreObjGui = enemyScoreObj.GetComponent<TextMeshProUGUI>();
+        enemyScoreObjGui.text = PlayerStats.enemyScore.ToString();
+        
+        int totalScore = PlayerStats.rockScore + PlayerStats.enemyScore;
         TextMeshProUGUI scoreObjGui = scoreObj.GetComponent<TextMeshProUGUI>();
-        scoreObjGui.text = getRandomScore(GameManager.instance.Level);
+        scoreObjGui.text = totalScore.ToString();
     }
 
     // Update is called once per frame
     void Update()
     {
         
-    }
-
-    private string getRandomScore(int level) {
-        int multiplier = random.Next(10, 21);
-        int finalScore = 0;
-
-        if(level == 1) {
-            finalScore = 300 + (multiplier*5);
-        } else if (level == 2) {
-            finalScore = 600 + (multiplier*5);
-        } else {
-            finalScore = 900 + (multiplier*5);
-        }
-
-        string str = finalScore.ToString();
-        return str;
     }
 }

@@ -15,6 +15,8 @@ TagManager:
   - enemy_bullet
   - enemy
   - score
+  - rock_score
+  - enemy_score
   layers:
   - Default
   - TransparentFX

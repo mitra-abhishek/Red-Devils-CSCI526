@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour
 
     public void Start()
     {
-        ResetScore();
+        // ResetScore();
         bulletController=new BulletController();
         bulletController.setBullets(bullets);
         bulletPowerUpController=new BulletPowerUpController();
