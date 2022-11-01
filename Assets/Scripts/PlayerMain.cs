@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 
@@ -8,6 +9,7 @@ public class PlayerMain : MonoBehaviour
 {
     public int maxHealth=100;
     public int currentHealth;
+    public GameObject gotHitScreen;
     public Dictionary<string, int> pairs = new Dictionary<string, int>()
     {
         { "SampleScene 2", 1 }, { "Level 2", 2 },{"Level 3",3}
@@ -26,7 +28,13 @@ public class PlayerMain : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      
+        if(gotHitScreen!=null){
+            if(gotHitScreen.GetComponent<Image>().color.a>0){
+                var color=gotHitScreen.GetComponent<Image>().color;
+                color.a-=0.005f;
+                gotHitScreen.GetComponent<Image>().color=color;
+            }
+     }
     }
 
     public void TakeDamage(int damage){
@@ -46,10 +54,14 @@ public class PlayerMain : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other){
+        var color=gotHitScreen.GetComponent<Image>().color;
+        color.a=0.8f;
         if(other.tag=="rock"){
+            gotHitScreen.GetComponent<Image>().color=color;
             TakeDamage(20);
         }
         if(other.tag=="enemy_bullet"){
+            gotHitScreen.GetComponent<Image>().color=color;
             Debug.Log("enemy bullet detected");
             TakeDamage(20);
         }
