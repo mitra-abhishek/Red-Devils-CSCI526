@@ -33,8 +33,8 @@ public class letter : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D col)
     {
-        Debug.Log("Collision for Letter");
-        Debug.Log(col.gameObject.tag);
+        //Debug.Log("Collision for Letter");
+        //Debug.Log(col.gameObject.tag);
         if (col.gameObject.tag == "Bullet")
         {
             Destroy(col.gameObject);

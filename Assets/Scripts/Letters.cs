@@ -55,8 +55,8 @@ public class Letters : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D col)
     {
-        Debug.Log("Collision for Letter");
-        Debug.Log(col.gameObject.tag);
+        //Debug.Log("Collision for Letter");
+        //Debug.Log(col.gameObject.tag);
         if (col.gameObject.tag == "bullet" )
         {
             Destroy(col.gameObject);
@@ -67,8 +67,8 @@ public class Letters : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.Log("Trigger for Letter");
-        Debug.Log(col.gameObject.tag);
+        //Debug.Log("Trigger for Letter");
+        //Debug.Log(col.gameObject.tag);
         if (col.gameObject.tag == "player")
         {
             // Destroy(gameObject);

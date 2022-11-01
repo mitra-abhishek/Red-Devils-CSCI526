@@ -40,5 +40,9 @@ public class Bullets : MonoBehaviour
         if(other.tag == "enemy"){
             Destroy(other.gameObject);
         }
+
+        if(other.tag == "smart_enemy"){
+            Destroy(other.gameObject);
+        }
     }
 }

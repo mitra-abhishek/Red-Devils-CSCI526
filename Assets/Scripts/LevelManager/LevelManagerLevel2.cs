@@ -93,10 +93,10 @@ public class LevelManagerLevel2 : MonoBehaviour
 
     void SomeFunction (Dictionary<string, object> message)
     {
-        Debug.Log(message);
+        //Debug.Log(message);
         var val = (Collider2D)message["amount"];
-        Debug.Log ($"{val.name[0]} received test!");
-        Debug.Log ("Some Function was called!: ");
+        // Debug.Log ($"{val.name[0]} received test!");
+        // Debug.Log ("Some Function was called!: ");
         totalLettersShot+=1;
         GameManager.instance.totalLettersShot=totalLettersShot;
         Boolean letterMatched = false;

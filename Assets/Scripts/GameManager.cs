@@ -42,7 +42,6 @@ public class GameManager : MonoBehaviour
     }
     public void Start()
     {
-        Debug.Log("Game Manager Started");
         bulletController=new BulletController();
         bulletController.setBullets(bullets);
         bulletPowerUpController=new BulletPowerUpController();
@@ -119,20 +118,20 @@ public class GameManager : MonoBehaviour
             foreach (char wordChar in tempUpperCase)
             {
                 int currentDist = Math.Abs((int)(c-wordChar));
-                Debug.Log(("Curr DIst is " + currentDist + " Numeric Value "+ Char.GetNumericValue(c)));
+                //Debug.Log(("Curr DIst is " + currentDist + " Numeric Value "+ Char.GetNumericValue(c)));
                 minDist = Math.Min(currentDist, minDist);
             }
-            Debug.Log("Distance for " + c + " is  : " + minDist);
+            //Debug.Log("Distance for " + c + " is  : " + minDist);
             wordDistanceDict.Add(c, minDist);
         } 
-        Debug.Log(wordDistanceDict);
+        //Debug.Log(wordDistanceDict);
 
     }
 
     public String getColorLevel(String currentChar)
     {
         int dist = wordDistanceDict[currentChar.ToUpper()[0]];
-        Debug.Log("Letter is "+ currentChar + "Distance is " + dist);
+        //Debug.Log("Letter is "+ currentChar + "Distance is " + dist);
  
         if (dist == 0)
         {

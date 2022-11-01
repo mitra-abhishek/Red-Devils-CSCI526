@@ -11,12 +11,10 @@ public class BulletPowerUpController : MonoBehaviour
     public int totalPowerUpsCollected;
 
     public void setTotalPowerGenerated(){
-        Debug.Log("Game Manager Set Total Power ");
         totalPowerUpsGenerated=0;
     }
 
     public void setTotalPowerUpsCollected(){
-        Debug.Log("Game Manager Set Total Power Collected");
         totalPowerUpsCollected=0;
     }
 

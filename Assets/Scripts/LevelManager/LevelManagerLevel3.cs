@@ -98,10 +98,10 @@ public class LevelManagerLevel3 : MonoBehaviour
 
     void SomeFunction (Dictionary<string, object> message)
     {
-        Debug.Log(message);
+        //Debug.Log(message);
         var val = (Collider2D)message["amount"];
-        Debug.Log ($"{val.name[0]} received test!");
-        Debug.Log ("Some Function was called!: ");
+        // Debug.Log ($"{val.name[0]} received test!");
+        // Debug.Log ("Some Function was called!: ");
         Boolean letterMatched = false;
         totalLettersShot+=1;
         GameManager.instance.totalLettersShot=totalLettersShot;
@@ -196,7 +196,7 @@ public class LevelManagerLevel3 : MonoBehaviour
             RectTransform.offsetMin = new Vector2(RectTransform.offsetMin.x,-40);
             blankList.Add(blankHelper.GetComponent<TMP_Text>());
         }
-        Debug.Log(letterMap);
+        //Debug.Log(letterMap);
     }
 
     private void OnDestroy()
@@ -207,7 +207,7 @@ public class LevelManagerLevel3 : MonoBehaviour
         timeFinished=Time.time;
         timeToComplete=Math.Round(timeFinished-timeStart,2);
         availableBullets=bulletController.availableBullets;
-        Debug.Log("The available Bullets are"+availableBullets);
+        //Debug.Log("The available Bullets are"+availableBullets);
         if (timeToComplete>0 && timer.currentTime>0 && playerMain.currentHealth>0){
             if (availableBullets>1){
             currentLevel=pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name];            
@@ -222,7 +222,7 @@ public class LevelManagerLevel3 : MonoBehaviour
                 sendToGoogle.UpdateUnsuccessfulTriesAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],false);
                 sendToGoogle.UpdateResonForDeathAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],"Bullet Finished");
                 sendToGoogle.UpdateCorrectLettersShotAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],totalLettersShot,characterShot,"level3 destroy");
-                Debug.Log("Game manager else"+bulletPowerUpController.getTotalPowerUpsCollected());
+                //Debug.Log("Game manager else"+bulletPowerUpController.getTotalPowerUpsCollected());
                 sendToGoogle.UpdatePowerUpsUsageAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],bulletPowerUpController.getTotalPowerUpsGenerated(),bulletPowerUpController.getTotalPowerUpsCollected());
                 //UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene 2");
                 GameManager.instance.lossScreen();

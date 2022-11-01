@@ -12,7 +12,6 @@ public class BulletPowerUp : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Bullet Powerup Created");
         GameManager.instance.bulletPowerUpController.addTotalPowerUpsGenerated();
         rb=this.GetComponent<Rigidbody2D>();
         // Change to add bullet speed if needed
@@ -34,7 +33,7 @@ public class BulletPowerUp : MonoBehaviour
         {
             GameManager.instance.bulletController.addBullets(5);
             GameManager.instance.bulletPowerUpController.addTotalPowerUpsCollected();
-            Debug.Log("Bullet Powerup added to Player");
+            //Debug.Log("Bullet Powerup added to Player");
             Destroy(this.gameObject);
         }
     }

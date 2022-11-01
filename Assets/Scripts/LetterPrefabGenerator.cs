@@ -166,7 +166,7 @@ public class LetterPrefabGenerator : MonoBehaviour
         
         GameObject letter = Instantiate(Resources.Load("Letters/"+getLetter(word)) as GameObject);
         //Debug.Log("Tag : " +letter.tag);
-        Debug.Log("Name : " + letter.name);
+        //Debug.Log("Name : " + letter.name);
         letter.transform.position=new Vector2(GameManager.instance.getRandomRange(-screenBounds.x, screenBounds.x), screenBounds.y);
         
         GameObject letter2 = Instantiate(Resources.Load("Letters/"+getLetter(word)) as GameObject);
@@ -199,7 +199,7 @@ public class LetterPrefabGenerator : MonoBehaviour
         //     letter = Instantiate(Resources.Load("Letters/"+getLetter(LevelManagerLevel1.instance.levelWord)) as GameObject);
 
         string string_letter = getLetter(GameManager.instance.LevelWord);
-        Debug.Log("Current Letter is " + string_letter);
+        //Debug.Log("Current Letter is " + string_letter);
         if (!GameManager.instance.switchColor)
             letter = Instantiate(Resources.Load("Letters/black/"+ string_letter) as GameObject);
         else

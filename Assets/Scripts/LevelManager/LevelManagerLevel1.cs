@@ -94,10 +94,10 @@ public class LevelManagerLevel1 : MonoBehaviour
 
     void SomeFunction (Dictionary<string, object> message)
     {
-        Debug.Log(message);
+        //Debug.Log(message);
         var val = (Collider2D)message["amount"];
-        Debug.Log ($"{val.name[0]} received test!");
-        Debug.Log ("Some Function was called!: ");
+        // Debug.Log ($"{val.name[0]} received test!");
+        // Debug.Log ("Some Function was called!: ");
         Boolean letterMatched = false;
         totalLettersShot+=1;
         GameManager.instance.totalLettersShot=totalLettersShot;
@@ -205,7 +205,7 @@ public class LevelManagerLevel1 : MonoBehaviour
         timeToComplete=Math.Round(timeFinished-timeStart,2);
         availableBullets=bulletController.availableBullets;         // Available bullets==Bullets Shot
 
-        Debug.Log("The characters total shot"+totalLettersShot);
+        //Debug.Log("The characters total shot"+totalLettersShot);
         if (timeToComplete>0 && timer.currentTime>0 && playerMain.currentHealth>0){
             if (availableBullets>1){
             currentLevel=pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name];            
@@ -219,7 +219,7 @@ public class LevelManagerLevel1 : MonoBehaviour
             // All bulltes over so available bullets=level1bullets;
             sendToGoogle.UpdateUnsuccessfulTriesAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],false);
             sendToGoogle.UpdateResonForDeathAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],"Bullet Finished");
-            Debug.Log("THe total bullets shot is"+totalLettersShot+"Correct character shot"+characterShot);
+            //Debug.Log("THe total bullets shot is"+totalLettersShot+"Correct character shot"+characterShot);
             sendToGoogle.UpdateCorrectLettersShotAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],totalLettersShot,characterShot,"level1 source");
             sendToGoogle.UpdatePowerUpsUsageAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],bulletPowerUpController.getTotalPowerUpsGenerated(),bulletPowerUpController.getTotalPowerUpsCollected());
             //UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene 2");

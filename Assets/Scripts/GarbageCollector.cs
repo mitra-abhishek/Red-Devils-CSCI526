@@ -19,7 +19,7 @@ public class GarbageCollector : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D col)
     {
-        Debug.Log("Collision to Wall");
+        //Debug.Log("Collision to Wall");
         Destroy(col.gameObject);
     }
 }

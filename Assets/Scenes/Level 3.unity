@@ -419,6 +419,7 @@ GameObject:
   - component: {fileID: 345747629}
   - component: {fileID: 345747631}
   - component: {fileID: 345747632}
+  - component: {fileID: 345747633}
   m_Layer: 0
   m_Name: LevelManager3
   m_TagString: Untagged
@@ -528,8 +529,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 5389615402529709660, guid: 037e261c6813a2a49a3c3c3242eef74e, type: 3}
-  enemyReAppearTime: 2
+  enemyReAppearTime: 3
   maxEnemyAtTime: 2
+--- !u!114 &345747633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 345747626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ff1cf651606f4657820d3f4c9532ff5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smartEnemyPrefab: {fileID: 7857365539536989332, guid: d9580dd25d46a47579ae50d7c3cf8fe2, type: 3}
+  enemyReAppearTime: 6
+  maxEnemyAtTime: 1
 --- !u!1 &356175784
 GameObject:
   m_ObjectHideFlags: 0

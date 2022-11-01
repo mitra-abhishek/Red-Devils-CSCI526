@@ -51,6 +51,6 @@ public class bulletdemo1 : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D col)
     {
-        Debug.Log("Collision Detected");
+        //Debug.Log("Collision Detected");
     }
 }
