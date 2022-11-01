@@ -47,13 +47,13 @@ public class PlayerMain : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other){
         if(other.tag=="rock"){
-            TakeDamage(20);
+            TakeDamage(10);
         }
         if(other.tag=="enemy_bullet"){
-            TakeDamage(20);
+            TakeDamage(10);
         }
         if(other.tag=="smart_enemy_bullet"){
-            TakeDamage(20);
+            TakeDamage(10);
         }
     }
 }
