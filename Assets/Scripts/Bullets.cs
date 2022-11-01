@@ -9,6 +9,7 @@ public class Bullets : MonoBehaviour
     private Camera mainCam;
     private Rigidbody2D rigidBullet;
     private Vector3 posMouse;
+    public GameObject explosion;
     public float speed = 7f;
     
     // Start is called before the first frame update
@@ -27,6 +28,7 @@ public class Bullets : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other){
         if(other.tag=="rock"){
+            Instantiate(explosion,transform.position,transform.rotation);
             Destroy(this.gameObject);
             Destroy(other.gameObject);
             
@@ -38,10 +40,12 @@ public class Bullets : MonoBehaviour
         }
 
         if(other.tag == "enemy"){
+            Instantiate(explosion,transform.position,transform.rotation);
             Destroy(other.gameObject);
         }
 
         if(other.tag == "smart_enemy"){
+            Instantiate(explosion,transform.position,transform.rotation);
             Destroy(other.gameObject);
         }
     }
