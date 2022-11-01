@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Runtime.InteropServices;
 
 public class ButtonHandlerLev3 : MonoBehaviour
 {
@@ -10,8 +11,9 @@ public class ButtonHandlerLev3 : MonoBehaviour
     private Bullets bulletHandler;
     private LevelManagerLevel3 levelManagerLevel3;
 
-    public void onClick()
+    public void onClickFun()
     {
+        print("We enter this");
         int currentCoins = coin_count.getNumCoins();
         if(currentCoins>=3)
         {

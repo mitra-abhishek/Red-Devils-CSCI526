@@ -23,13 +23,13 @@ public class ButtonHandler : MonoBehaviour
             bulletHandler.SetEnemiesDestroyed(currentCoins);
             levelManagerLevel2.setLetterFromHint();
         }
-        else{
-            // popUpMessage.SetActive(true);
-            // StartCoroutine(timeDelay());
-            // // Mouse mouse = new Mouse();
-            // Mouse.current.WarpCursorPosition(new Vector2(100, 100));
+        // else{
+        //     // popUpMessage.SetActive(true);
+        //     // StartCoroutine(timeDelay());
+        //     // // Mouse mouse = new Mouse();
+        //     // Mouse.current.WarpCursorPosition(new Vector2(100, 100));
 
-        }
+        // }
 
 
     }
