@@ -28,8 +28,6 @@ public class GameManager : MonoBehaviour
 
     public BulletController bulletController;
     public BulletPowerUpController bulletPowerUpController;
-    public delayHelper delay;
-    public Bullets bulletsHelper;
 
     public int ScreenDivisionNumber = 10;
     private List<int> previousScreenPositionSelected = new List<int>(10);
@@ -62,8 +60,6 @@ public class GameManager : MonoBehaviour
         bulletPowerUpController=new BulletPowerUpController();
         bulletPowerUpController.setTotalPowerGenerated();
         bulletPowerUpController.setTotalPowerUpsCollected();
-        delay = new delayHelper();
-        
 
     }
     private void OnDisable()
@@ -77,7 +73,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        bulletsHelper = new Bullets();
+        
     }
     public float getRandomRange(float start, float end)
     {
