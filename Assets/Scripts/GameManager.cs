@@ -154,10 +154,10 @@ public class GameManager : MonoBehaviour
         {
             return "green/";
         }
-        if(dist < 2)
-        {
-            return "orange/";
-        }
+        // if(dist < 2)
+        // {
+        //     return "orange/";
+        // }
        
         return "red/";
     }
