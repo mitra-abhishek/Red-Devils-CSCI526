@@ -1,0 +1,4425 @@
+fileFormatVersion: 2
+guid: 6b44ad25440d66b4d838474b7dc18bec
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_0
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 183
+        width: 49
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d236a733227db4b44aac4ca40880b368
+      internalID: -1512616113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_1
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 230
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a6a282a38d1f5a4da3575f4fd85674d
+      internalID: 45831287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_2
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 232
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4139acbf7e881547aad2f6e6c12dd9a
+      internalID: 1740594982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_3
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 232
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dafdc6e90a13dc842ae8fa0bc583cc5d
+      internalID: -1248787369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_4
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 232
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e44043bb975efe448407f7fb3817893
+      internalID: 2061541060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_5
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 184
+        width: 54
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 202351291e64a3746a921c8b12b6824f
+      internalID: 104312164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_6
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 215
+        width: 26
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9ac97f128b7b6245ac95889cf0d54bb
+      internalID: 402913582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_7
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 230
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20ebed8e95481e848abe8347b656b40c
+      internalID: 770997480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_8
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 215
+        width: 21
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34b821faab63b77449f9b3748e1f711d
+      internalID: 2066415265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_9
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 215
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b04286cf646b76469f94b9ce91164f7
+      internalID: 1397448658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_10
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 214
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55411de7b9f813a4f866f3962410595a
+      internalID: -1405943253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_11
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 216
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30fff64d644f23d49977729f55dc6143
+      internalID: -417801551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_12
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 218
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a08a4683545f90c4e998e23e26e8129d
+      internalID: 1977257123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_13
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 214
+        width: 5
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4e7470f6d487d5439e9603b553c613a
+      internalID: -2076226750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_14
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 222
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7513b3569bc5bfa4ea99f54d30e98fb0
+      internalID: 716441015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_15
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 222
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37255373aa6069740807a6abd99ebc05
+      internalID: -120530152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_16
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 201
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9446ef973a8cc6147b9d23fb20d81bc2
+      internalID: 408660631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_17
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 200
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 413e60dfde4b75545a761fe47636866c
+      internalID: -262800553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_18
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 199
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d906d9c079713d84ea25befed3795969
+      internalID: -1216938139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_19
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 199
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09d9ed5974a47524a943cdb86052e682
+      internalID: 1544787451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_20
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 197
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2b0402657f788f41819a64129841765
+      internalID: -1634806399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_21
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 196
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b0466143ffe91f44b1f37029e4b5a2e
+      internalID: -1308341901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_22
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 197
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a175ec9a7869864aa8c7542d889ec27
+      internalID: 1355698880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_23
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 199
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3a1727581419de4681691bccf86e657
+      internalID: -1012606861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_24
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 184
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c29af808ca469934faeb48c8e48ae213
+      internalID: -1551027907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_25
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 185
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11cf986f8402f4d4d9176231ffd961a0
+      internalID: 1388771427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_26
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 182
+        width: 4
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5847bbdf6ccc30546b23d153d28b91b2
+      internalID: 185043108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_27
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 183
+        width: 4
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27d5d9f1371e2664ea7ce7c051a79a03
+      internalID: 525744986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_28
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 182
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfa9dbccfa267bd4aa1181dda1ef472b
+      internalID: 2070692574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_29
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 184
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c6a805f0c296f049a18cbeebc55ba42
+      internalID: 48606178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_30
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 183
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3040d9b3fe9b984d98dd0351726b6df
+      internalID: -766464312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_31
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 183
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c72023ae4dbaeab4ab09682c0830468b
+      internalID: 540956826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_32
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 159
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a94bc898d926d24ba6e8ae4a7b75506
+      internalID: -469499283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_33
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 168
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bfe1e91193ba824ea5c0099f749ca19
+      internalID: -249563454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_34
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 160
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 903ed05e04a478c4cad280923ef70f93
+      internalID: -397837286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_35
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 168
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d89225e56dc166242a76856481742525
+      internalID: -29782395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_36
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 160
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13d677a6d93ae8844bdab6f6a3f1693a
+      internalID: 431362942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_37
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 160
+        width: 5
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5f216d64e96bf140a59fd81e3dd67dd
+      internalID: -2086909098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_38
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 149
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc2dcd0eb6f95db46a84f1997a35f33f
+      internalID: 2056724907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_39
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 166
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8445151acb864a4e8b05a2fcb4c8332
+      internalID: -1333828948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_40
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 148
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e17e75bfcb747c4ea7efc26b3df269e
+      internalID: 1589660764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_41
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 147
+        width: 24
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 153b10148c6af964c892db3995c4d9af
+      internalID: -823482272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_42
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 143
+        width: 64
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c69e45f32fb8f614c8ac3e9a892feed7
+      internalID: 1985190890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_43
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 148
+        width: 40
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c3e0381046550147b4c1ae83c95438a
+      internalID: 541793649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_44
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 145
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6b5ee11c58c6ca418272b1157d2734c
+      internalID: 802821221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_45
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 147
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14f245c2f9884b94f9f752ff7982b5a1
+      internalID: 837507366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_46
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 147
+        width: 9
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce53d83220839184690b7fa1d53f5db8
+      internalID: 468138989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_47
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 132
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eb3132e1cfa62842be4c32496636c9b
+      internalID: 1753116160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_48
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 131
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c95da7b21a76d6a43af1460ef6389d83
+      internalID: -1226352851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_49
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 132
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d2ba50f304d22d4ab05ffdcdc095aa0
+      internalID: 1141756573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_50
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 131
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13163e328dd232a49bb838433faf2c8f
+      internalID: 840982795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_51
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 116
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2ba6455e3c5cc943a256a053b0ab644
+      internalID: -1637633055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_52
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 112
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 419e832e097048443aed5034f24b90fb
+      internalID: -78511532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_53
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 119
+        width: 31
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e561c2353ed5b584a980e78f201d482f
+      internalID: 400803133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_54
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 121
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75e1bf8d9d8ab804b997c71150e6ac7c
+      internalID: 1360821336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_55
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 334c561eef2301049856b08d17701e81
+      internalID: 927775581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_56
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 124
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4f89d00b269ce74d82d8c336eae0df6
+      internalID: 1140113448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_57
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 113
+        width: 27
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7940804c010cea142a1addc842926f15
+      internalID: 2062516125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_58
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 125
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6ad6fe9da44c9d409e7186472d685e6
+      internalID: -982168219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_59
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 124
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a44a922c16a79b4680386d85a492a88
+      internalID: 2125639079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_60
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 124
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73942564579e93a448bfb1ceaef2e091
+      internalID: -245741360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_61
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 124
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d88668b27067de94abe8ac2c35842389
+      internalID: 875180591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_62
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 113
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ec16076709cfec41867ff47b517ff06
+      internalID: 785502633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_63
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 113
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d117b8f15adee7e4aa6e502def37900f
+      internalID: -932237648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_64
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 120
+        width: 6
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 136566063269ee54e9391f9434f82b67
+      internalID: 1095010747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_65
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 112
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bad5e59bf9057a489a783b18a36888a
+      internalID: 2034687804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_66
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 111
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6214c42f59a95d54a84c71655dd925a8
+      internalID: 1624159460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_67
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 81
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40e2b47629260f145ae724674b8f8865
+      internalID: -822294661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_68
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 44
+        width: 22
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a40febf68ad75c4a83b8cb96da194e9
+      internalID: 571485281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_69
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 44
+        width: 24
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c422c08058533d34ebe7cf22c5feaaa3
+      internalID: -754404189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_70
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 92
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67a55f9697742fa40825a64f70a039bc
+      internalID: 1903815576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_71
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 93
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d6b523602870144cbcd37570dd66d8a
+      internalID: -341592458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_72
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 92
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce54adbc3ce6b4a4dab6c35af3e36c9f
+      internalID: 1375637177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_73
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 93
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10470aab205ca6e4d8537926cecda829
+      internalID: 830143514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_74
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 86
+        width: 17
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd94051cac0c52c4eba6977746a90d5d
+      internalID: -425729209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_75
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 81
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09b3ac7bd073bc04ca8dff84b0056756
+      internalID: -1379708902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_76
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 81
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 903f283c50cfaba4a8d34764e047e476
+      internalID: -2084730500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_77
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 86
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8da5f535402a85b448352bea3e318caa
+      internalID: 1947080011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_78
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 87
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96659f6640d015b429153c0c6d7a8dd8
+      internalID: -1387704811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_79
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 88
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97329020a1a2a904296c0d05a6759692
+      internalID: -1095884601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_80
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 88
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1851024c0ae5e840944943788d2c2f2
+      internalID: 1428823510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_81
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 87
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b75ebb1504550443988f5034392da45
+      internalID: -1078840065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_82
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 88
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06be7a3a0bf4ede489e0bd72325ee044
+      internalID: -1129851445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_83
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 88
+        width: 13
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 206374e7ceb40d14da0e074b0b2eafd7
+      internalID: 1289369735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_84
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 81
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e966a6fd70afc784195c8335338e06f2
+      internalID: -710542753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_85
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 81
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb3ddbbfa8f09654fb2986c94a1f2f45
+      internalID: 358299858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_86
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 76
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b43ef7c9530dac4aa3d7f2bf8716f32
+      internalID: 804762612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_87
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 77
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da82e288940ab754ebda2edac9828c35
+      internalID: -1257196742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_88
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 76
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b4b22f5f547d554ea7e559d6c428606
+      internalID: 646369474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_89
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 77
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b0a4f1752817b64c9065f25fc26e5e3
+      internalID: -1065262255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_90
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 75
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58a5a2aa67878f342b8a243e44749e43
+      internalID: -1922128799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_91
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 76
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59d8404fccbd0284ea380d4f72a73de9
+      internalID: 2045799308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_92
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 75
+        width: 17
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39065132d6442d241b4889e687b5e61d
+      internalID: 930798079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_93
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 76
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e8777c6c5fd47847bebdb725dba6d26
+      internalID: 60745154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_94
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 77
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e99cba250d7991e40b7300332fa2f719
+      internalID: -776483996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_95
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 77
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 792789b9303cc9745be7a225106e1645
+      internalID: -635300328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_96
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 77
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9018bab4795ab59469fad75fc52c72a6
+      internalID: 214272544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_97
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 77
+        width: 13
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e01a6c1fab4e3f748add83de100eb2c4
+      internalID: -1720063579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_98
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 44
+        width: 18
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a13f541bd1eabdf49910f69bfebd9ad4
+      internalID: -1876648515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_99
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 44
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2323fafcd52b048418d7b990e760e9d6
+      internalID: -1528993892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_100
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 60
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 351c547ec74b2da48885e299173a946c
+      internalID: 497314410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_101
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 61
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d26497a8c461314388539af8df20470
+      internalID: -1951354463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_102
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 60
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b2178f845f56b7478dfc4ca9cd8c82b
+      internalID: -1084238045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_103
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 61
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4c4b469211fb0a47a068f6ccb77a7bb
+      internalID: -1096707593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_104
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88a76694b0989b64b94344721c0be8fa
+      internalID: -600163795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_105
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 65
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db230beeedee67042b91d3df2a6e219c
+      internalID: -466710217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_106
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 66
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f17166d99c82ea044b591c076f68fc0b
+      internalID: -1867576424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_107
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 66
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 755e0db707792594588e5851adeebd3d
+      internalID: 678876360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_108
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 64
+        width: 17
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d47d5d7416a3b6244aaeb43005a812c3
+      internalID: 10541068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_109
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 65
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d418fc3c0314384eaf1460bb98d35d4
+      internalID: 1878963541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_110
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 66
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aef4759e060cfd045a69729ffa74bb44
+      internalID: 404345372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_111
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 66
+        width: 13
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b793451f20e3da449a918bd23be8d829
+      internalID: -1670093501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_112
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 43
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f50d5f3cc0e8474798bb34c2ee77707
+      internalID: -1619981099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_113
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 43
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37ed39bbbea85d347967de5c61984ea4
+      internalID: -1000209975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_114
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 44
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08625e99323cdfc45981c288e8b62b4e
+      internalID: 621509028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_115
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 44
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67afbc6de4fb58a46a0f35b3b016aea6
+      internalID: -1725860523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_116
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 53
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b937cbb8297a874198c98d4f8b7ab6c
+      internalID: -2042647115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_117
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 54
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2764874908a2cd4398cda826af2653e
+      internalID: 1931741713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_118
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 55
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ed41ee9178cf564aaddb77bdee122b6
+      internalID: -1684584376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_119
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 55
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e699e2a14f147e4d946835e9779715e
+      internalID: 408498202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_120
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 53
+        width: 17
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e1ff14595822fc449339c39da3711f2
+      internalID: 93052570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_121
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 54
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99b2f91776b80f3478ddaefb15c0737e
+      internalID: 779449544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_122
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 55
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bdcfd8ca020a3a4d906b89844cc8792
+      internalID: -772142197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_123
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 55
+        width: 13
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33d014bdad59c0f45b62f4f88bf94ed2
+      internalID: -1350733548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_124
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 45
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 188c4334e7c45b643b37a49208e4478c
+      internalID: -824867820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_125
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 45
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4c309465bccfc3408333e9419ee20c0
+      internalID: 990484269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_126
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 30
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6152aa9b47fd1c4bbc003e4dc4c04cd
+      internalID: -50266770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_127
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 30
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf115d6e475b4f14ab50e4f50ab445db
+      internalID: 1486767697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_128
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 30
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9137ad6f82dd2147b129dbd5a8e4a05
+      internalID: 744363733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_129
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 30
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca9e7de6058069449a21938a1472f61a
+      internalID: -2067897712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_130
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 28
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30df10b269f451243beaa5fc64a6d333
+      internalID: -750535248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_131
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 30
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76d7d16dc38056c4fbf7d125719a0b95
+      internalID: -833556861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_132
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 30
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a512aa538a66e747ab976ae9388a7e1
+      internalID: -575298203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_133
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 30
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ec9fe36a6175b342aa2ae6af112ffb0
+      internalID: 197004354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_134
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 30
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ecdd2e99bb5cc94a8eac0770fb6b1eb
+      internalID: 1716103859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_135
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 30
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee64957dc64e278479899c470bb30059
+      internalID: -66189231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_136
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 30
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0bd229a08e8a4d419249be97adab6dd
+      internalID: 915267981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_137
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 30
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e869d97230ddb346b49c682d53d4f52
+      internalID: 1368224719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_138
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 30
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee6a662dbec1c59468379093c59f8f95
+      internalID: -2133476209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_139
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 30
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f8b902ca9c86584e88fc46b8f0244b5
+      internalID: 2143073941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_140
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 30
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b905cebecb8aa2145859a6088f404402
+      internalID: -169564574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_141
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 30
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47e0fa2fb25e60c4599fb01f95f5f567
+      internalID: 1498571719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_142
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 30
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c73b267e22da91940b5e3c3ad5e78315
+      internalID: -2119605837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_143
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 30
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd778ca592c021c48a705f4836240699
+      internalID: -1818817027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_144
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 30
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cc1957837057a046940c2ed57904e79
+      internalID: 293790802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_145
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 30
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76daeae23fd011947832c861dd69b8e5
+      internalID: -1294448322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_146
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 30
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81a7951de9ec62949a0c249d266d4911
+      internalID: -972696327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_147
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 18
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3393accf0c30b6478b16e6d88c90cb4
+      internalID: 1376253902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_148
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 16
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 973aeec981a2fc34fae78a7be96c98c1
+      internalID: -1710975072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_149
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 16
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54217a789a3f96f43ae2747c0992f6f4
+      internalID: -1205942465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_150
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 18
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cd697aa7556323448f86c5eee57c0ee
+      internalID: 1523271781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_151
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 18
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c724fad31116ab8488175c9f14190841
+      internalID: 126069052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_152
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 18
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dff333389e7dc64b81037fc7197f370
+      internalID: -424845859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_153
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 16
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2097a334e6b509748ab75c9e93c8da21
+      internalID: 2068627173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_154
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 18
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ccff101036dda14885088001731c130
+      internalID: 409173120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_155
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 17
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d1424c8c82b40445a60d596757aee2e
+      internalID: 139598417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_156
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 18
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aeaf58bd0f5f614096ed84051dadd44
+      internalID: 1643050756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_157
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 18
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78733978e2ef50e43a0193a89723d755
+      internalID: 1643498195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_158
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 16
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e716c3b05653cb4fb5e6851f26ccdc5
+      internalID: -1284639146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_159
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 18
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f30b2808b8328d43a2ff0e4af7bc300
+      internalID: 16687795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_160
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 18
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c221490318cc4c94e902e36b959bce6f
+      internalID: -394347262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_161
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 18
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ea8cea8afe4cd74a964c2e3ceccce82
+      internalID: 18779337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_162
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 18
+        width: 8
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dd0035414a8d69488425eb6b6e92a7f
+      internalID: 19588730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_163
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 16
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68f13858e8b178e44b3db07b8a5e3529
+      internalID: 771783884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_164
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 18
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b87956f32020e1449e1e393f1003e07
+      internalID: 1223260632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_165
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 18
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5236918ed780be5428a9feb625e853eb
+      internalID: 596944964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_166
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 18
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ad7a4c5dc040784286e06087167df9e
+      internalID: 294874252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_167
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 6
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9a4b640339c4f343b15239cf8cd8a9c
+      internalID: 1955185173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_168
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 6
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c2c5037c5b233d42af05795fda9715d
+      internalID: -321763165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_169
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 4
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af726b1c6f094ca49ae2f52bcae376ed
+      internalID: 1874349333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_170
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 4
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9565f35c5154cda4dbcfb1adf0766dc9
+      internalID: -148552442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_171
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 4
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86d9da645da48ae4c83d9b34e1e76ec5
+      internalID: 1231648239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_172
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 6
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84e5dfb09f26ba24cb848c981decd28a
+      internalID: 408493564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_173
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 6
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a934631f36d1c7744a0d41c31ce31435
+      internalID: 1701055556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_174
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 6
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f99b6850eb9a67e488ba1fb428ba5b71
+      internalID: 928912207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_175
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 6
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45a8af5954cb5ad479eeb48fe42fd616
+      internalID: -235634404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_176
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 6
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f38e2928ca0c6f540b4d0866a8b97575
+      internalID: -406846899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_177
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 6
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0aa9136c02cc9e64dbc666d1cdf21a91
+      internalID: -1185877819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_178
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 6
+        width: 18
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7fb6d5111dadf144b249e33feae7f72
+      internalID: -1040942077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_179
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 6
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79293ef32db452647971e170162e29de
+      internalID: 1065241707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_180
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 6
+        width: 8
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c5104a9813e5f64a8d090edb2f94234
+      internalID: -871562027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_181
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 6
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 734efe1e2721fa24fbb9e0a2d355cb28
+      internalID: 1564064559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_182
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 6
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b610d9d27b03af34d9a276108c5b0392
+      internalID: -2106589463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_183
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 6
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79503e4a360d42d40a451383f03aab8d
+      internalID: 2091556199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_184
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 6
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c038e98a2897d04cb47d0a10af1ccd3
+      internalID: -945477033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_185
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 6
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 019306217ac9f054eb1c3c561e3ec812
+      internalID: 1309050320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_186
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 6
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcf249c57f25ec24baa4f53fe1884a34
+      internalID: 605276119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_187
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 6
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0d81ab5942b4744e9951dbc77f7f5db
+      internalID: 981393898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_188
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 6
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54b501eeb3ba69740b828f9ca0cc3a9c
+      internalID: -1889275824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_189
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 6
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cd67ae3979a83e4bb24247e843b7185
+      internalID: -1951804401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_190
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 6
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01e13f8377d3a3e47bc263d83d3b9df8
+      internalID: -420993777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_191
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 6
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56d86984a64e73748a64281c5496bf3a
+      internalID: -331405826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_192
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 6
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73cf95dd517cf9046bc988f28a94cec2
+      internalID: 1890401560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_193
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 6
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c42ecd22006868a4cbd0972336108771
+      internalID: -1797629133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_194
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 4
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0882e51d8140d44c818cb9fa9b57ad9
+      internalID: -1315832499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_29: 48606178
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_133: 197004354
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_75: -1379708902
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_134: 1716103859
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_188: -1889275824
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_34: -397837286
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_41: -823482272
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_59: 2125639079
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_52: -78511532
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_168: -321763165
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_79: -1095884601
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_97: -1720063579
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_121: 779449544
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_176: -406846899
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_160: -394347262
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_107: 678876360
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_43: 541793649
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_94: -776483996
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_70: 1903815576
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_51: -1637633055
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_104: -600163795
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_172: 408493564
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_95: -635300328
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_189: -1951804401
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_1: 45831287
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_81: -1078840065
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_152: -424845859
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_84: -710542753
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_77: 1947080011
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_167: 1955185173
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_38: 2056724907
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_191: -331405826
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_40: 1589660764
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_90: -1922128799
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_142: -2119605837
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_125: 990484269
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_82: -1129851445
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_131: -833556861
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_10: -1405943253
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_53: 400803133
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_113: -1000209975
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_86: 804762612
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_46: 468138989
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_151: 126069052
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_42: 1985190890
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_2: 1740594982
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_80: 1428823510
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_180: -871562027
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_25: 1388771427
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_36: 431362942
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_11: -417801551
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_193: -1797629133
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_105: -466710217
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_12: 1977257123
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_14: 716441015
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_87: -1257196742
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_126: -50266770
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_76: -2084730500
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_138: -2133476209
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_16: 408660631
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_92: 930798079
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_47: 1753116160
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_48: -1226352851
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_115: -1725860523
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_117: 1931741713
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_157: 1643498195
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_170: -148552442
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_49: 1141756573
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_93: 60745154
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_140: -169564574
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_154: 409173120
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_135: -66189231
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_159: 16687795
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_85: 358299858
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_153: 2068627173
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_21: -1308341901
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_106: -1867576424
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_144: 293790802
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_28: 2070692574
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_102: -1084238045
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_17: -262800553
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_32: -469499283
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_108: 10541068
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_143: -1818817027
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_98: -1876648515
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_96: 214272544
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_161: 18779337
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_111: -1670093501
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_129: -2067897712
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_181: 1564064559
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_101: -1951354463
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_156: 1643050756
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_158: -1284639146
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_179: 1065241707
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_186: 605276119
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_123: -1350733548
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_44: 802821221
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_118: -1684584376
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_145: -1294448322
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_26: 185043108
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_88: 646369474
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_166: 294874252
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_54: 1360821336
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_68: 571485281
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_110: 404345372
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_175: -235634404
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_45: 837507366
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_60: -245741360
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_83: 1289369735
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_20: -1634806399
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_185: 1309050320
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_150: 1523271781
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_171: 1231648239
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_69: -754404189
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_130: -750535248
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_91: 2045799308
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_194: -1315832499
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_0: -1512616113
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_4: 2061541060
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_64: 1095010747
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_174: 928912207
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_33: -249563454
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_37: -2086909098
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_23: -1012606861
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_128: 744363733
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_184: -945477033
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_7: 770997480
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_73: 830143514
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_30: -766464312
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_19: 1544787451
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_58: -982168219
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_39: -1333828948
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_99: -1528993892
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_137: 1368224719
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_55: 927775581
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_136: 915267981
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_139: 2143073941
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_22: 1355698880
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_183: 2091556199
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_65: 2034687804
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_147: 1376253902
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_27: 525744986
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_112: -1619981099
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_187: 981393898
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_124: -824867820
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_100: 497314410
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_72: 1375637177
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_148: -1710975072
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_6: 402913582
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_122: -772142197
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_66: 1624159460
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_182: -2106589463
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_146: -972696327
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_103: -1096707593
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_74: -425729209
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_71: -341592458
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_141: 1498571719
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_50: 840982795
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_61: 875180591
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_109: 1878963541
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_62: 785502633
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_164: 1223260632
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_3: -1248787369
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_165: 596944964
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_155: 139598417
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_56: 1140113448
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_63: -932237648
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_119: 408498202
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_132: -575298203
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_116: -2042647115
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_57: 2062516125
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_163: 771783884
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_24: -1551027907
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_177: -1185877819
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_149: -1205942465
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_35: -29782395
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_67: -822294661
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_18: -1216938139
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_190: -420993777
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_127: 1486767697
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_5: 104312164
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_9: 1397448658
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_162: 19588730
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_169: 1874349333
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_114: 621509028
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_192: 1890401560
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_13: -2076226750
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_31: 540956826
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_78: -1387704811
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_89: -1065262255
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_120: 93052570
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_178: -1040942077
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_173: 1701055556
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_8: 2066415265
+      Game Boy Advance - Castlevania Harmony of Dissonance - Ice Magic_15: -120530152
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

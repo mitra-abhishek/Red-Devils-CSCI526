@@ -17,6 +17,9 @@ TagManager:
   - score
   - rock_score
   - enemy_score
+  - smart_enemy
+  - smart_enemy_bullet
+  - ice
   layers:
   - Default
   - TransparentFX

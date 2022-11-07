@@ -713,6 +713,7 @@ GameObject:
   - component: {fileID: 345747630}
   - component: {fileID: 345747629}
   - component: {fileID: 345747631}
+  - component: {fileID: 345747632}
   m_Layer: 0
   m_Name: LevelManager1
   m_TagString: Untagged
@@ -809,6 +810,22 @@ MonoBehaviour:
   bulletPowerupPrefab: {fileID: 387216967669953160, guid: 545bc3e745cd6394984a8a5484fed91b, type: 3}
   bulletPowerupReAppearTime: 20
   maxbulletPowerupAtTime: 1
+--- !u!114 &345747632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 345747626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 360ac33fb0d3093498e17428e074643f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rockPrefab: {fileID: 5356430114322639579, guid: 540c7db7e61fe65469ecfe31bf396eda, type: 3}
+  rockReAppearTime: 2
+  maxRockAtTime: 1
+  freezeTime: 4
 --- !u!1 &356175784
 GameObject:
   m_ObjectHideFlags: 0

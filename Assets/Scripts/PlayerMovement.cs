@@ -22,8 +22,16 @@ public class PlayerMovement : MonoBehaviour
     public float ANGULAR_SPEED = 3.7f;
 
     public float WEBGL_MULTIPLIER = 1.0f;
+    
+    public static PlayerMovement instance;
+
+    
     void Start()
     {   
+        if (instance == null)
+        {
+            instance = this;
+        }
     }
 
 
@@ -86,6 +94,18 @@ public class PlayerMovement : MonoBehaviour
             Destroy(this.gameObject);
             UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
         }
+    }
+
+    public void decreasePlayerSpeedCaller()
+    {
+        StartCoroutine(decreasePlayerSpeed());
+    }
+    public IEnumerator decreasePlayerSpeed()
+    {
+        speed /= IcePrefabGenerator.instance.reduceSpeedBy;
+        yield return new WaitForSeconds(IcePrefabGenerator.instance.freezeTime);
+        Debug.Log("Increase Speed"); 
+        speed *= IcePrefabGenerator.instance.reduceSpeedBy;
     }
 
 }

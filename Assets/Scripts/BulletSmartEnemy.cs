@@ -23,6 +23,7 @@ public class BulletSmartEnemy : MonoBehaviour
     // Update is called once per frame
     void Update() 
     {
+
         transform.position = Vector2.MoveTowards(transform.position, pos_target, speed * Time.deltaTime);
 
         if(-transform.position.y>screenBounds.y*1){
