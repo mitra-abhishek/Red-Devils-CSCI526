@@ -112,5 +112,11 @@ public class Bullets : MonoBehaviour
             Instantiate(explosion,transform.position,transform.rotation);
             Destroy(other.gameObject);
         }
+
+        if(other.tag == "boss_enemy_level1"){
+            PlayerStats.enemyScore += 10;
+            Instantiate(explosion,transform.position,transform.rotation);
+            FindObjectOfType<BossEnemyLevel1>().TakeHit(10);
+        }
     }
 }

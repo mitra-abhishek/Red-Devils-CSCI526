@@ -20,6 +20,7 @@ TagManager:
   - smart_enemy
   - smart_enemy_bullet
   - ice
+  - boss_enemy_level1
   layers:
   - Default
   - TransparentFX
