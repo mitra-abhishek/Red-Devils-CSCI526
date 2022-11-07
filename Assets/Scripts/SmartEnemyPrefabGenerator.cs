@@ -22,7 +22,9 @@ public class SmartEnemyPrefabGenerator : MonoBehaviour
     {
         for (int i = 0; i < random.Next(1, maxEnemyAtTime); i++)
         {
-            StartCoroutine(createEnemiesDelayedCoRoutine());
+            if(GameManager.instance.wordCompleted == false){
+                StartCoroutine(createEnemiesDelayedCoRoutine());
+            }
             //StopCoroutine(createLettersDelayedCoRoutine());
         }
     }
@@ -41,7 +43,7 @@ public class SmartEnemyPrefabGenerator : MonoBehaviour
     }
 
     IEnumerator enemyLoop(){
-        while(true){
+         while(GameManager.instance.wordCompleted == false){
             yield return new WaitForSeconds(enemyReAppearTime);
             createEnemiesDelayed();
         }

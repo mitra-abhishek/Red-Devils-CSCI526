@@ -64,6 +64,7 @@ public class LevelManagerLevel2 : MonoBehaviour
         List<string> level_words = new List<string>
         {
             "FORD", "FIAT", "AUDI", "BENZ"
+            //"F"
         };
        
         int index = random.Next(level_words.Count);
@@ -169,9 +170,13 @@ public class LevelManagerLevel2 : MonoBehaviour
         }
         characterShot=count;
         GameManager.instance.characterShotCount=characterShot;
-        if (count == levelWord.Length) {    
-            StartCoroutine(SetWinText ());
+        if (count == levelWord.Length) {
+            GameManager.instance.wordCompleted = true;   
+            if(GameManager.instance.gameWon == true){
+                StartCoroutine(SetWinText ());
+            }
         }
+
     }
 
     IEnumerator SetWinText () {

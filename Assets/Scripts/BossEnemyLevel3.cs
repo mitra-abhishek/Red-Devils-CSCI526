@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossEnemyLevel1 : MonoBehaviour
+public class BossEnemyLevel3 : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Vector2 screenBounds;
@@ -18,7 +18,7 @@ public class BossEnemyLevel1 : MonoBehaviour
     void Start()
     {
         rb=this.GetComponent<Rigidbody2D>();
-        // rb.velocity=new Vector2(0, 0);
+        rb.velocity=new Vector2(GameManager.instance.RockSpeed, 0);
         screenBounds=Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
         StartCoroutine(enemy_bulletLoop());
         maxPoints=50;
@@ -56,11 +56,11 @@ public class BossEnemyLevel1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // if(transform.position.x>screenBounds.x){
-        //     rb.velocity=new Vector2(-GameManager.instance.RockSpeed, 0);
-        // }
-        // else if(transform.position.x<-1*screenBounds.x){
-        //     rb.velocity=new Vector2(GameManager.instance.RockSpeed, 0);
-        // }
+        if(transform.position.x>screenBounds.x){
+            rb.velocity=new Vector2(-GameManager.instance.RockSpeed, 0);
+        }
+        else if(transform.position.x<-1*screenBounds.x){
+            rb.velocity=new Vector2(GameManager.instance.RockSpeed, 0);
+        }
     }
 }

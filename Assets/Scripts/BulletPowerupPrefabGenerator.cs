@@ -22,7 +22,9 @@ public class BulletPowerupPrefabGenerator : MonoBehaviour
     {
         for (int i = 0; i < random.Next(1, maxbulletPowerupAtTime); i++)
         {
-            StartCoroutine(createbulletPowerupssDelayedCoRoutine());
+            if(GameManager.instance.wordCompleted == false){
+                StartCoroutine(createbulletPowerupssDelayedCoRoutine());
+            }
             //StopCoroutine(createLettersDelayedCoRoutine());
         }
     }
@@ -41,7 +43,7 @@ public class BulletPowerupPrefabGenerator : MonoBehaviour
     }
 
     IEnumerator bulletPowerupLoop(){
-        while(true){
+        while(GameManager.instance.wordCompleted == false){
             yield return new WaitForSeconds(bulletPowerupReAppearTime);
             createbulletPowerupsDelayed();
         }

@@ -63,7 +63,8 @@ public class LevelManagerLevel1 : MonoBehaviour
 
         List<string> level_words = new List<string>
         {
-            "CAT", "DOG", "FOX"
+            //"CAT", "DOG", "FOX"
+            "C"
         };
         
         int index = random.Next(level_words.Count);
@@ -157,12 +158,17 @@ public class LevelManagerLevel1 : MonoBehaviour
         }
         characterShot=count;
         GameManager.instance.characterShotCount=characterShot;
-        if (count == levelWord.Length) {    
-            StartCoroutine(SetWinText ());
+        if (count == levelWord.Length) {
+            GameManager.instance.wordCompleted = true;   
+            if(GameManager.instance.gameWon == true){
+                StartCoroutine(SetWinText ());
+            }
         }
     }
 
     IEnumerator SetWinText () {
+        GameManager.instance.wordCompleted = false;
+        GameManager.instance.gameWon = false;
         yield return new WaitForSeconds(2f);
         Destroy(this.gameObject);
     //     if (pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name]+1 <=3){

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyPrefabGenerator : MonoBehaviour
 {
+    public static IEnumerator enemyLoopCoroutine;
+    public static IEnumerator createEnemiesDelayedCoroutine;
     private Vector2 screenBounds;
     private static System.Random random = new System.Random();
 
@@ -15,14 +17,20 @@ public class EnemyPrefabGenerator : MonoBehaviour
     void Start()
     {
         screenBounds=Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
-        StartCoroutine(enemyLoop());
+        
+        enemyLoopCoroutine = enemyLoop();
+        StartCoroutine(enemyLoopCoroutine);
+        //StartCoroutine(enemyLoop());
     }
     
     private void createEnemiesDelayed()
     {
         for (int i = 0; i < random.Next(1, maxEnemyAtTime); i++)
         {
-            StartCoroutine(createEnemiesDelayedCoRoutine());
+            if(GameManager.instance.wordCompleted == false){
+                createEnemiesDelayedCoroutine = createEnemiesDelayedCoRoutine();
+                StartCoroutine(createEnemiesDelayedCoroutine);
+            }
             //StopCoroutine(createLettersDelayedCoRoutine());
         }
     }
@@ -41,9 +49,9 @@ public class EnemyPrefabGenerator : MonoBehaviour
     }
 
     IEnumerator enemyLoop(){
-        while(true){
+        while(GameManager.instance.wordCompleted == false){
             yield return new WaitForSeconds(enemyReAppearTime);
             createEnemiesDelayed();
         }
-    }
+    }  
 }

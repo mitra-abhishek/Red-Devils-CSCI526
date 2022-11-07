@@ -174,8 +174,11 @@ public class LevelManagerLevel3 : MonoBehaviour
         }
         characterShot=count;
         GameManager.instance.characterShotCount=characterShot;
-        if (count == levelWord.Length) {    
-            StartCoroutine(SetWinText ());
+        if (count == levelWord.Length) {
+            GameManager.instance.wordCompleted = true;   
+            if(GameManager.instance.gameWon == true){
+                StartCoroutine(SetWinText ());
+            }
         }
     }
 
