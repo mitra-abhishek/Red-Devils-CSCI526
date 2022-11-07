@@ -15,11 +15,11 @@ public class LevelManagerLevel2 : MonoBehaviour
     [SerializeField] BulletPowerUpController bulletPowerUpController;
 
 
-    public String levelWord = "";
+    public static String levelWord = "";
     public List<TMP_Text> blankList = new List<TMP_Text>();
     public GameObject blankPrefab;
     public Transform blankHolder;
-    public Dictionary<int,Char> letterMap = new Dictionary<int,Char>();
+    public static Dictionary<int,Char> letterMap = new Dictionary<int,Char>();
     public float letterSpeed = 1.5f;
     public float rockSpeed = 2.0f;
 
@@ -109,6 +109,23 @@ public class LevelManagerLevel2 : MonoBehaviour
            }
        }
 
+    }
+
+    public void setLetterFromHint()
+    {
+        print("Entering this 5");
+        print(levelWord.Length);
+        for(int itr = 0;itr<levelWord.Length;itr++)
+       {
+           print(letterMap[itr]);
+           if(letterMap[itr]=='/')
+           {
+               letterMap[itr] = levelWord[itr];
+               print("LetterMap");
+               print(letterMap[itr]);
+               break;
+           }
+       }
     }
 
     // Start is called before the first frame update
