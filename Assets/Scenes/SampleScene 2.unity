@@ -752,7 +752,6 @@ MonoBehaviour:
   levelWord: 
   blankList: []
   correctLetterList: []
-  explosionList: []
   blankPrefab: {fileID: 5187836768122991378, guid: 7cce4b751137f4e84a2f103914e1a902, type: 3}
   correctLetterPrefab: {fileID: 5187836768122991378, guid: 6d36053df73807844afc50f9a3690707, type: 3}
   blankHolder: {fileID: 252724979}
@@ -762,7 +761,6 @@ MonoBehaviour:
   timeToComplete: 0
   totalLettersShot: 0
   characterShot: 0
-  explosion: {fileID: 0}
   sendToGoogle: {fileID: 1289588395}
   bulletController: {fileID: 928287816}
   bulletPowerUpController: {fileID: 186177822}
@@ -1285,7 +1283,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a4b3dacff37859943a8a7d2054ea6e01, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fde5afdd22cc92a4a94b848d1697daed, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
