@@ -14,11 +14,11 @@ public class LevelManagerLevel3 : MonoBehaviour
     [SerializeField] BulletController bulletController;
     [SerializeField] BulletPowerUpController bulletPowerUpController;
 
-    public String levelWord = "";
+    public static String levelWord = "";
     public List<TMP_Text> blankList = new List<TMP_Text>();
     public GameObject blankPrefab;
     public Transform blankHolder;
-    public Dictionary<int,Char> letterMap = new Dictionary<int,Char>();
+    public static Dictionary<int,Char> letterMap = new Dictionary<int,Char>();
     public float letterSpeed = 1.5f;
     public int level3Bullets = 20;
     public float rockSpeed = 3.5f;
