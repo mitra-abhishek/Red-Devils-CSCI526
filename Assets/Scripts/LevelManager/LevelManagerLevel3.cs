@@ -305,6 +305,6 @@ public class LevelManagerLevel3 : MonoBehaviour
                 }
             }
         }
-
+        letterMap = new Dictionary<int, char>();
     }
 }
