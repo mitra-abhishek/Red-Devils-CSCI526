@@ -26,5 +26,11 @@ public class ShieldMain : MonoBehaviour
         if(other.tag=="smart_enemy_bullet"){
             Destroy(other.gameObject);
         }
+        if(other.tag=="enemy"){
+            Destroy(other.gameObject);
+        }
+        if(other.tag=="smart_enemy"){
+            Destroy(other.gameObject);
+        }
     }
 }
