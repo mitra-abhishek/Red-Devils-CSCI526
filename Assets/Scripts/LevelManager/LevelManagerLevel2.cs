@@ -180,6 +180,8 @@ public class LevelManagerLevel2 : MonoBehaviour
     }
 
     IEnumerator SetWinText () {
+        GameManager.instance.wordCompleted = false;
+        GameManager.instance.gameWon = false;
         yield return new WaitForSeconds(2f);
         Destroy(this.gameObject);
         

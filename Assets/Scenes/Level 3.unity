@@ -463,6 +463,7 @@ GameObject:
   - component: {fileID: 345747632}
   - component: {fileID: 345747633}
   - component: {fileID: 345747634}
+  - component: {fileID: 345747635}
   m_Layer: 0
   m_Name: LevelManager3
   m_TagString: Untagged
@@ -603,6 +604,21 @@ MonoBehaviour:
   enemyPrefab: {fileID: 1126280980146680301, guid: ff42553c7c12d4fab9f5d5929e64183d, type: 3}
   enemyReAppearTime: 2
   maxEnemyAtTime: 1
+--- !u!114 &345747635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 345747626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91840c98eec084f31b7c499d33cd7f67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthPowerupPrefab: {fileID: 4276392852886831379, guid: f7f6126af1b0a4b5db40e9e5fdfe36c5, type: 3}
+  healthPowerupReAppearTime: 4
+  maxbulletPowerupAtTime: 1
 --- !u!1 &356175784
 GameObject:
   m_ObjectHideFlags: 0

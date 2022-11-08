@@ -183,6 +183,8 @@ public class LevelManagerLevel3 : MonoBehaviour
     }
 
     IEnumerator SetWinText () {
+        GameManager.instance.wordCompleted = false;
+        GameManager.instance.gameWon = false;
         yield return new WaitForSeconds(2f);
         Destroy(this.gameObject);
         //UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene 2");
