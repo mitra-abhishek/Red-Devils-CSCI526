@@ -1071,7 +1071,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shieldPowerupPrefab: {fileID: 387216967669953160, guid: e1d34bbdf318d4ee89630807a1feaf11, type: 3}
-  shieldPowerupReAppearTime: 4
+  shieldPowerupReAppearTime: 6
   maxshieldPowerupAtTime: 1
 --- !u!1 &356175784
 GameObject:
