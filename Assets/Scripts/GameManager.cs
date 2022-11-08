@@ -14,6 +14,8 @@ public static class PlayerStats {
 public class GameManager : MonoBehaviour
 {  
     public static GameManager instance;
+    public bool wordCompleted;
+    public bool gameWon;
     public int Level = 1;
     public String LevelWord;
     public float LetterSpeed = 2.0f;
@@ -60,6 +62,8 @@ public class GameManager : MonoBehaviour
         bulletPowerUpController=new BulletPowerUpController();
         bulletPowerUpController.setTotalPowerGenerated();
         bulletPowerUpController.setTotalPowerUpsCollected();
+        wordCompleted = false;
+        gameWon = false;
 
     }
     private void OnDisable()
@@ -150,10 +154,10 @@ public class GameManager : MonoBehaviour
         {
             return "green/";
         }
-        if(dist < 2)
-        {
-            return "orange/";
-        }
+        // if(dist < 2)
+        // {
+        //     return "orange/";
+        // }
        
         return "red/";
     }

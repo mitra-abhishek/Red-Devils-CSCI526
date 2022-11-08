@@ -39,6 +39,9 @@ public class PlayerMain : MonoBehaviour
 
     public void TakeDamage(int damage){
         currentHealth-=damage;
+        if(currentHealth>100){
+            currentHealth=100;
+        }
         healthBar.setHealth(currentHealth);
         Debug.Log("The scence health is"+currentHealth);
         if (currentHealth<=0){
@@ -47,6 +50,7 @@ public class PlayerMain : MonoBehaviour
              Debug.Log("Check letter count when health is over"+GameManager.instance.totalLettersShot+"---- correct"+GameManager.instance.characterShotCount+"level---"+pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name]);
             sendToGoogle.UpdateCorrectLettersShotAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],GameManager.instance.totalLettersShot,GameManager.instance.characterShotCount,"healthbar finished");
             sendToGoogle.UpdatePowerUpsUsageAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],GameManager.instance.bulletPowerUpController.getTotalPowerUpsGenerated(),GameManager.instance.bulletPowerUpController.getTotalPowerUpsCollected());
+            GameManager.instance.wordCompleted = false;
             Destroy(this.gameObject);
             //UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene 2");
             GameManager.instance.lossScreen();

@@ -39,6 +39,8 @@ public class LetterPrefabGenerator : MonoBehaviour
         // );
 
         screenBounds=Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
+        GameManager.instance.wordCompleted = false;
+        GameManager.instance.gameWon = false;
         StartCoroutine(letterLoop()); // assuming level 2
     }
     
@@ -180,7 +182,9 @@ public class LetterPrefabGenerator : MonoBehaviour
     {
         for (int i = 0; i < random.Next(1, 4); i++)
         {
-            StartCoroutine(createLettersDelayedCoRoutine());
+            if(GameManager.instance.wordCompleted == false) {
+                StartCoroutine(createLettersDelayedCoRoutine());
+            }
             //StopCoroutine(createLettersDelayedCoRoutine());
         }
         
@@ -213,12 +217,15 @@ public class LetterPrefabGenerator : MonoBehaviour
     
 
     IEnumerator letterLoop(){
-
-        while(true){
+        Debug.Log("Letter Prefab");
+        Debug.Log(GameManager.instance.wordCompleted);
+        while(GameManager.instance.wordCompleted == false){
+            Debug.Log(GameManager.instance.wordCompleted);
             yield return new WaitForSeconds(letterReAppearTime);
             //createLetters(LevelManagerLevel1.instance.levelWord);
             //Debug.Log("Level Word : "+LevelManagerLevel1.instance.levelWord);
             createLettersDelayed();
         }
+        Debug.Log(GameManager.instance.wordCompleted);
     }
 }

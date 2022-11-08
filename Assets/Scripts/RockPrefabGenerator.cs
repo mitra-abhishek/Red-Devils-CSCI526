@@ -22,7 +22,9 @@ public class RockPrefabGenerator : MonoBehaviour
     {
         for (int i = 0; i < random.Next(1, maxRockAtTime); i++)
         {
-            StartCoroutine(createRockssDelayedCoRoutine());
+            if(GameManager.instance.wordCompleted == false){
+                StartCoroutine(createRockssDelayedCoRoutine());
+            }
             //StopCoroutine(createLettersDelayedCoRoutine());
         }
     }
@@ -41,7 +43,7 @@ public class RockPrefabGenerator : MonoBehaviour
     }
 
     IEnumerator rockLoop(){
-        while(true){
+        while(GameManager.instance.wordCompleted == false){
             yield return new WaitForSeconds(rockReAppearTime);
             createRocksDelayed();
         }

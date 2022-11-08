@@ -23,6 +23,9 @@ TagManager:
   - Shield
   - ShieldTimer
   - ShieldPowerUp
+  - boss_enemy_level1
+  - boss_enemy_level2
+  - boss_enemy_level3
   layers:
   - Default
   - TransparentFX
