@@ -12,8 +12,6 @@ public class coinCount : MonoBehaviour
     public void setNumCoins(int num)
     {
         coins = num;
-        print("Checking coin count here");
-        print(coins);
     }
     public int getNumCoins()
     {
@@ -24,8 +22,6 @@ public class coinCount : MonoBehaviour
     {
         coinText = numCoins.GetComponent<Text>();
         string helperText = coins.ToString();
-        print("printing HelperText here");
-        print(helperText);
         coinText.text = helperText;
     }
 }

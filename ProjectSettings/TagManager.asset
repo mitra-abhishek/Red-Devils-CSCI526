@@ -20,6 +20,9 @@ TagManager:
   - smart_enemy
   - smart_enemy_bullet
   - ice
+  - Shield
+  - ShieldTimer
+  - ShieldPowerUp
   layers:
   - Default
   - TransparentFX
