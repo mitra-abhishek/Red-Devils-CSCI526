@@ -71,7 +71,7 @@ public class LevelManagerLevel2 : MonoBehaviour
         List<string> level_words = new List<string>
         {
             "FORD", "FIAT", "AUDI", "BENZ"
-            //"F"
+            // "F"
         };
 
         int index = random.Next(level_words.Count);

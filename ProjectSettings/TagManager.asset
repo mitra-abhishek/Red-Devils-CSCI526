@@ -26,6 +26,7 @@ TagManager:
   - boss_enemy_level1
   - boss_enemy_level2
   - boss_enemy_level3
+  - level_score
   layers:
   - Default
   - TransparentFX
