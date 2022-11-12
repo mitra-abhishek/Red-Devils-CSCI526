@@ -7,7 +7,6 @@ using System.Runtime.InteropServices;
 public class ButtonHandlerLev3 : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject buttonText;
     private coinCount coin_count;
     private Bullets bulletHandler;
     private LevelManagerLevel3 levelManagerLevel3;

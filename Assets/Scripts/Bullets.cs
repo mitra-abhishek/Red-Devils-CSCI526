@@ -110,6 +110,24 @@ public class Bullets : MonoBehaviour
         if(other.tag == "smart_enemy"){
             PlayerStats.enemyScore += 10;
             Instantiate(explosion,transform.position,transform.rotation);
+            enemiesDestroyed += 1;
+            List<GameObject> gameObjects = FindAllObjectsInScene();
+            foreach(var element in gameObjects)
+            {
+                if(element.name == "Coin")
+                {
+                    GameObject enemy = other.gameObject;
+                    Vector3 positionHelper = enemy.GetComponent<Transform>().localPosition;
+                    coin = element;
+                    coin.GetComponent<Transform>().position = positionHelper;
+                }
+            }
+            // other.gameObject.SetActive(false);
+            coin.SetActive(true);
+            coin_count.setNumCoins(enemiesDestroyed);
+            coinHelper = GameObject.Find("CoinHelper");
+            delayHelper script = coinHelper.GetComponent<delayHelper>();
+            script.callCoroutine(coin);
             Destroy(other.gameObject);
         }
 
