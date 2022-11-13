@@ -724,8 +724,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   smartEnemyPrefab: {fileID: 7857365539536989332, guid: d9580dd25d46a47579ae50d7c3cf8fe2, type: 3}
+  freezeEnemyPrefab: {fileID: 7857365539536989332, guid: af4e1a4c6731cd146a3572a457dcf2dc, type: 3}
   enemyReAppearTime: 6
   maxEnemyAtTime: 1
+  reduceSpeedBy: 10
+  freezeTime: 3
 --- !u!114 &345747634
 MonoBehaviour:
   m_ObjectHideFlags: 0

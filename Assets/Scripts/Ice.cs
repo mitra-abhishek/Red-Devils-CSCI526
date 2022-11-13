@@ -1,38 +1,46 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Ice : MonoBehaviour
 {
-
     private Rigidbody2D rb;
     private Vector2 screenBounds;
+    private Camera mainCam;
+    private Rigidbody2D rigidBullet;
+    public float speed = 7f;
 
+    Vector3 pos_target;
+    
     // Start is called before the first frame update
     void Start()
     {
-        rb=this.GetComponent<Rigidbody2D>();
-        rb.velocity=new Vector2(0,-GameManager.instance.RockSpeed);
-        screenBounds=Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
+        pos_target =  FindObjectOfType<PlayerMain>().transform.position;
+
+        screenBounds=Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));   
     }
 
     // Update is called once per frame
-    void Update()
+    void Update() 
     {
-        if(transform.position.y<screenBounds.y*-1){
+
+        transform.position = Vector2.MoveTowards(transform.position, pos_target, speed * Time.deltaTime);
+
+        if(-transform.position.y>screenBounds.y*1){
+            Destroy(this.gameObject);
+        }
+        if (transform.position.y < pos_target.y) {
             Destroy(this.gameObject);
         }
     }
-   
-
+    
     private void OnTriggerEnter2D(Collider2D col)
     {
         Debug.Log("Collision with Ice");
         if (col.gameObject.tag == "player")
         {
             PlayerMovement.instance.decreasePlayerSpeedCaller();
+            Destroy(this.gameObject);
         }
-        Destroy(this.gameObject);
     }
 }

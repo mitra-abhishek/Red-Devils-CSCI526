@@ -102,10 +102,10 @@ public class PlayerMovement : MonoBehaviour
     }
     public IEnumerator decreasePlayerSpeed()
     {
-        speed /= IcePrefabGenerator.instance.reduceSpeedBy;
-        yield return new WaitForSeconds(IcePrefabGenerator.instance.freezeTime);
+        speed /= SmartEnemyPrefabGenerator.instance.reduceSpeedBy;
+        yield return new WaitForSeconds(SmartEnemyPrefabGenerator.instance.freezeTime);
         Debug.Log("Increase Speed"); 
-        speed *= IcePrefabGenerator.instance.reduceSpeedBy;
+        speed *= SmartEnemyPrefabGenerator.instance.reduceSpeedBy;
     }
 
 }

@@ -1,9 +1,11 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.UIElements;
 
 
 public static class PlayerStats {
@@ -39,6 +41,12 @@ public class GameManager : MonoBehaviour
     public Boolean switchColor = true;
 
     private static System.Random random = new System.Random();
+    
+    private List<char> datalist = new List<char>();
+    private int indexLetter = 0;
+    private string secondaryChars = "bcdfgjklmpquvwxyz";
+
+    
     void Awake()
     {
         if (instance == null)
@@ -161,6 +169,70 @@ public class GameManager : MonoBehaviour
        
         return "red/";
     }
+    
+    public static char GetRandomCharacter(string text)
+    {
+        int index = random.Next(text.Length);
+        return text[index];
+    }
+
+    public void createLetterSpawnArrayInitial()
+    {
+        datalist.AddRange(LevelWord);
+        datalist.AddRange("aeiou");
+        datalist.AddRange("tnshr");
+        ShuffleMe(datalist);
+    }
+    public char getLetterPrimary()
+    {
+        char randomChar;
+        int randINT = random.Next(1, 10);
+        if (randINT >= 2)
+        {
+            randomChar = datalist[indexLetter];
+            indexLetter++;
+        }
+        else
+        {
+            randomChar = GetRandomCharacter(secondaryChars);
+        }
+
+        return randomChar;
+    }
+    
+    public char getLetterSecondary()
+    {
+        char randomChar;
+        int randINT = random.Next(1, 10);
+        if (randINT >= 6)
+        {
+            randomChar = datalist[indexLetter];
+            indexLetter++;
+        }
+        else if (randINT == 5)
+        { 
+            var common = LevelWord.ToUpper().Intersect(secondaryChars.ToUpper());
+            int index = random.Next(common.Count());
+            randomChar =  common.ElementAt(index);
+        }
+        else
+        {
+            randomChar = GetRandomCharacter(secondaryChars);
+        }
+
+        return randomChar;
+    }
+    
+    public static void ShuffleMe<T>(IList<T> list)  
+    {
+        int n = list.Count;
+        for(int i= list.Count - 1; i > 1; i--)
+        {
+            int rnd = random.Next(i + 1);
+            (list[rnd], list[i]) = (list[i], list[rnd]);
+        }
+    }
+
     
     
 }
