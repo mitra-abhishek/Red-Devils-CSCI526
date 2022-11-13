@@ -62,9 +62,9 @@
      <Compile Include="Assets\Scripts\Enemy.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
+     <Compile Include="Assets\FreeParallax\Scripts\FreeParallax.cs" />
      <Compile Include="Assets\Scripts\Start_Screen_buttons.cs" />
      <Compile Include="Assets\Scripts\Proto1 Scripts\ArrowTag.cs" />
-     <Compile Include="Assets\Scroll.cs" />
      <Compile Include="Assets\Scripts\Tutorial2.cs" />
      <Compile Include="Assets\Scripts\ButtonHandler.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
@@ -105,7 +105,7 @@
      <Compile Include="Assets\Scripts\GarbageCollector.cs" />
      <Compile Include="Assets\Scripts\Proto1 Scripts\Player.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
-     <Compile Include="Assets\LetterSpawn.cs" />
+     <Compile Include="Assets\Scripts\LetterSpawn.cs" />
      <Compile Include="Assets\Scripts\RockPrefabGenerator.cs" />
      <Compile Include="Assets\Scripts\Proto1 Scripts\bulletdemo2.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
@@ -128,6 +128,7 @@
      <Compile Include="Assets\Scripts\Timer.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
      <Compile Include="Assets\Scripts\ShieldTimer.cs" />
+     <Compile Include="Assets\FreeParallax\Scripts\FreeParallaxDemo.cs" />
      <Compile Include="Assets\Scripts\IcePrefabGenerator.cs" />
      <Compile Include="Assets\Scripts\SpriteText.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
@@ -139,8 +140,8 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\Scripts\BossEnemyPrefabGenerator.cs" />
-     <Compile Include="Assets\FreeParallax\Scripts\FreeParallaxDemo.cs" />
-     <Compile Include="Assets\FreeParallax\Scripts\FreeParallax.cs" />
+     <Compile Include="Assets\Scripts\UpperLetterGen.cs" />
+     <Compile Include="Assets\Scripts\LowerLetter.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

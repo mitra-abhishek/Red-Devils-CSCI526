@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour
     public Dictionary<char, int> wordDistanceDict = new Dictionary<char, int>();
 
     public Boolean switchColor = true;
+    public Boolean altVersion = false;
 
     private static System.Random random = new System.Random();
     
@@ -46,7 +47,7 @@ public class GameManager : MonoBehaviour
     private int indexLetter = 0;
     private string secondaryChars = "bcdfgjklmpquvwxyz";
 
-    
+
     void Awake()
     {
         if (instance == null)
@@ -176,6 +177,15 @@ public class GameManager : MonoBehaviour
         return text[index];
     }
 
+    private void IncrementDataList()
+    {
+        indexLetter = (indexLetter + 1) % datalist.Count();
+        if (indexLetter == 0)
+        {
+            createLetterSpawnArrayInitial();
+        }
+    }
+
     public void createLetterSpawnArrayInitial()
     {
         datalist.AddRange(LevelWord);
@@ -190,7 +200,7 @@ public class GameManager : MonoBehaviour
         if (randINT >= 2)
         {
             randomChar = datalist[indexLetter];
-            indexLetter++;
+            IncrementDataList();
         }
         else
         {
@@ -207,7 +217,7 @@ public class GameManager : MonoBehaviour
         if (randINT >= 6)
         {
             randomChar = datalist[indexLetter];
-            indexLetter++;
+            IncrementDataList();
         }
         else if (randINT == 5)
         { 

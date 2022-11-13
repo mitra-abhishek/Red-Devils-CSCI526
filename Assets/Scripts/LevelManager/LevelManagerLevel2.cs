@@ -27,6 +27,8 @@ public class LevelManagerLevel2 : MonoBehaviour
     public static Dictionary<int, Char> letterMap = new Dictionary<int, Char>();
     public float letterSpeed = 1.5f;
     public float rockSpeed = 2.0f;
+    public Boolean altVersion = false;
+    
 
     public float timeStart;
     public float timeFinished;
@@ -35,6 +37,7 @@ public class LevelManagerLevel2 : MonoBehaviour
     public int availableBullets;
     public int totalLettersShot = 0;
     public int characterShot = 0;
+    
     public Dictionary<String, int> pairs = new Dictionary<String, int>()
     {
         { "SampleScene 2", 1 }, { "Level 2", 2 },{"Level 3",3}
@@ -85,6 +88,10 @@ public class LevelManagerLevel2 : MonoBehaviour
         GameManager.instance.RockSpeed = rockSpeed;
         GameManager.instance.bullets = level2Bullets;
         GameManager.instance.genWordDistanceDictionary();
+        
+        GameManager.instance.createLetterSpawnArrayInitial();
+        GameManager.instance.altVersion = altVersion;
+        
         availableBullets = level2Bullets;
 
     }

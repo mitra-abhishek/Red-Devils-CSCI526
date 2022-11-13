@@ -21,16 +21,20 @@ public class Letters : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb=this.GetComponent<Rigidbody2D>();
-        rb.velocity=new Vector2(0,-GameManager.instance.LetterSpeed);
+        if (!GameManager.instance.altVersion)
+        {
+            rb = this.GetComponent<Rigidbody2D>();
+            rb.velocity = new Vector2(0, -GameManager.instance.LetterSpeed);
+        }
+
         screenBounds=Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
         if (displacementX)
             initialPosition = transform.position.x;
         else
             initialPosition = transform.position.y;
         
-        if (moving)
-            StartCoroutine(RunLoop());
+        // if (moving)
+        //     StartCoroutine(RunLoop());
     } 
 
     // Update is called once per frame
