@@ -5,13 +5,14 @@ using UnityEngine;
 
 public class UpperLetterGen : MonoBehaviour
 {
-    public float letterReAppearTime=4.0f;
+    private float letterReAppearTime=30.0f;
 
 
     private Vector3 startPosition;
     private GameObject letter = null;
     private Boolean droppedLetter = false;
     private Renderer renderer;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -60,7 +61,7 @@ public class UpperLetterGen : MonoBehaviour
             //Debug.Log("Level Word : "+LevelManagerLevel1.instance.levelWord);
             yield return new WaitForSeconds(0.5f);
             createLettersDelayed();
-            yield return new WaitForSeconds(5.0f);
+            yield return new WaitForSeconds(letterReAppearTime);
             droppedLetter = false;
         }
         
@@ -75,6 +76,7 @@ public class UpperLetterGen : MonoBehaviour
             Destroy(col.gameObject);
             Rigidbody2D rb = letter.GetComponent<Rigidbody2D>();
             rb.velocity = new Vector2(0, -GameManager.instance.LetterSpeed);
+            letter.transform.localScale = new Vector3(0.7f, 0.7f, 0.7f);
             droppedLetter = true;
             Debug.Log(rb);
             StopAllCoroutines();
