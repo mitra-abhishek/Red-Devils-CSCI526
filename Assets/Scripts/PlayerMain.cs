@@ -64,6 +64,11 @@ public class PlayerMain : MonoBehaviour
             gotHitScreen.GetComponent<Image>().color=color;
             TakeDamage(10);
         }
+        if(other.tag == "Letter") {
+            EventManager.TriggerEvent ("test", new Dictionary<string, object> { { "amount", other } });
+            Destroy(other.gameObject);
+            // Destroy(this.gameObject);
+        }
         if(other.tag=="enemy_bullet"){
             gotHitScreen.GetComponent<Image>().color=color;
             Debug.Log("enemy bullet detected");
