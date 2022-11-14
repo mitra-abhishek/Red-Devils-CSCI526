@@ -105,6 +105,7 @@ public class Bullets : MonoBehaviour
             delayHelper script = coinHelper.GetComponent<delayHelper>();
             script.callCoroutine(coin);
             Destroy(other.gameObject);
+            Destroy(this.gameObject);
         }
 
         if(other.tag == "smart_enemy"){
@@ -129,24 +130,28 @@ public class Bullets : MonoBehaviour
             delayHelper script = coinHelper.GetComponent<delayHelper>();
             script.callCoroutine(coin);
             Destroy(other.gameObject);
+            Destroy(this.gameObject);
         }
 
         if(other.tag == "boss_enemy_level1"){
             PlayerStats.enemyScore += 10;
             Instantiate(explosion,transform.position,transform.rotation);
             FindObjectOfType<BossEnemyLevel1>().TakeHit(10);
+            Destroy(this.gameObject);
         }
 
         if(other.tag == "boss_enemy_level2"){
             PlayerStats.enemyScore += 10;
             Instantiate(explosion,transform.position,transform.rotation);
             FindObjectOfType<BossEnemyLevel2>().TakeHit(10);
+            Destroy(this.gameObject);
         }
 
         if(other.tag == "boss_enemy_level3"){
             PlayerStats.enemyScore += 10;
             Instantiate(explosion,transform.position,transform.rotation);
             FindObjectOfType<BossEnemyLevel3>().TakeHit(10);
+            Destroy(this.gameObject);
         }
     }
 }
