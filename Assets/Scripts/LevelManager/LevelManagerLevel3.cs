@@ -201,6 +201,11 @@ public class LevelManagerLevel3 : MonoBehaviour
         }
         characterShot = count;
         GameManager.instance.characterShotCount = characterShot;
+        
+        if (count == levelWord.Length - 1) {
+            GameManager.instance.penultimate = true;
+        }
+
         if (count == levelWord.Length)
         {
             GameManager.instance.wordCompleted = true;
@@ -218,6 +223,7 @@ public class LevelManagerLevel3 : MonoBehaviour
     }
 
     IEnumerator SetWinText() {
+        GameManager.instance.penultimate = false;
         GameManager.instance.wordCompleted = false;
         GameManager.instance.gameWon = false;
         yield return new WaitForSeconds(2f);

@@ -30,8 +30,7 @@ public class BossEnemyPrefabGenerator : MonoBehaviour
     }
 
     IEnumerator enemyLoop2(){
-        Debug.Log("Game is not over yet");
-        while(GameManager.instance.wordCompleted == false){
+        while(GameManager.instance.penultimate == false){
             yield return new WaitForSeconds(enemyReAppearTime);
         }
         createEnemies();

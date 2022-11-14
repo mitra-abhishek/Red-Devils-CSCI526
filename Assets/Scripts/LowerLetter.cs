@@ -54,7 +54,7 @@ public class LowerLetter : MonoBehaviour
     
     IEnumerator letterLoop(){
         //Debug.Log(GameManager.instance.wordCompleted);
-        while(GameManager.instance.wordCompleted == false){
+        while(true){
             Debug.Log(GameManager.instance.wordCompleted);
             //createLetters(LevelManagerLevel1.instance.levelWord);
             //Debug.Log("Level Word : "+LevelManagerLevel1.instance.levelWord);

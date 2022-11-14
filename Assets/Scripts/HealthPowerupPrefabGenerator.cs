@@ -22,9 +22,9 @@ public class HealthPowerupPrefabGenerator : MonoBehaviour
     {
         for (int i = 0; i < random.Next(1, maxbulletPowerupAtTime); i++)
         {
-            if(GameManager.instance.wordCompleted == false){
+            //if(GameManager.instance.wordCompleted == false){
                 StartCoroutine(createHealthPowerupssDelayedCoRoutine());
-            }
+            //}
         }
     }
 
@@ -42,7 +42,7 @@ public class HealthPowerupPrefabGenerator : MonoBehaviour
     }
 
     IEnumerator healthPowerupLoop(){
-        while(GameManager.instance.wordCompleted == false){
+        while(true){
             yield return new WaitForSeconds(healthPowerupReAppearTime);
             createHealthPowerupsDelayed();
         }

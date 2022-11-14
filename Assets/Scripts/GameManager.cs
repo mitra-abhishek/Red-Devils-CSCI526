@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
 {  
     public static GameManager instance;
     public bool wordCompleted;
+    public bool penultimate;
     public bool gameWon;
     public int Level = 1;
     public String LevelWord;
@@ -72,6 +73,7 @@ public class GameManager : MonoBehaviour
         bulletPowerUpController.setTotalPowerGenerated();
         bulletPowerUpController.setTotalPowerUpsCollected();
         wordCompleted = false;
+        penultimate = false;
         gameWon = false;
 
     }

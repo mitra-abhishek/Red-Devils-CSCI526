@@ -27,7 +27,7 @@ public class EnemyPrefabGenerator : MonoBehaviour
     {
         for (int i = 0; i < random.Next(1, maxEnemyAtTime); i++)
         {
-            if(GameManager.instance.wordCompleted == false){
+            if(GameManager.instance.penultimate == false){
                 createEnemiesDelayedCoroutine = createEnemiesDelayedCoRoutine();
                 StartCoroutine(createEnemiesDelayedCoroutine);
             }
@@ -49,7 +49,7 @@ public class EnemyPrefabGenerator : MonoBehaviour
     }
 
     IEnumerator enemyLoop(){
-        while(GameManager.instance.wordCompleted == false){
+        while(GameManager.instance.penultimate == false){
             yield return new WaitForSeconds(enemyReAppearTime);
             createEnemiesDelayed();
         }
