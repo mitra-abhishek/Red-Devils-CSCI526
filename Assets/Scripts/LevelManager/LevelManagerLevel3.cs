@@ -38,7 +38,7 @@ public class LevelManagerLevel3 : MonoBehaviour
     private float checktime;
     public Dictionary<String, int> pairs = new Dictionary<String, int>()
     {
-        { "SampleScene 2", 1 }, { "Level 2", 2 },{"Level 3",3}
+        {"Tutorial",0},{ "SampleScene 2", 1 }, { "Level 2", 2 },{"Level 3",3}
     };
     public Dictionary<TMP_Text, bool> correctLetterPairs = new Dictionary<TMP_Text, bool>();
 
@@ -201,8 +201,9 @@ public class LevelManagerLevel3 : MonoBehaviour
         }
         characterShot = count;
         GameManager.instance.characterShotCount = characterShot;
-        
-        if (count == levelWord.Length - 1) {
+
+        if (count == levelWord.Length - 1)
+        {
             GameManager.instance.penultimate = true;
         }
 
@@ -222,7 +223,8 @@ public class LevelManagerLevel3 : MonoBehaviour
         correctLetterPairs[correctLetterList[i].GetComponent<TMP_Text>()] = true;
     }
 
-    IEnumerator SetWinText() {
+    IEnumerator SetWinText()
+    {
         GameManager.instance.penultimate = false;
         GameManager.instance.wordCompleted = false;
         GameManager.instance.gameWon = false;

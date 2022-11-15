@@ -20,6 +20,6 @@ public class Tutorial1 : MonoBehaviour
     }
     void loadTutorial2()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Tutorial2");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Tutorial");
     }
 }

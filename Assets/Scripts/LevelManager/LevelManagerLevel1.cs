@@ -43,7 +43,7 @@ public class LevelManagerLevel1 : MonoBehaviour
     public int availableBullets;
     public Dictionary<String, int> pairs = new Dictionary<String, int>()
         {
-            { "SampleScene 2", 1 }, { "Level 2", 2 },{"Level 3",3}
+            {"Tutorial",0},{ "SampleScene 2", 1 }, { "Level 2", 2 },{"Level 3",3}
         };
     public Dictionary<TMP_Text, bool> correctLetterPairs = new Dictionary<TMP_Text, bool>();
 
@@ -183,11 +183,12 @@ public class LevelManagerLevel1 : MonoBehaviour
         }
         characterShot = count;
         GameManager.instance.characterShotCount = characterShot;
-        
-        if (count == levelWord.Length - 1) {
+
+        if (count == levelWord.Length - 1)
+        {
             GameManager.instance.penultimate = true;
         }
-        
+
         if (count == levelWord.Length)
         {
             GameManager.instance.wordCompleted = true;
