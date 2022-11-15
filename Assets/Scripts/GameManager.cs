@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
     
     private List<char> datalist = new List<char>();
     private int indexLetter = 0;
-    private string secondaryChars = "bcfgjklmpquvwxyzsnhr";
+    private string secondaryChars = "cgjklmpquvwxyzsnh";
 
 
     void Awake()
