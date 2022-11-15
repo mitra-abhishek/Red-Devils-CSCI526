@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class UpperLetterGen : MonoBehaviour
 {
-    private float letterReAppearTime=30.0f;
+    private float letterReAppearTime=15.0f;
 
 
     private Vector3 startPosition;

@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
     
     private List<char> datalist = new List<char>();
     private int indexLetter = 0;
-    private string secondaryChars = "bcdfgjklmpquvwxyz";
+    private string secondaryChars = "bcfgjklmpquvwxyzsnhr";
 
 
     void Awake()
@@ -191,15 +191,14 @@ public class GameManager : MonoBehaviour
     public void createLetterSpawnArrayInitial()
     {
         datalist.AddRange(LevelWord);
-        datalist.AddRange("aeiou");
-        datalist.AddRange("tnshr");
+        // datalist.AddRange("o");
         ShuffleMe(datalist);
     }
     public char getLetterPrimary()
     {
         char randomChar;
         int randINT = random.Next(1, 10);
-        if (randINT >= 2)
+        if (randINT >= 5)
         {
             randomChar = datalist[indexLetter];
             IncrementDataList();
@@ -215,8 +214,8 @@ public class GameManager : MonoBehaviour
     public char getLetterSecondary()
     {
         char randomChar;
-        int randINT = random.Next(1, 10);
-        if (randINT >= 6)
+        int randINT = random.Next(1, 11);
+        if (randINT >= 5)
         {
             randomChar = datalist[indexLetter];
             IncrementDataList();
