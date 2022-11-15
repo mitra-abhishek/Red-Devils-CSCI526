@@ -36,16 +36,47 @@ public class PlayerMovement : MonoBehaviour
 
 
     void FixedUpdate() {
+
         screenBounds=Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
-        float moveHorizontal = Input.GetAxis("Horizontal");
+        
+        if(Input.GetKey(KeyCode.UpArrow))
+        {
+            // switch to rotation mode
+            if (Input.GetKey(KeyCode.LeftArrow)) 
+            {
+            
+                if(angle<= 90)
+                    angle += ANGULAR_SPEED*WEBGL_MULTIPLIER;
+                transform.eulerAngles = new Vector3(0, 0, angle);
+            }
+            else if (Input.GetKey(KeyCode.RightArrow)) 
+            {
+            
+                if(angle>= -90)
+                    angle -= ANGULAR_SPEED*WEBGL_MULTIPLIER;
+                transform.eulerAngles = new Vector3(0, 0, angle);
+            }
+            Vector2 movement = new Vector2(0.0f, 0.0f);
+            GetComponent<Rigidbody2D>().velocity = movement*speed;
+        }
+        else
+        {
+            float moveHorizontal = Input.GetAxis("Horizontal");
+            // switch to horizontal movement after resetting angle
+            angle = 0;
+            transform.eulerAngles = new Vector3(0, 0, angle);
 
-        Vector2 movement = new Vector2(moveHorizontal, 0.0f);
-        GetComponent<Rigidbody2D>().velocity = movement*speed;
-
+            
+            Vector2 movement = new Vector2(moveHorizontal, 0.0f);
+            GetComponent<Rigidbody2D>().velocity = movement*speed;
+  
+        }
         GetComponent<Rigidbody2D>().position = new Vector2(
-            Mathf.Clamp(GetComponent<Rigidbody2D>().position.x, -screenBounds.x, screenBounds.x), 
-            y
-        );  
+                Mathf.Clamp(GetComponent<Rigidbody2D>().position.x, -screenBounds.x, screenBounds.x),
+                y
+            );
+        
+        
     }
 
     public void shoot(){
@@ -57,36 +88,36 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void Update(){
-        if (Input.GetKey(KeyCode.RightArrow)) {
-            if(angle>= -90)
-                angle -= ANGULAR_SPEED*WEBGL_MULTIPLIER;
-            transform.eulerAngles = new Vector3(0, 0, angle);
-            print(angle);
-        }
-
-        else if (Input.GetKey(KeyCode.LeftArrow)) {
+        // if (Input.GetKey(KeyCode.RightArrow)) {
+        //     if(angle>= -90)
+        //         angle -= ANGULAR_SPEED*WEBGL_MULTIPLIER;
             
-            if(angle<= 90)
-                angle += ANGULAR_SPEED*WEBGL_MULTIPLIER;
-            transform.eulerAngles = new Vector3(0, 0, angle);
-            print(angle);
-        }
+        //     print(angle);
+        // }
 
-        else
-        {
-            if(angle>= 0)
-                angle -= ANGULAR_SPEED*WEBGL_MULTIPLIER;
+        // else if (Input.GetKey(KeyCode.LeftArrow)) {
             
-            if(angle<= 0)
-                angle += ANGULAR_SPEED*WEBGL_MULTIPLIER;
+        //     if(angle<= 90)
+        //         angle += ANGULAR_SPEED*WEBGL_MULTIPLIER;
+        //     transform.eulerAngles = new Vector3(0, 0, angle);
+        //     print(angle);
+        // }
 
-            transform.eulerAngles = new Vector3(0, 0, angle);
-        }
+        // else
+        // {
+        //     if(angle>= 0)
+        //         angle -= ANGULAR_SPEED*WEBGL_MULTIPLIER;
+            
+        //     if(angle<= 0)
+        //         angle += ANGULAR_SPEED*WEBGL_MULTIPLIER;
+
+        //     transform.eulerAngles = new Vector3(0, 0, angle);
+        // }
 
         
 
 
-        if(GameManager.instance.bulletController.getBullets()>0 && (Input.GetKeyDown("space") || Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.UpArrow))){
+        if(GameManager.instance.bulletController.getBullets()>0 && Input.GetKeyDown("space")){
             shoot();
             GameManager.instance.bulletController.subtractBullet();
         }
