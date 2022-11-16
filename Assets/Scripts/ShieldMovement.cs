@@ -52,4 +52,16 @@ public class ShieldMovement : MonoBehaviour
     }
 
     void Update(){}
+
+    public void decreaseShieldSpeedCaller()
+    {
+        StartCoroutine(decreaseShieldSpeed());
+    }
+    public IEnumerator decreaseShieldSpeed()
+    {
+        speed /= SmartEnemyPrefabGenerator.instance.reduceSpeedBy;
+        yield return new WaitForSeconds(SmartEnemyPrefabGenerator.instance.freezeTime);
+        Debug.Log("Increase Speed"); 
+        speed *= SmartEnemyPrefabGenerator.instance.reduceSpeedBy;
+    }
 }
