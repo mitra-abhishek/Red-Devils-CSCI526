@@ -66,6 +66,11 @@ public class PlayerMain : MonoBehaviour
         }
         if(other.tag == "Letter") {
             EventManager.TriggerEvent ("test", new Dictionary<string, object> { { "amount", other } });
+            if(LevelManagerLevel2.levelWord.IndexOf(other.name[0]) == -1)
+            {
+                gotHitScreen.GetComponent<Image>().color=color;
+                TakeDamage(10);
+            }
             Destroy(other.gameObject);
             // Destroy(this.gameObject);
         }
