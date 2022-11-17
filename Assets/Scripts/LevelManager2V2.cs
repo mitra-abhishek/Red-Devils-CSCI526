@@ -73,7 +73,7 @@ public class LevelManager2V2 : MonoBehaviour
 
         List<string> level_words = new List<string>
         {
-            "FORD", "FIAT", "AUDI", "BENZ"
+            "FORD", "FIAT", "AUDI"
             // "F"
         };
 
