@@ -115,7 +115,10 @@ public class PlayerMovement : MonoBehaviour
         // }
 
         
-
+        if(Input.GetKeyUp(KeyCode.UpArrow))
+        {
+            Input.ResetInputAxes();
+        }
 
         if(GameManager.instance.bulletController.getBullets()>0 && Input.GetKeyDown("space")){
             shoot();
