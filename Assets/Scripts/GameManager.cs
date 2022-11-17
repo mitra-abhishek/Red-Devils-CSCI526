@@ -46,7 +46,8 @@ public class GameManager : MonoBehaviour
     
     private List<char> datalist = new List<char>();
     private int indexLetter = 0;
-    private string secondaryChars = "cgjklmpquvwxyzsnh";
+    private string secondaryChars = "cgjklmpquvwxyzh";
+    private string primaryChars = "aeiouhdtsnhr";
 
 
     void Awake()
@@ -198,14 +199,14 @@ public class GameManager : MonoBehaviour
     {
         char randomChar;
         int randINT = random.Next(1, 10);
-        if (randINT >= 5)
+        if (randINT >= 3)
         {
             randomChar = datalist[indexLetter];
             IncrementDataList();
         }
         else
         {
-            randomChar = GetRandomCharacter(secondaryChars);
+            randomChar = GetRandomCharacter(primaryChars);
         }
 
         return randomChar;
@@ -220,7 +221,7 @@ public class GameManager : MonoBehaviour
             randomChar = datalist[indexLetter];
             IncrementDataList();
         }
-        else if (randINT == 5)
+        else if (randINT >= 3)
         { 
             var common = LevelWord.ToUpper().Intersect(secondaryChars.ToUpper());
             int index = random.Next(common.Count());
