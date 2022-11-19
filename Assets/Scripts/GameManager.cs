@@ -48,14 +48,19 @@ public class GameManager : MonoBehaviour
     private int indexLetter = 0;
     private string secondaryChars = "cgjklmpquvwxyzh";
     private string primaryChars = "aeiouhdtsnhr";
+    private AudioClip laserClip;
+    private AudioSource audioSource;
 
 
+    
     void Awake()
     {
         if (instance == null)
         {
             instance = this;
         }
+        laserClip = Resources.Load<AudioClip>("Sounds/LaserShot");
+        audioSource = this.GetComponent<AudioSource>();
         DontDestroyOnLoad(instance);
     }
 
@@ -243,6 +248,11 @@ public class GameManager : MonoBehaviour
             int rnd = random.Next(i + 1);
             (list[rnd], list[i]) = (list[i], list[rnd]);
         }
+    }
+
+    public void playLaserSound()
+    {
+        audioSource.PlayOneShot(laserClip);
     }
 
     

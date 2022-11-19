@@ -9,13 +9,14 @@ public class Enemy : MonoBehaviour
     public GameObject enemy_bulletPrefab;
     public float enemy_bulletSpeed = 7f;
     private float angle = 0;
-    private float enemy_bullet_ReAppearTime=1f;
+    private float enemy_bullet_ReAppearTime=1.0f;
+    private float speed = 2.0f;
 
     // Start is called before the first frame update
     void Start()
     {
         rb=this.GetComponent<Rigidbody2D>();
-        rb.velocity=new Vector2(0,-GameManager.instance.RockSpeed);
+        rb.velocity=new Vector2(0,-speed);
         screenBounds=Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
         StartCoroutine(enemy_bulletLoop());
     }
@@ -29,9 +30,12 @@ public class Enemy : MonoBehaviour
     }
 
     IEnumerator enemy_bulletLoop(){
-        while(true){
-            yield return new WaitForSeconds(enemy_bullet_ReAppearTime);
+        while(true)
+        {
+            yield return new WaitForSeconds(0.05f);
             shoot();
+            yield return new WaitForSeconds(enemy_bullet_ReAppearTime);
+
         }
     }
 

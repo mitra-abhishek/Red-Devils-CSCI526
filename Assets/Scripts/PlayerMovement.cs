@@ -22,16 +22,19 @@ public class PlayerMovement : MonoBehaviour
     public float ANGULAR_SPEED = 3.7f;
 
     public float WEBGL_MULTIPLIER = 1.0f;
-    
+
     public static PlayerMovement instance;
 
-    
+
+
+
     void Start()
     {   
         if (instance == null)
         {
             instance = this;
         }
+
     }
 
 
@@ -80,6 +83,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     public void shoot(){
+        GameManager.instance.playLaserSound();
         GameObject bullet=Instantiate(bulletPrefab) as GameObject;
         bullet.transform.position=GetComponent<Rigidbody2D>().position;
         Vector2 bulletDirection = new Vector2(Mathf.Sin(Mathf.Deg2Rad * -angle), Mathf.Cos(Mathf.Deg2Rad * -angle));
