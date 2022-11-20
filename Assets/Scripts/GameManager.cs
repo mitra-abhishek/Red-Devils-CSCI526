@@ -81,6 +81,8 @@ public class GameManager : MonoBehaviour
         wordCompleted = false;
         penultimate = false;
         gameWon = false;
+        laserClip = Resources.Load<AudioClip>("Sounds/LaserShot");
+        audioSource = this.GetComponent<AudioSource>();
 
     }
     private void OnDisable()
@@ -252,7 +254,10 @@ public class GameManager : MonoBehaviour
 
     public void playLaserSound()
     {
-        audioSource.PlayOneShot(laserClip);
+        if (!laserClip)
+            laserClip = Resources.Load<AudioClip>("Sounds/LaserShot");
+        if (laserClip)
+            audioSource.PlayOneShot(laserClip);
     }
 
     

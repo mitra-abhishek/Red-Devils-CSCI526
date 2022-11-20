@@ -82,6 +82,7 @@
      <Compile Include="Assets\Scripts\SendToGoogle.cs" />
      <Compile Include="Assets\Scripts\LevelManager\WinTextLevelManager.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
+     <Compile Include="Assets\Scripts\ScrollingObject.cs" />
      <Compile Include="Assets\Scripts\SplitEnemy.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
@@ -94,6 +95,7 @@
      <Compile Include="Assets\Scripts\LevelManager\LevelManagerLevel1.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
+     <Compile Include="Assets\Scripts\RepeatingBackground.cs" />
      <Compile Include="Assets\Scripts\BulletPowerUpController.cs" />
      <Compile Include="Assets\Scripts\LevelCompleteScript.cs" />
      <Compile Include="Assets\Scripts\ShieldPowerUp.cs" />

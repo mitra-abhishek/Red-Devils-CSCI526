@@ -6,6 +6,15 @@ using UnityEngine;
 public class UpperLetterGen : MonoBehaviour
 {
     private float letterReAppearTime=15.0f;
+    
+    public float speed=2.0f;
+    public Boolean moving = true;
+    public float pingPongSpeed = 0.25f;
+    public Boolean displacementX = true;
+    public float displacementParam1 = 0.3f;
+    public float displacementParam2 = 0.1f;
+    private float initialPosition = 0.3f ;
+
 
 
     private Vector3 startPosition;
@@ -45,12 +54,18 @@ public class UpperLetterGen : MonoBehaviour
 
         letter = Instantiate(Resources.Load("Letters/"+GameManager.instance.getLetterPrimary()) as GameObject);
         //Debug.Log("This is generated "+ letter.gameObject.name);
-        //letter.transform.position= transform.position;
+        letter.transform.position= transform.position;
         letter.transform.localPosition = renderer.bounds.center;
         //letter.transform.parent = this.transform;
         //letter.transform.position  = GameObject.Find("UpperLetter").transform.position;
         //letter.transform.localPosition = Vector3.zero;
-
+        if (displacementX)
+            initialPosition = transform.position.x;
+        else
+            initialPosition = transform.position.y;
+        
+        if (moving)
+            StartCoroutine(MovementLoop());
     }
     
     IEnumerator letterLoop(){
@@ -66,6 +81,22 @@ public class UpperLetterGen : MonoBehaviour
         }
         
        // Debug.Log(GameManager.instance.wordCompleted);
+    }
+    
+    private IEnumerator MovementLoop() {
+        for (float t=0f; ; t += Time.deltaTime) { 
+            
+            Vector3 currenrtTransformPosition = transform.position;
+
+            float currentDisplacement = Mathf.PingPong(Time.time * pingPongSpeed, 1) * displacementParam1 - displacementParam2;
+
+            if (displacementX)
+                transform.position = new Vector3(  initialPosition + currentDisplacement, currenrtTransformPosition.y, currenrtTransformPosition.z);
+            else
+                transform.position = new Vector3(currenrtTransformPosition.x,  initialPosition + currentDisplacement, currenrtTransformPosition.z);
+            
+            yield return null; // "wait for a frame"
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D col)

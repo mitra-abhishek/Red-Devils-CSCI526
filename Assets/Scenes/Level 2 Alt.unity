@@ -530,6 +530,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a05030b48a55bf34db3ec6f780832ee4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 2
+  moving: 0
+  pingPongSpeed: 0.25
+  displacementX: 1
+  displacementParam1: 0.3
+  displacementParam2: 0.1
 --- !u!4 &169039638
 Transform:
   m_ObjectHideFlags: 0
@@ -1591,6 +1597,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a05030b48a55bf34db3ec6f780832ee4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 2
+  moving: 0
+  pingPongSpeed: 0.25
+  displacementX: 1
+  displacementParam1: 0.3
+  displacementParam2: 0.1
 --- !u!4 &615340317
 Transform:
   m_ObjectHideFlags: 0
@@ -2121,6 +2133,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a05030b48a55bf34db3ec6f780832ee4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 2
+  moving: 0
+  pingPongSpeed: 0.25
+  displacementX: 1
+  displacementParam1: 0.3
+  displacementParam2: 0.1
 --- !u!4 &681342522
 Transform:
   m_ObjectHideFlags: 0
@@ -2340,6 +2358,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a05030b48a55bf34db3ec6f780832ee4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 2
+  moving: 0
+  pingPongSpeed: 0.25
+  displacementX: 1
+  displacementParam1: 0.3
+  displacementParam2: 0.1
 --- !u!4 &774419870
 Transform:
   m_ObjectHideFlags: 0
@@ -2968,6 +2992,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a05030b48a55bf34db3ec6f780832ee4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 2
+  moving: 0
+  pingPongSpeed: 0.25
+  displacementX: 1
+  displacementParam1: 0.3
+  displacementParam2: 0.1
 --- !u!4 &1106623908
 Transform:
   m_ObjectHideFlags: 0
@@ -3092,6 +3122,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a05030b48a55bf34db3ec6f780832ee4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 2
+  moving: 1
+  pingPongSpeed: 0.25
+  displacementX: 1
+  displacementParam1: 0.3
+  displacementParam2: 0.1
 --- !u!4 &1142512514
 Transform:
   m_ObjectHideFlags: 0
@@ -3260,6 +3296,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a05030b48a55bf34db3ec6f780832ee4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 2
+  moving: 0
+  pingPongSpeed: 0.25
+  displacementX: 1
+  displacementParam1: 0.3
+  displacementParam2: 0.1
 --- !u!4 &1144564513
 Transform:
   m_ObjectHideFlags: 0
@@ -3384,6 +3426,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a05030b48a55bf34db3ec6f780832ee4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 2
+  moving: 1
+  pingPongSpeed: 0.25
+  displacementX: 1
+  displacementParam1: 0.3
+  displacementParam2: 0.1
 --- !u!4 &1173905571
 Transform:
   m_ObjectHideFlags: 0
@@ -3630,6 +3678,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a05030b48a55bf34db3ec6f780832ee4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 2
+  moving: 1
+  pingPongSpeed: 0.25
+  displacementX: 1
+  displacementParam1: 0.3
+  displacementParam2: 0.1
 --- !u!4 &1411530540
 Transform:
   m_ObjectHideFlags: 0
@@ -3985,6 +4039,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a05030b48a55bf34db3ec6f780832ee4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 2
+  moving: 0
+  pingPongSpeed: 0.25
+  displacementX: 1
+  displacementParam1: 0.3
+  displacementParam2: 0.1
 --- !u!4 &1539101411
 Transform:
   m_ObjectHideFlags: 0
@@ -4905,6 +4965,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a05030b48a55bf34db3ec6f780832ee4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 2
+  moving: 0
+  pingPongSpeed: 0.25
+  displacementX: 1
+  displacementParam1: 0.3
+  displacementParam2: 0.1
 --- !u!4 &2033165521
 Transform:
   m_ObjectHideFlags: 0
