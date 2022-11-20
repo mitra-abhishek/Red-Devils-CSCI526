@@ -56,7 +56,7 @@ public class UpperLetterGen : MonoBehaviour
         //Debug.Log("This is generated "+ letter.gameObject.name);
         letter.transform.position= transform.position;
         letter.transform.localPosition = renderer.bounds.center;
-        //letter.transform.parent = this.transform;
+        letter.transform.parent = this.transform;
         //letter.transform.position  = GameObject.Find("UpperLetter").transform.position;
         //letter.transform.localPosition = Vector3.zero;
         if (displacementX)

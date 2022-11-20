@@ -46,11 +46,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parallaxCamera: {fileID: 0}
-  Speed: -5
+  Speed: -2
   Elements:
   - GameObjects:
     - {fileID: 9133933234991393806}
-    SpeedRatio: 1
+    SpeedRatio: 0.46
     RepositionLogic:
       PositionMode: 1
       ScaleHeight: 1
@@ -131,10 +131,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1093544391
+  m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b859b8e76df12e845aeb24727b9dc048, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3f1d485a9695e414eb4f7d2011824160, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
