@@ -4661,7 +4661,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9133933234937527841, guid: 9a1f15289ecf785438775a2ef323abe2, type: 3}
       propertyPath: Speed
-      value: -3
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 9133933234937527841, guid: 9a1f15289ecf785438775a2ef323abe2, type: 3}
       propertyPath: Elements.Array.data[0].SpeedRatio
@@ -4712,8 +4712,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9133933234991393800, guid: 9a1f15289ecf785438775a2ef323abe2, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9133933234991393800, guid: 9a1f15289ecf785438775a2ef323abe2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 44afa3058e1d3e3499841e116e404401, type: 3}
+    - target: {fileID: 9133933234991393800, guid: 9a1f15289ecf785438775a2ef323abe2, type: 3}
       propertyPath: m_SortingOrder
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9133933234991393800, guid: 9a1f15289ecf785438775a2ef323abe2, type: 3}
+      propertyPath: m_MaskInteraction
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9133933234991393806, guid: 9a1f15289ecf785438775a2ef323abe2, type: 3}
       propertyPath: m_Layer

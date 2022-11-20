@@ -40,8 +40,8 @@ public class Ice : MonoBehaviour
         if (col.gameObject.tag == "player")
         {
             PlayerMovement.instance.decreasePlayerSpeedCaller();
-            if (ShieldMovement.instance)
-                ShieldMovement.instance.decreaseShieldSpeedCaller();
+            // if (ShieldMovement.instance)
+            //     ShieldMovement.instance.decreaseShieldSpeedCaller();
             Destroy(this.gameObject);
         }
     }

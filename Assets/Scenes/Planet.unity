@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BGPrefab
       objectReference: {fileID: 0}
+    - target: {fileID: 9133933234937527841, guid: 9a1f15289ecf785438775a2ef323abe2, type: 3}
+      propertyPath: Speed
+      value: -10
+      objectReference: {fileID: 0}
     - target: {fileID: 9133933234937527842, guid: 9a1f15289ecf785438775a2ef323abe2, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -189,6 +193,18 @@ PrefabInstance:
     - target: {fileID: 9133933234937527842, guid: 9a1f15289ecf785438775a2ef323abe2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9133933234991393800, guid: 9a1f15289ecf785438775a2ef323abe2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: cc28f0ce124d75145b6fb7b117335248, type: 3}
+    - target: {fileID: 9133933234991393807, guid: 9a1f15289ecf785438775a2ef323abe2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -12.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9133933234991393807, guid: 9a1f15289ecf785438775a2ef323abe2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 15.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a1f15289ecf785438775a2ef323abe2, type: 3}
@@ -1374,7 +1390,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 23.799988, y: 5.200012}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &747395542
