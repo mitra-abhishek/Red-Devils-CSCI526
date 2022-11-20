@@ -27,6 +27,8 @@ public class LevelManagerLevel1 : MonoBehaviour
     public double timeToComplete;
     public int totalLettersShot = 0;
     public int characterShot = 0;
+    public Boolean altVersion = false;
+
 
     [SerializeField] SendToGoogle sendToGoogle;
     [SerializeField] BulletController bulletController;
@@ -87,6 +89,7 @@ public class LevelManagerLevel1 : MonoBehaviour
         GameManager.instance.bullets = level1Bullets;
         // GameManager.instance.bulletPowerUpSpeed = bulletPowerUpSpeed;
         GameManager.instance.genWordDistanceDictionary();
+        GameManager.instance.altVersion = altVersion;
         availableBullets = level1Bullets;
 
     }

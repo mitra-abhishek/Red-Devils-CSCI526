@@ -31,6 +31,8 @@ public class LevelManagerLevel3 : MonoBehaviour
     public int availableBullets;
     public int totalLettersShot = 0;
     public int characterShot = 0;
+    public Boolean altVersion = false;
+
 
     public float timeStart;
     public float timeFinished;
@@ -90,6 +92,7 @@ public class LevelManagerLevel3 : MonoBehaviour
         GameManager.instance.RockSpeed = rockSpeed;
         GameManager.instance.bullets = level3Bullets;
         GameManager.instance.genWordDistanceDictionary();
+        GameManager.instance.altVersion = altVersion;
         availableBullets = level3Bullets;
 
     }

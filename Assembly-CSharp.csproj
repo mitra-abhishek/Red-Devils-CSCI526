@@ -82,6 +82,7 @@
      <Compile Include="Assets\Scripts\SendToGoogle.cs" />
      <Compile Include="Assets\Scripts\LevelManager\WinTextLevelManager.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
+     <Compile Include="Assets\Scripts\SplitEnemy.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
@@ -131,6 +132,7 @@
      <Compile Include="Assets\Scripts\ShieldTimer.cs" />
      <Compile Include="Assets\FreeParallax\Scripts\FreeParallaxDemo.cs" />
      <Compile Include="Assets\Scripts\UpperLetterGen.cs" />
+     <Compile Include="Assets\Scripts\LevelManager\TutorialLevelManager.cs" />
      <Compile Include="Assets\Scripts\IcePrefabGenerator.cs" />
      <Compile Include="Assets\Scripts\SpriteText.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
