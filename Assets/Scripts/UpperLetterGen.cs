@@ -13,6 +13,7 @@ public class UpperLetterGen : MonoBehaviour
     public Boolean displacementX = true;
     public float displacementParam1 = 0.3f;
     public float displacementParam2 = 0.1f;
+    public float letterScale = 1.5f;
     private float initialPosition = 0.3f ;
 
 
@@ -107,7 +108,7 @@ public class UpperLetterGen : MonoBehaviour
             Destroy(col.gameObject);
             Rigidbody2D rb = letter.GetComponent<Rigidbody2D>();
             rb.velocity = new Vector2(0, -GameManager.instance.LetterSpeed);
-            letter.transform.localScale = new Vector3(3.0f, 3.0f, 3.0f);
+            letter.transform.localScale = new Vector3(letterScale, letterScale, letterScale);
             droppedLetter = true;
             Debug.Log(rb);
             StopAllCoroutines();
