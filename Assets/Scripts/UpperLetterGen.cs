@@ -107,7 +107,7 @@ public class UpperLetterGen : MonoBehaviour
             Destroy(col.gameObject);
             Rigidbody2D rb = letter.GetComponent<Rigidbody2D>();
             rb.velocity = new Vector2(0, -GameManager.instance.LetterSpeed);
-            letter.transform.localScale = new Vector3(0.7f, 0.7f, 0.7f);
+            letter.transform.localScale = new Vector3(3.0f, 3.0f, 3.0f);
             droppedLetter = true;
             Debug.Log(rb);
             StopAllCoroutines();

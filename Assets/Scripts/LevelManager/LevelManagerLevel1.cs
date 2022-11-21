@@ -89,6 +89,7 @@ public class LevelManagerLevel1 : MonoBehaviour
         GameManager.instance.bullets = level1Bullets;
         // GameManager.instance.bulletPowerUpSpeed = bulletPowerUpSpeed;
         GameManager.instance.genWordDistanceDictionary();
+        GameManager.instance.createLetterSpawnArrayInitial();
         GameManager.instance.altVersion = altVersion;
         availableBullets = level1Bullets;
 
