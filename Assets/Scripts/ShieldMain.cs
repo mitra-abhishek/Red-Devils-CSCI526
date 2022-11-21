@@ -7,7 +7,8 @@ public class ShieldMain : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        //this.transform.parent = PlayerMovement.instance.transform;
+
     }
 
     // Update is called once per frame
