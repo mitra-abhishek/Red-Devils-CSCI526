@@ -15,7 +15,7 @@ public class UpperLetterGen : MonoBehaviour
     public float displacementParam2 = 0.1f;
     public float letterScale = 1.5f;
     private float initialPosition = 0.3f ;
-    public GameObject explosion;
+    private GameObject explosion;
 
 
 
@@ -30,6 +30,7 @@ public class UpperLetterGen : MonoBehaviour
     {
         startPosition = transform.position;
         renderer = GetComponent<Renderer>();
+        explosion = Resources.Load<GameObject>("Explosion/BurstEffect");
         StartCoroutine(letterLoop());
     }
 
