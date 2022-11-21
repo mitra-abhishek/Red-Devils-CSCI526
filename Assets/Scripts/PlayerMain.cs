@@ -10,7 +10,7 @@ public class PlayerMain : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth;
     public GameObject gotHitScreen;
-    public GameObject explosion;
+    private GameObject explosion;
     public Dictionary<string, int> pairs = new Dictionary<string, int>()
     {
         { "SampleScene 2", 1 }, { "Level 2", 2 },{"Level 3",3}
@@ -24,6 +24,7 @@ public class PlayerMain : MonoBehaviour
     {
         currentHealth = maxHealth;
         healthBar.setMaxHealth(maxHealth);
+        explosion = Resources.Load<GameObject>("Explosion/DustExplosion");
     }
 
     // Update is called once per frame
