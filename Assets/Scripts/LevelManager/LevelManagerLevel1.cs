@@ -11,7 +11,7 @@ public class LevelManagerLevel1 : MonoBehaviour
 
     // Other Game parameters can be added here! like health, time, etc;
 
-    public String levelWord = "";
+    public static String levelWord = "";
     public List<TMP_Text> blankList = new List<TMP_Text>();
     public List<TMP_Text> correctLetterList = new List<TMP_Text>();
 
