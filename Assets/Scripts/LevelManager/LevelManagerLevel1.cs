@@ -73,7 +73,7 @@ public class LevelManagerLevel1 : MonoBehaviour
 
         List<string> level_words = new List<string>
         {
-            "CAT", "DOG", "FOX"
+            "EARTH", "MARS", "JUPITER","VENUS","SATURN","MERCURY","NEPTUNE","URANUS"
             // "C"
         };
 
