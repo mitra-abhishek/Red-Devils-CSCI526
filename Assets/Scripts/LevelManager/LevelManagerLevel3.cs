@@ -227,6 +227,27 @@ public class LevelManagerLevel3 : MonoBehaviour
         correctLetterPairs[correctLetterList[i].GetComponent<TMP_Text>()] = true;
     }
 
+    // IEnumerator SetWinText()
+    // {
+    //     GameManager.instance.penultimate = false;
+    //     GameManager.instance.wordCompleted = false;
+    //     GameManager.instance.gameWon = false;
+    //     yield return new WaitForSeconds(2f);
+    //     Destroy(this.gameObject);
+    //     //UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene 2");
+    //     GameManager.instance.winScreen2();
+    //     // GameObject mainMenu = GameObject.Find("MainMenu");
+    //     // print("Checking mainMenu here");
+    //     // print(mainMenu);
+    //     // RectTransform rectTransform = mainMenu.GetComponent<RectTransform>();
+    //     // print("Checking transform vals here");
+    //     // print(rectTransform.offsetMin);
+    //     // rectTransform.offsetMin = new Vector2(-37,rectTransform.offsetMin.y);
+    //     // print(rectTransform);
+    //     // rectTransform.offsetMax = new Vector2(rectTransform.offsetMax.x,-178);
+    //
+    // }
+    
     IEnumerator SetWinText()
     {
         GameManager.instance.penultimate = false;
@@ -234,19 +255,12 @@ public class LevelManagerLevel3 : MonoBehaviour
         GameManager.instance.gameWon = false;
         yield return new WaitForSeconds(2f);
         Destroy(this.gameObject);
-        //UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene 2");
-        GameManager.instance.winScreen2();
-        // GameObject mainMenu = GameObject.Find("MainMenu");
-        // print("Checking mainMenu here");
-        // print(mainMenu);
-        // RectTransform rectTransform = mainMenu.GetComponent<RectTransform>();
-        // print("Checking transform vals here");
-        // print(rectTransform.offsetMin);
-        // rectTransform.offsetMin = new Vector2(-37,rectTransform.offsetMin.y);
-        // print(rectTransform);
-        // rectTransform.offsetMax = new Vector2(rectTransform.offsetMax.x,-178);
+
+        //UnityEngine.SceneManagement.SceneManager.LoadScene(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name]+1);
+        GameManager.instance.winScreen();
 
     }
+    
     void Initialise()
     {
 
