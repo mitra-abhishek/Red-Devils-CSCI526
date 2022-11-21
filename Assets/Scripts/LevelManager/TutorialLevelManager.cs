@@ -73,7 +73,6 @@ public class TutorialLevelManager : MonoBehaviour
 
 
     public List<GameObject> popUps = new List<GameObject>();
-    public GameObject TopBar;
     private int popUpIndex;
     // public GameObject rocks;
 
@@ -86,7 +85,7 @@ public class TutorialLevelManager : MonoBehaviour
 
         List<string> level_words = new List<string>
         {
-            "CAT"
+            "ATLANTIC","ARTIC","PACIFIC","INDIAN"
         };
 
         int index = random.Next(level_words.Count);
