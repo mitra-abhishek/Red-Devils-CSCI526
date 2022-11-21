@@ -27,7 +27,7 @@ public class LevelManagerLevel1 : MonoBehaviour
     public double timeToComplete;
     public int totalLettersShot = 0;
     public int characterShot = 0;
-    public Boolean altVersion = false;
+    public Boolean altVersion = true;
 
 
     [SerializeField] SendToGoogle sendToGoogle;
