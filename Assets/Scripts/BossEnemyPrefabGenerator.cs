@@ -33,10 +33,10 @@ public class BossEnemyPrefabGenerator : MonoBehaviour
         while(GameManager.instance.penultimate == false && GameManager.instance.oneMinLeft == false){
             yield return new WaitForSeconds(enemyReAppearTime);
         }
-        Debug.Log("***************");
-        Debug.Log(GameManager.instance.penultimate);
-        Debug.Log(GameManager.instance.oneMinLeft);
-        Debug.Log("***************");
+        // Debug.Log("***************");
+        // Debug.Log(GameManager.instance.penultimate);
+        // Debug.Log(GameManager.instance.oneMinLeft);
+        // Debug.Log("***************");
         createEnemies();
     }  
 }
