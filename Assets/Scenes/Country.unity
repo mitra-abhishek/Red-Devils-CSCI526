@@ -4723,7 +4723,7 @@ MonoBehaviour:
   speed: 20
   xMin: -4
   xMax: 4
-  y: -4
+  y: -3
   sceneCam: {fileID: 0}
   rb: {fileID: 1975061646}
 --- !u!58 &1975061645

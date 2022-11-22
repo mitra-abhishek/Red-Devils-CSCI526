@@ -58,7 +58,8 @@ public class GameManager : MonoBehaviour
     private AudioClip letterCollectClip;
     private AudioClip selfDamageClip;
     private AudioClip powerupCollectClip;
-
+    private float BULLET_IMPACT_VOLUME = 0.1f;
+    private float SELF_DAMAGE_VOLUME = 0.1f;
 
     private AudioSource audioSource;
 
@@ -314,7 +315,7 @@ public class GameManager : MonoBehaviour
         if (!bulletImpactClip)
             bulletImpactClip = Resources.Load<AudioClip>("Sounds/BulletImpact");
         if (bulletImpactClip)
-            audioSource.PlayOneShot(bulletImpactClip);
+            audioSource.PlayOneShot(bulletImpactClip, BULLET_IMPACT_VOLUME);
     }
 
     public void playCoinCollect()
@@ -339,7 +340,7 @@ public class GameManager : MonoBehaviour
         if (!selfDamageClip)
             selfDamageClip = Resources.Load<AudioClip>("Sounds/SelfDamage");
         if (selfDamageClip)
-            audioSource.PlayOneShot(selfDamageClip);
+            audioSource.PlayOneShot(selfDamageClip, SELF_DAMAGE_VOLUME);
     }
 
     public void playPowerupCollect()
