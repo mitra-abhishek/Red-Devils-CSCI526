@@ -536,7 +536,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 160351989}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.17, y: 1.42, z: 0.27960327}
+  m_LocalPosition: {x: -6.51, y: 1.42, z: 0.27960327}
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -698,7 +698,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 196012489}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.69, y: 2.6, z: 0.27960327}
+  m_LocalPosition: {x: -8.22, y: 2.58, z: 0.27960327}
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1181,7 +1181,7 @@ MonoBehaviour:
   currentTime: 0
   startingTime: 120
   countdownText: {fileID: 340055228}
-  sendToGoogle: {fileID: 0}
+  sendToGoogle: {fileID: 682405817}
 --- !u!114 &340055228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1284,7 +1284,7 @@ MonoBehaviour:
   blankPrefab: {fileID: 5187836768122991378, guid: 7cce4b751137f4e84a2f103914e1a902, type: 3}
   correctLetterPrefab: {fileID: 5187836768122991378, guid: 6d36053df73807844afc50f9a3690707, type: 3}
   blankHolder: {fileID: 210239621}
-  correctLetterHolder: {fileID: 0}
+  correctLetterHolder: {fileID: 210239621}
   letterSpeed: 2
   level3Bullets: 30
   rockSpeed: 3.5
@@ -1972,7 +1972,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 630372720}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.22, y: 2.6, z: 0.27960327}
+  m_LocalPosition: {x: -5.1, y: 2.6, z: 0.27960327}
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2160,7 +2160,8 @@ Transform:
   m_LocalPosition: {x: 0, y: -1.94, z: 0}
   m_LocalScale: {x: 0.35, y: 0.35, z: 6.42966}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1156221608}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2186,6 +2187,7 @@ MonoBehaviour:
   rb: {fileID: 635070115}
   ANGULAR_SPEED: 3.7
   WEBGL_MULTIPLIER: 1
+  firePoint: {fileID: 1156221608}
 --- !u!61 &635070114
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2278,7 +2280,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 639094139}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.86, y: 1.35, z: 0.27960327}
+  m_LocalPosition: {x: -3.39, y: 1.41, z: 0.27960327}
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2592,7 +2594,7 @@ GameObject:
   - component: {fileID: 788573572}
   - component: {fileID: 788573571}
   - component: {fileID: 788573570}
-  - component: {fileID: 788573569}
+  - component: {fileID: 788573573}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -2621,21 +2623,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &788573569
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 788573567}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88e13929fccb34db9a57bf1305efb55f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  popUpMessage: {fileID: 0}
-  _Key: 104
-  button: {fileID: 788573570}
 --- !u!114 &788573570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2680,9 +2667,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 788573569}
-        m_TargetAssemblyTypeName: ButtonHandlerLev3, Assembly-CSharp
-        m_MethodName: onClickFun
+      - m_Target: {fileID: 788573573}
+        m_TargetAssemblyTypeName: ButtonHandlerCountry, Assembly-CSharp
+        m_MethodName: onClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2730,6 +2717,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 788573567}
   m_CullTransparentMesh: 1
+--- !u!114 &788573573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 788573567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 893b8bdf5722f4d7da62262843b1391f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  popUpMessage: {fileID: 330333358}
+  _Key: 104
+  button: {fileID: 788573570}
 --- !u!1 &869445297
 GameObject:
   m_ObjectHideFlags: 0
@@ -3477,6 +3479,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1156221607
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1156221608}
+  m_Layer: 0
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1156221608
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1156221607}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 2.43, z: 0}
+  m_LocalScale: {x: 2.8571427, y: 2.8571427, z: 0.15552922}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 635070112}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1240173744
 GameObject:
@@ -4690,7 +4723,7 @@ MonoBehaviour:
   speed: 20
   xMin: -4
   xMax: 4
-  y: -4
+  y: -3
   sceneCam: {fileID: 0}
   rb: {fileID: 1975061646}
 --- !u!58 &1975061645

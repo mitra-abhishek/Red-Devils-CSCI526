@@ -28,6 +28,7 @@ TagManager:
   - boss_enemy_level3
   - level_score
   - Sport_player_bullet
+  - boss_enemy_level4
   layers:
   - Default
   - TransparentFX

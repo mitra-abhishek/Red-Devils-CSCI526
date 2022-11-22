@@ -58,7 +58,8 @@ public class GameManager : MonoBehaviour
     private AudioClip letterCollectClip;
     private AudioClip selfDamageClip;
     private AudioClip powerupCollectClip;
-
+    private float BULLET_IMPACT_VOLUME = 0.1f;
+    private float SELF_DAMAGE_VOLUME = 0.1f;
 
     private AudioSource audioSource;
 
@@ -99,19 +100,22 @@ public class GameManager : MonoBehaviour
         oneMinLeft = false;
         laserClip = Resources.Load<AudioClip>("Sounds/LaserShot");
         audioSource = this.GetComponent<AudioSource>();
-        primaryCharsList.AddRange(primaryChars);
-        int itr = 0;
-        ShuffleMe(primaryCharsList);
-        while(finalChars.Length<11-LevelWord.Length && itr < primaryCharsList.Count)
-        {
-            if (LevelWord.ToLower().IndexOf(primaryCharsList[itr]) == -1)
-            {
-                finalChars +=primaryCharsList[itr];
+        // primaryCharsList.AddRange(primaryChars);
+        // int itr = 0;
+        // ShuffleMe(primaryCharsList);
+        // while(finalChars.Length<(11-GameManager.instance.LevelWord.Length) && itr < primaryCharsList.Count)
+        // {
+        //     if (LevelWord.ToLower().IndexOf(primaryCharsList[itr]) == -1)
+        //     {
+        //         finalChars +=primaryCharsList[itr];
                 
-            }
-            itr+=1;
-        }
-        createLetterSpawnArrayInitial();
+        //     }
+        //     itr+=1;
+        // }
+        // print("Checking Wrong Letters");
+        // print(GameManager.instance.LevelWord.Length);
+        // print(finalChars);
+        // createLetterSpawnArrayInitial();
 
     }
     private void OnDisable()
@@ -125,7 +129,20 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ShuffleMe(datalist);
+        //ShuffleMe(datalist);
+        primaryCharsList.AddRange(primaryChars);
+        int itr = 0;
+        ShuffleMe(primaryCharsList);
+        while(finalChars.Length<(11-GameManager.instance.LevelWord.Length) && itr < primaryCharsList.Count)
+        {
+            if (LevelWord.ToLower().IndexOf(primaryCharsList[itr]) == -1)
+            {
+                finalChars +=primaryCharsList[itr];
+                
+            }
+            itr+=1;
+        }
+        createLetterSpawnArrayInitial();
     }
     public float getRandomRange(float start, float end)
     {
@@ -224,9 +241,10 @@ public class GameManager : MonoBehaviour
         // {
         //     createLetterSpawnArrayInitial();
         // }
-        if(indexLetter == 11)
+        if(indexLetter > 10)
         {
             indexLetter = 0;
+            ShuffleMe(datalist);
         }
     }
 
@@ -313,7 +331,7 @@ public class GameManager : MonoBehaviour
         if (!bulletImpactClip)
             bulletImpactClip = Resources.Load<AudioClip>("Sounds/BulletImpact");
         if (bulletImpactClip)
-            audioSource.PlayOneShot(bulletImpactClip);
+            audioSource.PlayOneShot(bulletImpactClip, BULLET_IMPACT_VOLUME);
     }
 
     public void playCoinCollect()
@@ -338,7 +356,7 @@ public class GameManager : MonoBehaviour
         if (!selfDamageClip)
             selfDamageClip = Resources.Load<AudioClip>("Sounds/SelfDamage");
         if (selfDamageClip)
-            audioSource.PlayOneShot(selfDamageClip);
+            audioSource.PlayOneShot(selfDamageClip, SELF_DAMAGE_VOLUME);
     }
 
     public void playPowerupCollect()

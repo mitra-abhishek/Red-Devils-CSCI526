@@ -3,29 +3,35 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Runtime.InteropServices;
-
-public class ButtonHandlerLev3 : MonoBehaviour
+// using UnityEngine.InputSystem;
+    
+public class ButtonHandlerSport : MonoBehaviour
 {
     // Start is called before the first frame update
     private coinCount coin_count;
     private Bullets bulletHandler;
-    private LevelManagerLevel3 levelManagerLevel3;
+    private LevelManagerLevel4 levelManagerLevel4;
     public GameObject popUpMessage;
     public KeyCode _Key;
 
     public Button button;
+    
+    // void awake()
+    // {
+    //     button = GetComponent<Button>();
+    //     print("Getting Button Here");
+    //     print(button);
+    // } 
 
-    public void onClickFun()
+    public void onClick()
     {
-        print("We enter this");
         int currentCoins = coin_count.getNumCoins();
         if(currentCoins>=3)
         {
-            print("Can we enter this if");
             currentCoins-=3;
             coin_count.setNumCoins(currentCoins);
             bulletHandler.SetEnemiesDestroyed(currentCoins);
-            levelManagerLevel3.setLetterFromHint();
+            levelManagerLevel4.setLetterFromHint();
         }
         else{
             popUpMessage.SetActive(true);
@@ -46,7 +52,7 @@ public class ButtonHandlerLev3 : MonoBehaviour
     {
         coin_count = new coinCount();
         bulletHandler = new Bullets();
-        levelManagerLevel3 = new LevelManagerLevel3();
+        levelManagerLevel4 = new LevelManagerLevel4();
     }
 
     // Update is called once per frame

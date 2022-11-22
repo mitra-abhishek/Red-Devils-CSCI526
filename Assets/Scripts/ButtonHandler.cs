@@ -10,7 +10,7 @@ public class ButtonHandler : MonoBehaviour
     // Start is called before the first frame update
     private coinCount coin_count;
     private Bullets bulletHandler;
-    private LevelManagerLevel2 levelManagerLevel2;
+    private LevelManagerLevel1 levelManagerLevel1;
     public GameObject popUpMessage;
     public KeyCode _Key;
 
@@ -31,7 +31,7 @@ public class ButtonHandler : MonoBehaviour
             currentCoins-=3;
             coin_count.setNumCoins(currentCoins);
             bulletHandler.SetEnemiesDestroyed(currentCoins);
-            levelManagerLevel2.setLetterFromHint();
+            levelManagerLevel1.setLetterFromHint();
         }
         else{
             popUpMessage.SetActive(true);
@@ -52,7 +52,7 @@ public class ButtonHandler : MonoBehaviour
     {
         coin_count = new coinCount();
         bulletHandler = new Bullets();
-        levelManagerLevel2 = new LevelManagerLevel2();
+        levelManagerLevel1 = new LevelManagerLevel1();
     }
 
     // Update is called once per frame

@@ -78,12 +78,12 @@ public class Bullets : MonoBehaviour
             Destroy(other.gameObject);
             
         }
-        if(other.tag == "Letter") {
-            EventManager.TriggerEvent ("test", new Dictionary<string, object> { { "amount", other } });
-            GameManager.instance.playLetterCollect();
-            Destroy(other.gameObject);
-            Destroy(this.gameObject);
-        }
+        // if(other.tag == "Letter") {
+        //     EventManager.TriggerEvent ("test", new Dictionary<string, object> { { "amount", other } });
+        //     GameManager.instance.playLetterCollect();
+        //     Destroy(other.gameObject);
+        //     Destroy(this.gameObject);
+        // }
 
         if(other.tag == "enemy"){
             PlayerStats.enemyScore += 10;
@@ -158,6 +158,14 @@ public class Bullets : MonoBehaviour
             PlayerStats.enemyScore += 10;
             Instantiate(explosion,transform.position,transform.rotation);
             FindObjectOfType<BossEnemyLevel3>().TakeHit(10);
+            GameManager.instance.playBulletImpact();
+            Destroy(this.gameObject);
+        }
+
+        if(other.tag == "boss_enemy_level4"){
+            PlayerStats.enemyScore += 10;
+            Instantiate(explosion,transform.position,transform.rotation);
+            FindObjectOfType<BossEnemyLevel4>().TakeHit(10);
             GameManager.instance.playBulletImpact();
             Destroy(this.gameObject);
         }

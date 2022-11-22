@@ -11,6 +11,7 @@ public class PlayerMain : MonoBehaviour
     public int currentHealth;
     public GameObject gotHitScreen;
     private GameObject explosion;
+
     public Dictionary<string, int> pairs = new Dictionary<string, int>()
     {
         {"Tutorial",0},{ "Planet", 1 }, { "Animals", 2 },{"Country",3},{"Sport",4}

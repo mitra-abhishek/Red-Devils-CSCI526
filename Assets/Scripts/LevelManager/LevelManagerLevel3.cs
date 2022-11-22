@@ -78,12 +78,12 @@ public class LevelManagerLevel3 : MonoBehaviour
 
         List<string> level_words = new List<string>
         {
-            "INDIA", "CHINA", "KOREA", "SPAIN", "BRAZIL"
+            "IRAN","CHINA", "EGYPT", "SPAIN", "BRAZIL"
         };
 
         int index = random.Next(level_words.Count);
         levelWord = level_words[index];
-
+        print("This is the first");
         // Pass Values to GameManager
         GameManager.instance.Level = 3;
         GameManager.instance.switchColor = true;

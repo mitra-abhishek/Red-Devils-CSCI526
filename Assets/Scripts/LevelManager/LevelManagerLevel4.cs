@@ -78,7 +78,7 @@ public class LevelManagerLevel4 : MonoBehaviour
 
         List<string> level_words = new List<string>
         {
-            "HOCKEY", "BOXING", "RUGBY", "GOLF", "SQUASH"
+            "HOCKEY", "BOXING", "RUGBY", "GOLF"
         };
 
         int index = random.Next(level_words.Count);
@@ -174,7 +174,6 @@ public class LevelManagerLevel4 : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("Inside the else condition");
                     correctLetterList[i].GetComponent<TMP_Text>().color = new Color32(164, 164, 164, 0);
                 }
                 correctLetterUpdate.text = "O".ToString();

@@ -1179,7 +1179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83a3899c27eb44224a5dc8abe32d7309, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 1126280980146680301, guid: 87716cf0b23194d768ce6e9de4f36d84, type: 3}
+  enemyPrefab: {fileID: 1126280980146680301, guid: 9ec5acd5fe56f4fd8b2a1cb9111bbf8a, type: 3}
   enemyReAppearTime: 2
   maxEnemyAtTime: 1
 --- !u!114 &345747636
@@ -1547,7 +1547,8 @@ Transform:
   m_LocalPosition: {x: -0.07, y: -3.96, z: 0}
   m_LocalScale: {x: 0.75, y: 0.75, z: 6.42966}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1835749248}
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1568,11 +1569,12 @@ MonoBehaviour:
   xMax: 4
   y: -3
   bulletSpeed: 7
-  bulletPrefab: {fileID: 4403854986693279775, guid: 749751dbaf3c45242ba0303af30b832d, type: 3}
+  bulletPrefab: {fileID: 4403854986693279775, guid: fcd4d5dc9ab40c14390182a6ac95290e, type: 3}
   sceneCam: {fileID: 519420031}
   rb: {fileID: 635070115}
   ANGULAR_SPEED: 3.7
   WEBGL_MULTIPLIER: 1
+  firePoint: {fileID: 1835749248}
 --- !u!61 &635070114
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4166,7 +4168,7 @@ GameObject:
   - component: {fileID: 1512974934}
   - component: {fileID: 1512974933}
   - component: {fileID: 1512974932}
-  - component: {fileID: 1512974931}
+  - component: {fileID: 1512974935}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -4195,21 +4197,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1512974931
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1512974929}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88e13929fccb34db9a57bf1305efb55f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  popUpMessage: {fileID: 0}
-  _Key: 104
-  button: {fileID: 1512974932}
 --- !u!114 &1512974932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4254,9 +4241,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1512974931}
-        m_TargetAssemblyTypeName: ButtonHandlerLev3, Assembly-CSharp
-        m_MethodName: onClickFun
+      - m_Target: {fileID: 1512974935}
+        m_TargetAssemblyTypeName: ButtonHandlerAnimals, Assembly-CSharp
+        m_MethodName: onClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4304,6 +4291,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1512974929}
   m_CullTransparentMesh: 1
+--- !u!114 &1512974935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512974929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 800b59122f6e34d989ae68ae7d2e9ebe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  popUpMessage: {fileID: 1007082514}
+  _Key: 104
+  button: {fileID: 1512974932}
 --- !u!1 &1539101407
 GameObject:
   m_ObjectHideFlags: 0
@@ -4531,7 +4533,7 @@ MonoBehaviour:
   currentTime: 0
   startingTime: 120
   countdownText: {fileID: 1579874782}
-  sendToGoogle: {fileID: 0}
+  sendToGoogle: {fileID: 82895570}
 --- !u!114 &1579874782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4883,6 +4885,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1835749247
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1835749248}
+  m_Layer: 0
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1835749248
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1835749247}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.48, y: 1.36, z: 0}
+  m_LocalScale: {x: 1.3333334, y: 1.3333334, z: 0.15552922}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 635070112}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1898424111
 PrefabInstance:
   m_ObjectHideFlags: 0
