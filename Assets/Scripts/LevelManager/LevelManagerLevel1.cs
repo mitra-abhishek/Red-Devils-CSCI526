@@ -74,8 +74,7 @@ public class LevelManagerLevel1 : MonoBehaviour
 
         List<string> level_words = new List<string>
         {
-            "EARTH", "MARS", "JUPITER","VENUS","SATURN","MERCURY","NEPTUNE","URANUS"
-            // "C"
+            "EARTH", "MARS" ,"VENUS","SATURN"
         };
 
         int index = random.Next(level_words.Count);

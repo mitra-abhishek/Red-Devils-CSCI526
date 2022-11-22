@@ -10,7 +10,7 @@ public class Enemy : MonoBehaviour
     public float enemy_bulletSpeed = 7f;
     private float angle = 0;
     private float enemy_bullet_ReAppearTime=1.0f;
-    private float speed = 2.0f;
+    private float speed = 3.5f;
 
     // Start is called before the first frame update
     void Start()
