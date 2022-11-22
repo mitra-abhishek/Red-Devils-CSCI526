@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8ae508ea3834847529ee7efafec0a131, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fb7d93abf5b34f94da2cc14328f68443, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -126,7 +126,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.94, y: 5.05}
+    oldSize: {x: 3.3, y: 4.6}
     newSize: {x: 4.94, y: 5.05}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 679012e61e0764dd5863f63caba63051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BossEnemy_bulletPrefab: {fileID: 4403854986693279775, guid: 6d426a285fc5244489b5509a8f5af64e, type: 3}
+  BossEnemy_bulletPrefab: {fileID: 4403854986693279775, guid: ce8c1061b5670cf478cbb2a65433c45a, type: 3}
   enemy_bulletSpeed: 7
   healthbar: {fileID: 7109955408886279007}
   points: 0

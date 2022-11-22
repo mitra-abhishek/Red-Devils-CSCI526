@@ -871,7 +871,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83a3899c27eb44224a5dc8abe32d7309, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 1126280980146680301, guid: e25d61859244b4a1fa966aaa073e8b53, type: 3}
+  enemyPrefab: {fileID: 1126280980146680301, guid: 87716cf0b23194d768ce6e9de4f36d84, type: 3}
   enemyReAppearTime: 2
   maxEnemyAtTime: 1
 --- !u!114 &345747634
