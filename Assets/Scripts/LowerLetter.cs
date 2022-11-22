@@ -55,7 +55,7 @@ public class LowerLetter : MonoBehaviour
     IEnumerator letterLoop(){
         //Debug.Log(GameManager.instance.wordCompleted);
         while(true){
-            Debug.Log(GameManager.instance.wordCompleted);
+            //Debug.Log(GameManager.instance.wordCompleted);
             //createLetters(LevelManagerLevel1.instance.levelWord);
             //Debug.Log("Level Word : "+LevelManagerLevel1.instance.levelWord);
             yield return new WaitForSeconds(0.5f);
@@ -71,12 +71,12 @@ public class LowerLetter : MonoBehaviour
     {
         if (col.gameObject.tag == "bullet")
         {
-            Debug.Log("Collision with bullet - letter cloud");
+            //Debug.Log("Collision with bullet - letter cloud");
             Destroy(col.gameObject);
             Rigidbody2D rb = letter.GetComponent<Rigidbody2D>();
             rb.velocity = new Vector2(0, -GameManager.instance.LetterSpeed);
             droppedLetter = true;
-            Debug.Log(rb);
+            //Debug.Log(rb);
             StopAllCoroutines();
             StartCoroutine(letterLoop());
         }

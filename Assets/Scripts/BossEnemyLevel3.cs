@@ -31,7 +31,7 @@ public class BossEnemyLevel3 : MonoBehaviour
     {
         points-=damage;
         healthbar.SetHealth(points, 50);
-        Debug.Log(points);
+        //Debug.log(points);
         if(points<=0){
             GameManager.instance.gameWon = true;
             Destroy(gameObject);

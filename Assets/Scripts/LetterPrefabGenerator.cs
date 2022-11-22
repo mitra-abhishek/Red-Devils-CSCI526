@@ -42,6 +42,7 @@ public class LetterPrefabGenerator : MonoBehaviour
         GameManager.instance.penultimate = false;
         GameManager.instance.wordCompleted = false;
         GameManager.instance.gameWon = false;
+        GameManager.instance.oneMinLeft = false;
         StartCoroutine(letterLoop()); // assuming level 2
     }
     

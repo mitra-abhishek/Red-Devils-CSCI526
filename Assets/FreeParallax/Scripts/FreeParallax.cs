@@ -33,14 +33,14 @@ public class FreeParallax : MonoBehaviour
         FreeParallaxElement e = Elements[i];
         if (e.GameObjects == null || e.GameObjects.Count == 0)
         {
-            Debug.LogError("No game objects found at element index " + i.ToString() + ", be sure to set at least one game object for each element in the parallax");
+            //Debug.logError("No game objects found at element index " + i.ToString() + ", be sure to set at least one game object for each element in the parallax");
             return;
         }
         foreach (GameObject obj in e.GameObjects)
         {
             if (obj == null)
             {
-                Debug.LogError("Null game object found at element index " + i.ToString());
+                //Debug.logError("Null game object found at element index " + i.ToString());
                 return;
             }
         }
@@ -68,7 +68,7 @@ public class FreeParallax : MonoBehaviour
             parallaxCamera = Camera.main;
             if (parallaxCamera == null)
             {
-                Debug.LogError("Cannot run parallax without a camera");
+                //Debug.logError("Cannot run parallax without a camera");
                 return;
             }
         }
@@ -244,7 +244,7 @@ public class FreeParallaxElement
                 Renderer r = obj.GetComponent<Renderer>();
                 if (r == null)
                 {
-                    Debug.LogError("Null renderer found at element index " + index.ToString() + ", each game object in the parallax must have a renderer");
+                    //Debug.logError("Null renderer found at element index " + index.ToString() + ", each game object in the parallax must have a renderer");
                     return;
                 }
                 GameObjectRenderers.Add(r);
@@ -291,8 +291,8 @@ public class FreeParallaxElement
                     float objWidth = c.WorldToViewportPoint(new Vector3(worldBottom.x + b.size.x, 0, 0)).x;
                     if (objWidth < 1.1f)
                     {
-                        Debug.LogWarning("Game object in element index " + index.ToString() + " did not fit the screen width but was asked to wrap, so it was stretched. This can be fixed " +
-                                         "by making sure any parallax graphics that wrap are at least 1.1x times the largest width resolution you support.");
+                        // Debug.LogWarning("Game object in element index " + index.ToString() + " did not fit the screen width but was asked to wrap, so it was stretched. This can be fixed " +
+                        //                  "by making sure any parallax graphics that wrap are at least 1.1x times the largest width resolution you support.");
                         Vector3 scale = obj.transform.localScale;
                         scale.x = (scale.x * (1.0f / objWidth)) + 0.1f;
                         obj.transform.localScale = scale;
@@ -304,8 +304,8 @@ public class FreeParallaxElement
                     float objHeight = c.WorldToViewportPoint(new Vector3(0.0f, worldBottom.y + b.size.y, 0.0f)).y;
                     if (objHeight < 1.1f)
                     {
-                        Debug.LogWarning("Game object in element index " + index.ToString() + " did not fit the screen height but was asked to wrap, so it was stretched. This can be fixed " +
-                                         "by making sure any parallax graphics that wrap are at least 1.1x times the largest height resolution you support.");
+                        // Debug.LogWarning("Game object in element index " + index.ToString() + " did not fit the screen height but was asked to wrap, so it was stretched. This can be fixed " +
+                        //                  "by making sure any parallax graphics that wrap are at least 1.1x times the largest height resolution you support.");
                         Vector3 scale = obj.transform.localScale;
                         scale.y = (scale.y * (1.0f / objHeight)) + 0.1f;
                         obj.transform.localScale = scale;

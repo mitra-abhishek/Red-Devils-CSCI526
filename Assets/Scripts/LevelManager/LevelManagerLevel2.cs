@@ -93,6 +93,11 @@ public class LevelManagerLevel2 : MonoBehaviour
 
         availableBullets = level2Bullets;
 
+        GameManager.instance.penultimate = false;
+        GameManager.instance.wordCompleted = false;
+        GameManager.instance.gameWon = false;
+        GameManager.instance.oneMinLeft = false;
+
     }
 
     void OnEnable()
@@ -166,12 +171,12 @@ public class LevelManagerLevel2 : MonoBehaviour
                 blankUpdate.fontSize = 100f;
                 if (correctLetterPairs[correctLetterList[i].GetComponent<TMP_Text>()] == false)
                 {
-                    Debug.Log("Inside the first condition");
+                    // Debug.Log("Inside the first condition");
                     StartCoroutine(HandleIt(i));
                 }
                 else
                 {
-                    Debug.Log("Inside the else condition");
+                    // Debug.Log("Inside the else condition");
                     correctLetterList[i].GetComponent<TMP_Text>().color = new Color32(164, 164, 164, 0);
                 }
                 correctLetterUpdate.text = "O".ToString();
@@ -231,6 +236,7 @@ public class LevelManagerLevel2 : MonoBehaviour
         GameManager.instance.penultimate = false;
         GameManager.instance.wordCompleted = false;
         GameManager.instance.gameWon = false;
+        GameManager.instance.oneMinLeft = false;
         yield return new WaitForSeconds(2f);
         Destroy(this.gameObject);
 

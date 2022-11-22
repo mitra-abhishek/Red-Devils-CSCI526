@@ -110,7 +110,6 @@ public class UpperLetterGen : MonoBehaviour
         //Debug.Log(GameManager.instance.wordCompleted);
         while (GameManager.instance.wordCompleted == false)
         {
-            Debug.Log(GameManager.instance.wordCompleted);
             //createLetters(LevelManagerLevel1.instance.levelWord);
             //Debug.Log("Level Word : "+LevelManagerLevel1.instance.levelWord);
             yield return new WaitForSeconds(0.5f);
@@ -144,13 +143,13 @@ public class UpperLetterGen : MonoBehaviour
     {
         if (col.gameObject.tag == "bullet")
         {
-            Debug.Log("Collision with bullet - letter cloud");
+            //Debug.Log("Collision with bullet - letter cloud");
             Destroy(col.gameObject);
             Rigidbody2D rb = letter.GetComponent<Rigidbody2D>();
             rb.velocity = new Vector2(0, -GameManager.instance.LetterSpeed);
             letter.transform.localScale = new Vector3(letterScale, letterScale, letterScale);
             droppedLetter = true;
-            Debug.Log(rb);
+            //Debug.Log(rb);
             if (scene.name.Equals("Planet") | scene.name.Equals("Sport") | scene.name.Equals("Country"))
             {
                 Instantiate(explosion, transform.position, transform.rotation);

@@ -101,10 +101,10 @@ public class GameManager : MonoBehaviour
         laserClip = Resources.Load<AudioClip>("Sounds/LaserShot");
         audioSource = this.GetComponent<AudioSource>();
         primaryCharsList.AddRange(primaryChars);
-        print("1start");
-        print(primaryCharsList);
-        print("1end");
-        print("");
+        // print("1start");
+        // print(primaryCharsList);
+        // print("1end");
+        // print("");
         ShuffleMe(primaryCharsList);
         // primaryCharsList.AddRange(primaryChars);
         // int itr = 0;
@@ -139,8 +139,8 @@ public class GameManager : MonoBehaviour
         // primaryCharsList.AddRange(primaryChars);
         int itr = 0;
         // ShuffleMe(primaryCharsList);
-        print("Checking Length here");
-        print(GameManager.instance.LevelWord.Length);
+        // print("Checking Length here");
+        // print(GameManager.instance.LevelWord.Length);
         while(finalChars.Length<(11-GameManager.instance.LevelWord.Length) && itr < primaryCharsList.Count && GameManager.instance.LevelWord.Length != 0)
         {
             if (LevelWord.ToLower().IndexOf(primaryCharsList[itr]) == -1)
@@ -150,10 +150,10 @@ public class GameManager : MonoBehaviour
             }
             itr+=1;
         }
-        print("2start");
-        print(finalChars);
-        print("2end");
-        print("");
+        // print("2start");
+        // print(finalChars);
+        // print("2end");
+        // print("");
         // createLetterSpawnArrayInitial();
     }
     public float getRandomRange(float start, float end)
@@ -189,6 +189,7 @@ public class GameManager : MonoBehaviour
 
     public void lossScreen()
     {
+        GameManager.instance.oneMinLeft = false;
         SceneManager.LoadScene("Level Failure");
     }
 
@@ -265,16 +266,16 @@ public class GameManager : MonoBehaviour
     {
         datalist = new List<char>();
         datalist.AddRange(LevelWord);
-        print(LevelWord);
-        print(GameManager.instance.LevelWord);
+        // print(LevelWord);
+        // print(GameManager.instance.LevelWord);
         // datalist.AddRange("o");
         datalist.AddRange(finalChars.ToUpper());
         for(int itr = 0;itr<datalist.Count;itr++)
         {
-            print(datalist[itr]);
+            // print(datalist[itr]);
         }
-        print("Checking vals here");
-        print(finalChars.ToUpper());
+        // print("Checking vals here");
+        // print(finalChars.ToUpper());
         ShuffleMe(datalist);
     }
     public char getLetterPrimary()
@@ -290,13 +291,13 @@ public class GameManager : MonoBehaviour
         // {
         //     randomChar = GetRandomCharacter(primaryChars);
         // }
-        print("3start");
-        for(int itr = 0;itr<datalist.Count;itr++)
-        {
-            print(datalist[itr]);
-        }
-        print("3end");
-        print("");
+        // print("3start");
+        // for(int itr = 0;itr<datalist.Count;itr++)
+        // {
+        //     print(datalist[itr]);
+        // }
+        // print("3end");
+        // print("");
         char randomChar = datalist[indexLetter];
         IncrementDataList();
 

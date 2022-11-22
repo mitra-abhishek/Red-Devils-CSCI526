@@ -134,8 +134,8 @@ public class TutorialLevelManager : MonoBehaviour
 
     public void setLetterFromHint(Dictionary<int, Char> letterMap)
     {
-        Debug.Log("Inside set letter from Hint" + letterMap.Count);
-        print("Entering this 5");
+        // Debug.Log("Inside set letter from Hint" + letterMap.Count);
+        // print("Entering this 5");
         print(levelWord.Length);
         for (int itr = 0; itr < levelWord.Length; itr++)
         {
@@ -199,7 +199,7 @@ public class TutorialLevelManager : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                Debug.Log("Inside the Index 2 Showing to shoot the bullet" + popUpIndex);
+                //Debug.Log("Inside the Index 2 Showing to shoot the bullet" + popUpIndex);
                 popUpIndex++;
                 rockActive = true;
             }
@@ -208,7 +208,7 @@ public class TutorialLevelManager : MonoBehaviour
         {
             popUps[3].gameObject.SetActive(false);
             rockShootingTime += Time.deltaTime;
-            Debug.Log("Inside the Rocks Shooting" + rockShootingTime);
+            //Debug.Log("Inside the Rocks Shooting" + rockShootingTime);
             rock.SetActive(true);
             if (rockShootingTime >= 15f && playerMain.currentHealth >= 80)
             {
@@ -238,14 +238,14 @@ public class TutorialLevelManager : MonoBehaviour
                     rockActive = false;
                     isEnemiesSpawnOver = true;
                 }
-                Debug.Log("Inside the Index 3 Showing Enemies" + popUpIndex);
-                Debug.Log("Inside the Index 3 The wait time is" + waitTimeForEnemies);
+                //Debug.Log("Inside the Index 3 Showing Enemies" + popUpIndex);
+                //Debug.Log("Inside the Index 3 The wait time is" + waitTimeForEnemies);
 
             }
         }
         else if (popUpIndex == 4 && enemiesActive == true && enemiesTutorialCompleted == false)
         {
-            Debug.Log("Inside the Index 4");
+            //Debug.Log("Inside the Index 4");
             popUps[4].gameObject.SetActive(false);
             enemyShootingTime += Time.deltaTime;
             enemies.SetActive(true);
@@ -291,12 +291,12 @@ public class TutorialLevelManager : MonoBehaviour
                     blankUpdate.fontSize = 100f;
                     if (correctLetterPairs[correctLetterList[i].GetComponent<TMP_Text>()] == false)
                     {
-                        Debug.Log("Inside the first condition");
+                        // Debug.Log("Inside the first condition");
                         StartCoroutine(HandleIt(i));
                     }
                     else
                     {
-                        Debug.Log("Inside the else condition");
+                        // Debug.Log("Inside the else condition");
                         correctLetterList[i].GetComponent<TMP_Text>().color = new Color32(164, 164, 164, 0);
                     }
                     correctLetterUpdate.text = "O".ToString();
@@ -327,7 +327,7 @@ public class TutorialLevelManager : MonoBehaviour
                 }
             }
             characterShot = count;
-            Debug.Log("The character shot count is" + characterShot);
+            //Debug.Log("The character shot count is" + characterShot);
             GameManager.instance.characterShotCount = characterShot;
             if (count == levelWord.Length)
             {
@@ -363,7 +363,7 @@ public class TutorialLevelManager : MonoBehaviour
 
     IEnumerator SetWinText()
     {
-        Debug.Log("The whole letter is complete");
+        //Debug.Log("The whole letter is complete");
         GameManager.instance.wordCompleted = false;
         GameManager.instance.gameWon = false;
         yield return new WaitForSeconds(2f);

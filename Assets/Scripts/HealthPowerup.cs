@@ -31,7 +31,7 @@ public class HealthPowerup : MonoBehaviour
         if (col.gameObject.CompareTag("player"))
         {
             FindObjectOfType<PlayerMain>().TakeDamage(-10);
-            Debug.Log("Health Powerup detected");
+            //Debug.Log("Health Powerup detected");
             GameManager.instance.playPowerupCollect();
             //GameManager.instance.bulletController.addBullets(5);
             Destroy(this.gameObject);

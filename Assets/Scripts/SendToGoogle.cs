@@ -47,9 +47,9 @@ public class SendToGoogle : MonoBehaviour
 
     private void Awake()
     {
-        Debug.Log("SendToGoogle: Awake Called.");
+        //Debug.Log("SendToGoogle: Awake Called.");
         _sessionID = DateTime.Now.Ticks;
-        Debug.Log("_sessionID = " + _sessionID);
+        //Debug.Log("_sessionID = " + _sessionID);
         
     }
     // Start is called before the first frame update
@@ -89,11 +89,11 @@ public class SendToGoogle : MonoBehaviour
 
             if (www.result != UnityWebRequest.Result.Success)
             {
-                Debug.Log(www.error);
+                //Debug.Log(www.error);
             }
             else
             {
-                Debug.Log("SendToGoogle.Post: Form upload completed.");
+                //Debug.Log("SendToGoogle.Post: Form upload completed.");
             }
         }
 
@@ -112,7 +112,7 @@ public class SendToGoogle : MonoBehaviour
     private IEnumerator PostUnsuccessfulTriesAnalytics(string sessionID, string currentLevel,string isLevelCompleted)
     {
         //Create Form and enter responses
-        Debug.Log("Unsuccessful Tries Analytics");
+        //Debug.Log("Unsuccessful Tries Analytics");
         WWWForm form = new WWWForm();
         form.AddField("entry.1366828310", sessionID);
         form.AddField("entry.363749641",currentLevel);
@@ -124,11 +124,11 @@ public class SendToGoogle : MonoBehaviour
 
             if (www.result != UnityWebRequest.Result.Success)
             {
-                Debug.Log(www.error);
+                //Debug.Log(www.error);
             }
             else
             {
-                Debug.Log("SendToGoogle.Post: Form upload completed.");
+                //Debug.Log("SendToGoogle.Post: Form upload completed.");
             }
         }
 
@@ -142,7 +142,7 @@ public class SendToGoogle : MonoBehaviour
 
     private IEnumerator PostHealthbarAnalytics(string sessionID, string completedLevel,string currentHealth)
     {
-        Debug.Log("The Healthbar Analytics"+completedLevel);
+        //Debug.Log("The Healthbar Analytics"+completedLevel);
         //Create Form and enter responses
         WWWForm form = new WWWForm();
         form.AddField("entry.628208234", sessionID);
@@ -155,11 +155,11 @@ public class SendToGoogle : MonoBehaviour
 
             if (www.result != UnityWebRequest.Result.Success)
             {
-                Debug.Log(www.error);
+                //Debug.Log(www.error);
             }
             else
             {
-                Debug.Log("SendToGoogle.Post: Form upload completed.");
+                //Debug.Log("SendToGoogle.Post: Form upload completed.");
             }
         }
 
@@ -174,7 +174,7 @@ public class SendToGoogle : MonoBehaviour
     private IEnumerator PostResonForDeathAnalytics(string sessionID, string currentLevel,string deathReason)
     {
         //Create Form and enter responses
-        Debug.Log("The reason for the death is"+currentLevel+"----"+deathReason);
+        //Debug.Log("The reason for the death is"+currentLevel+"----"+deathReason);
         WWWForm form = new WWWForm();
         form.AddField("entry.1761087184", sessionID);
         form.AddField("entry.2142992592",currentLevel);
@@ -186,11 +186,11 @@ public class SendToGoogle : MonoBehaviour
 
             if (www.result != UnityWebRequest.Result.Success)
             {
-                Debug.Log(www.error);
+                //Debug.Log(www.error);
             }
             else
             {
-                Debug.Log("SendToGoogle.Post: Form upload completed.");
+                //Debug.Log("SendToGoogle.Post: Form upload completed.");
             }
         }
 
@@ -206,7 +206,7 @@ public class SendToGoogle : MonoBehaviour
     {
         //Create Form and enter responses
         WWWForm form = new WWWForm();
-        Debug.Log("The current leve inside form is"+letterShotLevel);
+        //Debug.Log("The current leve inside form is"+letterShotLevel);
         form.AddField("entry.298398774", sessionID);
         form.AddField("entry.692591639",letterShotLevel);
         form.AddField("entry.561116185",totalShotsCount);
@@ -218,18 +218,18 @@ public class SendToGoogle : MonoBehaviour
 
             if (www.result != UnityWebRequest.Result.Success)
             {
-                Debug.Log(www.error);
+                //Debug.Log(www.error);
             }
             else
             {
-                Debug.Log("SendToGoogle.Post: Form upload completed.");
+                //Debug.Log("SendToGoogle.Post: Form upload completed.");
             }
         }
 
     }
 
     public void SendPowerUpsUsageAnalytics(){
-        Debug.Log("Game Manager Power Up Usage");
+        //Debug.Log("Game Manager Power Up Usage");
         if(this.gameObject!=null){
         StartCoroutine(PostPowerUpsUsageAnalytics(_sessionID.ToString(), _currentLevel.ToString(),_totalPowerUpsGenerated.ToString(),_totalPowerUpsCollected.ToString()));
         }
@@ -250,11 +250,11 @@ public class SendToGoogle : MonoBehaviour
 
             if (www.result != UnityWebRequest.Result.Success)
             {
-                Debug.Log(www.error);
+                //Debug.Log(www.error);
             }
             else
             {
-                Debug.Log("SendToGoogle.Post: Form upload completed.");
+                //Debug.Log("SendToGoogle.Post: Form upload completed.");
             }
         }
 
@@ -271,7 +271,7 @@ public class SendToGoogle : MonoBehaviour
     public void UpdateUnsuccessfulTriesAnalytics(int current_level,bool isLevelCompleted){
         _currentLevel=current_level;
         _isLevelCompleted=isLevelCompleted;
-        Debug.Log("Unsuccessful Tries Function");
+        //Debug.Log("Unsuccessful Tries Function");
         if(this!=null){
             SendUnsuccessfulTriesAnalytics();
         }

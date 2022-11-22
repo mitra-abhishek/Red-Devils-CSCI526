@@ -50,12 +50,12 @@ public class PlayerMain : MonoBehaviour
             currentHealth = 100;
         }
         healthBar.setHealth(currentHealth);
-        Debug.Log("The scence health is" + currentHealth);
+        //Debug.Log("The scence health is" + currentHealth);
         if (currentHealth <= 0)
         {
             sendToGoogle.UpdateUnsuccessfulTriesAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name], false);
             sendToGoogle.UpdateResonForDeathAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name], "Health Finished");
-            Debug.Log("Check letter count when health is over" + GameManager.instance.totalLettersShot + "---- correct" + GameManager.instance.characterShotCount + "level---" + pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name]);
+            //Debug.Log("Check letter count when health is over" + GameManager.instance.totalLettersShot + "---- correct" + GameManager.instance.characterShotCount + "level---" + pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name]);
             sendToGoogle.UpdateCorrectLettersShotAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name], GameManager.instance.totalLettersShot, GameManager.instance.characterShotCount, "healthbar finished");
             sendToGoogle.UpdatePowerUpsUsageAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name], GameManager.instance.bulletPowerUpController.getTotalPowerUpsGenerated(), GameManager.instance.bulletPowerUpController.getTotalPowerUpsCollected());
             //GameManager.instance.wordCompleted = false;
@@ -90,7 +90,7 @@ public class PlayerMain : MonoBehaviour
         if (other.tag == "enemy_bullet")
         {
             gotHitScreen.GetComponent<Image>().color = color;
-            Debug.Log("enemy bullet detected");
+            //Debug.Log("enemy bullet detected");
             TakeDamage(10);
         }
         if (other.tag == "smart_enemy_bullet")

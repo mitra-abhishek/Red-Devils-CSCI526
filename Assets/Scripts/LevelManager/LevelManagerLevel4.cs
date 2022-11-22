@@ -44,7 +44,7 @@ public class LevelManagerLevel4 : MonoBehaviour
     };
     public Dictionary<TMP_Text, bool> correctLetterPairs = new Dictionary<TMP_Text, bool>();
 
-    private int currentLevel = 1;
+    private int currentLevel = 4;
     public PlayerMain playerMain;
     public Timer timer;
 
@@ -98,6 +98,11 @@ public class LevelManagerLevel4 : MonoBehaviour
         GameManager.instance.createLetterSpawnArrayInitial();
         GameManager.instance.altVersion = altVersion;
         availableBullets = level4Bullets;
+
+        GameManager.instance.penultimate = false;
+        GameManager.instance.wordCompleted = false;
+        GameManager.instance.gameWon = false;
+        GameManager.instance.oneMinLeft = false;
 
     }
 
@@ -172,7 +177,7 @@ public class LevelManagerLevel4 : MonoBehaviour
                 blankUpdate.fontSize = 100f;
                 if (correctLetterPairs[correctLetterList[i].GetComponent<TMP_Text>()] == false)
                 {
-                    Debug.Log("Inside the first condition");
+                    // Debug.Log("Inside the first condition");
                     StartCoroutine(HandleIt(i));
                 }
                 else
@@ -235,6 +240,7 @@ public class LevelManagerLevel4 : MonoBehaviour
         GameManager.instance.penultimate = false;
         GameManager.instance.wordCompleted = false;
         GameManager.instance.gameWon = false;
+        GameManager.instance.oneMinLeft = false;
         yield return new WaitForSeconds(2f);
         Destroy(this.gameObject);
         //UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene 2");
@@ -303,7 +309,7 @@ public class LevelManagerLevel4 : MonoBehaviour
                     sendToGoogle.UpdateLevelAnalytics(currentLevel, timeToComplete);
                     sendToGoogle.UpdateUnsuccessfulTriesAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name], true);
                     sendToGoogle.UpdateHealthbarAnalytics(currentLevel, playerMain.currentHealth);
-                    sendToGoogle.UpdateCorrectLettersShotAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name], totalLettersShot, characterShot, "level3 destroy");
+                    sendToGoogle.UpdateCorrectLettersShotAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name], totalLettersShot, characterShot, "level4 destroy");
                     sendToGoogle.UpdatePowerUpsUsageAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name], GameManager.instance.bulletPowerUpController.getTotalPowerUpsGenerated(), GameManager.instance.bulletPowerUpController.getTotalPowerUpsCollected());
 
                 }
@@ -311,7 +317,7 @@ public class LevelManagerLevel4 : MonoBehaviour
                 {
                     sendToGoogle.UpdateUnsuccessfulTriesAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name], false);
                     sendToGoogle.UpdateResonForDeathAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name], "Bullet Finished");
-                    sendToGoogle.UpdateCorrectLettersShotAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name], totalLettersShot, characterShot, "level3 destroy");
+                    sendToGoogle.UpdateCorrectLettersShotAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name], totalLettersShot, characterShot, "level4 destroy");
                     //Debug.Log("Game manager else"+bulletPowerUpController.getTotalPowerUpsCollected());
                     sendToGoogle.UpdatePowerUpsUsageAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name], bulletPowerUpController.getTotalPowerUpsGenerated(), bulletPowerUpController.getTotalPowerUpsCollected());
                     //UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene 2");
