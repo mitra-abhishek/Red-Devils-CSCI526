@@ -2453,7 +2453,8 @@ Transform:
   m_LocalPosition: {x: 0, y: -1.94, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 6.42966}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 815479464}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2479,6 +2480,7 @@ MonoBehaviour:
   rb: {fileID: 635070115}
   ANGULAR_SPEED: 3.7
   WEBGL_MULTIPLIER: 1
+  firePoint: {fileID: 815479464}
 --- !u!61 &635070114
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3134,6 +3136,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 811692697}
   m_CullTransparentMesh: 1
+--- !u!1 &815479463
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 815479464}
+  m_Layer: 0
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &815479464
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 815479463}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 3.88, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 0.15552922}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 635070112}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &940070764
 GameObject:
   m_ObjectHideFlags: 0
