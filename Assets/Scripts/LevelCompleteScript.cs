@@ -29,7 +29,7 @@ public class LevelCompleteScript : MonoBehaviour
 
         string level = GameManager.instance.Level.ToString();
 
-        Debug.Log("=======" + level);
+        //Debug.Log("=======" + level);
         int levelSc = 500;
         // if(level == "2") {
         //     levelSc = 400;
