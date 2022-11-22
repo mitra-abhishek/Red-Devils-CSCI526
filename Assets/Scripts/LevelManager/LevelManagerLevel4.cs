@@ -174,7 +174,6 @@ public class LevelManagerLevel4 : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("Inside the else condition");
                     correctLetterList[i].GetComponent<TMP_Text>().color = new Color32(164, 164, 164, 0);
                 }
                 correctLetterUpdate.text = "O".ToString();

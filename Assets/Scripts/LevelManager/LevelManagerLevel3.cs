@@ -83,7 +83,7 @@ public class LevelManagerLevel3 : MonoBehaviour
 
         int index = random.Next(level_words.Count);
         levelWord = level_words[index];
-
+        print("This is the first");
         // Pass Values to GameManager
         GameManager.instance.Level = 3;
         GameManager.instance.switchColor = true;

@@ -161,5 +161,13 @@ public class Bullets : MonoBehaviour
             GameManager.instance.playBulletImpact();
             Destroy(this.gameObject);
         }
+
+        if(other.tag == "boss_enemy_level4"){
+            PlayerStats.enemyScore += 10;
+            Instantiate(explosion,transform.position,transform.rotation);
+            FindObjectOfType<BossEnemyLevel4>().TakeHit(10);
+            GameManager.instance.playBulletImpact();
+            Destroy(this.gameObject);
+        }
     }
 }
