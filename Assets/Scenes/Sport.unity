@@ -1014,7 +1014,7 @@ GameObject:
   - component: {fileID: 310811392}
   - component: {fileID: 310811391}
   - component: {fileID: 310811390}
-  - component: {fileID: 310811389}
+  - component: {fileID: 310811393}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1043,21 +1043,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &310811389
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 310811387}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88e13929fccb34db9a57bf1305efb55f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  popUpMessage: {fileID: 0}
-  _Key: 104
-  button: {fileID: 310811390}
 --- !u!114 &310811390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1102,9 +1087,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 310811389}
-        m_TargetAssemblyTypeName: ButtonHandlerLev3, Assembly-CSharp
-        m_MethodName: onClickFun
+      - m_Target: {fileID: 310811393}
+        m_TargetAssemblyTypeName: ButtonHandlerSport, Assembly-CSharp
+        m_MethodName: onClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1152,6 +1137,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 310811387}
   m_CullTransparentMesh: 1
+--- !u!114 &310811393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 310811387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34727276f09745cba9f4f86c4423437, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  popUpMessage: {fileID: 330333358}
+  _Key: 104
+  button: {fileID: 310811390}
 --- !u!1 &311528106
 GameObject:
   m_ObjectHideFlags: 0

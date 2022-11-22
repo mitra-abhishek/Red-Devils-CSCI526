@@ -5,12 +5,12 @@ using UnityEngine.UI;
 using System.Runtime.InteropServices;
 // using UnityEngine.InputSystem;
     
-public class ButtonHandler : MonoBehaviour
+public class ButtonHandlerAnimals : MonoBehaviour
 {
     // Start is called before the first frame update
     private coinCount coin_count;
     private Bullets bulletHandler;
-    private LevelManagerLevel1 levelManagerLevel1;
+    private LevelManagerLevel2 levelManagerLevel2;
     public GameObject popUpMessage;
     public KeyCode _Key;
 
@@ -31,7 +31,7 @@ public class ButtonHandler : MonoBehaviour
             currentCoins-=3;
             coin_count.setNumCoins(currentCoins);
             bulletHandler.SetEnemiesDestroyed(currentCoins);
-            levelManagerLevel1.setLetterFromHint();
+            levelManagerLevel2.setLetterFromHint();
         }
         else{
             popUpMessage.SetActive(true);
@@ -52,7 +52,7 @@ public class ButtonHandler : MonoBehaviour
     {
         coin_count = new coinCount();
         bulletHandler = new Bullets();
-        levelManagerLevel1 = new LevelManagerLevel1();
+        levelManagerLevel2 = new LevelManagerLevel2();
     }
 
     // Update is called once per frame

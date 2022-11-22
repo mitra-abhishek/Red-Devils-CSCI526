@@ -21,7 +21,7 @@ public class LevelManagerLevel1 : MonoBehaviour
     public Transform blankHolder;
     public Transform correctLetterHolder;
 
-    public Dictionary<int, Char> letterMap = new Dictionary<int, Char>();
+    public static Dictionary<int, Char> letterMap = new Dictionary<int, Char>();
     public float timeStart;
     public float timeFinished;
     public double timeToComplete;
@@ -225,6 +225,23 @@ public class LevelManagerLevel1 : MonoBehaviour
 
     }
 
+    public void setLetterFromHint()
+    {
+        print("Entering this 5");
+        print(levelWord.Length);
+        for (int itr = 0; itr < levelWord.Length; itr++)
+        {
+            print(letterMap[itr]);
+            if (letterMap[itr] == '/')
+            {
+                letterMap[itr] = levelWord[itr];
+                print("LetterMap");
+                print(letterMap[itr]);
+                break;
+            }
+        }
+    }
+
     void Initialise()
     {
 
@@ -296,5 +313,6 @@ public class LevelManagerLevel1 : MonoBehaviour
                 }
             }
         }
+        letterMap = new Dictionary<int, char>();
     }
 }
