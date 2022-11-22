@@ -73,7 +73,10 @@ public class UpperLetterGen : MonoBehaviour
             Destroy(letter.gameObject);
         }
 
-        letter = Instantiate(Resources.Load("Letters/" + GameManager.instance.getLetterPrimary()) as GameObject);
+        if (GameManager.instance.Level==3)
+            letter = Instantiate(Resources.Load("Letters/orange/" + GameManager.instance.getLetterPrimary()) as GameObject);
+        else
+            letter = Instantiate(Resources.Load("Letters/" + GameManager.instance.getLetterPrimary()) as GameObject);
         //Debug.Log("This is generated "+ letter.gameObject.name);
         letter.transform.position = transform.position;
         letter.transform.localPosition = renderer.bounds.center;
