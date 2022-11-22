@@ -78,7 +78,7 @@ public class PlayerMain : MonoBehaviour
         if (other.tag == "Letter")
         {
             EventManager.TriggerEvent("test", new Dictionary<string, object> { { "amount", other } });
-            if (LevelManagerLevel1.levelWord.IndexOf(other.name[0]) == -1)
+            if (GameManager.instance.LevelWord.IndexOf(other.name[0]) == -1)
             {
                 gotHitScreen.GetComponent<Image>().color = color;
                 TakeDamage(10);
