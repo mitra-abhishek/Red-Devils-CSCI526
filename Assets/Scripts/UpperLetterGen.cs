@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UpperLetterGen : MonoBehaviour
 {
@@ -14,8 +15,9 @@ public class UpperLetterGen : MonoBehaviour
     public float displacementParam1 = 0.3f;
     public float displacementParam2 = 0.1f;
     public float letterScale = 1.5f;
-    private float initialPosition = 0.3f ;
+    private float initialPosition = 0.3f;
     private GameObject explosion;
+    private Scene scene;
 
 
 
@@ -30,7 +32,23 @@ public class UpperLetterGen : MonoBehaviour
     {
         startPosition = transform.position;
         renderer = GetComponent<Renderer>();
-        explosion = Resources.Load<GameObject>("Explosion/BurstEffect");
+        scene = SceneManager.GetActiveScene();
+        if (scene.name.Equals("Planet") | scene.name.Equals("Sport"))
+        {
+            explosion = Resources.Load<GameObject>("Explosion/BurstEffect(Planets)");
+        }
+        else if (scene.name.Equals("Tutorial"))
+        {
+            explosion = Resources.Load<GameObject>("Explosion/BurstEffect (0)");
+        }
+        else if (scene.name.Equals("Animals"))
+        {
+            explosion = Resources.Load<GameObject>("Explosion/BurstEffect(Animals)");
+        }
+        else
+        {
+            explosion = Resources.Load<GameObject>("Explosion/BurstEffect(Animals)");
+        }
         StartCoroutine(letterLoop());
     }
 
@@ -117,8 +135,14 @@ public class UpperLetterGen : MonoBehaviour
             letter.transform.localScale = new Vector3(letterScale, letterScale, letterScale);
             droppedLetter = true;
             Debug.Log(rb);
-            Instantiate(explosion, new Vector3(transform.position.x + 1, transform.position.y + 1, transform.position.z), transform.rotation);
-            // Instantiate(explosion, transform.position, transform.rotation);
+            if (scene.name.Equals("Planet") | scene.name.Equals("Sport"))
+            {
+                Instantiate(explosion, transform.position, transform.rotation);
+            }
+            else
+            {
+                Instantiate(explosion, new Vector3(transform.position.x + 1, transform.position.y + 1, transform.position.z), transform.rotation);
+            }
             StopAllCoroutines();
             StartCoroutine(letterLoop());
         }
