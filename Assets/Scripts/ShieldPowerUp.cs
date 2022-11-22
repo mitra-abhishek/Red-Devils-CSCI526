@@ -36,6 +36,7 @@ public class ShieldPowerUp : MonoBehaviour
 
             GameObject shieldTimer = parent.transform.Find("ShieldTimer").gameObject;
             shieldTimer.SetActive(true);
+            GameManager.instance.playPowerupCollect();
             Destroy(this.gameObject);
         }
     }

@@ -33,6 +33,7 @@ public class BulletPowerUp : MonoBehaviour
         {
             GameManager.instance.bulletController.addBullets(5);
             GameManager.instance.bulletPowerUpController.addTotalPowerUpsCollected();
+            GameManager.instance.playPowerupCollect();
             //Debug.Log("Bullet Powerup added to Player");
             Destroy(this.gameObject);
         }
