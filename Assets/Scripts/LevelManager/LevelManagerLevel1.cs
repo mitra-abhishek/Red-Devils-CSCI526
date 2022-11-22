@@ -137,6 +137,7 @@ public class LevelManagerLevel1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        GameManager.instance.LevelWord = levelWord;
         for (int i = 0; i < blankList.Count; i++)
         {
             if (letterMap[i] != '/')
