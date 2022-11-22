@@ -48,7 +48,10 @@ public class GameManager : MonoBehaviour
     private List<char> datalist = new List<char>();
     private int indexLetter = 0;
     private string secondaryChars = "cgjklmpquvwxyzh";
-    private string primaryChars = "aeiouhdtsnhr";
+    private string primaryChars = "cdfghjklmnpqrstvwxyz";
+    // char[] primaryCharsListHelper = { "c","d","f","g","h","j","k","l","m","n","p","q","r","s","t","v","w","x","y","z" };
+    private List<char> primaryCharsList = new List<char>();
+    private string finalChars = "";
     private AudioClip laserClip;
     private AudioSource audioSource;
 
@@ -85,6 +88,19 @@ public class GameManager : MonoBehaviour
         oneMinLeft = false;
         laserClip = Resources.Load<AudioClip>("Sounds/LaserShot");
         audioSource = this.GetComponent<AudioSource>();
+        primaryCharsList.AddRange(primaryChars);
+        int itr = 0;
+        ShuffleMe(primaryCharsList);
+        while(finalChars.Length<11-LevelWord.Length && itr < primaryCharsList.Count)
+        {
+            if (LevelWord.ToLower().IndexOf(primaryCharsList[itr]) == -1)
+            {
+                finalChars +=primaryCharsList[itr];
+                
+            }
+            itr+=1;
+        }
+        createLetterSpawnArrayInitial();
 
     }
     private void OnDisable()
@@ -98,7 +114,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        ShuffleMe(datalist);
     }
     public float getRandomRange(float start, float end)
     {
@@ -191,32 +207,50 @@ public class GameManager : MonoBehaviour
 
     private void IncrementDataList()
     {
-        indexLetter = (indexLetter + 1) % datalist.Count();
-        if (indexLetter == 0)
+        indexLetter = (indexLetter + 1);
+        // % datalist.Count();
+        // if (indexLetter == 0)
+        // {
+        //     createLetterSpawnArrayInitial();
+        // }
+        if(indexLetter == 11)
         {
-            createLetterSpawnArrayInitial();
+            indexLetter = 0;
         }
     }
 
     public void createLetterSpawnArrayInitial()
     {
+        datalist = new List<char>();
         datalist.AddRange(LevelWord);
+        print(LevelWord);
+        print(GameManager.instance.LevelWord);
         // datalist.AddRange("o");
+        datalist.AddRange(finalChars.ToUpper());
+        for(int itr = 0;itr<datalist.Count;itr++)
+        {
+            print(datalist[itr]);
+        }
+        print("Checking vals here");
+        print(finalChars.ToUpper());
         ShuffleMe(datalist);
     }
     public char getLetterPrimary()
     {
-        char randomChar;
-        int randINT = random.Next(1, 10);
-        if (randINT >= 3)
-        {
-            randomChar = datalist[indexLetter];
-            IncrementDataList();
-        }
-        else
-        {
-            randomChar = GetRandomCharacter(primaryChars);
-        }
+        // char randomChar;
+        // int randINT = random.Next(1, 10);
+        // if (randINT <= GameManager.instance.LevelWord.Length)
+        // {
+        //     randomChar = datalist[indexLetter];
+        //     IncrementDataList();
+        // }
+        // else
+        // {
+        //     randomChar = GetRandomCharacter(primaryChars);
+        // }
+        
+        char randomChar = datalist[indexLetter];
+        IncrementDataList();
 
         return randomChar;
     }
