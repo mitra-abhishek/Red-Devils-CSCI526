@@ -78,7 +78,7 @@ public class LevelManagerLevel3 : MonoBehaviour
 
         List<string> level_words = new List<string>
         {
-            "INDIA", "CHINA", "KOREA", "SPAIN", "BRAZIL"
+            "IRAN","CHINA", "KOREA", "SPAIN", "BRAZIL"
         };
 
         int index = random.Next(level_words.Count);

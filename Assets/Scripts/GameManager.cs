@@ -125,7 +125,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ShuffleMe(datalist);
+        //ShuffleMe(datalist);
     }
     public float getRandomRange(float start, float end)
     {
@@ -227,6 +227,7 @@ public class GameManager : MonoBehaviour
         if(indexLetter == 11)
         {
             indexLetter = 0;
+            ShuffleMe(datalist);
         }
     }
 
