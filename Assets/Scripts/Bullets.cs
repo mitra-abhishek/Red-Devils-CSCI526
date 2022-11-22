@@ -73,12 +73,14 @@ public class Bullets : MonoBehaviour
         if(other.tag=="rock"){
             PlayerStats.rockScore += 5;
             Instantiate(explosion,transform.position,transform.rotation);
+            GameManager.instance.playBulletImpact();
             Destroy(this.gameObject);
             Destroy(other.gameObject);
             
         }
         if(other.tag == "Letter") {
             EventManager.TriggerEvent ("test", new Dictionary<string, object> { { "amount", other } });
+            GameManager.instance.playLetterCollect();
             Destroy(other.gameObject);
             Destroy(this.gameObject);
         }
@@ -96,8 +98,10 @@ public class Bullets : MonoBehaviour
                     Vector3 positionHelper = enemy.GetComponent<Transform>().localPosition;
                     coin = element;
                     coin.GetComponent<Transform>().position = positionHelper;
+                    GameManager.instance.playCoinCollect();
                 }
             }
+            GameManager.instance.playBulletImpact();
             // other.gameObject.SetActive(false);
             coin.SetActive(true);
             coin_count.setNumCoins(enemiesDestroyed);
@@ -129,6 +133,7 @@ public class Bullets : MonoBehaviour
             coinHelper = GameObject.Find("CoinHelper");
             delayHelper script = coinHelper.GetComponent<delayHelper>();
             script.callCoroutine(coin);
+            GameManager.instance.playBulletImpact();
             Destroy(other.gameObject);
             Destroy(this.gameObject);
         }
@@ -137,6 +142,7 @@ public class Bullets : MonoBehaviour
             PlayerStats.enemyScore += 10;
             Instantiate(explosion,transform.position,transform.rotation);
             FindObjectOfType<BossEnemyLevel1>().TakeHit(10);
+            GameManager.instance.playBulletImpact();
             Destroy(this.gameObject);
         }
 
@@ -144,6 +150,7 @@ public class Bullets : MonoBehaviour
             PlayerStats.enemyScore += 10;
             Instantiate(explosion,transform.position,transform.rotation);
             FindObjectOfType<BossEnemyLevel2>().TakeHit(10);
+            GameManager.instance.playBulletImpact();
             Destroy(this.gameObject);
         }
 
@@ -151,6 +158,7 @@ public class Bullets : MonoBehaviour
             PlayerStats.enemyScore += 10;
             Instantiate(explosion,transform.position,transform.rotation);
             FindObjectOfType<BossEnemyLevel3>().TakeHit(10);
+            GameManager.instance.playBulletImpact();
             Destroy(this.gameObject);
         }
     }
