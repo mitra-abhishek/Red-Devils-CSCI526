@@ -75,6 +75,10 @@ public class UpperLetterGen : MonoBehaviour
 
         if (GameManager.instance.Level == 3)
             letter = Instantiate(Resources.Load("Letters/orange/" + GameManager.instance.getLetterPrimary()) as GameObject);
+        else if(GameManager.instance.Level == 1)
+            letter = Instantiate(Resources.Load("Letters/orange-red/" + GameManager.instance.getLetterPrimary()) as GameObject);
+        else if(GameManager.instance.Level == 4)
+            letter = Instantiate(Resources.Load("Letters/white/" + GameManager.instance.getLetterPrimary()) as GameObject);
         else
             letter = Instantiate(Resources.Load("Letters/" + GameManager.instance.getLetterPrimary()) as GameObject);
         //Debug.Log("This is generated "+ letter.gameObject.name);

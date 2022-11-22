@@ -15,6 +15,10 @@ public class HealthBar : MonoBehaviour
        fill.color=gradient.Evaluate(1f);
    }
    public void setHealth(int health){
+       if(slider.value>health)
+       {
+        GameManager.instance.playSelfDamage();
+       }
        slider.value=health;
     //    Instead of slider.value, we used slider.normalized because it normalizes the slider value from 0 to 1
         //print("Printing text here");

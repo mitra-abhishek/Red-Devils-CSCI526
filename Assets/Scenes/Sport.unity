@@ -349,7 +349,7 @@ MonoBehaviour:
   displacementX: 1
   displacementParam1: 0.3
   displacementParam2: 0.1
-  letterScale: 1.5
+  letterScale: 3
 --- !u!1 &125624289
 GameObject:
   m_ObjectHideFlags: 0
@@ -562,7 +562,7 @@ MonoBehaviour:
   displacementX: 1
   displacementParam1: 0.3
   displacementParam2: 0.1
-  letterScale: 1.5
+  letterScale: 3
 --- !u!1 &173534772
 GameObject:
   m_ObjectHideFlags: 0
@@ -693,7 +693,7 @@ MonoBehaviour:
   displacementX: 1
   displacementParam1: 0.3
   displacementParam2: 0.1
-  letterScale: 1.5
+  letterScale: 3
 --- !u!1 &182012157
 GameObject:
   m_ObjectHideFlags: 0
@@ -1677,7 +1677,7 @@ MonoBehaviour:
   displacementX: 1
   displacementParam1: 0.3
   displacementParam2: 0.1
-  letterScale: 1.5
+  letterScale: 3
 --- !u!1 &398993005
 GameObject:
   m_ObjectHideFlags: 0
@@ -2220,7 +2220,7 @@ MonoBehaviour:
   displacementX: 1
   displacementParam1: 0.3
   displacementParam2: 0.1
-  letterScale: 1.5
+  letterScale: 3
 --- !u!1 &614447730
 GameObject:
   m_ObjectHideFlags: 0
@@ -2492,7 +2492,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.08788097, y: -0.21225166}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2503,7 +2503,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.9972956, y: 4.652133}
   m_EdgeRadius: 0
 --- !u!50 &635070115
 Rigidbody2D:
@@ -2725,7 +2725,7 @@ MonoBehaviour:
   displacementX: 1
   displacementParam1: 0.3
   displacementParam2: 0.1
-  letterScale: 1.5
+  letterScale: 3
 --- !u!1 &687394104
 GameObject:
   m_ObjectHideFlags: 0
@@ -2856,7 +2856,7 @@ MonoBehaviour:
   displacementX: 1
   displacementParam1: 0.3
   displacementParam2: 0.1
-  letterScale: 1.5
+  letterScale: 3
 --- !u!1 &716075932
 GameObject:
   m_ObjectHideFlags: 0
@@ -3542,7 +3542,7 @@ MonoBehaviour:
   displacementX: 1
   displacementParam1: 0.3
   displacementParam2: 0.1
-  letterScale: 1.5
+  letterScale: 3
 --- !u!1 &1132403459
 GameObject:
   m_ObjectHideFlags: 0
@@ -4177,7 +4177,7 @@ MonoBehaviour:
   displacementX: 1
   displacementParam1: 0.3
   displacementParam2: 0.1
-  letterScale: 1.5
+  letterScale: 3
 --- !u!1 &1515085485
 GameObject:
   m_ObjectHideFlags: 0
@@ -4511,7 +4511,7 @@ MonoBehaviour:
   displacementX: 1
   displacementParam1: 0.3
   displacementParam2: 0.1
-  letterScale: 1.5
+  letterScale: 3
 --- !u!1 &1975061641
 GameObject:
   m_ObjectHideFlags: 0
@@ -4975,7 +4975,7 @@ MonoBehaviour:
   displacementX: 1
   displacementParam1: 0.3
   displacementParam2: 0.1
-  letterScale: 1.5
+  letterScale: 3
 --- !u!1 &2092520067
 GameObject:
   m_ObjectHideFlags: 0

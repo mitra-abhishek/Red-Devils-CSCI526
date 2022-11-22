@@ -53,6 +53,13 @@ public class GameManager : MonoBehaviour
     private List<char> primaryCharsList = new List<char>();
     private string finalChars = "";
     private AudioClip laserClip;
+    private AudioClip bulletImpactClip;
+    private AudioClip coinCollectClip;
+    private AudioClip letterCollectClip;
+    private AudioClip selfDamageClip;
+    private AudioClip powerupCollectClip;
+
+
     private AudioSource audioSource;
 
 
@@ -64,6 +71,10 @@ public class GameManager : MonoBehaviour
             instance = this;
         }
         laserClip = Resources.Load<AudioClip>("Sounds/LaserShot");
+        bulletImpactClip = Resources.Load<AudioClip>("Sounds/BulletImpact");
+        coinCollectClip = Resources.Load<AudioClip>("Sounds/CoinCollect");
+        letterCollectClip = Resources.Load<AudioClip>("Sounds/LetterCollect");
+        powerupCollectClip = Resources.Load<AudioClip>("Sounds/PowerupCollect");
         audioSource = this.GetComponent<AudioSource>();
         DontDestroyOnLoad(instance);
     }
@@ -296,6 +307,47 @@ public class GameManager : MonoBehaviour
             audioSource.PlayOneShot(laserClip);
     }
 
+
+    public void playBulletImpact()
+    {
+        if (!bulletImpactClip)
+            bulletImpactClip = Resources.Load<AudioClip>("Sounds/BulletImpact");
+        if (bulletImpactClip)
+            audioSource.PlayOneShot(bulletImpactClip);
+    }
+
+    public void playCoinCollect()
+    {
+        if (!coinCollectClip)
+            coinCollectClip = Resources.Load<AudioClip>("Sounds/CoinCollect");
+        if (coinCollectClip)
+            audioSource.PlayOneShot(coinCollectClip);
+    }
+    
+
+    public void playLetterCollect()
+    {
+        if (!letterCollectClip)
+            letterCollectClip = Resources.Load<AudioClip>("Sounds/LetterCollect");
+        if (letterCollectClip)
+            audioSource.PlayOneShot(letterCollectClip);
+    }
+    
+    public void playSelfDamage()
+    {
+        if (!selfDamageClip)
+            selfDamageClip = Resources.Load<AudioClip>("Sounds/SelfDamage");
+        if (selfDamageClip)
+            audioSource.PlayOneShot(selfDamageClip);
+    }
+
+    public void playPowerupCollect()
+    {
+        if (!powerupCollectClip)
+            powerupCollectClip = Resources.Load<AudioClip>("Sounds/PowerupCollect");
+        if (powerupCollectClip)
+            audioSource.PlayOneShot(powerupCollectClip);
+    }
     
     
 }

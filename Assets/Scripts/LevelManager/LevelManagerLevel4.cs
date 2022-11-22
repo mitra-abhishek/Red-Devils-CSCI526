@@ -40,7 +40,7 @@ public class LevelManagerLevel4 : MonoBehaviour
     private float checktime;
     public Dictionary<String, int> pairs = new Dictionary<String, int>()
     {
-        {"Tutorial",0},{ "SampleScene 2", 1 }, { "Level 2", 2 },{"Level 3",3}
+        {"Tutorial",0},{ "Planet", 1 }, { "Animals", 2 },{"Country",3},{"Sport",4}
     };
     public Dictionary<TMP_Text, bool> correctLetterPairs = new Dictionary<TMP_Text, bool>();
 
