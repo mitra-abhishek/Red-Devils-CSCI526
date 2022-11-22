@@ -17,6 +17,7 @@ public class UpperLetterGen : MonoBehaviour
     public float letterScale = 1.5f;
     private float initialPosition = 0.3f;
     private GameObject explosion;
+    private GameObject shuffleExplosion;
     private Scene scene;
 
 
@@ -49,6 +50,7 @@ public class UpperLetterGen : MonoBehaviour
         {
             explosion = Resources.Load<GameObject>("Explosion/BurstEffect(Planets)");
         }
+        shuffleExplosion = Resources.Load<GameObject>("Explosion/AllBurst");
         StartCoroutine(letterLoop());
     }
 
@@ -75,13 +77,20 @@ public class UpperLetterGen : MonoBehaviour
 
         if (GameManager.instance.Level == 3)
             letter = Instantiate(Resources.Load("Letters/orange/" + GameManager.instance.getLetterPrimary()) as GameObject);
-        else if(GameManager.instance.Level == 1)
+        else if (GameManager.instance.Level == 1)
             letter = Instantiate(Resources.Load("Letters/orange-red/" + GameManager.instance.getLetterPrimary()) as GameObject);
-        else if(GameManager.instance.Level == 4)
+        else if (GameManager.instance.Level == 4)
             letter = Instantiate(Resources.Load("Letters/white/" + GameManager.instance.getLetterPrimary()) as GameObject);
         else
             letter = Instantiate(Resources.Load("Letters/" + GameManager.instance.getLetterPrimary()) as GameObject);
-        //Debug.Log("This is generated "+ letter.gameObject.name);
+        if (scene.name.Equals("Planet") | scene.name.Equals("Sport") | scene.name.Equals("Country"))
+        {
+            Instantiate(shuffleExplosion, transform.position, transform.rotation);
+        }
+        else
+        {
+            Instantiate(shuffleExplosion, new Vector3(transform.position.x + 1, transform.position.y + 1, transform.position.z), transform.rotation);
+        }
         letter.transform.position = transform.position;
         letter.transform.localPosition = renderer.bounds.center;
         letter.transform.parent = this.transform;
