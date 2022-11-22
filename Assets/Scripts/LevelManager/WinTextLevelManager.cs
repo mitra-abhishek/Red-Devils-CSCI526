@@ -16,12 +16,12 @@ public class WinTextLevelManager : MonoBehaviour
     
     private Dictionary<int, String> pairs = new Dictionary<int, String>()
     {
-        {  1, "SampleScene 2" }, { 2, "Level 2" },{3, "Level 3"}
+        {0,"Tutorial"},{  1, "Planet" }, { 2, "Animals" },{3, "Country"}, {4,"Sport"}
     };
 
     private void Awake()
     {
-        if (GameManager.instance.Level == 3)
+        if (GameManager.instance.Level == 4)
         {
             nextLevel.gameObject.SetActive(false);
         }

@@ -16,8 +16,9 @@ public class LossLevelManager : MonoBehaviour
     
     private Dictionary<int, String> pairs = new Dictionary<int, String>()
     {
-        {  1, "SampleScene 2" }, { 2, "Level 2" },{3, "Level 3"}
+        {0,"Tutorial"},{  1, "Planet" }, { 2, "Animals" },{3, "Country"}, {4,"Sport"}
     };
+   
     
     // Start is called before the first frame update
     void Start()

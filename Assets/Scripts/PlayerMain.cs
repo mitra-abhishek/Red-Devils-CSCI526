@@ -13,7 +13,7 @@ public class PlayerMain : MonoBehaviour
     private GameObject explosion;
     public Dictionary<string, int> pairs = new Dictionary<string, int>()
     {
-        { "SampleScene 2", 1 }, { "Level 2", 2 },{"Level 3",3}
+        {"Tutorial",0},{ "Planet", 1 }, { "Animals", 2 },{"Country",3},{"Sport",4}
     };
     [SerializeField] SendToGoogle sendToGoogle;
 

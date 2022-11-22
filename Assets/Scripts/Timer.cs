@@ -10,7 +10,7 @@ public class Timer : MonoBehaviour
     public float startingTime = 120f;
     public Dictionary<string, int> pairs = new Dictionary<string, int>()
     {
-        { "SampleScene 2", 1 }, { "Level 2", 2 },{"Level 3",3}
+        {"Tutorial",0},{ "Planet", 1 }, { "Animals", 2 },{"Country",3},{"Sport", 4}
     };
 
     [SerializeField] Text countdownText;
@@ -49,7 +49,7 @@ public class Timer : MonoBehaviour
             sendToGoogle.UpdateCorrectLettersShotAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],GameManager.instance.totalLettersShot,GameManager.instance.characterShotCount,"healthbar finished");
             sendToGoogle.UpdatePowerUpsUsageAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],GameManager.instance.bulletPowerUpController.getTotalPowerUpsGenerated(),GameManager.instance.bulletPowerUpController.getTotalPowerUpsCollected());
             Destroy(this.gameObject);
-            UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene 2");
+            //UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene 2");
         }
     }
 }
