@@ -78,12 +78,12 @@ public class Bullets : MonoBehaviour
             Destroy(other.gameObject);
             
         }
-        if(other.tag == "Letter") {
-            EventManager.TriggerEvent ("test", new Dictionary<string, object> { { "amount", other } });
-            GameManager.instance.playLetterCollect();
-            Destroy(other.gameObject);
-            Destroy(this.gameObject);
-        }
+        // if(other.tag == "Letter") {
+        //     EventManager.TriggerEvent ("test", new Dictionary<string, object> { { "amount", other } });
+        //     GameManager.instance.playLetterCollect();
+        //     Destroy(other.gameObject);
+        //     Destroy(this.gameObject);
+        // }
 
         if(other.tag == "enemy"){
             PlayerStats.enemyScore += 10;
