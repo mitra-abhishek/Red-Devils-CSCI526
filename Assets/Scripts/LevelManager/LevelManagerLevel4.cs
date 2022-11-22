@@ -85,6 +85,9 @@ public class LevelManagerLevel4 : MonoBehaviour
         levelWord = level_words[index];
 
         // Pass Values to GameManager
+        print("Test");
+        print(levelWord);
+        print(GameManager.instance.Level);
         GameManager.instance.Level = 4;
         GameManager.instance.switchColor = true;
         GameManager.instance.LevelWord = levelWord;

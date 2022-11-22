@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
     private List<char> datalist = new List<char>();
     private int indexLetter = 0;
     private string secondaryChars = "cgjklmpquvwxyzh";
-    private string primaryChars = "cdfghjklmnpqrstvwxyz";
+    private string primaryChars = "bcdfghjklmnpqrstvwxyz";
     // char[] primaryCharsListHelper = { "c","d","f","g","h","j","k","l","m","n","p","q","r","s","t","v","w","x","y","z" };
     private List<char> primaryCharsList = new List<char>();
     private string finalChars = "";
@@ -100,6 +100,12 @@ public class GameManager : MonoBehaviour
         oneMinLeft = false;
         laserClip = Resources.Load<AudioClip>("Sounds/LaserShot");
         audioSource = this.GetComponent<AudioSource>();
+        primaryCharsList.AddRange(primaryChars);
+        print("1start");
+        print(primaryCharsList);
+        print("1end");
+        print("");
+        ShuffleMe(primaryCharsList);
         // primaryCharsList.AddRange(primaryChars);
         // int itr = 0;
         // ShuffleMe(primaryCharsList);
@@ -130,10 +136,12 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         //ShuffleMe(datalist);
-        primaryCharsList.AddRange(primaryChars);
+        // primaryCharsList.AddRange(primaryChars);
         int itr = 0;
-        ShuffleMe(primaryCharsList);
-        while(finalChars.Length<(11-GameManager.instance.LevelWord.Length) && itr < primaryCharsList.Count)
+        // ShuffleMe(primaryCharsList);
+        print("Checking Length here");
+        print(GameManager.instance.LevelWord.Length);
+        while(finalChars.Length<(11-GameManager.instance.LevelWord.Length) && itr < primaryCharsList.Count && GameManager.instance.LevelWord.Length != 0)
         {
             if (LevelWord.ToLower().IndexOf(primaryCharsList[itr]) == -1)
             {
@@ -142,7 +150,11 @@ public class GameManager : MonoBehaviour
             }
             itr+=1;
         }
-        createLetterSpawnArrayInitial();
+        print("2start");
+        print(finalChars);
+        print("2end");
+        print("");
+        // createLetterSpawnArrayInitial();
     }
     public float getRandomRange(float start, float end)
     {
@@ -235,16 +247,17 @@ public class GameManager : MonoBehaviour
 
     private void IncrementDataList()
     {
-        indexLetter = (indexLetter + 1);
+        indexLetter = indexLetter + 1;
         // % datalist.Count();
         // if (indexLetter == 0)
         // {
         //     createLetterSpawnArrayInitial();
         // }
-        if(indexLetter > 10)
+        if(indexLetter >= datalist.Count || indexLetter == 0)
         {
             indexLetter = 0;
-            ShuffleMe(datalist);
+            // ShuffleMe(datalist);
+            createLetterSpawnArrayInitial();
         }
     }
 
@@ -277,7 +290,13 @@ public class GameManager : MonoBehaviour
         // {
         //     randomChar = GetRandomCharacter(primaryChars);
         // }
-        
+        print("3start");
+        for(int itr = 0;itr<datalist.Count;itr++)
+        {
+            print(datalist[itr]);
+        }
+        print("3end");
+        print("");
         char randomChar = datalist[indexLetter];
         IncrementDataList();
 
