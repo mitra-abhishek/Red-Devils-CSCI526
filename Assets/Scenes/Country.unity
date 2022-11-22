@@ -330,7 +330,7 @@ MonoBehaviour:
   displacementX: 1
   displacementParam1: 0.3
   displacementParam2: 0.1
-  letterScale: 1.5
+  letterScale: 2
 --- !u!1 &61282335
 GameObject:
   m_ObjectHideFlags: 0
@@ -639,7 +639,7 @@ MonoBehaviour:
   displacementX: 1
   displacementParam1: 0.3
   displacementParam2: 0.1
-  letterScale: 1.5
+  letterScale: 2
 --- !u!1 &182012157
 GameObject:
   m_ObjectHideFlags: 0
@@ -801,7 +801,7 @@ MonoBehaviour:
   displacementX: 1
   displacementParam1: 0.3
   displacementParam2: 0.1
-  letterScale: 1.5
+  letterScale: 2
 --- !u!1 &206715128
 GameObject:
   m_ObjectHideFlags: 0
@@ -1650,7 +1650,7 @@ MonoBehaviour:
   displacementX: 1
   displacementParam1: 0.3
   displacementParam2: 0.1
-  letterScale: 1.5
+  letterScale: 2
 --- !u!1 &411326682
 GameObject:
   m_ObjectHideFlags: 0
@@ -2075,7 +2075,7 @@ MonoBehaviour:
   displacementX: 1
   displacementParam1: 0.3
   displacementParam2: 0.1
-  letterScale: 1.5
+  letterScale: 2
 --- !u!1 &635070110
 GameObject:
   m_ObjectHideFlags: 0
@@ -2381,7 +2381,7 @@ MonoBehaviour:
   displacementX: 1
   displacementParam1: 0.3
   displacementParam2: 0.1
-  letterScale: 1.5
+  letterScale: 2
 --- !u!1 &650721911
 GameObject:
   m_ObjectHideFlags: 0
@@ -3049,7 +3049,7 @@ MonoBehaviour:
   displacementX: 1
   displacementParam1: 0.3
   displacementParam2: 0.1
-  letterScale: 1.5
+  letterScale: 2
 --- !u!1 &1051483575
 GameObject:
   m_ObjectHideFlags: 0
@@ -3180,7 +3180,7 @@ MonoBehaviour:
   displacementX: 1
   displacementParam1: 0.3
   displacementParam2: 0.1
-  letterScale: 1.5
+  letterScale: 2
 --- !u!1 &1066395445
 GameObject:
   m_ObjectHideFlags: 0
@@ -3552,7 +3552,7 @@ MonoBehaviour:
   displacementX: 1
   displacementParam1: 0.3
   displacementParam2: 0.1
-  letterScale: 1.5
+  letterScale: 2
 --- !u!1 &1132403459
 GameObject:
   m_ObjectHideFlags: 0
@@ -4420,7 +4420,7 @@ MonoBehaviour:
   displacementX: 1
   displacementParam1: 0.3
   displacementParam2: 0.1
-  letterScale: 1.5
+  letterScale: 2
 --- !u!1 &1675804186
 GameObject:
   m_ObjectHideFlags: 0
@@ -5576,7 +5576,7 @@ MonoBehaviour:
   displacementX: 1
   displacementParam1: 0.3
   displacementParam2: 0.1
-  letterScale: 1.5
+  letterScale: 2
 --- !u!1001 &2502462975481952729
 PrefabInstance:
   m_ObjectHideFlags: 0

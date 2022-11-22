@@ -277,7 +277,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.82, y: 5.2}
+  m_Size: {x: 5, y: 5}
   m_EdgeRadius: 0
 --- !u!212 &111461622
 SpriteRenderer:
@@ -350,7 +350,6 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 1.5
-  explosion: {fileID: 0}
 --- !u!1 &125624289
 GameObject:
   m_ObjectHideFlags: 0
@@ -491,7 +490,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.82, y: 5.2}
+  m_Size: {x: 5, y: 5}
   m_EdgeRadius: 0
 --- !u!212 &135765452
 SpriteRenderer:
@@ -564,7 +563,6 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 1.5
-  explosion: {fileID: 0}
 --- !u!1 &173534772
 GameObject:
   m_ObjectHideFlags: 0
@@ -623,7 +621,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.82, y: 5.2}
+  m_Size: {x: 5, y: 5}
   m_EdgeRadius: 0
 --- !u!212 &173534775
 SpriteRenderer:
@@ -696,7 +694,6 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 1.5
-  explosion: {fileID: 0}
 --- !u!1 &182012157
 GameObject:
   m_ObjectHideFlags: 0
@@ -1506,7 +1503,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.82, y: 5.2}
+  m_Size: {x: 5, y: 5}
   m_EdgeRadius: 0
 --- !u!212 &390641316
 SpriteRenderer:
@@ -1579,7 +1576,6 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 1.5
-  explosion: {fileID: 0}
 --- !u!1 &398993005
 GameObject:
   m_ObjectHideFlags: 0
@@ -2050,7 +2046,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.82, y: 5.2}
+  m_Size: {x: 5, y: 5}
   m_EdgeRadius: 0
 --- !u!212 &584829571
 SpriteRenderer:
@@ -2123,7 +2119,6 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 1.5
-  explosion: {fileID: 0}
 --- !u!1 &626061401
 GameObject:
   m_ObjectHideFlags: 0
@@ -2342,7 +2337,6 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   gotHitScreen: {fileID: 558642470}
-  explosion: {fileID: 2131305524043948238, guid: 54344166172c3dc41ac15f26c5934557, type: 3}
   sendToGoogle: {fileID: 682405817}
   healthBar: {fileID: 2109715734}
   timer: {fileID: 1237414937}
@@ -2455,7 +2449,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.82, y: 5.2}
+  m_Size: {x: 5, y: 5}
   m_EdgeRadius: 0
 --- !u!212 &682902375
 SpriteRenderer:
@@ -2528,7 +2522,6 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 1.5
-  explosion: {fileID: 0}
 --- !u!1 &687394104
 GameObject:
   m_ObjectHideFlags: 0
@@ -2587,7 +2580,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.82, y: 5.2}
+  m_Size: {x: 5, y: 5}
   m_EdgeRadius: 0
 --- !u!212 &687394107
 SpriteRenderer:
@@ -2660,7 +2653,6 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 1.5
-  explosion: {fileID: 0}
 --- !u!1 &716075932
 GameObject:
   m_ObjectHideFlags: 0
@@ -3172,7 +3164,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.82, y: 5.2}
+  m_Size: {x: 5, y: 5}
   m_EdgeRadius: 0
 --- !u!212 &1092369015
 SpriteRenderer:
@@ -3245,7 +3237,6 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 1.5
-  explosion: {fileID: 0}
 --- !u!1 &1132403459
 GameObject:
   m_ObjectHideFlags: 0
@@ -3905,7 +3896,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.82, y: 5.2}
+  m_Size: {x: 5, y: 5}
   m_EdgeRadius: 0
 --- !u!212 &1256426547
 SpriteRenderer:
@@ -3978,7 +3969,6 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 1.5
-  explosion: {fileID: 0}
 --- !u!1 &1515085485
 GameObject:
   m_ObjectHideFlags: 0
@@ -4297,7 +4287,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.82, y: 5.2}
+  m_Size: {x: 5, y: 5}
   m_EdgeRadius: 0
 --- !u!212 &1962307904
 SpriteRenderer:
@@ -4370,7 +4360,6 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 1.5
-  explosion: {fileID: 0}
 --- !u!1 &1975061641
 GameObject:
   m_ObjectHideFlags: 0
@@ -4660,7 +4649,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.82, y: 5.2}
+  m_Size: {x: 5, y: 5}
   m_EdgeRadius: 0
 --- !u!212 &2052555120
 SpriteRenderer:
@@ -4733,7 +4722,6 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 1.5
-  explosion: {fileID: 0}
 --- !u!1 &2076880370
 GameObject:
   m_ObjectHideFlags: 0
