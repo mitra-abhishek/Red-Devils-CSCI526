@@ -30,6 +30,6 @@ public class Start_Screen_buttons : MonoBehaviour
 
     void loadTutorial1()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Tutorial1");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Tutorial");
     }
 }

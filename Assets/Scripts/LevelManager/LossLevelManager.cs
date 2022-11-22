@@ -16,7 +16,7 @@ public class LossLevelManager : MonoBehaviour
     
     private Dictionary<int, String> pairs = new Dictionary<int, String>()
     {
-        {0,"Tutorial"},{  1, "Planet" }, { 2, "Animals" },{3, "Country"}, {4,"Sport"}
+        {0, "Tutorial"},{1, "Planet"}, {2,  "Animals"},{3, "Country"},{4, "Sport"}
     };
    
     
