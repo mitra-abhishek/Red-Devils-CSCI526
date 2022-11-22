@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public bool wordCompleted;
     public bool penultimate;
+    public bool oneMinLeft;
     public bool gameWon;
     public int Level = 1;
     public String LevelWord;
@@ -81,6 +82,7 @@ public class GameManager : MonoBehaviour
         wordCompleted = false;
         penultimate = false;
         gameWon = false;
+        oneMinLeft = false;
         laserClip = Resources.Load<AudioClip>("Sounds/LaserShot");
         audioSource = this.GetComponent<AudioSource>();
 

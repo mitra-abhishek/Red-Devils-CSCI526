@@ -38,6 +38,10 @@ public class Timer : MonoBehaviour
             countdownText.color = Color.red;
         }
 
+        if (currentTime <= 60) {
+            GameManager.instance.oneMinLeft = true;
+        }
+
         if (currentTime <= 0) {
             currentTime = 0;
             sendToGoogle.UpdateUnsuccessfulTriesAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name],false);

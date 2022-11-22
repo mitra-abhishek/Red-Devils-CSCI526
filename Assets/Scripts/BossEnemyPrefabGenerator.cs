@@ -9,7 +9,7 @@ public class BossEnemyPrefabGenerator : MonoBehaviour
     private static System.Random random = new System.Random();
 
     public GameObject enemyPrefab;
-    public float enemyReAppearTime=2.0f;
+    public float enemyReAppearTime=1.0f;
     public int maxEnemyAtTime = 1;
 
 
@@ -30,7 +30,7 @@ public class BossEnemyPrefabGenerator : MonoBehaviour
     }
 
     IEnumerator enemyLoop2(){
-        while(GameManager.instance.penultimate == false){
+        while(GameManager.instance.penultimate == false && GameManager.instance.oneMinLeft == false){
             yield return new WaitForSeconds(enemyReAppearTime);
         }
         createEnemies();
