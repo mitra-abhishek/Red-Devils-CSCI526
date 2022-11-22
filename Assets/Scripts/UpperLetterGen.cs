@@ -47,7 +47,7 @@ public class UpperLetterGen : MonoBehaviour
         }
         else
         {
-            explosion = Resources.Load<GameObject>("Explosion/BurstEffect(Animals)");
+            explosion = Resources.Load<GameObject>("Explosion/BurstEffect(Planets)");
         }
         StartCoroutine(letterLoop());
     }
@@ -73,7 +73,7 @@ public class UpperLetterGen : MonoBehaviour
             Destroy(letter.gameObject);
         }
 
-        if (GameManager.instance.Level==3)
+        if (GameManager.instance.Level == 3)
             letter = Instantiate(Resources.Load("Letters/orange/" + GameManager.instance.getLetterPrimary()) as GameObject);
         else
             letter = Instantiate(Resources.Load("Letters/" + GameManager.instance.getLetterPrimary()) as GameObject);
@@ -138,7 +138,7 @@ public class UpperLetterGen : MonoBehaviour
             letter.transform.localScale = new Vector3(letterScale, letterScale, letterScale);
             droppedLetter = true;
             Debug.Log(rb);
-            if (scene.name.Equals("Planet") | scene.name.Equals("Sport"))
+            if (scene.name.Equals("Planet") | scene.name.Equals("Sport") | scene.name.Equals("Country"))
             {
                 Instantiate(explosion, transform.position, transform.rotation);
             }
