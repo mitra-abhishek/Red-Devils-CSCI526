@@ -74,7 +74,6 @@ public class LevelManagerLevel2 : MonoBehaviour
         List<string> level_words = new List<string>
         {
             "HORSE", "DOG", "TIGER", "LION","SNAKE"
-            // "F"
         };
 
         int index = random.Next(level_words.Count);
