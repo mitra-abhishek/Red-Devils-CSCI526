@@ -171,7 +171,7 @@ public class TutorialLevelManager : MonoBehaviour
         }
         if (popUpIndex == 0)
         {
-            if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
+            if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow))
             {
                 Debug.Log("Inside the Index 0 showing Movement" + popUpIndex);
                 popUpIndex++;
@@ -179,11 +179,20 @@ public class TutorialLevelManager : MonoBehaviour
         }
         else if (popUpIndex == 1)
         {
-            if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow))
+            if (Input.GetKey(KeyCode.UpArrow))
             {
-                Debug.Log("Inside the Index 1 Showing Rotation" + popUpIndex);
+                if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.LeftArrow))
+                {
+                    popUpIndex++;
 
-                popUpIndex++;
+                }
+
+                // if ((Input.GetKeyDown(KeyCode.LeftArrow) && (Input.GetKeyDown(KeyCode.UpArrow))) || (Input.GetKeyDown(KeyCode.RightArrow) && (Input.GetKeyDown(KeyCode.UpArrow))))
+                // {
+                //     Debug.Log("Inside the Index 1 Showing Rotation" + popUpIndex);
+
+                //     popUpIndex++;
+                // }
             }
         }
         else if (popUpIndex == 2)
@@ -201,7 +210,7 @@ public class TutorialLevelManager : MonoBehaviour
             rockShootingTime += Time.deltaTime;
             Debug.Log("Inside the Rocks Shooting" + rockShootingTime);
             rock.SetActive(true);
-            if (rockShootingTime >= 25f && playerMain.currentHealth >= 80)
+            if (rockShootingTime >= 15f && playerMain.currentHealth >= 80)
             {
                 rockActive = false;
                 rockTutorialCompleted = true;
@@ -240,7 +249,7 @@ public class TutorialLevelManager : MonoBehaviour
             popUps[4].gameObject.SetActive(false);
             enemyShootingTime += Time.deltaTime;
             enemies.SetActive(true);
-            if (enemyShootingTime >= 25f && playerMain.currentHealth >= 80)
+            if (enemyShootingTime >= 15f && playerMain.currentHealth >= 80)
             {
                 enemiesActive = false;
                 isEnemiesSpawnOver = true;
