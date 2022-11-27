@@ -360,11 +360,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  moving: 0
-  pingPongSpeed: 0.25
+  moving: 1
+  pingPongSpeed: 0.21
   displacementX: 1
-  displacementParam1: 0.3
-  displacementParam2: 0.1
+  displacementParam1: 0.8
+  displacementParam2: 0.3
   letterScale: 1.5
   anchor: {fileID: 0}
   velocityRotate: 0
@@ -1542,11 +1542,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  moving: 0
-  pingPongSpeed: 0.25
+  moving: 1
+  pingPongSpeed: 0.26
   displacementX: 1
-  displacementParam1: 0.3
-  displacementParam2: 0.1
+  displacementParam1: 0.8
+  displacementParam2: 0.3
   letterScale: 1.5
   anchor: {fileID: 0}
   velocityRotate: 0
@@ -1954,11 +1954,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  moving: 0
-  pingPongSpeed: 0.25
+  moving: 1
+  pingPongSpeed: 0.23
   displacementX: 1
-  displacementParam1: 0.3
-  displacementParam2: 0.1
+  displacementParam1: 0.8
+  displacementParam2: 0.3
   letterScale: 1.5
   anchor: {fileID: 0}
   velocityRotate: 0
@@ -2093,11 +2093,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  moving: 0
-  pingPongSpeed: 0.25
+  moving: 1
+  pingPongSpeed: 0.42
   displacementX: 1
-  displacementParam1: 0.3
-  displacementParam2: 0.1
+  displacementParam1: 0.8
+  displacementParam2: 0.3
   letterScale: 1.5
   anchor: {fileID: 0}
   velocityRotate: 0
@@ -2863,11 +2863,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  moving: 0
-  pingPongSpeed: 0.25
+  moving: 1
+  pingPongSpeed: 0.2
   displacementX: 1
-  displacementParam1: 0.3
-  displacementParam2: 0.1
+  displacementParam1: 0.8
+  displacementParam2: 0.3
   letterScale: 1.5
   anchor: {fileID: 0}
   velocityRotate: 0
@@ -3003,10 +3003,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   moving: 1
-  pingPongSpeed: 0.25
+  pingPongSpeed: 0.35
   displacementX: 1
-  displacementParam1: 0.3
-  displacementParam2: 0.1
+  displacementParam1: 0.8
+  displacementParam2: 0.3
   letterScale: 1.5
   anchor: {fileID: 0}
   velocityRotate: 0
@@ -3185,11 +3185,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  moving: 0
-  pingPongSpeed: 0.25
+  moving: 1
+  pingPongSpeed: 0.22
   displacementX: 1
-  displacementParam1: 0.3
-  displacementParam2: 0.1
+  displacementParam1: 0.8
+  displacementParam2: 0.3
   letterScale: 1.5
   anchor: {fileID: 0}
   velocityRotate: 0
@@ -3325,10 +3325,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   moving: 1
-  pingPongSpeed: 0.25
+  pingPongSpeed: 0.4
   displacementX: 1
-  displacementParam1: 0.3
-  displacementParam2: 0.1
+  displacementParam1: 0.8
+  displacementParam2: 0.3
   letterScale: 1.5
   anchor: {fileID: 0}
   velocityRotate: 0
@@ -3899,10 +3899,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   moving: 1
-  pingPongSpeed: 0.25
+  pingPongSpeed: 0.3
   displacementX: 1
-  displacementParam1: 0.3
-  displacementParam2: 0.1
+  displacementParam1: 0.8
+  displacementParam2: 0.3
   letterScale: 1.5
   anchor: {fileID: 0}
   velocityRotate: 0
@@ -4580,11 +4580,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  moving: 0
-  pingPongSpeed: 0.25
+  moving: 1
+  pingPongSpeed: 0.4
   displacementX: 1
-  displacementParam1: 0.3
-  displacementParam2: 0.1
+  displacementParam1: 0.8
+  displacementParam2: 0.3
   letterScale: 1.5
   anchor: {fileID: 0}
   velocityRotate: 0
@@ -5300,11 +5300,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  moving: 0
-  pingPongSpeed: 0.25
+  moving: 1
+  pingPongSpeed: 0.26
   displacementX: 1
-  displacementParam1: 0.3
-  displacementParam2: 0.1
+  displacementParam1: 0.8
+  displacementParam2: 0.3
   letterScale: 1.5
   anchor: {fileID: 0}
   velocityRotate: 0
