@@ -88,7 +88,7 @@ public class LevelManagerLevel1 : MonoBehaviour
         GameManager.instance.bullets = level1Bullets;
         // GameManager.instance.bulletPowerUpSpeed = bulletPowerUpSpeed;
         GameManager.instance.genWordDistanceDictionary();
-        GameManager.instance.createLetterSpawnArrayInitial();
+        // GameManager.instance.createLetterSpawnArrayInitial();
         GameManager.instance.altVersion = altVersion;
         availableBullets = level1Bullets;
         
@@ -231,16 +231,11 @@ public class LevelManagerLevel1 : MonoBehaviour
 
     public void setLetterFromHint()
     {
-        print("Entering this 5");
-        print(levelWord.Length);
         for (int itr = 0; itr < levelWord.Length; itr++)
         {
-            print(letterMap[itr]);
             if (letterMap[itr] == '/')
             {
                 letterMap[itr] = levelWord[itr];
-                print("LetterMap");
-                print(letterMap[itr]);
                 break;
             }
         }

@@ -92,7 +92,6 @@ public class LevelManagerLevel3 : MonoBehaviour
         GameManager.instance.RockSpeed = rockSpeed;
         GameManager.instance.bullets = level3Bullets;
         GameManager.instance.genWordDistanceDictionary();
-        GameManager.instance.createLetterSpawnArrayInitial();
         GameManager.instance.altVersion = altVersion;
         availableBullets = level3Bullets;
 

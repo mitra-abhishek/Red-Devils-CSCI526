@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
 
     private static System.Random random = new System.Random();
     
-    private List<char> datalist = new List<char>();
+    public List<char> datalist = new List<char>();
     private int indexLetter = 0;
     private string secondaryChars = "cgjklmpquvwxyzh";
     private string primaryChars = "bcdfghjklmnpqrstvwxyz";
@@ -150,9 +150,6 @@ public class GameManager : MonoBehaviour
             }
             itr+=1;
         }
-        // print("2start");
-        // print(finalChars);
-        // print("2end");
         // print("");
         // createLetterSpawnArrayInitial();
     }
@@ -249,58 +246,55 @@ public class GameManager : MonoBehaviour
     private void IncrementDataList()
     {
         indexLetter = indexLetter + 1;
-        // % datalist.Count();
-        // if (indexLetter == 0)
-        // {
-        //     createLetterSpawnArrayInitial();
-        // }
         if(indexLetter >= datalist.Count || indexLetter == 0)
         {
             indexLetter = 0;
-            // ShuffleMe(datalist);
-            createLetterSpawnArrayInitial();
+            // createLetterSpawnArrayInitial();
         }
     }
 
     public void createLetterSpawnArrayInitial()
     {
+        print("==========");
+        print("I am called");
         datalist = new List<char>();
         datalist.AddRange(LevelWord);
-        // print(LevelWord);
-        // print(GameManager.instance.LevelWord);
-        // datalist.AddRange("o");
-        datalist.AddRange(finalChars.ToUpper());
+
+        print(LevelWord);
+        string allAlphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        List<char> alphabetList = new List<char>();
+        alphabetList.AddRange(allAlphabets);
+        ShuffleMe(alphabetList);
+
+        int randCount = 0;
+        int idx = 0;
+        while(randCount < (11-LevelWord.Length)) {
+            if (LevelWord.IndexOf(alphabetList[idx]) == -1) {
+                datalist.Add(alphabetList[idx]);
+                randCount++;
+            }
+            idx++;
+        }
+        ShuffleMe(datalist);
+        string test = "";
         for(int itr = 0;itr<datalist.Count;itr++)
         {
-            // print(datalist[itr]);
+            test += datalist[itr]+" ";
         }
-        // print("Checking vals here");
-        // print(finalChars.ToUpper());
-        ShuffleMe(datalist);
+        Debug.Log(test);
+        print("**********");
+
     }
     public char getLetterPrimary()
     {
-        // char randomChar;
-        // int randINT = random.Next(1, 10);
-        // if (randINT <= GameManager.instance.LevelWord.Length)
-        // {
-        //     randomChar = datalist[indexLetter];
-        //     IncrementDataList();
-        // }
-        // else
-        // {
-        //     randomChar = GetRandomCharacter(primaryChars);
-        // }
-        // print("3start");
-        // for(int itr = 0;itr<datalist.Count;itr++)
-        // {
-        //     print(datalist[itr]);
-        // }
-        // print("3end");
-        // print("");
+        string test = "";
+        for(int itr = 0;itr<datalist.Count;itr++)
+        {
+            test += datalist[itr]+" ";
+        }
+        Debug.Log("This is it: "+test);   
         char randomChar = datalist[indexLetter];
         IncrementDataList();
-
         return randomChar;
     }
     

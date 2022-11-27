@@ -15,6 +15,8 @@ public class UpperLetterGen : MonoBehaviour
     public float displacementParam1 = 0.3f;
     public float displacementParam2 = 0.1f;
     public float letterScale = 1.5f;
+    public Boolean restructure = false;
+    public char letterChar;
     private float initialPosition = 0.3f;
     private GameObject explosion;
     private GameObject shuffleExplosion;
@@ -23,8 +25,8 @@ public class UpperLetterGen : MonoBehaviour
 
 
     private Vector3 startPosition;
-    private GameObject letter = null;
-    private Boolean droppedLetter = false;
+    public GameObject letter = null;
+    public Boolean droppedLetter = false;
     private Renderer renderer;
 
 
@@ -51,38 +53,29 @@ public class UpperLetterGen : MonoBehaviour
             explosion = Resources.Load<GameObject>("Explosion/BurstEffect(Planets)");
         }
         shuffleExplosion = Resources.Load<GameObject>("Explosion/AllBurst");
-        StartCoroutine(letterLoop());
     }
 
     // Update is called once per frame
-    void Update()
-    {
-
+    void Update() {
     }
 
-    private void createLettersDelayed()
+    public void createLettersDelayed()
     {
-        // if (letter != null || letter.GetComponent<Rigidbody2D>().velocity.y == null || letter.GetComponent<Rigidbody2D>().velocity.y == null )
-        // {
-        //     Destroy(letter);
-        // } 
-        // if (letter != null)
-        // {
-        //     Destroy(letter);
-        // }
         if (letter && !droppedLetter)
         {
             Destroy(letter.gameObject);
         }
 
         if (GameManager.instance.Level == 3)
-            letter = Instantiate(Resources.Load("Letters/orange/" + GameManager.instance.getLetterPrimary()) as GameObject);
-        else if (GameManager.instance.Level == 1)
-            letter = Instantiate(Resources.Load("Letters/orange-red/" + GameManager.instance.getLetterPrimary()) as GameObject);
+            letter = Instantiate(Resources.Load("Letters/orange/" + letterChar) as GameObject);
+        else if (GameManager.instance.Level == 1) {
+            letter = Instantiate(Resources.Load("Letters/orange-red/" + letterChar) as GameObject);
+        }
         else if (GameManager.instance.Level == 4)
-            letter = Instantiate(Resources.Load("Letters/white/" + GameManager.instance.getLetterPrimary()) as GameObject);
-        else
-            letter = Instantiate(Resources.Load("Letters/" + GameManager.instance.getLetterPrimary()) as GameObject);
+            letter = Instantiate(Resources.Load("Letters/white/" + letterChar) as GameObject);
+        else {
+            letter = Instantiate(Resources.Load("Letters/" + letterChar) as GameObject);
+        }
         if (scene.name.Equals("Planet") | scene.name.Equals("Sport") | scene.name.Equals("Country"))
         {
             Instantiate(shuffleExplosion, transform.position, transform.rotation);
@@ -107,7 +100,6 @@ public class UpperLetterGen : MonoBehaviour
 
     IEnumerator letterLoop()
     {
-        //Debug.Log(GameManager.instance.wordCompleted);
         while (GameManager.instance.wordCompleted == false)
         {
             //createLetters(LevelManagerLevel1.instance.levelWord);
@@ -117,8 +109,6 @@ public class UpperLetterGen : MonoBehaviour
             yield return new WaitForSeconds(letterReAppearTime);
             droppedLetter = false;
         }
-
-        // Debug.Log(GameManager.instance.wordCompleted);
     }
 
     private IEnumerator MovementLoop()
@@ -159,7 +149,7 @@ public class UpperLetterGen : MonoBehaviour
                 Instantiate(explosion, new Vector3(transform.position.x + 1, transform.position.y + 1, transform.position.z), transform.rotation);
             }
             StopAllCoroutines();
-            StartCoroutine(letterLoop());
+            createLettersDelayed();
         }
     }
 }
