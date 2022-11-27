@@ -232,7 +232,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1371999427}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &40599010
 BoxCollider2D:
@@ -332,19 +332,9 @@ MonoBehaviour:
   displacementParam2: 0.1
   letterScale: 2
   anchor: {fileID: 0}
-  velocityRotate: 0
-  state: 0
-  objs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  velocityRotate: 1.5
+  RoatationPlane: 1
+  state: 10
   restructure: 0
   letterChar: 0
   letter: {fileID: 0}
@@ -527,155 +517,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 107885161}
   m_CullTransparentMesh: 1
---- !u!1 &160351989
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 160351990}
-  - component: {fileID: 160351993}
-  - component: {fileID: 160351992}
-  - component: {fileID: 160351991}
-  m_Layer: 0
-  m_Name: UpperLetter (6)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &160351990
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 160351989}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.51, y: 1.42, z: 0.27960327}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1371999427}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &160351991
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 160351989}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.71, y: 1.86}
-    newSize: {x: 2.71, y: 1.86}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.23, y: 1.77}
-  m_EdgeRadius: 0
---- !u!212 &160351992
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 160351989}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 0fd1f278169b24323bb8387d2060fae6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 2.71, y: 1.86}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!114 &160351993
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 160351989}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a05030b48a55bf34db3ec6f780832ee4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2
-  moving: 0
-  pingPongSpeed: 0.25
-  displacementX: 1
-  displacementParam1: 0.3
-  displacementParam2: 0.1
-  letterScale: 2
-  anchor: {fileID: 0}
-  velocityRotate: 0
-  state: 0
-  objs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  restructure: 0
-  letterChar: 0
-  letter: {fileID: 0}
-  droppedLetter: 0
 --- !u!1 &182012157
 GameObject:
   m_ObjectHideFlags: 0
@@ -706,52 +547,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 206715132}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &182371041
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 182371043}
-  - component: {fileID: 182371042}
-  m_Layer: 0
-  m_Name: ShieldPowerUp
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &182371042
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 182371041}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f64a69500cb4fc4f855410089a8fa89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  totalPowerUpsGenerated: 0
-  totalPowerUpsCollected: 0
---- !u!4 &182371043
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 182371041}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &196012489
 GameObject:
@@ -885,19 +680,9 @@ MonoBehaviour:
   displacementParam2: 0.1
   letterScale: 2
   anchor: {fileID: 0}
-  velocityRotate: 0
-  state: 0
-  objs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  velocityRotate: 1.5
+  RoatationPlane: 1
+  state: 4
   restructure: 0
   letterChar: 0
   letter: {fileID: 0}
@@ -1652,7 +1437,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1371999427}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &377656339
 BoxCollider2D:
@@ -1752,19 +1537,9 @@ MonoBehaviour:
   displacementParam2: 0.1
   letterScale: 2
   anchor: {fileID: 0}
-  velocityRotate: 0
-  state: 0
-  objs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  velocityRotate: 1.5
+  RoatationPlane: 1
+  state: 8
   restructure: 0
   letterChar: 0
   letter: {fileID: 0}
@@ -2195,19 +1970,9 @@ MonoBehaviour:
   displacementParam2: 0.1
   letterScale: 2
   anchor: {fileID: 0}
-  velocityRotate: 0
-  state: 0
-  objs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  velocityRotate: 1.5
+  RoatationPlane: 1
+  state: 3
   restructure: 0
   letterChar: 0
   letter: {fileID: 0}
@@ -2421,7 +2186,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1371999427}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &639094141
 BoxCollider2D:
@@ -2521,19 +2286,9 @@ MonoBehaviour:
   displacementParam2: 0.1
   letterScale: 2
   anchor: {fileID: 0}
-  velocityRotate: 0
-  state: 0
-  objs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  velocityRotate: 1.5
+  RoatationPlane: 1
+  state: 6
   restructure: 0
   letterChar: 0
   letter: {fileID: 0}
@@ -2640,52 +2395,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &712948477
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 712948479}
-  - component: {fileID: 712948478}
-  m_Layer: 0
-  m_Name: HealthPowerUp
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &712948478
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 712948477}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8c41222c6c1c2e4c954ccd36ae4b1e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  totalPowerUpsGenerated: 0
-  totalPowerUpsCollected: 0
---- !u!4 &712948479
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 712948477}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &716075932
 GameObject:
@@ -3246,26 +2955,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  moving: 1
+  moving: 0
   pingPongSpeed: 0.25
   displacementX: 1
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 2
   anchor: {fileID: 0}
-  velocityRotate: 0
-  state: 0
-  objs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  velocityRotate: 1.5
+  RoatationPlane: 1
+  state: 2
   restructure: 0
   letterChar: 0
   letter: {fileID: 0}
@@ -3395,26 +3094,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  moving: 1
+  moving: 0
   pingPongSpeed: 0.25
   displacementX: 1
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 2
   anchor: {fileID: 0}
-  velocityRotate: 0
+  velocityRotate: 1.5
+  RoatationPlane: 1
   state: 0
-  objs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   restructure: 0
   letterChar: 0
   letter: {fileID: 0}
@@ -3590,26 +3279,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  moving: 1
+  moving: 0
   pingPongSpeed: 0.25
   displacementX: 1
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 2
   anchor: {fileID: 0}
-  velocityRotate: 0
-  state: 0
-  objs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  velocityRotate: 1.5
+  RoatationPlane: 1
+  state: 1
   restructure: 0
   letterChar: 0
   letter: {fileID: 0}
@@ -4076,7 +3755,6 @@ RectTransform:
   - {fileID: 1039586477}
   - {fileID: 630372721}
   - {fileID: 196012490}
-  - {fileID: 160351990}
   - {fileID: 639094140}
   - {fileID: 2143955744}
   - {fileID: 377656338}
@@ -4472,7 +4150,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1371999427}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1673101799
 BoxCollider2D:
@@ -4572,19 +4250,9 @@ MonoBehaviour:
   displacementParam2: 0.1
   letterScale: 2
   anchor: {fileID: 0}
-  velocityRotate: 0
-  state: 0
-  objs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  velocityRotate: 1.5
+  RoatationPlane: 1
+  state: 9
   restructure: 0
   letterChar: 0
   letter: {fileID: 0}
@@ -5563,7 +5231,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1371999427}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &2143955745
 BoxCollider2D:
@@ -5663,19 +5331,9 @@ MonoBehaviour:
   displacementParam2: 0.1
   letterScale: 2
   anchor: {fileID: 0}
-  velocityRotate: 0
-  state: 0
-  objs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  velocityRotate: 1.5
+  RoatationPlane: 1
+  state: 7
   restructure: 0
   letterChar: 0
   letter: {fileID: 0}
@@ -5747,14 +5405,6 @@ PrefabInstance:
       propertyPath: bulletPowerUpController
       value: 
       objectReference: {fileID: 1632121986}
-    - target: {fileID: 2502462975162162575, guid: be481bcb7702e014b98fa2a7c560e7ac, type: 3}
-      propertyPath: healthPowerUpController
-      value: 
-      objectReference: {fileID: 712948478}
-    - target: {fileID: 2502462975162162575, guid: be481bcb7702e014b98fa2a7c560e7ac, type: 3}
-      propertyPath: shieldPowerUpController
-      value: 
-      objectReference: {fileID: 182371042}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be481bcb7702e014b98fa2a7c560e7ac, type: 3}
 --- !u!1001 &3651086185473521744

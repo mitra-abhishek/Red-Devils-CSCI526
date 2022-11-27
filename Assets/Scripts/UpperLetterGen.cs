@@ -17,8 +17,12 @@ public class UpperLetterGen : MonoBehaviour
     public float letterScale = 1.5f;
     public GameObject anchor = null;
     public float velocityRotate =0.0f;
+    public Boolean RoatationPlane = false;
     public int state = 0;
-    public Transform[] objs = new Transform[10];
+    
+    
+    private Vector2[] objs = new Vector2[12];
+    
     
     public Boolean restructure = false;
     public char letterChar;
@@ -58,16 +62,38 @@ public class UpperLetterGen : MonoBehaviour
             explosion = Resources.Load<GameObject>("Explosion/BurstEffect(Planets)");
         }
         shuffleExplosion = Resources.Load<GameObject>("Explosion/AllBurst");
+        objs[0] = new Vector2(7f, 2.9f);
+        objs[1] = new Vector2(3.5f, 2.9f);
+        objs[2] = new Vector2(0.0f, 2.9f);
+        objs[3] = new Vector2(-3.5f, 2.9f);
+        objs[4] = new Vector2(-7f, 2.9f);
+        objs[5] = new Vector2(-8.0f, 2.0f);
+        objs[6] = new Vector2(-7f, 1.4f);
+        objs[7] = new Vector2(-3.5f, 1.4f);
+        objs[8] = new Vector2(0.0f, 1.4f);
+        objs[9] = new Vector2(3.5f, 1.4f);
+        objs[10] = new Vector2(7.0f, 1.4f);
+        objs[11] = new Vector2(8.0f, 2.0f);
+        if (RoatationPlane)
+        {
+            transform.position = objs[state];
+            StartCoroutine(LoopMove());
+        }
+
     }
 
     // Update is called once per frame
     void Update() {
     }
-    
-    void FixedUpdate () {
-        if(anchor)
-            transform.RotateAround(anchor.transform.localPosition, Vector3.back, Time.deltaTime*velocityRotate);
-    }
+
+    // void FixedUpdate()
+    // {
+    //     state++;
+    //     if (state >= objs.Length)
+    //         state = 0;
+    //     
+    //     transform.position = Vector2.MoveTowards (transform.position, objs [state], velocityRotate * Time.deltaTime);
+    // }
 
     public void createLettersDelayed()
     {
@@ -141,11 +167,22 @@ public class UpperLetterGen : MonoBehaviour
     
     IEnumerator LoopMove()
     {
-        transform.position = Vector3.MoveTowards (transform.position, objs [state].position, speed * Time.deltaTime);
-        state++;
-        if (state >= objs.Length)
-            state = 0;
-        yield return null;
+        while (true)
+        {
+            if (transform.position != (Vector3)objs[state])
+            {
+                transform.position = Vector2.MoveTowards(transform.position, objs[state], velocityRotate * Time.deltaTime);
+            }
+            else
+            {
+                state++;
+            }
+            if (state >= objs.Length)
+                state = 0;
+
+            //yield return new WaitForSeconds(2.0f);
+            yield return null;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D col)
