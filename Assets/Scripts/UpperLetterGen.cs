@@ -205,6 +205,10 @@ public class UpperLetterGen : MonoBehaviour
                 Instantiate(explosion, new Vector3(transform.position.x + 1, transform.position.y + 1, transform.position.z), transform.rotation);
             }
             StopAllCoroutines();
+            if (RoatationPlane)
+            {
+                StartCoroutine(LoopMove());
+            }
             createLettersDelayed();
         }
     }
