@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 
 
-public class BulletPowerUpController : MonoBehaviour
+public class HealthPowerUpController : MonoBehaviour
 {
     public int totalPowerUpsGenerated;
     public int totalPowerUpsCollected;
@@ -23,14 +23,14 @@ public class BulletPowerUpController : MonoBehaviour
     public void addTotalPowerUpsGenerated()
     {
         totalPowerUpsGenerated += 1;
-        Debug.Log("PowerUp bullet Count" + totalPowerUpsGenerated);
+        Debug.Log("PowerUp health Count" + totalPowerUpsGenerated);
 
     }
 
     public void addTotalPowerUpsCollected()
     {
         totalPowerUpsCollected += 1;
-        Debug.Log("Collected bullet Powerups" + totalPowerUpsCollected);
+        Debug.Log("Collected health Powerups" + totalPowerUpsCollected);
 
 
     }

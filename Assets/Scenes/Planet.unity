@@ -1093,6 +1093,52 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &394551300
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 394551302}
+  - component: {fileID: 394551301}
+  m_Layer: 0
+  m_Name: ShieldPowerUp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &394551301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394551300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f64a69500cb4fc4f855410089a8fa89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalPowerUpsGenerated: 0
+  totalPowerUpsCollected: 0
+--- !u!4 &394551302
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394551300}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &433533930
 GameObject:
   m_ObjectHideFlags: 0
@@ -1626,6 +1672,24 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 5
+  anchor: {fileID: 0}
+  velocityRotate: 0
+  state: 0
+  objs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  restructure: 0
+  letterChar: 0
+  letter: {fileID: 0}
+  droppedLetter: 0
 --- !u!4 &643498336
 Transform:
   m_ObjectHideFlags: 0
@@ -1928,6 +1992,24 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 5
+  anchor: {fileID: 0}
+  velocityRotate: 0
+  state: 0
+  objs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  restructure: 0
+  letterChar: 0
+  letter: {fileID: 0}
+  droppedLetter: 0
 --- !u!4 &706887914
 Transform:
   m_ObjectHideFlags: 0
@@ -2398,6 +2480,24 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 5
+  anchor: {fileID: 0}
+  velocityRotate: 0
+  state: 0
+  objs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  restructure: 0
+  letterChar: 0
+  letter: {fileID: 0}
+  droppedLetter: 0
 --- !u!4 &907965996
 Transform:
   m_ObjectHideFlags: 0
@@ -2626,6 +2726,24 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 5
+  anchor: {fileID: 0}
+  velocityRotate: 0
+  state: 0
+  objs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  restructure: 0
+  letterChar: 0
+  letter: {fileID: 0}
+  droppedLetter: 0
 --- !u!4 &929901870
 Transform:
   m_ObjectHideFlags: 0
@@ -2757,6 +2875,24 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 5
+  anchor: {fileID: 0}
+  velocityRotate: 0
+  state: 0
+  objs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  restructure: 0
+  letterChar: 0
+  letter: {fileID: 0}
+  droppedLetter: 0
 --- !u!4 &959846586
 Transform:
   m_ObjectHideFlags: 0
@@ -2888,6 +3024,24 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 5
+  anchor: {fileID: 0}
+  velocityRotate: 0
+  state: 0
+  objs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  restructure: 0
+  letterChar: 0
+  letter: {fileID: 0}
+  droppedLetter: 0
 --- !u!4 &987160969
 Transform:
   m_ObjectHideFlags: 0
@@ -3285,6 +3439,24 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 5
+  anchor: {fileID: 0}
+  velocityRotate: 0
+  state: 0
+  objs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  restructure: 0
+  letterChar: 0
+  letter: {fileID: 0}
+  droppedLetter: 0
 --- !u!4 &1229100227
 Transform:
   m_ObjectHideFlags: 0
@@ -3678,6 +3850,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1299446695
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1299446697}
+  - component: {fileID: 1299446696}
+  m_Layer: 0
+  m_Name: HealthPowerUp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1299446696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1299446695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8c41222c6c1c2e4c954ccd36ae4b1e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalPowerUpsGenerated: 0
+  totalPowerUpsCollected: 0
+--- !u!4 &1299446697
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1299446695}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1477198358
 GameObject:
@@ -4431,6 +4649,24 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 5
+  anchor: {fileID: 0}
+  velocityRotate: 0
+  state: 0
+  objs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  restructure: 0
+  letterChar: 0
+  letter: {fileID: 0}
+  droppedLetter: 0
 --- !u!4 &1611411396
 Transform:
   m_ObjectHideFlags: 0
@@ -4690,6 +4926,24 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 5
+  anchor: {fileID: 0}
+  velocityRotate: 0
+  state: 0
+  objs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  restructure: 0
+  letterChar: 0
+  letter: {fileID: 0}
+  droppedLetter: 0
 --- !u!4 &1686934599
 Transform:
   m_ObjectHideFlags: 0
@@ -4836,6 +5090,14 @@ PrefabInstance:
       propertyPath: bulletPowerUpController
       value: 
       objectReference: {fileID: 186177822}
+    - target: {fileID: 2502462975162162575, guid: be481bcb7702e014b98fa2a7c560e7ac, type: 3}
+      propertyPath: healthPowerUpController
+      value: 
+      objectReference: {fileID: 1299446696}
+    - target: {fileID: 2502462975162162575, guid: be481bcb7702e014b98fa2a7c560e7ac, type: 3}
+      propertyPath: shieldPowerUpController
+      value: 
+      objectReference: {fileID: 394551301}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be481bcb7702e014b98fa2a7c560e7ac, type: 3}
 --- !u!1 &1837209701
@@ -5132,6 +5394,24 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 5
+  anchor: {fileID: 0}
+  velocityRotate: 0
+  state: 0
+  objs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  restructure: 0
+  letterChar: 0
+  letter: {fileID: 0}
+  droppedLetter: 0
 --- !u!4 &1910497046
 Transform:
   m_ObjectHideFlags: 0
@@ -5339,6 +5619,24 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 5
+  anchor: {fileID: 0}
+  velocityRotate: 0
+  state: 0
+  objs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  restructure: 0
+  letterChar: 0
+  letter: {fileID: 0}
+  droppedLetter: 0
 --- !u!4 &2143059909
 Transform:
   m_ObjectHideFlags: 0

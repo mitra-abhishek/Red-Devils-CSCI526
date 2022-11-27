@@ -366,6 +366,20 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 1.5
+  anchor: {fileID: 0}
+  velocityRotate: 0
+  state: 0
+  objs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   restructure: 0
   letterChar: 0
   letter: {fileID: 0}
@@ -695,6 +709,52 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &228209657
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 228209659}
+  - component: {fileID: 228209658}
+  m_Layer: 0
+  m_Name: ShieldPowerUp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &228209658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 228209657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f64a69500cb4fc4f855410089a8fa89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalPowerUpsGenerated: 0
+  totalPowerUpsCollected: 0
+--- !u!4 &228209659
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 228209657}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &251434021
 GameObject:
   m_ObjectHideFlags: 0
@@ -1216,6 +1276,52 @@ MonoBehaviour:
   shieldPowerupPrefab: {fileID: 387216967669953160, guid: e1d34bbdf318d4ee89630807a1feaf11, type: 3}
   shieldPowerupReAppearTime: 12
   maxshieldPowerupAtTime: 1
+--- !u!1 &373367470
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 373367472}
+  - component: {fileID: 373367471}
+  m_Layer: 0
+  m_Name: HealthPowerUp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &373367471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 373367470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8c41222c6c1c2e4c954ccd36ae4b1e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalPowerUpsGenerated: 0
+  totalPowerUpsCollected: 0
+--- !u!4 &373367472
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 373367470}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1452,6 +1558,20 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 1.5
+  anchor: {fileID: 0}
+  velocityRotate: 0
+  state: 0
+  objs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   restructure: 0
   letterChar: 0
   letter: {fileID: 0}
@@ -1860,6 +1980,20 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 1.5
+  anchor: {fileID: 0}
+  velocityRotate: 0
+  state: 0
+  objs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   restructure: 0
   letterChar: 0
   letter: {fileID: 0}
@@ -1995,6 +2129,20 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 1.5
+  anchor: {fileID: 0}
+  velocityRotate: 0
+  state: 0
+  objs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   restructure: 0
   letterChar: 0
   letter: {fileID: 0}
@@ -2761,6 +2909,20 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 1.5
+  anchor: {fileID: 0}
+  velocityRotate: 0
+  state: 0
+  objs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   restructure: 0
   letterChar: 0
   letter: {fileID: 0}
@@ -2896,6 +3058,20 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 1.5
+  anchor: {fileID: 0}
+  velocityRotate: 0
+  state: 0
+  objs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   restructure: 0
   letterChar: 0
   letter: {fileID: 0}
@@ -3075,6 +3251,20 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 1.5
+  anchor: {fileID: 0}
+  velocityRotate: 0
+  state: 0
+  objs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   restructure: 0
   letterChar: 0
   letter: {fileID: 0}
@@ -3210,6 +3400,20 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 1.5
+  anchor: {fileID: 0}
+  velocityRotate: 0
+  state: 0
+  objs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   restructure: 0
   letterChar: 0
   letter: {fileID: 0}
@@ -3780,6 +3984,20 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 1.5
+  anchor: {fileID: 0}
+  velocityRotate: 0
+  state: 0
+  objs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   restructure: 0
   letterChar: 0
   letter: {fileID: 0}
@@ -4458,6 +4676,20 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 1.5
+  anchor: {fileID: 0}
+  velocityRotate: 0
+  state: 0
+  objs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   restructure: 0
   letterChar: 0
   letter: {fileID: 0}
@@ -4802,6 +5034,14 @@ PrefabInstance:
       propertyPath: bulletPowerUpController
       value: 
       objectReference: {fileID: 1262066304}
+    - target: {fileID: 2502462975162162575, guid: be481bcb7702e014b98fa2a7c560e7ac, type: 3}
+      propertyPath: healthPowerUpController
+      value: 
+      objectReference: {fileID: 373367471}
+    - target: {fileID: 2502462975162162575, guid: be481bcb7702e014b98fa2a7c560e7ac, type: 3}
+      propertyPath: shieldPowerUpController
+      value: 
+      objectReference: {fileID: 228209658}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be481bcb7702e014b98fa2a7c560e7ac, type: 3}
 --- !u!1 &1761683896
@@ -5174,6 +5414,20 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 1.5
+  anchor: {fileID: 0}
+  velocityRotate: 0
+  state: 0
+  objs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   restructure: 0
   letterChar: 0
   letter: {fileID: 0}

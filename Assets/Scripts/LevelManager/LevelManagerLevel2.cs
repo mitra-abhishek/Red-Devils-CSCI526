@@ -45,6 +45,8 @@ public class LevelManagerLevel2 : MonoBehaviour
     public Dictionary<TMP_Text, bool> correctLetterPairs = new Dictionary<TMP_Text, bool>();
 
     private int currentLevel = 1;
+    private int totalPowerUpsCollected;
+    private int totalPowerUpsGenerated;
     public PlayerMain playerMain;
     public Timer timer;
 
@@ -280,6 +282,9 @@ public class LevelManagerLevel2 : MonoBehaviour
 
     private void OnDestroy()
     {
+        totalPowerUpsGenerated = GameManager.instance.bulletPowerUpController.getTotalPowerUpsGenerated() + GameManager.instance.healthPowerUpController.getTotalPowerUpsGenerated() + GameManager.instance.shieldPowerUpController.getTotalPowerUpsGenerated();
+        totalPowerUpsCollected = GameManager.instance.bulletPowerUpController.getTotalPowerUpsCollected() + GameManager.instance.healthPowerUpController.getTotalPowerUpsCollected() + GameManager.instance.shieldPowerUpController.getTotalPowerUpsCollected();
+
         // End Analytics Call here
         if (this != null)
         {
@@ -295,14 +300,14 @@ public class LevelManagerLevel2 : MonoBehaviour
                     sendToGoogle.UpdateUnsuccessfulTriesAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name], true);
                     sendToGoogle.UpdateHealthbarAnalytics(currentLevel, playerMain.currentHealth);
                     sendToGoogle.UpdateCorrectLettersShotAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name], totalLettersShot, characterShot, "level2 source");
-                    sendToGoogle.UpdatePowerUpsUsageAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name], GameManager.instance.bulletPowerUpController.getTotalPowerUpsGenerated(), GameManager.instance.bulletPowerUpController.getTotalPowerUpsCollected());
+                    sendToGoogle.UpdatePowerUpsUsageAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name], totalPowerUpsGenerated, totalPowerUpsCollected);
                 }
                 else
                 {
                     sendToGoogle.UpdateUnsuccessfulTriesAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name], false);
                     sendToGoogle.UpdateResonForDeathAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name], "Bullet Finished");
                     sendToGoogle.UpdateCorrectLettersShotAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name], totalLettersShot, characterShot, "level2 source");
-                    sendToGoogle.UpdatePowerUpsUsageAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name], bulletPowerUpController.getTotalPowerUpsGenerated(), bulletPowerUpController.getTotalPowerUpsCollected());
+                    sendToGoogle.UpdatePowerUpsUsageAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name], totalPowerUpsGenerated, totalPowerUpsCollected);
                     //UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene 2");
                     GameManager.instance.lossScreen();
 

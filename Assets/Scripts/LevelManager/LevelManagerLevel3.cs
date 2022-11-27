@@ -45,6 +45,8 @@ public class LevelManagerLevel3 : MonoBehaviour
     public Dictionary<TMP_Text, bool> correctLetterPairs = new Dictionary<TMP_Text, bool>();
 
     private int currentLevel = 1;
+    private int totalPowerUpsCollected;
+    private int totalPowerUpsGenerated;
     public PlayerMain playerMain;
     public Timer timer;
 
@@ -252,7 +254,7 @@ public class LevelManagerLevel3 : MonoBehaviour
     //     // rectTransform.offsetMax = new Vector2(rectTransform.offsetMax.x,-178);
     //
     // }
-    
+
     IEnumerator SetWinText()
     {
         GameManager.instance.penultimate = false;
@@ -266,7 +268,7 @@ public class LevelManagerLevel3 : MonoBehaviour
         GameManager.instance.winScreen();
 
     }
-    
+
     void Initialise()
     {
 
@@ -305,6 +307,9 @@ public class LevelManagerLevel3 : MonoBehaviour
 
     private void OnDestroy()
     {
+        totalPowerUpsGenerated = GameManager.instance.bulletPowerUpController.getTotalPowerUpsGenerated() + GameManager.instance.healthPowerUpController.getTotalPowerUpsGenerated() + GameManager.instance.shieldPowerUpController.getTotalPowerUpsGenerated();
+        totalPowerUpsCollected = GameManager.instance.bulletPowerUpController.getTotalPowerUpsCollected() + GameManager.instance.healthPowerUpController.getTotalPowerUpsCollected() + GameManager.instance.shieldPowerUpController.getTotalPowerUpsCollected();
+
         // End Analytics Call here
         if (this != null)
         {
@@ -321,7 +326,7 @@ public class LevelManagerLevel3 : MonoBehaviour
                     sendToGoogle.UpdateUnsuccessfulTriesAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name], true);
                     sendToGoogle.UpdateHealthbarAnalytics(currentLevel, playerMain.currentHealth);
                     sendToGoogle.UpdateCorrectLettersShotAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name], totalLettersShot, characterShot, "level3 destroy");
-                    sendToGoogle.UpdatePowerUpsUsageAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name], GameManager.instance.bulletPowerUpController.getTotalPowerUpsGenerated(), GameManager.instance.bulletPowerUpController.getTotalPowerUpsCollected());
+                    sendToGoogle.UpdatePowerUpsUsageAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name], totalPowerUpsGenerated, totalPowerUpsCollected);
 
                 }
                 else

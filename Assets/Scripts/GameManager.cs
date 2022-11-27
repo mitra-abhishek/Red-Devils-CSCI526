@@ -8,13 +8,14 @@ using TMPro;
 using UnityEngine.UIElements;
 
 
-public static class PlayerStats {
+public static class PlayerStats
+{
     public static int rockScore { get; set; }
     public static int enemyScore { get; set; }
 }
 
 public class GameManager : MonoBehaviour
-{  
+{
     public static GameManager instance;
     public bool wordCompleted;
     public bool penultimate;
@@ -23,7 +24,7 @@ public class GameManager : MonoBehaviour
     public int Level = 1;
     public String LevelWord;
     public float LetterSpeed = 2.0f;
-    
+
     public float RockSpeed = 2.0f;
     public int bullets;
 
@@ -34,17 +35,19 @@ public class GameManager : MonoBehaviour
 
     public BulletController bulletController;
     public BulletPowerUpController bulletPowerUpController;
+    public HealthPowerUpController healthPowerUpController;
+    public ShieldPowerUpController shieldPowerUpController;
 
     public int ScreenDivisionNumber = 10;
     private List<int> previousScreenPositionSelected = new List<int>(10);
-    
+
     public Dictionary<char, int> wordDistanceDict = new Dictionary<char, int>();
 
     public Boolean switchColor = true;
     public Boolean altVersion = false;
 
     private static System.Random random = new System.Random();
-    
+
     public List<char> datalist = new List<char>();
     private int indexLetter = 0;
     private string secondaryChars = "cgjklmpquvwxyzh";
@@ -64,7 +67,7 @@ public class GameManager : MonoBehaviour
     private AudioSource audioSource;
 
 
-    
+
     void Awake()
     {
         if (instance == null)
@@ -89,11 +92,21 @@ public class GameManager : MonoBehaviour
     public void Start()
     {
         // ResetScore();
-        bulletController=new BulletController();
+        bulletController = new BulletController();
         bulletController.setBullets(bullets);
-        bulletPowerUpController=new BulletPowerUpController();
+
+        bulletPowerUpController = new BulletPowerUpController();
         bulletPowerUpController.setTotalPowerGenerated();
         bulletPowerUpController.setTotalPowerUpsCollected();
+
+        healthPowerUpController = new HealthPowerUpController();
+        healthPowerUpController.setTotalPowerGenerated();
+        healthPowerUpController.setTotalPowerUpsCollected();
+
+        shieldPowerUpController = new ShieldPowerUpController();
+        shieldPowerUpController.setTotalPowerGenerated();
+        shieldPowerUpController.setTotalPowerUpsCollected();
+
         wordCompleted = false;
         penultimate = false;
         gameWon = false;
@@ -114,7 +127,7 @@ public class GameManager : MonoBehaviour
         //     if (LevelWord.ToLower().IndexOf(primaryCharsList[itr]) == -1)
         //     {
         //         finalChars +=primaryCharsList[itr];
-                
+
         //     }
         //     itr+=1;
         // }
@@ -141,14 +154,14 @@ public class GameManager : MonoBehaviour
         // ShuffleMe(primaryCharsList);
         // print("Checking Length here");
         // print(GameManager.instance.LevelWord.Length);
-        while(finalChars.Length<(11-GameManager.instance.LevelWord.Length) && itr < primaryCharsList.Count && GameManager.instance.LevelWord.Length != 0)
+        while (finalChars.Length < (11 - GameManager.instance.LevelWord.Length) && itr < primaryCharsList.Count && GameManager.instance.LevelWord.Length != 0)
         {
             if (LevelWord.ToLower().IndexOf(primaryCharsList[itr]) == -1)
             {
-                finalChars +=primaryCharsList[itr];
-                
+                finalChars += primaryCharsList[itr];
+
             }
-            itr+=1;
+            itr += 1;
         }
         // print("");
         // createLetterSpawnArrayInitial();
@@ -158,7 +171,7 @@ public class GameManager : MonoBehaviour
         //float start = -screenBounds.x; float end = screenBounds.x;
         start = start + 0.5f;
         end = end - 0.5f;
-        float diff_per_screen = (end - start)/ScreenDivisionNumber;
+        float diff_per_screen = (end - start) / ScreenDivisionNumber;
         int random_number = random.Next(ScreenDivisionNumber);
         while (previousScreenPositionSelected.Contains(random_number))
         {
@@ -168,7 +181,7 @@ public class GameManager : MonoBehaviour
         {
             previousScreenPositionSelected.RemoveAt(0);
         }
-        
+
         previousScreenPositionSelected.Add(random_number);
         float final_position = start + random_number * diff_per_screen;
         return final_position;
@@ -195,10 +208,11 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Start Screen");
     }
 
-    public void gameOverScreen(){
+    public void gameOverScreen()
+    {
         SceneManager.LoadScene("Game Over");
     }
-    
+
     public void genWordDistanceDictionary()
     {
         wordDistanceDict = new Dictionary<char, int>();
@@ -209,13 +223,13 @@ public class GameManager : MonoBehaviour
             int minDist = 30;
             foreach (char wordChar in tempUpperCase)
             {
-                int currentDist = Math.Abs((int)(c-wordChar));
+                int currentDist = Math.Abs((int)(c - wordChar));
                 // Debug.Log(("Curr DIst is " + currentDist + " Numeric Value "+ Char.GetNumericValue(c)));
                 minDist = Math.Min(currentDist, minDist);
             }
             // Debug.Log("Distance for " + c + " is  : " + minDist);
             wordDistanceDict.Add(c, minDist);
-        } 
+        }
         // Debug.Log(wordDistanceDict);
 
     }
@@ -224,7 +238,7 @@ public class GameManager : MonoBehaviour
     {
         int dist = wordDistanceDict[currentChar.ToUpper()[0]];
         // Debug.Log("Letter is "+ currentChar + "Distance is " + dist);
- 
+
         if (dist == 0)
         {
             return "green/";
@@ -233,10 +247,10 @@ public class GameManager : MonoBehaviour
         // {
         //     return "orange/";
         // }
-       
+
         return "red/";
     }
-    
+
     public static char GetRandomCharacter(string text)
     {
         int index = random.Next(text.Length);
@@ -246,7 +260,7 @@ public class GameManager : MonoBehaviour
     private void IncrementDataList()
     {
         indexLetter = indexLetter + 1;
-        if(indexLetter >= datalist.Count || indexLetter == 0)
+        if (indexLetter >= datalist.Count || indexLetter == 0)
         {
             indexLetter = 0;
             // createLetterSpawnArrayInitial();
@@ -268,8 +282,10 @@ public class GameManager : MonoBehaviour
 
         int randCount = 0;
         int idx = 0;
-        while(randCount < (11-LevelWord.Length)) {
-            if (LevelWord.IndexOf(alphabetList[idx]) == -1) {
+        while (randCount < (11 - LevelWord.Length))
+        {
+            if (LevelWord.IndexOf(alphabetList[idx]) == -1)
+            {
                 datalist.Add(alphabetList[idx]);
                 randCount++;
             }
@@ -277,9 +293,9 @@ public class GameManager : MonoBehaviour
         }
         ShuffleMe(datalist);
         string test = "";
-        for(int itr = 0;itr<datalist.Count;itr++)
+        for (int itr = 0; itr < datalist.Count; itr++)
         {
-            test += datalist[itr]+" ";
+            test += datalist[itr] + " ";
         }
         Debug.Log(test);
         print("**********");
@@ -288,16 +304,16 @@ public class GameManager : MonoBehaviour
     public char getLetterPrimary()
     {
         string test = "";
-        for(int itr = 0;itr<datalist.Count;itr++)
+        for (int itr = 0; itr < datalist.Count; itr++)
         {
-            test += datalist[itr]+" ";
+            test += datalist[itr] + " ";
         }
-        Debug.Log("This is it: "+test);   
+        Debug.Log("This is it: " + test);
         char randomChar = datalist[indexLetter];
         IncrementDataList();
         return randomChar;
     }
-    
+
     public char getLetterSecondary()
     {
         char randomChar;
@@ -308,10 +324,10 @@ public class GameManager : MonoBehaviour
             IncrementDataList();
         }
         else if (randINT >= 3)
-        { 
+        {
             var common = LevelWord.ToUpper().Intersect(secondaryChars.ToUpper());
             int index = random.Next(common.Count());
-            randomChar =  common.ElementAt(index);
+            randomChar = common.ElementAt(index);
         }
         else
         {
@@ -320,11 +336,11 @@ public class GameManager : MonoBehaviour
 
         return randomChar;
     }
-    
-    public static void ShuffleMe<T>(IList<T> list)  
+
+    public static void ShuffleMe<T>(IList<T> list)
     {
         int n = list.Count;
-        for(int i= list.Count - 1; i > 1; i--)
+        for (int i = list.Count - 1; i > 1; i--)
         {
             int rnd = random.Next(i + 1);
             (list[rnd], list[i]) = (list[i], list[rnd]);
@@ -355,7 +371,7 @@ public class GameManager : MonoBehaviour
         if (coinCollectClip)
             audioSource.PlayOneShot(coinCollectClip);
     }
-    
+
 
     public void playLetterCollect()
     {
@@ -364,7 +380,7 @@ public class GameManager : MonoBehaviour
         if (letterCollectClip)
             audioSource.PlayOneShot(letterCollectClip);
     }
-    
+
     public void playSelfDamage()
     {
         if (!selfDamageClip)
@@ -380,6 +396,6 @@ public class GameManager : MonoBehaviour
         if (powerupCollectClip)
             audioSource.PlayOneShot(powerupCollectClip);
     }
-    
-    
+
+
 }
