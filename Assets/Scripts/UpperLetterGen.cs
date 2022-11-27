@@ -15,6 +15,11 @@ public class UpperLetterGen : MonoBehaviour
     public float displacementParam1 = 0.3f;
     public float displacementParam2 = 0.1f;
     public float letterScale = 1.5f;
+    public GameObject anchor = null;
+    public float velocityRotate =0.0f;
+    public int state = 0;
+    public Transform[] objs = new Transform[10];
+    
     public Boolean restructure = false;
     public char letterChar;
     private float initialPosition = 0.3f;
@@ -57,6 +62,11 @@ public class UpperLetterGen : MonoBehaviour
 
     // Update is called once per frame
     void Update() {
+    }
+    
+    void FixedUpdate () {
+        if(anchor)
+            transform.RotateAround(anchor.transform.localPosition, Vector3.back, Time.deltaTime*velocityRotate);
     }
 
     public void createLettersDelayed()
@@ -127,6 +137,15 @@ public class UpperLetterGen : MonoBehaviour
 
             yield return null; // "wait for a frame"
         }
+    }
+    
+    IEnumerator LoopMove()
+    {
+        transform.position = Vector3.MoveTowards (transform.position, objs [state].position, speed * Time.deltaTime);
+        state++;
+        if (state >= objs.Length)
+            state = 0;
+        yield return null;
     }
 
     private void OnTriggerEnter2D(Collider2D col)

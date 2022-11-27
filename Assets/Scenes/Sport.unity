@@ -350,10 +350,13 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 3
-  restructure: 0
-  letterChar: 0
-  letter: {fileID: 0}
-  droppedLetter: 0
+  anchor: {fileID: 0}
+  velocityRotate: 0
+  objs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &125624289
 GameObject:
   m_ObjectHideFlags: 0
@@ -567,10 +570,13 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 3
-  restructure: 0
-  letterChar: 0
-  letter: {fileID: 0}
-  droppedLetter: 0
+  anchor: {fileID: 0}
+  velocityRotate: 0
+  objs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &173534772
 GameObject:
   m_ObjectHideFlags: 0
@@ -702,10 +708,13 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 3
-  restructure: 0
-  letterChar: 0
-  letter: {fileID: 0}
-  droppedLetter: 0
+  anchor: {fileID: 0}
+  velocityRotate: 0
+  objs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &182012157
 GameObject:
   m_ObjectHideFlags: 0
@@ -1690,10 +1699,13 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 3
-  restructure: 0
-  letterChar: 0
-  letter: {fileID: 0}
-  droppedLetter: 0
+  anchor: {fileID: 0}
+  velocityRotate: 0
+  objs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &398993005
 GameObject:
   m_ObjectHideFlags: 0
@@ -1703,7 +1715,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 398993006}
-  - component: {fileID: 398993007}
   m_Layer: 0
   m_Name: LetterHolder
   m_TagString: Untagged
@@ -1737,18 +1748,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &398993007
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 398993005}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 324372bec3ee3455195168a9b9d7dd30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &411326682
 GameObject:
   m_ObjectHideFlags: 0
@@ -2250,10 +2249,13 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 3
-  restructure: 0
-  letterChar: 0
-  letter: {fileID: 0}
-  droppedLetter: 0
+  anchor: {fileID: 0}
+  velocityRotate: 0
+  objs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &614447730
 GameObject:
   m_ObjectHideFlags: 0
@@ -2484,7 +2486,7 @@ Transform:
   m_GameObject: {fileID: 635070110}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -1.94, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 6.42966}
+  m_LocalScale: {x: 0.35, y: 0.35, z: 6.42966}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 815479464}
@@ -2761,10 +2763,19 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 3
-  restructure: 0
-  letterChar: 0
-  letter: {fileID: 0}
-  droppedLetter: 0
+  anchor: {fileID: 0}
+  velocityRotate: 0
+  objs:
+  - {fileID: 0}
+  - {fileID: 135765450}
+  - {fileID: 687394105}
+  - {fileID: 2052555118}
+  - {fileID: 111461620}
+  - {fileID: 1092369013}
+  - {fileID: 390641314}
+  - {fileID: 584829569}
+  - {fileID: 1962307902}
+  - {fileID: 173534773}
 --- !u!1 &687394104
 GameObject:
   m_ObjectHideFlags: 0
@@ -2896,10 +2907,13 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 3
-  restructure: 0
-  letterChar: 0
-  letter: {fileID: 0}
-  droppedLetter: 0
+  anchor: {fileID: 0}
+  velocityRotate: 0
+  objs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &716075932
 GameObject:
   m_ObjectHideFlags: 0
@@ -3617,10 +3631,13 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 3
-  restructure: 0
-  letterChar: 0
-  letter: {fileID: 0}
-  droppedLetter: 0
+  anchor: {fileID: 0}
+  velocityRotate: 0
+  objs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1132403459
 GameObject:
   m_ObjectHideFlags: 0
@@ -4256,10 +4273,13 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 3
-  restructure: 0
-  letterChar: 0
-  letter: {fileID: 0}
-  droppedLetter: 0
+  anchor: {fileID: 0}
+  velocityRotate: 0
+  objs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1515085485
 GameObject:
   m_ObjectHideFlags: 0
@@ -4594,10 +4614,13 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 3
-  restructure: 0
-  letterChar: 0
-  letter: {fileID: 0}
-  droppedLetter: 0
+  anchor: {fileID: 0}
+  velocityRotate: 0
+  objs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1975061641
 GameObject:
   m_ObjectHideFlags: 0
@@ -5062,10 +5085,13 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 3
-  restructure: 0
-  letterChar: 0
-  letter: {fileID: 0}
-  droppedLetter: 0
+  anchor: {fileID: 0}
+  velocityRotate: 0
+  objs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &2092520067
 GameObject:
   m_ObjectHideFlags: 0
