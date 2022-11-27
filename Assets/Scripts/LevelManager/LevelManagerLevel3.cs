@@ -125,7 +125,7 @@ public class LevelManagerLevel3 : MonoBehaviour
         GameManager.instance.totalLettersShot = totalLettersShot;
         for (int itr = 0; itr < levelWord.Length; itr++)
         {
-            if (levelWord[itr] == val.name[0])
+            if (levelWord[itr] == val.name[0] && letterMap[itr] != val.name[0])
             {
                 letterMap[itr] = val.name[0];
                 break;
