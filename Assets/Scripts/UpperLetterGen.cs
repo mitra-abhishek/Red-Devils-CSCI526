@@ -102,6 +102,7 @@ public class UpperLetterGen : MonoBehaviour
             Destroy(letter.gameObject);
         }
 
+
         if (GameManager.instance.Level == 3)
             letter = Instantiate(Resources.Load("Letters/orange/" + letterChar) as GameObject);
         else if (GameManager.instance.Level == 1) {
@@ -189,11 +190,14 @@ public class UpperLetterGen : MonoBehaviour
     {
         if (col.gameObject.tag == "bullet")
         {
-            //Debug.Log("Collision with bullet - letter cloud");
+            //Debug.Log("Collision with bullet - letter cloud")
             Destroy(col.gameObject);
+            if (transform.childCount == 0)
+                return;
             Rigidbody2D rb = letter.GetComponent<Rigidbody2D>();
             rb.velocity = new Vector2(0, -GameManager.instance.LetterSpeed);
             letter.transform.localScale = new Vector3(letterScale, letterScale, letterScale);
+            letter.transform.parent = null; 
             droppedLetter = true;
             //Debug.Log(rb);
             if (scene.name.Equals("Planet") | scene.name.Equals("Sport") | scene.name.Equals("Country"))
@@ -209,7 +213,9 @@ public class UpperLetterGen : MonoBehaviour
             {
                 StartCoroutine(LoopMove());
             }
-            createLettersDelayed();
+
+            //createLettersDelayed();
+            Invoke("createLettersDelayed",1f);
         }
     }
 }
