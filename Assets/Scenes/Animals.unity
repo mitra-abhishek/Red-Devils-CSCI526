@@ -1103,6 +1103,7 @@ GameObject:
   - component: {fileID: 345747635}
   - component: {fileID: 345747636}
   - component: {fileID: 345747637}
+  - component: {fileID: 345747638}
   m_Layer: 0
   m_Name: LevelManager2
   m_TagString: Untagged
@@ -1186,7 +1187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 5389615402529709660, guid: abb1c870ca555481ca71c1200b50b43b, type: 3}
-  enemyReAppearTime: 4
+  enemyReAppearTime: 6
   maxEnemyAtTime: 1
 --- !u!114 &345747633
 MonoBehaviour:
@@ -1266,6 +1267,21 @@ MonoBehaviour:
   shieldPowerupPrefab: {fileID: 387216967669953160, guid: e1d34bbdf318d4ee89630807a1feaf11, type: 3}
   shieldPowerupReAppearTime: 12
   maxshieldPowerupAtTime: 1
+--- !u!114 &345747638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 345747626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11c3d6159814a24438c83ed80ebbcd90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 7857365539536989332, guid: 3eeb30b277dbf184c972d8e432378108, type: 3}
+  enemyReAppearTime: 10
+  maxEnemyAtTime: 1
 --- !u!1 &373367470
 GameObject:
   m_ObjectHideFlags: 0

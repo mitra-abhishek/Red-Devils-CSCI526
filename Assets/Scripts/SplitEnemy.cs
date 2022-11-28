@@ -10,9 +10,9 @@ public class SplitEnemy : MonoBehaviour
     private Vector2 screenBounds;
     public GameObject smartenemy_bulletPrefab;
     public float enemy_bulletSpeed = 7f;
-    public float speed = 3.0f;
+    private float speed = 2.0f;
     private float angle = 0;
-    private float enemy_bullet_ReAppearTime=1f;
+    private float enemy_bullet_ReAppearTime=1.25f;
     
 
     // Start is called before the first frame update
@@ -55,8 +55,8 @@ public class SplitEnemy : MonoBehaviour
                 Instantiate(Resources.Load("Enemy/Left")  as GameObject);
             GameObject right =
                 Instantiate(Resources.Load("Enemy/Right")  as GameObject);
-            left.transform.position=new Vector2(transform.position.x - 0.5f, transform.position.y);
-            right.transform.position=new Vector2(transform.position.x + 0.5f, transform.position.y);
+            left.transform.position=new Vector2(transform.position.x - 1.5f, transform.position.y);
+            right.transform.position=new Vector2(transform.position.x + 1.5f, transform.position.y);
             Destroy(this);
         }
     }

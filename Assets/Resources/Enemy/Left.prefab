@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 5389615402529709660}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.67, y: 4.46, z: 0}
-  m_LocalScale: {x: 0.05, y: 0.05, z: 0.27936426}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.27936426}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1039429682, guid: 24dde334d4a6e0d46a2b9583a2667f0d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a90031f04e347184cabe16c199507196, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e95afa2ca2f8b149931c0a52c5b2c16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy_bulletPrefab: {fileID: 4403854986693279775, guid: ad8fe8e96b1934d159f34d9ccb2547dc, type: 3}
+  enemy_bulletPrefab: {fileID: 4403854986693279775, guid: e6d09c195a767454fb4286721cb554ef, type: 3}
   enemy_bulletSpeed: 7
 --- !u!61 &-3712692952443256780
 BoxCollider2D:
@@ -135,16 +135,16 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.43677175, y: -0.17804265}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.65, y: 14.63}
+    oldSize: {x: 2.46, y: 5.02}
     newSize: {x: 8.6, y: 7.85}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.65, y: 14.63}
+  m_Size: {x: 1.6929591, y: 2.7380333}
   m_EdgeRadius: 0
