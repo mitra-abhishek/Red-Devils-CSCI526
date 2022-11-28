@@ -351,7 +351,7 @@ MonoBehaviour:
   displacementParam2: 0.1
   letterScale: 3
   anchor: {fileID: 0}
-  velocityRotate: 1.75
+  velocityRotate: 1.4
   RoatationPlane: 1
   state: 4
   restructure: 0
@@ -572,7 +572,7 @@ MonoBehaviour:
   displacementParam2: 0.1
   letterScale: 3
   anchor: {fileID: 0}
-  velocityRotate: 1.75
+  velocityRotate: 1.4
   RoatationPlane: 1
   state: 1
   restructure: 0
@@ -711,7 +711,7 @@ MonoBehaviour:
   displacementParam2: 0.1
   letterScale: 3
   anchor: {fileID: 0}
-  velocityRotate: 1.75
+  velocityRotate: 1.4
   RoatationPlane: 1
   state: 10
   restructure: 0
@@ -1703,7 +1703,7 @@ MonoBehaviour:
   displacementParam2: 0.1
   letterScale: 3
   anchor: {fileID: 0}
-  velocityRotate: 1.75
+  velocityRotate: 1.4
   RoatationPlane: 1
   state: 6
   restructure: 0
@@ -2266,7 +2266,7 @@ MonoBehaviour:
   displacementParam2: 0.1
   letterScale: 3
   anchor: {fileID: 0}
-  velocityRotate: 1.75
+  velocityRotate: 1.4
   RoatationPlane: 1
   state: 7
   restructure: 0
@@ -2782,7 +2782,7 @@ MonoBehaviour:
   displacementParam2: 0.1
   letterScale: 3
   anchor: {fileID: 0}
-  velocityRotate: 1.75
+  velocityRotate: 1.4
   RoatationPlane: 1
   state: 0
   restructure: 0
@@ -2921,7 +2921,7 @@ MonoBehaviour:
   displacementParam2: 0.1
   letterScale: 3
   anchor: {fileID: 0}
-  velocityRotate: 1.75
+  velocityRotate: 1.4
   RoatationPlane: 1
   state: 2
   restructure: 0
@@ -4150,7 +4150,7 @@ MonoBehaviour:
   displacementParam2: 0.1
   letterScale: 3
   anchor: {fileID: 0}
-  velocityRotate: 1.75
+  velocityRotate: 1.4
   RoatationPlane: 1
   state: 9
   restructure: 0
@@ -4584,7 +4584,7 @@ MonoBehaviour:
   displacementParam2: 0.1
   letterScale: 3
   anchor: {fileID: 0}
-  velocityRotate: 1.75
+  velocityRotate: 1.4
   RoatationPlane: 1
   state: 8
   restructure: 0
@@ -5056,7 +5056,7 @@ MonoBehaviour:
   displacementParam2: 0.1
   letterScale: 3
   anchor: {fileID: 0}
-  velocityRotate: 1.75
+  velocityRotate: 1.4
   RoatationPlane: 1
   state: 3
   restructure: 0
