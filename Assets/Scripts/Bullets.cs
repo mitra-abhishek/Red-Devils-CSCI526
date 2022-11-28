@@ -147,25 +147,25 @@ public class Bullets : MonoBehaviour
         }
 
         if(other.tag == "boss_enemy_level2"){
-            PlayerStats.enemyScore += 10;
+            PlayerStats.enemyScore += 15;
             Instantiate(explosion,transform.position,transform.rotation);
-            FindObjectOfType<BossEnemyLevel2>().TakeHit(10);
+            FindObjectOfType<BossEnemyLevel2>().TakeHit(8);
             GameManager.instance.playBulletImpact();
             Destroy(this.gameObject);
         }
 
         if(other.tag == "boss_enemy_level3"){
-            PlayerStats.enemyScore += 10;
+            PlayerStats.enemyScore += 20;
             Instantiate(explosion,transform.position,transform.rotation);
-            FindObjectOfType<BossEnemyLevel3>().TakeHit(10);
+            FindObjectOfType<BossEnemyLevel3>().TakeHit(6);
             GameManager.instance.playBulletImpact();
             Destroy(this.gameObject);
         }
 
         if(other.tag == "boss_enemy_level4"){
-            PlayerStats.enemyScore += 10;
+            PlayerStats.enemyScore += 25;
             Instantiate(explosion,transform.position,transform.rotation);
-            FindObjectOfType<BossEnemyLevel4>().TakeHit(10);
+            FindObjectOfType<BossEnemyLevel4>().TakeHit(5);
             GameManager.instance.playBulletImpact();
             Destroy(this.gameObject);
         }

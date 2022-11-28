@@ -152,7 +152,7 @@ public class PlayerMovement : MonoBehaviour
             //GameManager.instance.wordCompleted = false;
             Destroy(this.gameObject);
             //UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene 2");
-            GameManager.instance.lossScreen("Out of AMmo");
+            GameManager.instance.lossScreen("Out of Ammo");
         }
     }
 
