@@ -4113,6 +4113,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 975325351}
+  - component: {fileID: 975325352}
   m_Layer: 0
   m_Name: LetterHolder (1)
   m_TagString: Untagged
@@ -4146,6 +4147,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &975325352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 975325350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 324372bec3ee3455195168a9b9d7dd30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1007082514
 GameObject:
   m_ObjectHideFlags: 0
@@ -6742,6 +6755,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1579857842}
+  - component: {fileID: 1579857843}
   m_Layer: 0
   m_Name: LetterHolder
   m_TagString: Untagged
@@ -6775,6 +6789,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1579857843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579857841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 324372bec3ee3455195168a9b9d7dd30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1579874779
 GameObject:
   m_ObjectHideFlags: 0

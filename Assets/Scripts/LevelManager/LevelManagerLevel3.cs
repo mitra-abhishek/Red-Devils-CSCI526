@@ -20,6 +20,7 @@ public class LevelManagerLevel3 : MonoBehaviour
 
     public GameObject blankPrefab;
     public GameObject correctLetterPrefab;
+    public GameObject hintImage;
 
     public Transform blankHolder;
     public Transform correctLetterHolder;
@@ -80,8 +81,14 @@ public class LevelManagerLevel3 : MonoBehaviour
 
         List<string> level_words = new List<string>
         {
-            "IRAN","CHINA", "EGYPT", "SPAIN", "BRAZIL"
+            "IRAN","CHINA", "EGYPT", "SPAIN", "BRAZIL", "INDIA"
         };
+
+        // IRAN : Formerly known as Persia
+        // CHINA : Manufacturing hub of the world
+        // EGYPT : Popular for Pyramids
+        // SPAIN : La Tomatina !
+        // BRAZIL : One of the best football teams
 
         int index = random.Next(level_words.Count);
         levelWord = level_words[index];
@@ -125,13 +132,42 @@ public class LevelManagerLevel3 : MonoBehaviour
         GameManager.instance.totalLettersShot = totalLettersShot;
         for (int itr = 0; itr < levelWord.Length; itr++)
         {
-            if (levelWord[itr] == val.name[0])
+            if (levelWord[itr] == val.name[0] && letterMap[itr] != val.name[0])
             {
                 letterMap[itr] = val.name[0];
                 break;
             }
         }
 
+    }
+
+    private IEnumerator timeDelayHintHide()
+    {
+
+        hintImage = FindAllObject(GameObject.Find("Hints/Canvas"), levelWord);
+        if(hintImage.activeSelf == true)
+        {
+            yield return new WaitForSeconds(8.0f);
+            hintImage.SetActive(false);
+        }
+        
+    }
+
+    public static GameObject FindAllObject(GameObject parent, string name)
+    {
+     Transform[] trs= parent.GetComponentsInChildren<Transform>(true);
+     foreach(Transform t in trs){
+         if(t.name == name){
+              return t.gameObject;
+         }
+     }
+     return null;
+    }
+
+    public void showHint()
+    {   
+        hintImage = FindAllObject(GameObject.Find("Hints/Canvas"), levelWord);
+        hintImage.SetActive(true);
     }
 
     public void setLetterFromHint()
@@ -226,6 +262,7 @@ public class LevelManagerLevel3 : MonoBehaviour
                 StartCoroutine(SetWinText());
             }
         }
+        StartCoroutine(timeDelayHintHide());
     }
     private IEnumerator HandleIt(int i)
     {

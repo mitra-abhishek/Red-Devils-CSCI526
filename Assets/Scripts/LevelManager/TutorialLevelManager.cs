@@ -85,7 +85,7 @@ public class TutorialLevelManager : MonoBehaviour
 
         List<string> level_words = new List<string>
         {
-            "ATLANTIC","ARTIC","PACIFIC","INDIAN"
+            "ATLANTIC","ARCTIC","PACIFIC","INDIAN"
         };
 
         int index = random.Next(level_words.Count);
@@ -123,7 +123,7 @@ public class TutorialLevelManager : MonoBehaviour
         GameManager.instance.totalLettersShot = totalLettersShot;
         for (int itr = 0; itr < levelWord.Length; itr++)
         {
-            if (levelWord[itr] == val.name[0])
+            if (levelWord[itr] == val.name[0] && letterMap[itr] != val.name[0])
             {
                 letterMap[itr] = val.name[0];
                 break;
