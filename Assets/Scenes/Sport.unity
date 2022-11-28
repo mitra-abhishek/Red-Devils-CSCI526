@@ -2746,7 +2746,7 @@ MonoBehaviour:
   ANGULAR_SPEED: 3.7
   WEBGL_MULTIPLIER: 1
   firePoint: {fileID: 815479464}
-  sendToGoogle: {fileID: 0}
+  sendToGoogle: {fileID: 682405817}
 --- !u!61 &635070114
 BoxCollider2D:
   m_ObjectHideFlags: 0
