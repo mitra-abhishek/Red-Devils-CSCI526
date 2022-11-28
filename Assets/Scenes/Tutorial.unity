@@ -305,6 +305,14 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 1.5
+  anchor: {fileID: 0}
+  velocityRotate: 0
+  RoatationPlane: 0
+  state: 0
+  restructure: 0
+  letterChar: 0
+  letter: {fileID: 0}
+  droppedLetter: 0
 --- !u!1 &88750466
 GameObject:
   m_ObjectHideFlags: 0
@@ -651,6 +659,14 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 1.5
+  anchor: {fileID: 0}
+  velocityRotate: 0
+  RoatationPlane: 0
+  state: 0
+  restructure: 0
+  letterChar: 0
+  letter: {fileID: 0}
+  droppedLetter: 0
 --- !u!4 &169039638
 Transform:
   m_ObjectHideFlags: 0
@@ -1780,6 +1796,14 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 1.5
+  anchor: {fileID: 0}
+  velocityRotate: 0
+  RoatationPlane: 0
+  state: 0
+  restructure: 0
+  letterChar: 0
+  letter: {fileID: 0}
+  droppedLetter: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2108,6 +2132,14 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 1.5
+  anchor: {fileID: 0}
+  velocityRotate: 0
+  RoatationPlane: 0
+  state: 0
+  restructure: 0
+  letterChar: 0
+  letter: {fileID: 0}
+  droppedLetter: 0
 --- !u!1 &615340313
 GameObject:
   m_ObjectHideFlags: 0
@@ -2224,6 +2256,14 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 1.5
+  anchor: {fileID: 0}
+  velocityRotate: 0
+  RoatationPlane: 0
+  state: 0
+  restructure: 0
+  letterChar: 0
+  letter: {fileID: 0}
+  droppedLetter: 0
 --- !u!4 &615340317
 Transform:
   m_ObjectHideFlags: 0
@@ -2370,6 +2410,14 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 1.5
+  anchor: {fileID: 0}
+  velocityRotate: 0
+  RoatationPlane: 0
+  state: 0
+  restructure: 0
+  letterChar: 0
+  letter: {fileID: 0}
+  droppedLetter: 0
 --- !u!1 &635070110
 GameObject:
   m_ObjectHideFlags: 0
@@ -2894,6 +2942,14 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 1.5
+  anchor: {fileID: 0}
+  velocityRotate: 0
+  RoatationPlane: 0
+  state: 0
+  restructure: 0
+  letterChar: 0
+  letter: {fileID: 0}
+  droppedLetter: 0
 --- !u!4 &681342522
 Transform:
   m_ObjectHideFlags: 0
@@ -3101,6 +3157,14 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 1.5
+  anchor: {fileID: 0}
+  velocityRotate: 0
+  RoatationPlane: 0
+  state: 0
+  restructure: 0
+  letterChar: 0
+  letter: {fileID: 0}
+  droppedLetter: 0
 --- !u!1 &743640640
 GameObject:
   m_ObjectHideFlags: 0
@@ -3232,6 +3296,14 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 1.5
+  anchor: {fileID: 0}
+  velocityRotate: 0
+  RoatationPlane: 0
+  state: 0
+  restructure: 0
+  letterChar: 0
+  letter: {fileID: 0}
+  droppedLetter: 0
 --- !u!1 &762649573
 GameObject:
   m_ObjectHideFlags: 0
@@ -3363,6 +3435,14 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 1.5
+  anchor: {fileID: 0}
+  velocityRotate: 0
+  RoatationPlane: 0
+  state: 0
+  restructure: 0
+  letterChar: 0
+  letter: {fileID: 0}
+  droppedLetter: 0
 --- !u!1 &763916456
 GameObject:
   m_ObjectHideFlags: 0
@@ -3556,6 +3636,14 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 1.5
+  anchor: {fileID: 0}
+  velocityRotate: 0
+  RoatationPlane: 0
+  state: 0
+  restructure: 0
+  letterChar: 0
+  letter: {fileID: 0}
+  droppedLetter: 0
 --- !u!4 &774419870
 Transform:
   m_ObjectHideFlags: 0
@@ -3882,6 +3970,14 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 1.5
+  anchor: {fileID: 0}
+  velocityRotate: 0
+  RoatationPlane: 0
+  state: 0
+  restructure: 0
+  letterChar: 0
+  letter: {fileID: 0}
+  droppedLetter: 0
 --- !u!1 &938440607
 GameObject:
   m_ObjectHideFlags: 0
@@ -4017,6 +4113,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 975325351}
+  - component: {fileID: 975325352}
   m_Layer: 0
   m_Name: LetterHolder (1)
   m_TagString: Untagged
@@ -4050,6 +4147,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &975325352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 975325350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 324372bec3ee3455195168a9b9d7dd30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1007082514
 GameObject:
   m_ObjectHideFlags: 0
@@ -4371,6 +4480,14 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 1.5
+  anchor: {fileID: 0}
+  velocityRotate: 0
+  RoatationPlane: 0
+  state: 0
+  restructure: 0
+  letterChar: 0
+  letter: {fileID: 0}
+  droppedLetter: 0
 --- !u!1 &1051669126
 GameObject:
   m_ObjectHideFlags: 0
@@ -4647,6 +4764,14 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 1.5
+  anchor: {fileID: 0}
+  velocityRotate: 0
+  RoatationPlane: 0
+  state: 0
+  restructure: 0
+  letterChar: 0
+  letter: {fileID: 0}
+  droppedLetter: 0
 --- !u!4 &1106623908
 Transform:
   m_ObjectHideFlags: 0
@@ -4778,6 +4903,14 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 1.5
+  anchor: {fileID: 0}
+  velocityRotate: 0
+  RoatationPlane: 0
+  state: 0
+  restructure: 0
+  letterChar: 0
+  letter: {fileID: 0}
+  droppedLetter: 0
 --- !u!4 &1142512514
 Transform:
   m_ObjectHideFlags: 0
@@ -4953,6 +5086,14 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 1.5
+  anchor: {fileID: 0}
+  velocityRotate: 0
+  RoatationPlane: 0
+  state: 0
+  restructure: 0
+  letterChar: 0
+  letter: {fileID: 0}
+  droppedLetter: 0
 --- !u!4 &1144564513
 Transform:
   m_ObjectHideFlags: 0
@@ -5084,6 +5225,14 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 1.5
+  anchor: {fileID: 0}
+  velocityRotate: 0
+  RoatationPlane: 0
+  state: 0
+  restructure: 0
+  letterChar: 0
+  letter: {fileID: 0}
+  droppedLetter: 0
 --- !u!4 &1173905571
 Transform:
   m_ObjectHideFlags: 0
@@ -5818,6 +5967,14 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 1.5
+  anchor: {fileID: 0}
+  velocityRotate: 0
+  RoatationPlane: 0
+  state: 0
+  restructure: 0
+  letterChar: 0
+  letter: {fileID: 0}
+  droppedLetter: 0
 --- !u!4 &1411530540
 Transform:
   m_ObjectHideFlags: 0
@@ -6566,6 +6723,14 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 1.5
+  anchor: {fileID: 0}
+  velocityRotate: 0
+  RoatationPlane: 0
+  state: 0
+  restructure: 0
+  letterChar: 0
+  letter: {fileID: 0}
+  droppedLetter: 0
 --- !u!4 &1539101411
 Transform:
   m_ObjectHideFlags: 0
@@ -6590,6 +6755,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1579857842}
+  - component: {fileID: 1579857843}
   m_Layer: 0
   m_Name: LetterHolder
   m_TagString: Untagged
@@ -6623,6 +6789,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1579857843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579857841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 324372bec3ee3455195168a9b9d7dd30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1579874779
 GameObject:
   m_ObjectHideFlags: 0
@@ -7368,6 +7546,14 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 1.5
+  anchor: {fileID: 0}
+  velocityRotate: 0
+  RoatationPlane: 0
+  state: 0
+  restructure: 0
+  letterChar: 0
+  letter: {fileID: 0}
+  droppedLetter: 0
 --- !u!1001 &1898424111
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7635,6 +7821,14 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 1.5
+  anchor: {fileID: 0}
+  velocityRotate: 0
+  RoatationPlane: 0
+  state: 0
+  restructure: 0
+  letterChar: 0
+  letter: {fileID: 0}
+  droppedLetter: 0
 --- !u!1 &2033165517
 GameObject:
   m_ObjectHideFlags: 0
@@ -7751,6 +7945,14 @@ MonoBehaviour:
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 1.5
+  anchor: {fileID: 0}
+  velocityRotate: 0
+  RoatationPlane: 0
+  state: 0
+  restructure: 0
+  letterChar: 0
+  letter: {fileID: 0}
+  droppedLetter: 0
 --- !u!4 &2033165521
 Transform:
   m_ObjectHideFlags: 0
