@@ -28,11 +28,20 @@ public class ButtonHandlerAnimals : MonoBehaviour
         int currentCoins = coin_count.getNumCoins();
         if(currentCoins>=3)
         {
-            currentCoins-=3;
+            
+            if(currentCoins>=4)
+            {
+                levelManagerLevel2.showHint();
+                currentCoins-=4;
+            }
+            else 
+            {
+                currentCoins-=3;
+            }
             coin_count.setNumCoins(currentCoins);
             bulletHandler.SetEnemiesDestroyed(currentCoins);
             levelManagerLevel2.setLetterFromHint();
-            levelManagerLevel2.showHint();
+            
         }
         else{
             popUpMessage.SetActive(true);
@@ -42,6 +51,7 @@ public class ButtonHandlerAnimals : MonoBehaviour
 
 
     }
+
 
     IEnumerator timeDelay()
     {
