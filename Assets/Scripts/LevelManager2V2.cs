@@ -28,7 +28,7 @@ public class LevelManager2V2 : MonoBehaviour
     public float letterSpeed = 1.5f;
     public float rockSpeed = 2.0f;
     public Boolean altVersion = false;
-    
+
 
     public float timeStart;
     public float timeFinished;
@@ -37,7 +37,7 @@ public class LevelManager2V2 : MonoBehaviour
     public int availableBullets;
     public int totalLettersShot = 0;
     public int characterShot = 0;
-    
+
     public Dictionary<String, int> pairs = new Dictionary<String, int>()
     {
         {"Tutorial",0},{ "Planet", 1 }, { "Animals", 2 },{"Country",3},{"Sport", 4}
@@ -88,10 +88,10 @@ public class LevelManager2V2 : MonoBehaviour
         GameManager.instance.RockSpeed = rockSpeed;
         GameManager.instance.bullets = level2Bullets;
         GameManager.instance.genWordDistanceDictionary();
-        
+
         GameManager.instance.createLetterSpawnArrayInitial();
         GameManager.instance.altVersion = altVersion;
-        
+
         availableBullets = level2Bullets;
 
     }
@@ -204,7 +204,8 @@ public class LevelManager2V2 : MonoBehaviour
         characterShot = count;
         GameManager.instance.characterShotCount = characterShot;
 
-        if (count == levelWord.Length - 1) {
+        if (count == levelWord.Length - 1)
+        {
             GameManager.instance.penultimate = true;
         }
 
@@ -225,7 +226,8 @@ public class LevelManager2V2 : MonoBehaviour
         correctLetterPairs[correctLetterList[i].GetComponent<TMP_Text>()] = true;
     }
 
-    IEnumerator SetWinText() {
+    IEnumerator SetWinText()
+    {
         GameManager.instance.penultimate = false;
         GameManager.instance.wordCompleted = false;
         GameManager.instance.gameWon = false;
@@ -298,7 +300,7 @@ public class LevelManager2V2 : MonoBehaviour
                     sendToGoogle.UpdateCorrectLettersShotAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name], totalLettersShot, characterShot, "level2 source");
                     sendToGoogle.UpdatePowerUpsUsageAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name], bulletPowerUpController.getTotalPowerUpsGenerated(), bulletPowerUpController.getTotalPowerUpsCollected());
                     //UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene 2");
-                    GameManager.instance.lossScreen();
+                    GameManager.instance.lossScreen("Out of Ammo");
 
                 }
             }

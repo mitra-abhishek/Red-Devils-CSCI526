@@ -34,10 +34,12 @@ public class ShieldPowerUpController : MonoBehaviour
     }
     public int getTotalPowerUpsGenerated()
     {
+        Debug.Log("The total poweup generated for shield are" + totalPowerUpsGenerated);
         return totalPowerUpsGenerated;
     }
     public int getTotalPowerUpsCollected()
     {
+        Debug.Log("The total poweup generated for shield are" + totalPowerUpsCollected);
         return totalPowerUpsCollected;
     }
 }

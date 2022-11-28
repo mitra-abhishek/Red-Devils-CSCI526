@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     public bool penultimate;
     public bool oneMinLeft;
     public bool gameWon;
+    public string reasonOfDeath;
     public int Level = 1;
     public String LevelWord;
     public float LetterSpeed = 2.0f;
@@ -197,8 +198,10 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Level Complete2");
     }
 
-    public void lossScreen()
+    public void lossScreen(string gameOverReason)
     {
+        Debug.Log("Reason for death is" + gameOverReason);
+        GameManager.instance.reasonOfDeath = gameOverReason;
         GameManager.instance.oneMinLeft = false;
         SceneManager.LoadScene("Level Failure");
     }

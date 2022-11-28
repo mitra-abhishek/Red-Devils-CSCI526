@@ -1491,6 +1491,7 @@ MonoBehaviour:
   ANGULAR_SPEED: 3.7
   WEBGL_MULTIPLIER: 1
   firePoint: {fileID: 1188134433}
+  sendToGoogle: {fileID: 1289588395}
 --- !u!61 &635070114
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1674,18 +1675,8 @@ MonoBehaviour:
   letterScale: 5
   anchor: {fileID: 0}
   velocityRotate: 0
+  RoatationPlane: 0
   state: 0
-  objs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   restructure: 0
   letterChar: 0
   letter: {fileID: 0}
@@ -1994,18 +1985,8 @@ MonoBehaviour:
   letterScale: 5
   anchor: {fileID: 0}
   velocityRotate: 0
+  RoatationPlane: 0
   state: 0
-  objs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   restructure: 0
   letterChar: 0
   letter: {fileID: 0}
@@ -2482,18 +2463,8 @@ MonoBehaviour:
   letterScale: 5
   anchor: {fileID: 0}
   velocityRotate: 0
+  RoatationPlane: 0
   state: 0
-  objs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   restructure: 0
   letterChar: 0
   letter: {fileID: 0}
@@ -2728,18 +2699,8 @@ MonoBehaviour:
   letterScale: 5
   anchor: {fileID: 0}
   velocityRotate: 0
+  RoatationPlane: 0
   state: 0
-  objs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   restructure: 0
   letterChar: 0
   letter: {fileID: 0}
@@ -2877,18 +2838,8 @@ MonoBehaviour:
   letterScale: 5
   anchor: {fileID: 0}
   velocityRotate: 0
+  RoatationPlane: 0
   state: 0
-  objs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   restructure: 0
   letterChar: 0
   letter: {fileID: 0}
@@ -3026,18 +2977,8 @@ MonoBehaviour:
   letterScale: 5
   anchor: {fileID: 0}
   velocityRotate: 0
+  RoatationPlane: 0
   state: 0
-  objs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   restructure: 0
   letterChar: 0
   letter: {fileID: 0}
@@ -3441,18 +3382,8 @@ MonoBehaviour:
   letterScale: 5
   anchor: {fileID: 0}
   velocityRotate: 0
+  RoatationPlane: 0
   state: 0
-  objs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   restructure: 0
   letterChar: 0
   letter: {fileID: 0}
@@ -4651,18 +4582,8 @@ MonoBehaviour:
   letterScale: 5
   anchor: {fileID: 0}
   velocityRotate: 0
+  RoatationPlane: 0
   state: 0
-  objs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   restructure: 0
   letterChar: 0
   letter: {fileID: 0}
@@ -4928,18 +4849,8 @@ MonoBehaviour:
   letterScale: 5
   anchor: {fileID: 0}
   velocityRotate: 0
+  RoatationPlane: 0
   state: 0
-  objs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   restructure: 0
   letterChar: 0
   letter: {fileID: 0}
@@ -5396,18 +5307,8 @@ MonoBehaviour:
   letterScale: 5
   anchor: {fileID: 0}
   velocityRotate: 0
+  RoatationPlane: 0
   state: 0
-  objs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   restructure: 0
   letterChar: 0
   letter: {fileID: 0}
@@ -5621,18 +5522,8 @@ MonoBehaviour:
   letterScale: 5
   anchor: {fileID: 0}
   velocityRotate: 0
+  RoatationPlane: 0
   state: 0
-  objs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   restructure: 0
   letterChar: 0
   letter: {fileID: 0}

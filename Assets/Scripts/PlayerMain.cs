@@ -11,7 +11,8 @@ public class PlayerMain : MonoBehaviour
     public int currentHealth;
     public GameObject gotHitScreen;
     private GameObject explosion;
-
+    private int totalPowerUpsCollected;
+    private int totalPowerUpsGenerated;
     public Dictionary<string, int> pairs = new Dictionary<string, int>()
     {
         {"Tutorial",0},{ "Planet", 1 }, { "Animals", 2 },{"Country",3},{"Sport",4}
@@ -53,15 +54,18 @@ public class PlayerMain : MonoBehaviour
         //Debug.Log("The scence health is" + currentHealth);
         if (currentHealth <= 0)
         {
+            totalPowerUpsGenerated = GameManager.instance.bulletPowerUpController.getTotalPowerUpsGenerated() + GameManager.instance.healthPowerUpController.getTotalPowerUpsGenerated() + GameManager.instance.shieldPowerUpController.getTotalPowerUpsGenerated();
+            totalPowerUpsCollected = GameManager.instance.bulletPowerUpController.getTotalPowerUpsCollected() + GameManager.instance.healthPowerUpController.getTotalPowerUpsCollected() + GameManager.instance.shieldPowerUpController.getTotalPowerUpsCollected();
+
             sendToGoogle.UpdateUnsuccessfulTriesAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name], false);
             sendToGoogle.UpdateResonForDeathAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name], "Health Finished");
             //Debug.Log("Check letter count when health is over" + GameManager.instance.totalLettersShot + "---- correct" + GameManager.instance.characterShotCount + "level---" + pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name]);
             sendToGoogle.UpdateCorrectLettersShotAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name], GameManager.instance.totalLettersShot, GameManager.instance.characterShotCount, "healthbar finished");
-            sendToGoogle.UpdatePowerUpsUsageAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name], GameManager.instance.bulletPowerUpController.getTotalPowerUpsGenerated(), GameManager.instance.bulletPowerUpController.getTotalPowerUpsCollected());
+            sendToGoogle.UpdatePowerUpsUsageAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name], totalPowerUpsGenerated, totalPowerUpsCollected);
             //GameManager.instance.wordCompleted = false;
             Destroy(this.gameObject);
             //UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene 2");
-            GameManager.instance.lossScreen();
+            GameManager.instance.lossScreen("Out of Health");
         }
     }
 

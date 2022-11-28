@@ -1683,6 +1683,7 @@ MonoBehaviour:
   ANGULAR_SPEED: 3.7
   WEBGL_MULTIPLIER: 1
   firePoint: {fileID: 1835749248}
+  sendToGoogle: {fileID: 82895570}
 --- !u!61 &635070114
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4716,7 +4717,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTime: 0
-  startingTime: 120
+  startingTime: 5
   countdownText: {fileID: 1579874782}
   sendToGoogle: {fileID: 82895570}
 --- !u!114 &1579874782

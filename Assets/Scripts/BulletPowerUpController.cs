@@ -36,10 +36,12 @@ public class BulletPowerUpController : MonoBehaviour
     }
     public int getTotalPowerUpsGenerated()
     {
+        Debug.Log("The total powreup generated for bullet are" + totalPowerUpsGenerated);
         return totalPowerUpsGenerated;
     }
     public int getTotalPowerUpsCollected()
     {
+        Debug.Log("The total powreup collected for bullet are" + totalPowerUpsCollected);
         return totalPowerUpsCollected;
     }
 }

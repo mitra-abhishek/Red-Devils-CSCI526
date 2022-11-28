@@ -307,9 +307,6 @@ public class LevelManagerLevel3 : MonoBehaviour
 
     private void OnDestroy()
     {
-        totalPowerUpsGenerated = GameManager.instance.bulletPowerUpController.getTotalPowerUpsGenerated() + GameManager.instance.healthPowerUpController.getTotalPowerUpsGenerated() + GameManager.instance.shieldPowerUpController.getTotalPowerUpsGenerated();
-        totalPowerUpsCollected = GameManager.instance.bulletPowerUpController.getTotalPowerUpsCollected() + GameManager.instance.healthPowerUpController.getTotalPowerUpsCollected() + GameManager.instance.shieldPowerUpController.getTotalPowerUpsCollected();
-
         // End Analytics Call here
         if (this != null)
         {
@@ -321,23 +318,15 @@ public class LevelManagerLevel3 : MonoBehaviour
             {
                 if (availableBullets > 1)
                 {
+                    totalPowerUpsGenerated = GameManager.instance.bulletPowerUpController.getTotalPowerUpsGenerated() + GameManager.instance.healthPowerUpController.getTotalPowerUpsGenerated() + GameManager.instance.shieldPowerUpController.getTotalPowerUpsGenerated();
+                    totalPowerUpsCollected = GameManager.instance.bulletPowerUpController.getTotalPowerUpsCollected() + GameManager.instance.healthPowerUpController.getTotalPowerUpsCollected() + GameManager.instance.shieldPowerUpController.getTotalPowerUpsCollected();
+
                     currentLevel = pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name];
                     sendToGoogle.UpdateLevelAnalytics(currentLevel, timeToComplete);
                     sendToGoogle.UpdateUnsuccessfulTriesAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name], true);
                     sendToGoogle.UpdateHealthbarAnalytics(currentLevel, playerMain.currentHealth);
                     sendToGoogle.UpdateCorrectLettersShotAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name], totalLettersShot, characterShot, "level3 destroy");
                     sendToGoogle.UpdatePowerUpsUsageAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name], totalPowerUpsGenerated, totalPowerUpsCollected);
-
-                }
-                else
-                {
-                    sendToGoogle.UpdateUnsuccessfulTriesAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name], false);
-                    sendToGoogle.UpdateResonForDeathAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name], "Bullet Finished");
-                    sendToGoogle.UpdateCorrectLettersShotAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name], totalLettersShot, characterShot, "level3 destroy");
-                    //Debug.Log("Game manager else"+bulletPowerUpController.getTotalPowerUpsCollected());
-                    sendToGoogle.UpdatePowerUpsUsageAnalytics(pairs[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name], bulletPowerUpController.getTotalPowerUpsGenerated(), bulletPowerUpController.getTotalPowerUpsCollected());
-                    //UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene 2");
-                    GameManager.instance.lossScreen();
 
                 }
             }
