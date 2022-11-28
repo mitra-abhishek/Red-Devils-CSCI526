@@ -20,6 +20,7 @@ public class LevelManagerLevel2 : MonoBehaviour
     public List<TMP_Text> correctLetterList = new List<TMP_Text>();
     public GameObject blankPrefab;
     public GameObject correctLetterPrefab;
+    public GameObject hintImage;
 
     public Transform blankHolder;
     public Transform correctLetterHolder;
@@ -78,6 +79,12 @@ public class LevelManagerLevel2 : MonoBehaviour
             "HORSE", "DOG", "TIGER", "LION","SNAKE"
         };
 
+        // HORSE : A knight rides on a ...
+        // DOG : Man's best friend
+        // TIGER : The largest cat species
+        // LION : King of the jungle
+        // SNAKE : Related to Slytherin
+
         int index = random.Next(level_words.Count);
         levelWord = level_words[index];
 
@@ -129,6 +136,35 @@ public class LevelManagerLevel2 : MonoBehaviour
             }
         }
 
+    }
+
+    private IEnumerator timeDelayHintHide()
+    {
+
+        hintImage = FindAllObject(GameObject.Find("Hints/Canvas"), levelWord);
+        if(hintImage.activeSelf == true)
+        {
+            yield return new WaitForSeconds(8.0f);
+            hintImage.SetActive(false);
+        }
+        
+    }
+
+    public static GameObject FindAllObject(GameObject parent, string name)
+    {
+     Transform[] trs= parent.GetComponentsInChildren<Transform>(true);
+     foreach(Transform t in trs){
+         if(t.name == name){
+              return t.gameObject;
+         }
+     }
+     return null;
+    }
+
+    public void showHint()
+    {   
+        hintImage = FindAllObject(GameObject.Find("Hints/Canvas"), levelWord);
+        hintImage.SetActive(true);
     }
 
     public void setLetterFromHint()
@@ -223,7 +259,7 @@ public class LevelManagerLevel2 : MonoBehaviour
                 StartCoroutine(SetWinText());
             }
         }
-
+        StartCoroutine(timeDelayHintHide());
     }
     private IEnumerator HandleIt(int i)
     {

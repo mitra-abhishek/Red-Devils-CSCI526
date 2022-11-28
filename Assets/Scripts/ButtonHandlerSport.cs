@@ -32,6 +32,8 @@ public class ButtonHandlerSport : MonoBehaviour
             coin_count.setNumCoins(currentCoins);
             bulletHandler.SetEnemiesDestroyed(currentCoins);
             levelManagerLevel4.setLetterFromHint();
+            levelManagerLevel4.showHint();
+
         }
         else{
             popUpMessage.SetActive(true);

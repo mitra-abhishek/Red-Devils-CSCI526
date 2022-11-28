@@ -17,7 +17,8 @@ public class LevelManagerLevel1 : MonoBehaviour
 
     public GameObject blankPrefab;
     public GameObject correctLetterPrefab;
-
+    public GameObject hintImage;
+    
     public Transform blankHolder;
     public Transform correctLetterHolder;
 
@@ -78,6 +79,11 @@ public class LevelManagerLevel1 : MonoBehaviour
         {
             "EARTH", "MARS" ,"VENUS","SATURN"
         };
+
+        // EARTH : Where we live
+        // MARS : Musk is trying to live here
+        // VENUS : Symbolises Feminism
+        // SATURN : Planet of rings
 
         int index = random.Next(level_words.Count);
         levelWord = level_words[index];
@@ -207,6 +213,7 @@ public class LevelManagerLevel1 : MonoBehaviour
                 StartCoroutine(SetWinText());
             }
         }
+        StartCoroutine(timeDelayHintHide());
     }
     private IEnumerator HandleIt(int i)
     {
@@ -230,6 +237,34 @@ public class LevelManagerLevel1 : MonoBehaviour
         //     }
         GameManager.instance.winScreen();
 
+    }
+    private IEnumerator timeDelayHintHide()
+    {
+
+        hintImage = FindAllObject(GameObject.Find("Hints/Canvas"), levelWord);
+        if(hintImage.activeSelf == true)
+        {
+            yield return new WaitForSeconds(8.0f);
+            hintImage.SetActive(false);
+        }
+        
+    }
+
+    public static GameObject FindAllObject(GameObject parent, string name)
+    {
+     Transform[] trs= parent.GetComponentsInChildren<Transform>(true);
+     foreach(Transform t in trs){
+         if(t.name == name){
+              return t.gameObject;
+         }
+     }
+     return null;
+    }
+
+    public void showHint()
+    {   
+        hintImage = FindAllObject(GameObject.Find("Hints/Canvas"), levelWord);
+        hintImage.SetActive(true);
     }
 
     public void setLetterFromHint()
