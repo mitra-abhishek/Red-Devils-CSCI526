@@ -97,12 +97,16 @@ public class UpperLetterGen : MonoBehaviour
 
     public void createLettersDelayed()
     {
-        if (letter && !droppedLetter)
-        {
-            Destroy(letter.gameObject);
+        // if (letter && !droppedLetter)
+        // {
+        //     Destroy(letter.gameObject);
+        // }
+        //
+        foreach (Transform child in transform) {
+            GameObject.Destroy(child.gameObject);
         }
-
-
+        droppedLetter = false;
+        
         if (GameManager.instance.Level == 3)
             letter = Instantiate(Resources.Load("Letters/orange/" + letterChar) as GameObject);
         else if (GameManager.instance.Level == 1) {

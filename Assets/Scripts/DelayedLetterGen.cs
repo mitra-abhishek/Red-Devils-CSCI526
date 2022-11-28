@@ -26,9 +26,9 @@ public class DelayedLetterGen : MonoBehaviour
             GameManager.instance.createLetterSpawnArrayInitial();
             int itr = 0;
             foreach (Transform child in transform) {
-                if(child.gameObject.GetComponent<UpperLetterGen>().letter) {
-                    Destroy(child.gameObject.GetComponent<UpperLetterGen>().letter.gameObject);
-                }
+                // if(child.gameObject.GetComponent<UpperLetterGen>().letter) {
+                //     Destroy(child.gameObject.GetComponent<UpperLetterGen>().letter.gameObject);
+                // }
                 child.gameObject.GetComponent<UpperLetterGen>().letterChar = GameManager.instance.datalist[itr];
                 child.gameObject.GetComponent<UpperLetterGen>().createLettersDelayed();
                 itr++;
