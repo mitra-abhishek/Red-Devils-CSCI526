@@ -2969,7 +2969,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  moving: 1
+  moving: 0
   pingPongSpeed: 0.25
   displacementX: 1
   displacementParam1: 0.3
@@ -4841,7 +4841,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  moving: 1
+  moving: 0
   pingPongSpeed: 0.25
   displacementX: 1
   displacementParam1: 0.3
@@ -5514,7 +5514,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  moving: 1
+  moving: 0
   pingPongSpeed: 0.25
   displacementX: 1
   displacementParam1: 0.3
