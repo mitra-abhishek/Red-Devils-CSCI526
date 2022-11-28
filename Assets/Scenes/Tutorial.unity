@@ -1507,6 +1507,7 @@ MonoBehaviour:
   correctLetterList: []
   blankPrefab: {fileID: 5187836768122991378, guid: 7cce4b751137f4e84a2f103914e1a902, type: 3}
   correctLetterPrefab: {fileID: 5187836768122991378, guid: 6d36053df73807844afc50f9a3690707, type: 3}
+  hintImage: {fileID: 0}
   blankHolder: {fileID: 528683089}
   correctLetterHolder: {fileID: 339393109}
   letterSpeed: 1.5
@@ -7674,7 +7675,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rockPrefab: {fileID: 5356430114322639579, guid: 725fc8530256d6542a113c782924e382, type: 3}
-  rockReAppearTime: 3
+  rockReAppearTime: 2
   maxRockAtTime: 1
 --- !u!4 &1917732841
 Transform:

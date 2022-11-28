@@ -92,7 +92,7 @@ public class TutorialLevelManager : MonoBehaviour
         levelWord = level_words[index];
 
         // Pass Values to GameManager
-        GameManager.instance.Level = 3;
+        GameManager.instance.Level = 0;
         GameManager.instance.switchColor = true;
         GameManager.instance.LevelWord = levelWord;
         GameManager.instance.LetterSpeed = letterSpeed;
@@ -208,9 +208,9 @@ public class TutorialLevelManager : MonoBehaviour
         {
             popUps[3].gameObject.SetActive(false);
             rockShootingTime += Time.deltaTime;
-            //Debug.Log("Inside the Rocks Shooting" + rockShootingTime);
+            Debug.Log("Inside the Rocks Shooting" + rockShootingTime);
             rock.SetActive(true);
-            if (rockShootingTime >= 15f && playerMain.currentHealth >= 80)
+            if (rockShootingTime >= 8f && playerMain.currentHealth >= 80)
             {
                 rockActive = false;
                 rockTutorialCompleted = true;
@@ -224,13 +224,13 @@ public class TutorialLevelManager : MonoBehaviour
         }
         else if (popUpIndex == 3 && rockTutorialCompleted == true && rockActive == false)
         {
-            if (Input.GetKeyDown(KeyCode.Space) || waitTimeForEnemies >= 3f)
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 if (waitTimeForEnemies < 3f)
                 {
                     StartCoroutine(HandleWaitTime());
                 }
-                else if (waitTimeForEnemies >= 3f)
+                else if (waitTimeForEnemies >= 3f && Input.GetKey(KeyCode.Space))
                 {
                     popUpIndex += 1;
                     popUps[3].gameObject.SetActive(false);
@@ -248,8 +248,9 @@ public class TutorialLevelManager : MonoBehaviour
             //Debug.Log("Inside the Index 4");
             popUps[4].gameObject.SetActive(false);
             enemyShootingTime += Time.deltaTime;
+            Debug.Log("Inside the Enemy Shooting Time" + enemyShootingTime);
             enemies.SetActive(true);
-            if (enemyShootingTime >= 15f && playerMain.currentHealth >= 80)
+            if (enemyShootingTime >= 8f && playerMain.currentHealth >= 80)
             {
                 enemiesActive = false;
                 isEnemiesSpawnOver = true;
@@ -265,11 +266,11 @@ public class TutorialLevelManager : MonoBehaviour
 
         else if (popUpIndex == 4 && enemiesTutorialCompleted == true && enemiesActive == false)
         {
-            if (waitTimeForLetterse < 3f)
+            if (waitTimeForLetterse < 4f)
             {
                 StartCoroutine(HandleWaitTime());
             }
-            else if (isEnemiesSpawnOver == true)
+            else if (isEnemiesSpawnOver == true && Input.GetKey(KeyCode.Space))
             {
                 popUpIndex += 1;
                 popUps[4].gameObject.SetActive(false);
@@ -344,14 +345,15 @@ public class TutorialLevelManager : MonoBehaviour
     }
     private IEnumerator HandleWaitTime()
     {
-        yield return new WaitForSeconds(2f);
         if (isEnemiesSpawnOver == false)
         {
+            yield return new WaitForSeconds(1.5f);
             waitTimeForEnemies = 3f;
         }
         if (isEnemiesSpawnOver == true)
         {
-            waitTimeForLetterse = 3f;
+            yield return new WaitForSeconds(2f);
+            waitTimeForLetterse = 4f;
         }
     }
     private IEnumerator HandleIt(int i)
