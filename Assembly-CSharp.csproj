@@ -49,6 +49,7 @@
      <Compile Include="Assets\Scripts\Proto1 Scripts\BulletLogic.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
      <Compile Include="Assets\Scripts\HealthPowerupPrefabGenerator.cs" />
+     <Compile Include="Assets\Scripts\HandleLoseScreen.cs" />
      <Compile Include="Assets\Scripts\LevelManager\LevelManagerLevel3.cs" />
      <Compile Include="Assets\Scripts\InstructionFader.cs" />
      <Compile Include="Assets\Scripts\Rock.cs" />

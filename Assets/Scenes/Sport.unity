@@ -351,7 +351,7 @@ MonoBehaviour:
   displacementParam2: 0.1
   letterScale: 3
   anchor: {fileID: 0}
-  velocityRotate: 3
+  velocityRotate: 1.75
   RoatationPlane: 1
   state: 4
   restructure: 0
@@ -565,14 +565,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  moving: 1
+  moving: 0
   pingPongSpeed: 0.25
   displacementX: 1
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 3
   anchor: {fileID: 0}
-  velocityRotate: 3
+  velocityRotate: 1.75
   RoatationPlane: 1
   state: 1
   restructure: 0
@@ -711,7 +711,7 @@ MonoBehaviour:
   displacementParam2: 0.1
   letterScale: 3
   anchor: {fileID: 0}
-  velocityRotate: 3
+  velocityRotate: 1.75
   RoatationPlane: 1
   state: 10
   restructure: 0
@@ -1703,7 +1703,7 @@ MonoBehaviour:
   displacementParam2: 0.1
   letterScale: 3
   anchor: {fileID: 0}
-  velocityRotate: 3
+  velocityRotate: 1.75
   RoatationPlane: 1
   state: 6
   restructure: 0
@@ -2266,7 +2266,7 @@ MonoBehaviour:
   displacementParam2: 0.1
   letterScale: 3
   anchor: {fileID: 0}
-  velocityRotate: 3
+  velocityRotate: 1.75
   RoatationPlane: 1
   state: 7
   restructure: 0
@@ -2533,6 +2533,7 @@ MonoBehaviour:
   ANGULAR_SPEED: 3.7
   WEBGL_MULTIPLIER: 1
   firePoint: {fileID: 815479464}
+  sendToGoogle: {fileID: 0}
 --- !u!61 &635070114
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2774,14 +2775,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  moving: 1
+  moving: 0
   pingPongSpeed: 0.25
   displacementX: 1
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 3
   anchor: {fileID: 0}
-  velocityRotate: 3
+  velocityRotate: 1.75
   RoatationPlane: 1
   state: 0
   restructure: 0
@@ -2913,14 +2914,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  moving: 1
+  moving: 0
   pingPongSpeed: 0.25
   displacementX: 1
   displacementParam1: 0.3
   displacementParam2: 0.1
   letterScale: 3
   anchor: {fileID: 0}
-  velocityRotate: 3
+  velocityRotate: 1.75
   RoatationPlane: 1
   state: 2
   restructure: 0
@@ -4149,7 +4150,7 @@ MonoBehaviour:
   displacementParam2: 0.1
   letterScale: 3
   anchor: {fileID: 0}
-  velocityRotate: 3
+  velocityRotate: 1.75
   RoatationPlane: 1
   state: 9
   restructure: 0
@@ -4583,7 +4584,7 @@ MonoBehaviour:
   displacementParam2: 0.1
   letterScale: 3
   anchor: {fileID: 0}
-  velocityRotate: 3
+  velocityRotate: 1.75
   RoatationPlane: 1
   state: 8
   restructure: 0
@@ -5055,7 +5056,7 @@ MonoBehaviour:
   displacementParam2: 0.1
   letterScale: 3
   anchor: {fileID: 0}
-  velocityRotate: 3
+  velocityRotate: 1.75
   RoatationPlane: 1
   state: 3
   restructure: 0
