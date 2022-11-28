@@ -28,7 +28,8 @@ public class GameManager : MonoBehaviour
 
     public float RockSpeed = 2.0f;
     public int bullets;
-
+    public Dictionary<int, Char> letterMapTutorial = new Dictionary<int, Char>();
+    public bool checkIfAllowedToPressHint = false;
     // public float bulletPowerUpSpeed = 2.0f;
 
     public int totalLettersShot;

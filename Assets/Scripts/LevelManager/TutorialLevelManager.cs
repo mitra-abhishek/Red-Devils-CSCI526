@@ -129,13 +129,17 @@ public class TutorialLevelManager : MonoBehaviour
                 break;
             }
         }
+        GameManager.instance.letterMapTutorial = letterMap;
 
     }
 
-    public void setLetterFromHint(Dictionary<int, Char> letterMap)
+    public void setLetterFromHint()
     {
         // Debug.Log("Inside set letter from Hint" + letterMap.Count);
         // print("Entering this 5");
+        Debug.Log("Inside the set Letter Hint" + levelWord);
+        Debug.Log("The letterMap is" + GameManager.instance.letterMapTutorial);
+        letterMap = GameManager.instance.letterMapTutorial;
         print(levelWord.Length);
         for (int itr = 0; itr < levelWord.Length; itr++)
         {
@@ -250,7 +254,7 @@ public class TutorialLevelManager : MonoBehaviour
             enemyShootingTime += Time.deltaTime;
             Debug.Log("Inside the Enemy Shooting Time" + enemyShootingTime);
             enemies.SetActive(true);
-            if (enemyShootingTime >= 8f && playerMain.currentHealth >= 80)
+            if (enemyShootingTime >= 20f && playerMain.currentHealth >= 80)
             {
                 enemiesActive = false;
                 isEnemiesSpawnOver = true;
@@ -276,6 +280,7 @@ public class TutorialLevelManager : MonoBehaviour
                 popUps[4].gameObject.SetActive(false);
                 lettersActive = true;
                 letters.SetActive(true);
+                GameManager.instance.checkIfAllowedToPressHint = true;
             }
         }
         else
