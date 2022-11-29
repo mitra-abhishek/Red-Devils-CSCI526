@@ -28,19 +28,11 @@ public class ButtonHandlerCountry : MonoBehaviour
         int currentCoins = coin_count.getNumCoins();
         if(currentCoins>=3)
         {
+            currentCoins-=3;
             
-            if(currentCoins>=4)
-            {
-                levelManagerLevel3.showHint();
-                currentCoins-=4;
-            }
-            else 
-            {
-                currentCoins-=3;
-            }
+            levelManagerLevel3.showHint();
             coin_count.setNumCoins(currentCoins);
             bulletHandler.SetEnemiesDestroyed(currentCoins);
-            levelManagerLevel3.setLetterFromHint();
             
         }
         else{
