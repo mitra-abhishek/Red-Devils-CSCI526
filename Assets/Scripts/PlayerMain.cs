@@ -69,6 +69,48 @@ public class PlayerMain : MonoBehaviour
         }
     }
 
+    private bool hasCollectedLetter(char letterShot) {
+        if(GameManager.instance.Level == 1) {
+            bool wrongLetter = true;
+            for(int i=0; i<GameManager.instance.LevelWord.Length; i++) {
+                if(GameManager.instance.LevelWord[i] == letterShot && LevelManagerLevel1.letterMap[i] == '/') {
+                    wrongLetter = false;
+                    break;
+                }
+            }
+            return wrongLetter;
+        } else if (GameManager.instance.Level == 2) {
+            bool wrongLetter = true;
+            for(int i=0; i<GameManager.instance.LevelWord.Length; i++) {
+                if(GameManager.instance.LevelWord[i] == letterShot && LevelManagerLevel2.letterMap[i] == '/') {
+                    wrongLetter = false;
+                    break;
+                }
+            }
+            return wrongLetter;
+        } else if (GameManager.instance.Level == 3) {
+            bool wrongLetter = true;
+            for(int i=0; i<GameManager.instance.LevelWord.Length; i++) {
+                if(GameManager.instance.LevelWord[i] == letterShot && LevelManagerLevel3.letterMap[i] == '/') {
+                    wrongLetter = false;
+                    break;
+                }
+            }
+            return wrongLetter;
+        } else if (GameManager.instance.Level == 4) {
+            bool wrongLetter = true;
+            for(int i=0; i<GameManager.instance.LevelWord.Length; i++) {
+                if(GameManager.instance.LevelWord[i] == letterShot && LevelManagerLevel4.letterMap[i] == '/') {
+                    wrongLetter = false;
+                    break;
+                }
+            }
+            return wrongLetter;
+        }
+
+        return false;
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         var color = gotHitScreen.GetComponent<Image>().color;
@@ -82,8 +124,9 @@ public class PlayerMain : MonoBehaviour
         }
         if (other.tag == "Letter")
         {
+            bool alreadyCollected = hasCollectedLetter(other.name[0]);
             EventManager.TriggerEvent("test", new Dictionary<string, object> { { "amount", other } });
-            if (GameManager.instance.LevelWord.IndexOf(other.name[0]) == -1)
+            if (GameManager.instance.LevelWord.IndexOf(other.name[0]) == -1 || alreadyCollected)
             {
                 gotHitScreen.GetComponent<Image>().color = color;
                 TakeDamage(10);
