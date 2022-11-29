@@ -13,7 +13,11 @@ public class Bullets : MonoBehaviour
     private GameObject coinHelper;
     private GameObject coin;
     private coinCount coin_count;
+    private CoinAnimation1 animator;
     public static int enemiesDestroyed = 0;
+    public Transform target;
+    public Camera cam;
+    public GameObject _coinPrefab;
     public float speed = 7f;
 
     // Start is called before the first frame update
@@ -21,6 +25,7 @@ public class Bullets : MonoBehaviour
     {
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
         coin_count = new coinCount();
+        animator = new CoinAnimation1();
     }
 
     // Update is called once per frame
@@ -112,13 +117,21 @@ public class Bullets : MonoBehaviour
             }
             GameManager.instance.playBulletImpact();
             // other.gameObject.SetActive(false);
-            coin.SetActive(true);
+            // coin.SetActive(true);
             coin_count.setNumCoins(enemiesDestroyed);
             coinHelper = GameObject.Find("CoinHelper");
-            delayHelper script = coinHelper.GetComponent<delayHelper>();
-            script.callCoroutine(coin);
-            Destroy(other.gameObject);
+            // delayHelper script = coinHelper.GetComponent<delayHelper>();
+            // script.callCoroutine(coin);
+            
+            print("Testing here as well");
+            print(target);
+            // GameObject posHelper = Instantiate(other.transform.gameObject) as GameObject;
             Destroy(this.gameObject);
+            // other.transform.localScale = new Vector3(0.00001f, 0.000001f, 0.000001f);
+            CoinAnimation1 script2 = coinHelper.GetComponent<CoinAnimation1>();
+            script2.startCoinMove(other.transform.position,_coinPrefab,other.transform);
+            Destroy(other.gameObject);
+            // Destroy(posHelper);
         }
 
         if (other.tag == "smart_enemy")

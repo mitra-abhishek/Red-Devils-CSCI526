@@ -159,14 +159,27 @@ public class GameManager : MonoBehaviour
         // ShuffleMe(primaryCharsList);
         // print("Checking Length here");
         // print(GameManager.instance.LevelWord.Length);
-        while (finalChars.Length < (11 - GameManager.instance.LevelWord.Length) && itr < primaryCharsList.Count && GameManager.instance.LevelWord.Length != 0)
-        {
-            if (LevelWord.ToLower().IndexOf(primaryCharsList[itr]) == -1)
-            {
-                finalChars += primaryCharsList[itr];
 
+        if(Level == 3 || Level == 4) {
+            while (finalChars.Length < (11 - GameManager.instance.LevelWord.Length) && itr < primaryCharsList.Count && GameManager.instance.LevelWord.Length != 0)
+            {
+                if (LevelWord.ToLower().IndexOf(primaryCharsList[itr]) == -1)
+                {
+                    finalChars += primaryCharsList[itr];
+
+                }
+                itr += 1;
             }
-            itr += 1;
+        } else {
+            while (finalChars.Length < (10 - GameManager.instance.LevelWord.Length) && itr < primaryCharsList.Count && GameManager.instance.LevelWord.Length != 0)
+            {
+                if (LevelWord.ToLower().IndexOf(primaryCharsList[itr]) == -1)
+                {
+                    finalChars += primaryCharsList[itr];
+
+                }
+                itr += 1;
+            }
         }
         // print("");
         // createLetterSpawnArrayInitial();
@@ -276,8 +289,6 @@ public class GameManager : MonoBehaviour
 
     public void createLetterSpawnArrayInitial()
     {
-        print("==========");
-        print("I am called");
         datalist = new List<char>();
         datalist.AddRange(LevelWord);
 
@@ -289,25 +300,36 @@ public class GameManager : MonoBehaviour
 
         int randCount = 0;
         int idx = 0;
-        while (randCount < (11 - LevelWord.Length))
-        {
-            if (LevelWord.IndexOf(alphabetList[idx]) == -1)
+        if(Level == 3 || Level == 4) {
+            while (randCount < (10 - LevelWord.Length))
             {
-                datalist.Add(alphabetList[idx]);
-                randCount++;
+                if (LevelWord.IndexOf(alphabetList[idx]) == -1)
+                {
+                    datalist.Add(alphabetList[idx]);
+                    randCount++;
+                }
+                idx++;
             }
-            idx++;
+        } else {
+            while (randCount < (11 - LevelWord.Length))
+            {
+                if (LevelWord.IndexOf(alphabetList[idx]) == -1)
+                {
+                    datalist.Add(alphabetList[idx]);
+                    randCount++;
+                }
+                idx++;
+            }
         }
+
         ShuffleMe(datalist);
         string test = "";
         for (int itr = 0; itr < datalist.Count; itr++)
         {
             test += datalist[itr] + " ";
         }
-        Debug.Log(test);
-        print("**********");
-
     }
+
     public char getLetterPrimary()
     {
         string test = "";
