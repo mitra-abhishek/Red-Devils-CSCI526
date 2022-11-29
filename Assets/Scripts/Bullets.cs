@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Bullets : MonoBehaviour
-{   
+{
     private Rigidbody2D rb;
     private Vector2 screenBounds;
     private Camera mainCam;
@@ -15,18 +15,19 @@ public class Bullets : MonoBehaviour
     private coinCount coin_count;
     public static int enemiesDestroyed = 0;
     public float speed = 7f;
-    
+
     // Start is called before the first frame update
     void Start()
     {
-        screenBounds=Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));   
+        screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
         coin_count = new coinCount();
     }
 
     // Update is called once per frame
-    void Update() 
+    void Update()
     {
-        if(transform.position.y>screenBounds.y*1){
+        if (transform.position.y > screenBounds.y * 1)
+        {
             Destroy(this.gameObject);
         }
     }
@@ -38,45 +39,48 @@ public class Bullets : MonoBehaviour
 
 
     public static List<GameObject> FindAllObjectsInScene()
-     {
-         UnityEngine.SceneManagement.Scene activeScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene();
- 
-         GameObject[] rootObjects = activeScene.GetRootGameObjects();
- 
-         GameObject[] allObjects = Resources.FindObjectsOfTypeAll<GameObject>();
- 
-         List<GameObject> objectsInScene = new List<GameObject>();
- 
-         for (int i = 0; i < rootObjects.Length; i++)
-         {
-             objectsInScene.Add(rootObjects[i]);
-         }
- 
-         for (int i = 0; i < allObjects.Length; i++)
-         {
-             if (allObjects[i].transform.root)
-             {
-                 for (int i2 = 0; i2 < rootObjects.Length; i2++)
-                 {
-                     if (allObjects[i].transform.root == rootObjects[i2].transform && allObjects[i] != rootObjects[i2])
-                     {
-                         objectsInScene.Add(allObjects[i]);
-                         break;
-                     }
-                 }
-             }
-         }
-         return objectsInScene;
-     }
+    {
+        UnityEngine.SceneManagement.Scene activeScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene();
 
-    private void OnTriggerEnter2D(Collider2D other){
-        if(other.tag=="rock"){
+        GameObject[] rootObjects = activeScene.GetRootGameObjects();
+
+        GameObject[] allObjects = Resources.FindObjectsOfTypeAll<GameObject>();
+
+        List<GameObject> objectsInScene = new List<GameObject>();
+
+        for (int i = 0; i < rootObjects.Length; i++)
+        {
+            objectsInScene.Add(rootObjects[i]);
+        }
+
+        for (int i = 0; i < allObjects.Length; i++)
+        {
+            if (allObjects[i].transform.root)
+            {
+                for (int i2 = 0; i2 < rootObjects.Length; i2++)
+                {
+                    if (allObjects[i].transform.root == rootObjects[i2].transform && allObjects[i] != rootObjects[i2])
+                    {
+                        objectsInScene.Add(allObjects[i]);
+                        break;
+                    }
+                }
+            }
+        }
+        return objectsInScene;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "rock")
+        {
             PlayerStats.rockScore += 5;
-            Instantiate(explosion,transform.position,transform.rotation);
+            Instantiate(explosion, transform.position, transform.rotation);
             GameManager.instance.playBulletImpact();
+            GameManager.instance.isRockShotTutorial = true;
             Destroy(this.gameObject);
             Destroy(other.gameObject);
-            
+
         }
         // if(other.tag == "Letter") {
         //     EventManager.TriggerEvent ("test", new Dictionary<string, object> { { "amount", other } });
@@ -85,14 +89,19 @@ public class Bullets : MonoBehaviour
         //     Destroy(this.gameObject);
         // }
 
-        if(other.tag == "enemy"){
+        if (other.tag == "enemy")
+        {
             PlayerStats.enemyScore += 10;
-            Instantiate(explosion,transform.position,transform.rotation);
+            Instantiate(explosion, transform.position, transform.rotation);
             enemiesDestroyed += 1;
-            List<GameObject> gameObjects = FindAllObjectsInScene();
-            foreach(var element in gameObjects)
+            if (enemiesDestroyed == 3)
             {
-                if(element.name == "Coin")
+                GameManager.instance.isEnemyShotTutorial = true;
+            }
+            List<GameObject> gameObjects = FindAllObjectsInScene();
+            foreach (var element in gameObjects)
+            {
+                if (element.name == "Coin")
                 {
                     GameObject enemy = other.gameObject;
                     Vector3 positionHelper = enemy.GetComponent<Transform>().localPosition;
@@ -112,14 +121,15 @@ public class Bullets : MonoBehaviour
             Destroy(this.gameObject);
         }
 
-        if(other.tag == "smart_enemy"){
+        if (other.tag == "smart_enemy")
+        {
             PlayerStats.enemyScore += 10;
-            Instantiate(explosion,transform.position,transform.rotation);
+            Instantiate(explosion, transform.position, transform.rotation);
             enemiesDestroyed += 1;
             List<GameObject> gameObjects = FindAllObjectsInScene();
-            foreach(var element in gameObjects)
+            foreach (var element in gameObjects)
             {
-                if(element.name == "Coin")
+                if (element.name == "Coin")
                 {
                     GameObject enemy = other.gameObject;
                     Vector3 positionHelper = enemy.GetComponent<Transform>().localPosition;
@@ -138,33 +148,37 @@ public class Bullets : MonoBehaviour
             Destroy(this.gameObject);
         }
 
-        if(other.tag == "boss_enemy_level1"){
+        if (other.tag == "boss_enemy_level1")
+        {
             PlayerStats.enemyScore += 10;
-            Instantiate(explosion,transform.position,transform.rotation);
+            Instantiate(explosion, transform.position, transform.rotation);
             FindObjectOfType<BossEnemyLevel1>().TakeHit(10);
             GameManager.instance.playBulletImpact();
             Destroy(this.gameObject);
         }
 
-        if(other.tag == "boss_enemy_level2"){
+        if (other.tag == "boss_enemy_level2")
+        {
             PlayerStats.enemyScore += 15;
-            Instantiate(explosion,transform.position,transform.rotation);
+            Instantiate(explosion, transform.position, transform.rotation);
             FindObjectOfType<BossEnemyLevel2>().TakeHit(8);
             GameManager.instance.playBulletImpact();
             Destroy(this.gameObject);
         }
 
-        if(other.tag == "boss_enemy_level3"){
+        if (other.tag == "boss_enemy_level3")
+        {
             PlayerStats.enemyScore += 20;
-            Instantiate(explosion,transform.position,transform.rotation);
+            Instantiate(explosion, transform.position, transform.rotation);
             FindObjectOfType<BossEnemyLevel3>().TakeHit(6);
             GameManager.instance.playBulletImpact();
             Destroy(this.gameObject);
         }
 
-        if(other.tag == "boss_enemy_level4"){
+        if (other.tag == "boss_enemy_level4")
+        {
             PlayerStats.enemyScore += 25;
-            Instantiate(explosion,transform.position,transform.rotation);
+            Instantiate(explosion, transform.position, transform.rotation);
             FindObjectOfType<BossEnemyLevel4>().TakeHit(5);
             GameManager.instance.playBulletImpact();
             Destroy(this.gameObject);
