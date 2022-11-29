@@ -2150,6 +2150,7 @@ GameObject:
   m_Component:
   - component: {fileID: 914620033}
   - component: {fileID: 914620034}
+  - component: {fileID: 914620035}
   m_Layer: 0
   m_Name: CoinHelper
   m_TagString: Untagged
@@ -2185,6 +2186,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinVal: {fileID: 1761683896}
+--- !u!114 &914620035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 914620032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8653dcae773754a0aba8ff11ddc0faa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
 --- !u!1 &938440607
 GameObject:
   m_ObjectHideFlags: 0
@@ -5257,7 +5271,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 0}
+  target: {fileID: 0}
+  cam: {fileID: 0}
   speed: 7
+  _coinPrefab: {fileID: 0}
 --- !u!95 &1761683899
 Animator:
   serializedVersion: 4

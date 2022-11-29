@@ -50,11 +50,10 @@ public class CoinAnimation1 : MonoBehaviour
          return objectsInScene;
      }
 
-    public void startCoinMove(Vector3 _initial, GameObject _coinPrefab, Transform initalPos)
+    public void startCoinMove(Vector3 _initial, GameObject _coinPrefab)
     {
         print("Testing Here");
         print(_coinPrefab);
-        print(initalPos);
         List<GameObject> gameObjects = FindAllObjectsInScene();
             foreach(var element in gameObjects)
             {
@@ -70,8 +69,7 @@ public class CoinAnimation1 : MonoBehaviour
             }
         
         Vector3 targetPos = cam.ScreenToWorldPoint( new Vector3(target.position.x,target.position.y,cam.transform.position.z*-1));
-        GameObject initalPosHelper = Instantiate(initalPos.gameObject) as GameObject;
-        GameObject _coin = Instantiate(_coinPrefab, initalPosHelper.transform);
+        GameObject _coin = Instantiate(_coinPrefab, _initial, Quaternion.identity);
         print("Checking here");
         
         print(_initial);
@@ -89,6 +87,7 @@ public class CoinAnimation1 : MonoBehaviour
 
             yield return new WaitForEndOfFrame();
         }
+        Destroy(obj.gameObject);
         yield return null;
 
     }

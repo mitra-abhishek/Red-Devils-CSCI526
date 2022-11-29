@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4403854986693279774}
   - component: {fileID: 4403854986693279771}
   - component: {fileID: 4403854986693279770}
-  - component: {fileID: -988322778383371907}
+  - component: {fileID: 7988805422944845106}
   m_Layer: 0
   m_Name: Sport_player_bullet
   m_TagString: bullet
@@ -134,7 +134,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.4, y: 6.8}
   m_EdgeRadius: 0
---- !u!114 &-988322778383371907
+--- !u!114 &7988805422944845106
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -90,6 +90,7 @@ public class BossEnemyLevel1 : MonoBehaviour
             script.callCoroutine(coin);
             GameManager.instance.gameWon = true;
             Destroy(gameObject);
+            
         }
     }
 

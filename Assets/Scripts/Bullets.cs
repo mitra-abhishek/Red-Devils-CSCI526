@@ -17,8 +17,10 @@ public class Bullets : MonoBehaviour
     public static int enemiesDestroyed = 0;
     public Transform target;
     public Camera cam;
-    public GameObject _coinPrefab;
     public float speed = 7f;
+    
+    public GameObject _coinPrefab;
+
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +28,8 @@ public class Bullets : MonoBehaviour
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
         coin_count = new coinCount();
         animator = new CoinAnimation1();
+        //_coinPrefab = Resources.Load("coinPrefab.prefab") as GameObject; 
+        
     }
 
     // Update is called once per frame
@@ -128,9 +132,10 @@ public class Bullets : MonoBehaviour
             // GameObject posHelper = Instantiate(other.transform.gameObject) as GameObject;
             Destroy(this.gameObject);
             // other.transform.localScale = new Vector3(0.00001f, 0.000001f, 0.000001f);
-            CoinAnimation1 script2 = coinHelper.GetComponent<CoinAnimation1>();
-            script2.startCoinMove(other.transform.position,_coinPrefab,other.transform);
+            Vector3 _initial_posn = new Vector3(other.transform.position.x, other.transform.position.y);
             Destroy(other.gameObject);
+            CoinAnimation1 script2 = coinHelper.GetComponent<CoinAnimation1>();
+            script2.startCoinMove(_initial_posn,_coinPrefab);
             // Destroy(posHelper);
         }
 
