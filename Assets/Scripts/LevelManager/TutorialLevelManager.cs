@@ -22,7 +22,7 @@ public class TutorialLevelManager : MonoBehaviour
     public Transform blankHolder;
     public Transform correctLetterHolder;
 
-    public Dictionary<int, Char> letterMap = new Dictionary<int, Char>();
+    public static Dictionary<int, Char> letterMap = new Dictionary<int, Char>();
     public float letterSpeed = 1.5f;
     public int level3Bullets = 100;
     public float rockSpeed = 3.5f;

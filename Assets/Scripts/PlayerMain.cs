@@ -106,6 +106,15 @@ public class PlayerMain : MonoBehaviour
                 }
             }
             return wrongLetter;
+        } else if (GameManager.instance.Level == 0) {
+            bool wrongLetter = true;
+            for(int i=0; i<GameManager.instance.LevelWord.Length; i++) {
+                if(GameManager.instance.LevelWord[i] == letterShot && TutorialLevelManager.letterMap[i] == '/') {
+                    wrongLetter = false;
+                    break;
+                }
+            }
+            return wrongLetter;
         }
 
         return false;
