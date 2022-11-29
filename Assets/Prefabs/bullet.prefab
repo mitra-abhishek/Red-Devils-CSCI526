@@ -100,6 +100,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 3651642205849724161, guid: 1b39b12862afceb45b7d779d2990b251, type: 3}
+  target: {fileID: 0}
+  cam: {fileID: 0}
+  _coinPrefab: {fileID: 3277833702214576563, guid: 9cb0aef2e48fe41cdafa3bbc4786b457, type: 3}
   speed: 10
 --- !u!50 &4403854986693279771
 Rigidbody2D:
