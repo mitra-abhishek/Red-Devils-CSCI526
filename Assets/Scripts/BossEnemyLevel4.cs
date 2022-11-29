@@ -13,7 +13,41 @@ public class BossEnemyLevel4 : MonoBehaviour
     public BossEnemyHealthBehavior healthbar;
     public float points;
     public float maxPoints=50;
+    private GameObject coin;
+    private coinCount coin_count;
+    private GameObject coinHelper;
 
+    public static List<GameObject> FindAllObjectsInScene()
+     {
+         UnityEngine.SceneManagement.Scene activeScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene();
+ 
+         GameObject[] rootObjects = activeScene.GetRootGameObjects();
+ 
+         GameObject[] allObjects = Resources.FindObjectsOfTypeAll<GameObject>();
+ 
+         List<GameObject> objectsInScene = new List<GameObject>();
+ 
+         for (int i = 0; i < rootObjects.Length; i++)
+         {
+             objectsInScene.Add(rootObjects[i]);
+         }
+ 
+         for (int i = 0; i < allObjects.Length; i++)
+         {
+             if (allObjects[i].transform.root)
+             {
+                 for (int i2 = 0; i2 < rootObjects.Length; i2++)
+                 {
+                     if (allObjects[i].transform.root == rootObjects[i2].transform && allObjects[i] != rootObjects[i2])
+                     {
+                         objectsInScene.Add(allObjects[i]);
+                         break;
+                     }
+                 }
+             }
+         }
+         return objectsInScene;
+     }
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +59,7 @@ public class BossEnemyLevel4 : MonoBehaviour
         points=50;
         healthbar.SetHealth(points, maxPoints);
         healthbar.SetHealth(points, maxPoints);
+        coin_count = new coinCount();
     }
 
     public void TakeHit(float damage)
@@ -35,6 +70,24 @@ public class BossEnemyLevel4 : MonoBehaviour
         if(points<=0){
             GameManager.instance.gameWon = true;
             Destroy(gameObject);
+            Bullets.enemiesDestroyed += 2;
+            List<GameObject> gameObjects = FindAllObjectsInScene();
+            foreach(var element in gameObjects)
+            {
+                if(element.name == "Coin")
+                {
+                    GameObject enemy = this.gameObject;
+                    Vector3 positionHelper = enemy.GetComponent<Transform>().localPosition;
+                    coin = element;
+                    coin.GetComponent<Transform>().position = positionHelper;
+                }
+            }
+            // other.gameObject.SetActive(false);
+            coin.SetActive(true);
+            coin_count.setNumCoins(Bullets.enemiesDestroyed);
+            coinHelper = GameObject.Find("CoinHelper");
+            delayHelper script = coinHelper.GetComponent<delayHelper>();
+            script.callCoroutine(coin);
         }
     }
 
