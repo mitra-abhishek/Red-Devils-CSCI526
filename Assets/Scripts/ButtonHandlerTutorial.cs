@@ -33,8 +33,8 @@ public class ButtonHandlerTutorial : MonoBehaviour
                 currentCoins -= 3;
                 coin_count.setNumCoins(currentCoins);
                 bulletHandler.SetEnemiesDestroyed(currentCoins);
-                tutorialLevelManager.setLetterFromHint();
-                // tutorialLevelManager.showHint();
+                // tutorialLevelManager.setLetterFromHint();
+                tutorialLevelManager.showHint();
 
             }
             else

@@ -18,7 +18,7 @@ public class TutorialLevelManager : MonoBehaviour
 
     public GameObject blankPrefab;
     public GameObject correctLetterPrefab;
-
+    public GameObject hintImage;
     public Transform blankHolder;
     public Transform correctLetterHolder;
 
@@ -153,6 +153,11 @@ public class TutorialLevelManager : MonoBehaviour
             }
         }
     }
+    public void showHint()
+    {
+        hintImage = FindAllObject(GameObject.Find("Hints/Canvas"), levelWord);
+        hintImage.SetActive(true);
+    }
     void Start()
     {
         Initialise();
@@ -214,7 +219,7 @@ public class TutorialLevelManager : MonoBehaviour
             rockShootingTime += Time.deltaTime;
             Debug.Log("Inside the Rocks Shooting" + rockShootingTime);
             rock.SetActive(true);
-            if (rockShootingTime >= 8f && playerMain.currentHealth >= 80)
+            if (GameManager.instance.isRockShotTutorial && playerMain.currentHealth >= 80)
             {
                 rockActive = false;
                 rockTutorialCompleted = true;
@@ -230,18 +235,18 @@ public class TutorialLevelManager : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                if (waitTimeForEnemies < 3f)
-                {
-                    StartCoroutine(HandleWaitTime());
-                }
-                else if (waitTimeForEnemies >= 3f && Input.GetKey(KeyCode.Space))
-                {
-                    popUpIndex += 1;
-                    popUps[3].gameObject.SetActive(false);
-                    enemiesActive = true;
-                    rockActive = false;
-                    isEnemiesSpawnOver = true;
-                }
+                // if (waitTimeForEnemies < 3f)
+                // {
+                //     StartCoroutine(HandleWaitTime());
+                // }
+                // else if (waitTimeForEnemies >= 3f && Input.GetKey(KeyCode.Space))
+                // {
+                popUpIndex += 1;
+                popUps[3].gameObject.SetActive(false);
+                enemiesActive = true;
+                rockActive = false;
+                isEnemiesSpawnOver = true;
+                // }
                 //Debug.Log("Inside the Index 3 Showing Enemies" + popUpIndex);
                 //Debug.Log("Inside the Index 3 The wait time is" + waitTimeForEnemies);
 
@@ -254,7 +259,7 @@ public class TutorialLevelManager : MonoBehaviour
             enemyShootingTime += Time.deltaTime;
             Debug.Log("Inside the Enemy Shooting Time" + enemyShootingTime);
             enemies.SetActive(true);
-            if (enemyShootingTime >= 20f && playerMain.currentHealth >= 80)
+            if (GameManager.instance.isEnemyShotTutorial && playerMain.currentHealth >= 80)
             {
                 enemiesActive = false;
                 isEnemiesSpawnOver = true;
@@ -346,6 +351,7 @@ public class TutorialLevelManager : MonoBehaviour
             }
             // 
         }
+        StartCoroutine(timeDelayHintHide());
 
     }
     private IEnumerator HandleWaitTime()
@@ -376,6 +382,31 @@ public class TutorialLevelManager : MonoBehaviour
         yield return new WaitForSeconds(2f);
         Destroy(this.gameObject);
         GameManager.instance.winScreen2();
+    }
+
+    private IEnumerator timeDelayHintHide()
+    {
+
+        hintImage = FindAllObject(GameObject.Find("Hints/Canvas"), levelWord);
+        if (hintImage.activeSelf == true)
+        {
+            yield return new WaitForSeconds(8.0f);
+            hintImage.SetActive(false);
+        }
+
+    }
+
+    public static GameObject FindAllObject(GameObject parent, string name)
+    {
+        Transform[] trs = parent.GetComponentsInChildren<Transform>(true);
+        foreach (Transform t in trs)
+        {
+            if (t.name == name)
+            {
+                return t.gameObject;
+            }
+        }
+        return null;
     }
 
     void Initialise()
