@@ -156,11 +156,15 @@ public class Bullets : MonoBehaviour
                 }
             }
             // other.gameObject.SetActive(false);
-            coin.SetActive(true);
+            // coin.SetActive(true);
             coin_count.setNumCoins(enemiesDestroyed);
             coinHelper = GameObject.Find("CoinHelper");
-            delayHelper script = coinHelper.GetComponent<delayHelper>();
-            script.callCoroutine(coin);
+            // delayHelper script = coinHelper.GetComponent<delayHelper>();
+            // script.callCoroutine(coin);
+            Vector3 _initial_posn = new Vector3(other.transform.position.x, other.transform.position.y);
+            // Destroy(other.gameObject);
+            CoinAnimation1 script2 = coinHelper.GetComponent<CoinAnimation1>();
+            script2.startCoinMove(_initial_posn,_coinPrefab);
             GameManager.instance.playBulletImpact();
             Destroy(other.gameObject);
             Destroy(this.gameObject);
