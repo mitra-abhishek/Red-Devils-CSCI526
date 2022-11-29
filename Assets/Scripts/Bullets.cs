@@ -13,7 +13,7 @@ public class Bullets : MonoBehaviour
     private GameObject coinHelper;
     private GameObject coin;
     private coinCount coin_count;
-    private static int enemiesDestroyed = 0;
+    public static int enemiesDestroyed = 0;
     public float speed = 7f;
     
     // Start is called before the first frame update
