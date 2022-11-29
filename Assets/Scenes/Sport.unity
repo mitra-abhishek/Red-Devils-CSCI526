@@ -1372,7 +1372,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 5389615402529709660, guid: 387243d0489585245a7c5502c25c5c30, type: 3}
-  enemyReAppearTime: 3
+  enemyReAppearTime: 4.5
   maxEnemyAtTime: 2
 --- !u!114 &345747633
 MonoBehaviour:

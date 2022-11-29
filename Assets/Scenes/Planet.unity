@@ -865,7 +865,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rockPrefab: {fileID: 5356430114322639579, guid: 70a51788f29000747ae30818dca94965, type: 3}
-  rockReAppearTime: 1
+  rockReAppearTime: 3.5
   maxRockAtTime: 2
 --- !u!114 &345747631
 MonoBehaviour:
@@ -4076,8 +4076,8 @@ MonoBehaviour:
   explosion: {fileID: 0}
   target: {fileID: 1601538740}
   cam: {fileID: 519420031}
-  _coinPrefab: {fileID: 3277833702214576563, guid: 9cb0aef2e48fe41cdafa3bbc4786b457, type: 3}
   speed: 7
+  _coinPrefab: {fileID: 3277833702214576563, guid: 9cb0aef2e48fe41cdafa3bbc4786b457, type: 3}
 --- !u!95 &1477198361
 Animator:
   serializedVersion: 4
