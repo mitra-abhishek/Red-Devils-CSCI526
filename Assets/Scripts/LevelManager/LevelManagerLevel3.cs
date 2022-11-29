@@ -81,7 +81,7 @@ public class LevelManagerLevel3 : MonoBehaviour
 
         List<string> level_words = new List<string>
         {
-            "IRAN","CHINA", "EGYPT", "SPAIN", "BRAZIL", "INDIA"
+            "INDIA","CHINA", "EGYPT", "SPAIN", "BRAZIL"
         };
 
         // IRAN : Formerly known as Persia

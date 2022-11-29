@@ -77,7 +77,8 @@ public class LevelManagerLevel1 : MonoBehaviour
 
         List<string> level_words = new List<string>
         {
-            "EARTH", "MARS" ,"VENUS","SATURN"
+            // "EARTH", "MARS" ,"VENUS","SATURN"
+            "SATURN"
         };
 
         // EARTH : Where we live

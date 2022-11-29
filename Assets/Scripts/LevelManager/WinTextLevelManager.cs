@@ -21,7 +21,7 @@ public class WinTextLevelManager : MonoBehaviour
 
     private void Awake()
     {
-        if (GameManager.instance.Level == 4)
+        if (GameManager.instance.Level == 4 || GameManager.instance.Level == 0)
         {
             nextLevel.gameObject.SetActive(false);
         }

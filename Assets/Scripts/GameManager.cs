@@ -67,6 +67,9 @@ public class GameManager : MonoBehaviour
     private float SELF_DAMAGE_VOLUME = 0.1f;
 
     private AudioSource audioSource;
+    public bool isRockShotTutorial = false;
+    public bool isEnemyShotTutorial = false;
+
 
 
 

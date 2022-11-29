@@ -62,6 +62,7 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
      <Compile Include="Assets\FreeParallax\Scripts\FreeParallax.cs" />
+     <Compile Include="Assets\Scripts\level2hover.cs" />
      <Compile Include="Assets\Scripts\Start_Screen_buttons.cs" />
      <Compile Include="Assets\Scripts\Proto1 Scripts\ArrowTag.cs" />
      <Compile Include="Assets\Scripts\Tutorial2.cs" />
@@ -94,6 +95,7 @@
      <Compile Include="Assets\Scripts\SmartEnemyPrefabGenerator.cs" />
      <Compile Include="Assets\Scripts\LevelManager\LevelManagerLevel1.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
+     <Compile Include="Assets\Scripts\level1hover.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
      <Compile Include="Assets\Scripts\RepeatingBackground.cs" />
      <Compile Include="Assets\Scripts\BulletPowerUpController.cs" />
@@ -122,6 +124,8 @@
      <Compile Include="Assets\Scripts\Ice.cs" />
      <Compile Include="Assets\Scripts\BossEnemyLevel2.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
+     <Compile Include="Assets\Scripts\level3hover.cs" />
+     <Compile Include="Assets\Scripts\level4hover.cs" />
      <Compile Include="Assets\Scripts\Proto1 Scripts\bulletdemo1.cs" />
      <Compile Include="Assets\Scripts\BossEnemyLevel4.cs" />
      <Compile Include="Assets\Scripts\ShieldPowerUpController.cs" />
